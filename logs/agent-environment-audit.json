@@ -1,0 +1,9 @@
+{
+  "task": "stellium-locales",
+  "upstream_fixed_revision": "0ddb421bbb45a96bf38508c0085a4af8aee2bd40",
+  "purpose": "Check the agent tool environment, separate from grader controls",
+  "returncode": 2,
+  "stdout": "",
+  "stderr": "error: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/agent_environment_audit/stellium-locales/reference`\n  cause: No interpreter found for Python 3.11.4 in virtual environments, managed installations, or search path\n",
+  "seconds": 0.05432688099972438
+}

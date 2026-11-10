@@ -1,0 +1,14 @@
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "53-pytest-html-npm-A-41", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T18:21:06.710440+00:00"}
+{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "54-s3-template-A-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T18:30:33.874742+00:00"}
+{"id": "pixcull-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"completed_episode": "55-pixcull-sdist-A-23", "contract_pass": false, "stop": "infrastructure_error", "timestamp": "2026-11-05T18:49:34.836230+00:00"}
+Traceback (most recent call last):
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.6/run_batch_native_1_6.py", line 81, in <module>
+    main()
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.6/run_batch_native_1_6.py", line 77, in main
+    run_batch.main()
+  File "/workspace/scratch/93af20bbcd93/packaging_study/run_batch.py", line 168, in main
+    raise RuntimeError('Infrastructure outcome retained; review required before continuing')
+RuntimeError: Infrastructure outcome retained; review required before continuing

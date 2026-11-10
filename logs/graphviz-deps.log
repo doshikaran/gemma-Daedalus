@@ -1,0 +1,5 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+Resolved 1 package in 15.93s
+Prepared 1 package in 67ms
+Installed 1 package in 4ms
+ + graphviz==0.21

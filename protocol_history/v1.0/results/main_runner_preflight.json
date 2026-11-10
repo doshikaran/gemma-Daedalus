@@ -1,0 +1,37 @@
+{
+  "synthetic_or_gold_control_only": true,
+  "main_model_calls": 0,
+  "checks": [
+    "72 unique episodes; balanced seeds and conditions",
+    "Deterministic randomized ordering",
+    "Declared analysis recovers a known paired contrast and rejects incomplete data",
+    "Action parsing rejects malformed and multiple tool blocks",
+    "Scripted read/edit/execute/format-error recovery/completion, with persisted trajectory",
+    "Generated-token exhaustion stops the episode",
+    "Final patch export retains new source and excludes ignored build debris",
+    "Main runner candidate-grading path rejects historical no-op and accepts upstream fix"
+  ],
+  "candidate_grading_controls": [
+    {
+      "arm": "affected",
+      "pass": false,
+      "states": {
+        "source": true,
+        "wheel": false,
+        "sdist-wheel": false
+      },
+      "output": "/workspace/scratch/93af20bbcd93/packaging_study/preflight_runs/8cf645a8db5e46d9955b4cf01cd75a3f"
+    },
+    {
+      "arm": "reference",
+      "pass": true,
+      "states": {
+        "source": true,
+        "wheel": true,
+        "sdist-wheel": true
+      },
+      "output": "/workspace/scratch/93af20bbcd93/packaging_study/preflight_runs/f318295a359f4d448aa729cb8365000a"
+    }
+  ],
+  "pass": true
+}

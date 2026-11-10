@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-11-06T21:40:56.898848+00:00",
+  "source_tree_sha256": "f80a73e6394f66467003afd914ecbf91b9b895d1a5fa704c8c5f6cabd0599190",
+  "source_archive_sha256": "2c26b156817efc591f9ce583cddb32891e4589d3111061472eb05e257508811d",
+  "release_artifacts": [],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

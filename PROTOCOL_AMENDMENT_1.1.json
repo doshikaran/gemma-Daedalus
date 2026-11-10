@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-11-01T17:45:20.298807+00:00",
+  "original_freeze": "protocol_history/v1.0/FREEZE.json",
+  "reason": "Gold-reference audit found bare uv build selects unavailable Python 3.11.4 in agent tools; grader had explicit Python 3.12.14. Align interpreter/backend environment before continuing.",
+  "preliminary_episodes": [
+    {
+      "episode": "00-pyfiglet-154-A-19",
+      "completed_responses": 11,
+      "generated_tokens": 2255,
+      "final_result_exists": false
+    }
+  ],
+  "outcome_based_exclusion": false,
+  "main_results_viewed": 0,
+  "model_prompts_budgets_scoring_unchanged": true,
+  "partial_trajectory_inspected": true,
+  "completed_repair_outcomes_viewed": 0,
+  "changes": [
+    "Set UV_PYTHON and task-specific UV_BUILD_CONSTRAINT in the agent environment, matching independent grading.",
+    "Record original baseline independently so commits do not erase repair diffs.",
+    "Retain partial trajectories on transport errors and classify enforced wall-deadline exhaustion as budget, with unknown partial generation cost recorded.",
+    "Add a sequential controller for live status, post-grade compression, complete evidence checkpoints and automatic full-grid descriptive analysis."
+  ]
+}

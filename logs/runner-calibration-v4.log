@@ -1,0 +1,2 @@
+{"case": "function", "pass": true, "model_calls": 4}
+{"case": "resource", "pass": false, "model_calls": 12}

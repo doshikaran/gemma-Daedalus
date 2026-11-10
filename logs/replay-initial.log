@@ -1,0 +1,33 @@
+{"id": "apotrope-template", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "l0-module-actual", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "apotrope-template", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pyfiglet-154", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "l0-module-actual", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pyfiglet-154", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+Traceback (most recent call last):
+  File "/workspace/scratch/93af20bbcd93/packaging_study/replay.py", line 86, in <module>
+    results=list(pool.map(replay,['rtl-data','l0-module-actual','apotrope-template','pyfiglet-154']))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/93af20bbcd93/packaging_study/replay.py", line 46, in replay
+    repo=work/'repo';shutil.copytree(source[arm]['directory'],repo)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 600, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 554, in _copytree
+    raise Error(errors)
+shutil.Error: [('/workspace/scratch/93af20bbcd93/packaging_study/sources/sean-galloway__RTLDesignSherpa-DV-d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d/tests/sim/TBClasses/wavedrom_user/WAVEDROM_REQUIREMENTS.md', '/workspace/scratch/93af20bbcd93/packaging_study/tasks/rtl-data/affected/repo/tests/sim/TBClasses/wavedrom_user/WAVEDROM_REQUIREMENTS.md', "[Errno 2] No such file or directory: '/workspace/scratch/93af20bbcd93/packaging_study/sources/sean-galloway__RTLDesignSherpa-DV-d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d/tests/sim/TBClasses/wavedrom_user/WAVEDROM_REQUIREMENTS.md'"), ('/workspace/scratch/93af20bbcd93/packaging_study/sources/sean-galloway__RTLDesignSherpa-DV-d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d/tests/sim/TBClasses/wavedrom_user/GAXI_WAVEDROM_GUIDE.md', '/workspace/scratch/93af20bbcd93/packaging_study/tasks/rtl-data/affected/repo/tests/sim/TBClasses/wavedrom_user/GAXI_WAVEDROM_GUIDE.md', "[Errno 2] No such file or directory: '/workspace/scratch/93af20bbcd93/packaging_study/sources/sean-galloway__RTLDesignSherpa-DV-d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d/tests/sim/TBClasses/wavedrom_user/GAXI_WAVEDROM_GUIDE.md'")]

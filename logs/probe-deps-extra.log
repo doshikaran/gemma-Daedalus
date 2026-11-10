@@ -1,0 +1,48 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+Resolved 24 packages in 16.01s
+Downloading botocore (13.5MiB)
+Downloading h3 (1.0MiB)
+Downloading typst (24.8MiB)
+Downloading timezonefinder (26.9MiB)
+ Downloaded botocore
+ Downloaded h3
+   Building pyswisseph==2.10.3.2
+ Downloaded timezonefinder
+ Downloaded typst
+WARN Failed to acquire build lock: Could not create temporary file
+error: Failed to build `pyswisseph==2.10.3.2`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.build_wheel` failed (exit status: 1)
+
+         [stdout]
+         Searching for pkg-config...
+         pkg-config not found
+         Using internal libswe
+         Using internal sqlite3
+         running bdist_wheel
+         running build
+         running build_ext
+         building 'swisseph' extension
+         clang -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fstack-protector -fstack-clash-protection -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -DSQLITE_DEFAULT_AUTOVACUUM=1 -DSQLITE_DEFAULT_FOREIGN_KEYS=1 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1 -DSQLITE_DOESNT_MATCH_BLOBS=1 -DSQLITE_DQS=0 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_FTS4=1 -DSQLITE_MAX_EXPR_DEPTH=0 -DSQLITE_OMIT_DEPRECATED=1 -DSQLITE_OMIT_SHARED_CACHE=1 -DSQLITE_SECURE_DELETE=1 -DSQLITE_THREADSAFE=1 -Ilibswe -Iswephelp -Iswephelp/sqlite3 -I/root/.cache/uv/builds-v0/.tmpDfow44/include -I/opt/codex/runtimes/codex-primary-runtime/dependencies/python/include/python3.12 -c libswe/swecl.c -o build/temp.linux-x86_64-cpython-312/libswe/swecl.o
+
+         [stderr]
+         /root/.cache/uv/builds-v0/.tmpDfow44/lib/python3.12/site-packages/setuptools/_distutils/dist.py:318: UserWarning: Unknown distribution option: 'test_suite'
+           warnings.warn(msg)
+         /root/.cache/uv/builds-v0/.tmpDfow44/lib/python3.12/site-packages/setuptools/dist.py:332: InformationOnly: Normalizing '2.10.03.2' to '2.10.3.2'
+           self.metadata.version = self._normalize_version(self.metadata.version)
+         /root/.cache/uv/builds-v0/.tmpDfow44/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+         !!
+
+                 ********************************************************************************
+                 Please consider removing the following classifiers in favor of a SPDX license expression:
+
+                 License :: OSI Approved :: GNU Affero General Public License v3
+
+                 See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+                 ********************************************************************************
+
+         !!
+           self._finalize_license_expression()
+         error: [Errno 2] No such file or directory: 'clang'
+
+hint: Build failures usually indicate a problem with the package or the build environment

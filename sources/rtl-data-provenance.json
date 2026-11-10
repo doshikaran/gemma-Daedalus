@@ -1,0 +1,18 @@
+{
+  "id": "rtl-data",
+  "repository": "sean-galloway/RTLDesignSherpa-DV",
+  "affected": {
+    "repository": "sean-galloway/RTLDesignSherpa-DV",
+    "sha": "d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/sean-galloway__RTLDesignSherpa-DV-d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d",
+    "archive_sha256": "972195a970143ed3ae0891094bcfdd35e426f4b4d7c8a252851fcd7453dfa052",
+    "archive_bytes": 1700631
+  },
+  "reference": {
+    "repository": "sean-galloway/RTLDesignSherpa-DV",
+    "sha": "81f6a103149e891ad5ef3b832630aa8275dbfc0f",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/sean-galloway__RTLDesignSherpa-DV-81f6a103149e891ad5ef3b832630aa8275dbfc0f",
+    "archive_sha256": "8722c0fb75eabc8bae32cda4ead3485adab6cbc21c0cc92b2a5bc78da3795ceb",
+    "archive_bytes": 1701881
+  }
+}

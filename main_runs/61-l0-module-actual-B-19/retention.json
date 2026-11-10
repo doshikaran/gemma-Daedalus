@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-06T19:55:10.667875+00:00",
+  "source_tree_sha256": "9d1c6c481e5a38872667e8f05a996ac29935bfba2df9b77a2030c1fb1dbc9a07",
+  "source_archive_sha256": "63985543bb84d47275ee2d87332b00d29432341df3088a80a211c0b9f4e4f8ae",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/61-l0-module-actual-B-19/grading/l0-module-actual/2a4ae527ec64/candidate/direct-dist/l0p4map-1.0.0-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/61-l0-module-actual-B-19/release-artifacts/8cc71661010e5c55352685044bbc3fe494c42562bb8ff23430f3952be7899c63-l0p4map-1.0.0-py3-none-any.whl",
+      "sha256": "8cc71661010e5c55352685044bbc3fe494c42562bb8ff23430f3952be7899c63",
+      "bytes": 3001088
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/61-l0-module-actual-B-19/grading/l0-module-actual/2a4ae527ec64/candidate/from-sdist/l0p4map-1.0.0-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/61-l0-module-actual-B-19/release-artifacts/f02f4e03e17ee1a7e5b69864f87e21a8aa7e751e9f2594e0487759f65178e522-l0p4map-1.0.0-py3-none-any.whl",
+      "sha256": "f02f4e03e17ee1a7e5b69864f87e21a8aa7e751e9f2594e0487759f65178e522",
+      "bytes": 3001088
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/61-l0-module-actual-B-19/grading/l0-module-actual/2a4ae527ec64/candidate/sdist/l0p4map-1.0.0.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/61-l0-module-actual-B-19/release-artifacts/43d1a0312aeb9a01c688c314441d4468c62c84847829714d378fd80507d43cd1-l0p4map-1.0.0.tar.gz",
+      "sha256": "43d1a0312aeb9a01c688c314441d4468c62c84847829714d378fd80507d43cd1",
+      "bytes": 3000233
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

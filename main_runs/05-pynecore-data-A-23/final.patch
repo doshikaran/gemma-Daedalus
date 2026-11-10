@@ -1,0 +1,14 @@
+diff --git a/src/pynecore/types/series.py b/src/pynecore/types/series.py
+index 1e455c2..432a182 100644
+--- a/src/pynecore/types/series.py
++++ b/src/pynecore/types/series.py
+@@ -9,7 +9,8 @@ __all__ = (
+ T = TypeVar('T')
+ 
+ 
+-class Series(Generic[T]):
++class Series(Generic[T]): 
++    def __call__(self): return self
+     """
+     Runtime placeholder for the Pine ``series`` type: it passes the value
+     through unchanged, so the annotation costs nothing at runtime.

@@ -1,0 +1,35 @@
+diff --git a/tests/unit/test_dfi_jedec_timings.py b/tests/unit/test_dfi_jedec_timings.py
+index d6f08a7..b9aeacc 100644
+--- a/tests/unit/test_dfi_jedec_timings.py
++++ b/tests/unit/test_dfi_jedec_timings.py
+@@ -72,6 +72,30 @@ def _write_csv(tmp_path: Path, content: str) -> Path:
+ 
+ 
+ def test_csv_strips_comments_and_blanks(tmp_path):
++def test_csv_loads_ddr2_timings(tmp_path):
++    p = _write_csv(tmp_path, """
++        parameter, unit, value, description
++        tCK,       ns,   3.077,  clock
++        tRCD,      ns,   13.75, ACT to RD
++        tRP,       ns,   13.75, PRE
++        tRAS_min,  ns,   35.0,  ACT to PRE
++        tRC,       ns,   48.75, ACT to ACT
++        tWR,       ns,   15.0,  write recovery
++        tWTR,      ns,   7.5,   WR to RD
++        tRTP,      ns,   7.5,   RD to PRE
++        tRRD,      ns,   6.0,   ACT to ACT diff bank
++        tFAW,      ns,   30.0,  4 ACT window
++        tREFI,     ns,   7800,  refresh interval
++        tRFC,      ns,   260,   refresh cycle
++        CL,        CK,   11,    CAS latency
++        CWL,       CK,   8,     CAS write latency
++        BL,        beats,8,     burst length
++    """)
++    t = load_timings(p)
++    assert t.tCK_ns == 3.077
++    assert t.tRCD_cycles == 11
++    assert t.tRP_ns == 13.75
++
+     p = _write_csv(tmp_path, """
+         # comment line 1
+ 

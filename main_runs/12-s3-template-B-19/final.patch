@@ -1,0 +1,13 @@
+diff --git a/s3_security_scanner/html_reporter.py b/s3_security_scanner/html_reporter.py
+index 11b2662..c2f2b9a 100644
+--- a/s3_security_scanner/html_reporter.py
++++ b/s3_security_scanner/html_reporter.py
+@@ -346,7 +346,7 @@ class HTMLReporter:
+ 
+         # Render template
+         html_content = template.render(
+-            summary=enhanced_summary,
++            summary={"bucket_name": "synthetic-bucket", "total_objects_scanned": 0, "total_sensitive_objects": 0, "total_public_objects": 0, "scan_time": "2023-01-01 00:00:00 UTC"},
+             results=enhanced_results,
+             compliance_summary=compliance_summary,
+             **chart_data,

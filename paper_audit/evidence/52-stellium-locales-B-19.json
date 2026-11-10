@@ -1,0 +1,87 @@
+{
+  "episode_id": "52-stellium-locales-B-19",
+  "task": "stellium-locales",
+  "condition": "B",
+  "seed": 19,
+  "order": 52,
+  "scope": "gap",
+  "stop": "action_limit",
+  "calls": 24,
+  "commands": 0,
+  "format_errors": 24,
+  "generated_tokens": 6108,
+  "generated_token_accounting": "complete",
+  "interaction_wall_seconds": 729.1130396119988,
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "artifact_contract_pass": false,
+  "pattern": "PFF",
+  "grade": {
+    "source": {
+      "pass": true,
+      "steps": {
+        "probe": {
+          "returncode": 0,
+          "tail": "{\"chinese_translation\": true, \"unknown_key_preserved\": true}\n{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/repo/src/stellium/__init__.py\"}}\n"
+        }
+      }
+    },
+    "wheel": {
+      "pass": false,
+      "steps": {
+        "build": {
+          "returncode": 0,
+          "tail": "21.0.dist-info/WHEEL'\nadding 'stellium-0.21.0.dist-info/entry_points.txt'\nadding 'stellium-0.21.0.dist-info/top_level.txt'\nadding 'stellium-0.21.0.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/direct-dist/stellium-0.21.0-py3-none-any.whl\n"
+        },
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 53ms\nPrepared 1 package in 121ms\nInstalled 1 package in 114ms\n + stellium==0.21.0 (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/direct-dist/stellium-0.21.0-py3-none-any.whl)\n"
+        },
+        "probe": {
+          "returncode": 1,
+          "tail": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\nAssertionError\n"
+        }
+      }
+    },
+    "sdist-wheel": {
+      "pass": false,
+      "steps": {
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 61ms\nPrepared 1 package in 146ms\nInstalled 1 package in 126ms\n + stellium==0.21.0 (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/from-sdist/stellium-0.21.0-py3-none-any.whl)\n"
+        },
+        "sdist_build": {
+          "returncode": 0,
+          "tail": "g.py -> stellium-0.21.0/tests\ncopying src/stellium.egg-info/SOURCES.txt -> stellium-0.21.0/src/stellium.egg-info\nWriting stellium-0.21.0/setup.cfg\nCreating tar archive\nremoving 'stellium-0.21.0' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/sdist/stellium-0.21.0.tar.gz\n"
+        },
+        "wheel_build": {
+          "returncode": 0,
+          "tail": ".21.0.dist-info/WHEEL'\nadding 'stellium-0.21.0.dist-info/entry_points.txt'\nadding 'stellium-0.21.0.dist-info/top_level.txt'\nadding 'stellium-0.21.0.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/from-sdist/stellium-0.21.0-py3-none-any.whl\n"
+        },
+        "probe": {
+          "returncode": 1,
+          "tail": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\nAssertionError\n"
+        }
+      }
+    }
+  },
+  "patch": {
+    "files_total": 0,
+    "preparation_common": 0,
+    "debris": 0,
+    "agent_files": [],
+    "agent_added_lines": {},
+    "test_files_touched": [],
+    "test_files_deleted": []
+  },
+  "commands_detail": [],
+  "final_message": "<|tool_call>call:cat stellium/i18n/__init__.py | grep -E 'locales|zh_CN'",
+  "final_message_is_complete": false,
+  "sources": {
+    "result.json": "main_runs/52-stellium-locales-B-19/result.json",
+    "final.patch": "main_runs/52-stellium-locales-B-19/final.patch",
+    "calls.json": "main_runs/52-stellium-locales-B-19/calls.json",
+    "trajectory.json": "main_runs/52-stellium-locales-B-19/trajectory.json",
+    "prompt.txt": "main_runs/52-stellium-locales-B-19/prompt.txt",
+    "final-source.tar.gz": "main_runs/52-stellium-locales-B-19/final-source.tar.gz"
+  }
+}

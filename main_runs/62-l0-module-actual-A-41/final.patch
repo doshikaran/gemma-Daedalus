@@ -1,0 +1,24 @@
+diff --git a/main.py b/main.py
+index 50da77d..be9996a 100644
+--- a/main.py
++++ b/main.py
+@@ -189,8 +189,8 @@ def build_parser() -> argparse.ArgumentParser:
+         help="suppress progress messages",
+     )
+ 
+-    sub.add_parser("gui", help="launch the GUI (default when no command given)")
+-
++        console_p = sub.add_parser("console", help="run console commands")
++
+     return parser
+ 
+ 
+@@ -200,7 +200,7 @@ def main():
+ 
+     if args.command == "scan":
+         cmd_scan(args)
+-    elif args.command == "gui" or args.command is None:
++    elif args.command == "gui" or args.command == "console" or args.command is None:
+         cmd_gui(args)
+     else:
+         parser.print_help()

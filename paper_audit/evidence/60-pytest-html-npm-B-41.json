@@ -1,0 +1,190 @@
+{
+  "episode_id": "60-pytest-html-npm-B-41",
+  "task": "pytest-html-npm",
+  "condition": "B",
+  "seed": 41,
+  "order": 60,
+  "scope": "gap",
+  "stop": "budget",
+  "calls": 16,
+  "commands": 10,
+  "format_errors": 5,
+  "generated_tokens": 7523,
+  "generated_token_accounting": "lower_bound_partial_timeout",
+  "interaction_wall_seconds": 1200.0580691069918,
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "artifact_contract_pass": false,
+  "pattern": "PPF",
+  "grade": {
+    "source": {
+      "pass": true,
+      "steps": {
+        "probe": {
+          "returncode": 0,
+          "tail": "tml report: file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/60-pytest-html-npm-B-41/grading/pytest-html-npm/e0563922a916/candidate/consumer-source/report.html -\n1 passed in 0.01s\n{\"html_report\": true, \"module_origin\": \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/60-pytest-html-npm-B-41/grading/pytest-html-npm/e0563922a916/candidate/repo/src/pytest_html/__init__.py\"}\n"
+        }
+      }
+    },
+    "wheel": {
+      "pass": true,
+      "steps": {
+        "build": {
+          "returncode": 0,
+          "tail": "Building wheel...\nnpm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/60-pytest-html-npm-B-41/grading/pytest-html-npm/e0563922a916/candidate/direct-dist/pytest_html-0.0.0+audit-py3-none-any.whl\n"
+        },
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 48ms\nPrepared 1 package in 67ms\nInstalled 1 package in 24ms\n + pytest-html==0.0.0+audit (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/60-pytest-html-npm-B-41/grading/pytest-html-npm/e0563922a916/candidate/direct-dist/pytest_html-0.0.0+audit-py3-none-any.whl)\n"
+        },
+        "probe": {
+          "returncode": 0,
+          "tail": "port: file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/60-pytest-html-npm-B-41/grading/pytest-html-npm/e0563922a916/candidate/consumer-wheel/report.html -\n1 passed in 0.01s\n{\"html_report\": true, \"module_origin\": \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/60-pytest-html-npm-B-41/grading/pytest-html-npm/e0563922a916/candidate/wheel-installed/pytest_html/__init__.py\"}\n"
+        }
+      }
+    },
+    "sdist-wheel": {
+      "pass": false,
+      "steps": {
+        "sdist_build": {
+          "returncode": 0,
+          "tail": "Building source distribution...\nnpm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/60-pytest-html-npm-B-41/grading/pytest-html-npm/e0563922a916/candidate/sdist/pytest_html-0.0.0+audit.tar.gz\n"
+        },
+        "wheel_build": {
+          "returncode": 2,
+          "tail": "127.\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/main_runs/60-pytest-html-npm-B-41/grading/pytest-html-npm/e0563922a916/candidate/extracted/pytest_html-0.0.0+audit`\n  cause: The build backend returned an error\n  cause: Call to `hatchling.build.build_wheel` failed (exit status: 1)\n\nhint: Build failures usually indicate a problem with the package or the build environment\n"
+        }
+      }
+    }
+  },
+  "patch": {
+    "files_total": 0,
+    "preparation_common": 0,
+    "debris": 0,
+    "agent_files": [],
+    "agent_added_lines": {},
+    "test_files_touched": [],
+    "test_files_deleted": []
+  },
+  "commands_detail": [
+    {
+      "step": 0,
+      "command": "ls -R",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "-parser.js\n\n./node_modules/yargs-unparser:\nCHANGELOG.md\nLICENSE\nREADME.md\nindex.js\npackage.json\n\n./node_modules/yocto-queue:\nindex.d.ts\nindex.js\nlicense\npackage.json\nreadme.md\n\n./scripts:\nnpm.py\n\n./src:\nlayout\npytest_html\n\n./src/layout:\ncss\n\n./src/layout/css:\nstyle.scss\n\n./src/pytest_html:\n__init__.py\nbasereport.py\nextras.py\nfixtures.py\nhooks.py\nplugin.py\nreport.py\nreport_data.py\nresources\nscripts\nselfcontained_report.py\nutil.py\n\n./src/pytest_html/resources:\napp.js\nindex.jinja2\nstyle.css\n\n./src/pytest_html/scripts:\ndatamanager.js\ndom.js\nfilter.js\nindex.js\nmain.js\nmediaviewer.js\nsort.js\nstorage.js\n\n./testing:\nlegacy_test_pytest_html.py\ntest_e2e.py\ntest_integration.py\ntest_unit.py\nunittest.js\n"
+    },
+    {
+      "step": 2,
+      "command": "cat src/pytest_html/resources/app.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "            break\n        }\n    } else {\n        categories = []\n    }\n    return categories\n}\n\nconst getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false\nconst setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)\n\nconst getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []\nconst setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))\n\nmodule.exports = {\n    getVisible,\n    hideCategory,\n    showCategory,\n    getCollapsedIds,\n    setCollapsedIds,\n    getSort,\n    setSort,\n    getSortDirection,\n    setSortDirection,\n    getCollapsedCategory,\n    possibleFilters,\n}\n\n},{}]},{},[4]);\n"
+    },
+    {
+      "step": 3,
+      "command": "cat src/pytest_html/scripts/datamanager.js\ncat src/pytest_html/scripts/dom.js\ncat src/pytest_html/scripts/filter.js\ncat src/pytest_html/scripts/index.js\ncat src/pytest_html/scripts/main.js\ncat src/pytest_html/scripts/mediaviewer.js\ncat src/pytest_html/scripts/sort.js\ncat src/pytest_html/scripts/storage.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": " renderCollapsed\n            break\n        }\n    } else {\n        categories = []\n    }\n    return categories\n}\n\nconst getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false\nconst setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)\n\nconst getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []\nconst setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))\n\nmodule.exports = {\n    getVisible,\n    hideCategory,\n    showCategory,\n    getCollapsedIds,\n    setCollapsedIds,\n    getSort,\n    setSort,\n    getSortDirection,\n    setSortDirection,\n    getCollapsedCategory,\n    possibleFilters,\n}\n"
+    },
+    {
+      "step": 4,
+      "command": "cat src/pytest_html/scripts/dom.js\ncat src/pytest_html/scripts/filter.js\ncat src/pytest_html/scripts/index.js\ncat src/pytest_html/scripts/main.js\ncat src/pytest_html/scripts/mediaviewer.js\ncat src/pytest_html/scripts/sort.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "   break\n        }\n        manager.setRender(sortedList)\n    }\n}\n\nconst doSort = (type, skipDirection) => {\n    const newSortType = storageModule.getSort(manager.initialSort) !== type\n    const currentAsc = storageModule.getSortDirection()\n    let ascending\n    if (skipDirection) {\n        ascending = currentAsc\n    } else {\n        ascending = newSortType ? false : !currentAsc\n    }\n    storageModule.setSort(type)\n    storageModule.setSortDirection(ascending)\n\n    const list = manager.testSubset\n    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)\n    manager.setRender(sortedList)\n}\n\nmodule.exports = {\n    doInitSort,\n    doSort,\n}\n"
+    },
+    {
+      "step": 5,
+      "command": "cat src/pytest_html/scripts/index.js\ncat src/pytest_html/scripts/main.js\ncat src/pytest_html/scripts/mediaviewer.js\ncat src/pytest_html/scripts/sort.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "   break\n        }\n        manager.setRender(sortedList)\n    }\n}\n\nconst doSort = (type, skipDirection) => {\n    const newSortType = storageModule.getSort(manager.initialSort) !== type\n    const currentAsc = storageModule.getSortDirection()\n    let ascending\n    if (skipDirection) {\n        ascending = currentAsc\n    } else {\n        ascending = newSortType ? false : !currentAsc\n    }\n    storageModule.setSort(type)\n    storageModule.setSortDirection(ascending)\n\n    const list = manager.testSubset\n    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)\n    manager.setRender(sortedList)\n}\n\nmodule.exports = {\n    doInitSort,\n    doSort,\n}\n"
+    },
+    {
+      "step": 6,
+      "command": "cat src/pytest_html/scripts/main.js\ncat src/pytest_html/scripts/mediaviewer.js\ncat src/pytest_html/scripts/sort.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "   break\n        }\n        manager.setRender(sortedList)\n    }\n}\n\nconst doSort = (type, skipDirection) => {\n    const newSortType = storageModule.getSort(manager.initialSort) !== type\n    const currentAsc = storageModule.getSortDirection()\n    let ascending\n    if (skipDirection) {\n        ascending = currentAsc\n    } else {\n        ascending = newSortType ? false : !currentAsc\n    }\n    storageModule.setSort(type)\n    storageModule.setSortDirection(ascending)\n\n    const list = manager.testSubset\n    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)\n    manager.setRender(sortedList)\n}\n\nmodule.exports = {\n    doInitSort,\n    doSort,\n}\n"
+    },
+    {
+      "step": 7,
+      "command": "cat src/pytest_html/scripts/sort.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "   break\n        }\n        manager.setRender(sortedList)\n    }\n}\n\nconst doSort = (type, skipDirection) => {\n    const newSortType = storageModule.getSort(manager.initialSort) !== type\n    const currentAsc = storageModule.getSortDirection()\n    let ascending\n    if (skipDirection) {\n        ascending = currentAsc\n    } else {\n        ascending = newSortType ? false : !currentAsc\n    }\n    storageModule.setSort(type)\n    storageModule.setSortDirection(ascending)\n\n    const list = manager.testSubset\n    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)\n    manager.setRender(sortedList)\n}\n\nmodule.exports = {\n    doInitSort,\n    doSort,\n}\n"
+    },
+    {
+      "step": 12,
+      "command": "cat src/pytest_html/scripts/dom.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": ") => {\n            if (['image', 'video'].includes(format_type)) {\n                media.push({ path: content, name, format_type })\n            }\n\n            if (format_type === 'html') {\n                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)\n            }\n        })\n        mediaViewer.setup(resultBody, media)\n\n        // Add custom html from the pytest_html_results_table_html hook\n        tableHtml?.forEach((item) => {\n            resultBody.querySelector('td[class=\"extra\"]').insertAdjacentHTML('beforeend', item)\n        })\n\n        return resultBody\n    },\n}\n\nmodule.exports = {\n    dom,\n    htmlToElements,\n    find,\n    findAll,\n}\n"
+    },
+    {
+      "step": 13,
+      "command": "cat src/pytest_html/scripts/filter.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "er.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))\n\nconst doInitFilter = () => {\n    const currentFilter = storageModule.getVisible()\n    const filteredSubset = getFilteredSubSet(currentFilter)\n    manager.setRender(filteredSubset)\n}\n\nconst doFilter = (type, show) => {\n    if (show) {\n        storageModule.showCategory(type)\n    } else {\n        storageModule.hideCategory(type)\n    }\n\n    const currentFilter = storageModule.getVisible()\n    const filteredSubset = getFilteredSubSet(currentFilter)\n    manager.setRender(filteredSubset)\n\n    const sortColumn = storageModule.getSort()\n    doSort(sortColumn, true)\n}\n\nmodule.exports = {\n    doFilter,\n    doInitFilter,\n}\n"
+    },
+    {
+      "step": 14,
+      "command": "cat src/pytest_html/scripts/main.js",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "columnType } = element.dataset\n            doSort(columnType)\n            redraw()\n        })\n    })\n\n    document.getElementById('show_all_details').addEventListener('click', () => {\n        manager.allCollapsed = false\n        setCollapsedIds([])\n        redraw()\n    })\n    document.getElementById('hide_all_details').addEventListener('click', () => {\n        manager.allCollapsed = true\n        const allIds = manager.renderData.tests.map((test) => test.id)\n        setCollapsedIds(allIds)\n        redraw()\n    })\n}\n\nconst redraw = () => {\n    const { testSubset } = manager\n\n    renderContent(testSubset)\n    renderDerived()\n}\n\nmodule.exports = {\n    redraw,\n    bindEvents,\n    renderStatic,\n}\n"
+    }
+  ],
+  "final_message": "",
+  "final_message_is_complete": false,
+  "sources": {
+    "result.json": "main_runs/60-pytest-html-npm-B-41/result.json",
+    "final.patch": "main_runs/60-pytest-html-npm-B-41/final.patch",
+    "calls.json": "main_runs/60-pytest-html-npm-B-41/calls.json",
+    "trajectory.json": "main_runs/60-pytest-html-npm-B-41/trajectory.json",
+    "prompt.txt": "main_runs/60-pytest-html-npm-B-41/prompt.txt",
+    "final-source.tar.gz": "main_runs/60-pytest-html-npm-B-41/final-source.tar.gz"
+  }
+}

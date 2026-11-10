@@ -1,0 +1,74 @@
+[
+  {
+    "id": "rtl-data",
+    "repository": "sean-galloway/RTLDesignSherpa-DV",
+    "affected": {
+      "repository": "sean-galloway/RTLDesignSherpa-DV",
+      "sha": "d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d",
+      "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/sean-galloway__RTLDesignSherpa-DV-d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d",
+      "archive_sha256": "972195a970143ed3ae0891094bcfdd35e426f4b4d7c8a252851fcd7453dfa052",
+      "archive_bytes": 1700631
+    },
+    "reference": {
+      "repository": "sean-galloway/RTLDesignSherpa-DV",
+      "sha": "81f6a103149e891ad5ef3b832630aa8275dbfc0f",
+      "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/sean-galloway__RTLDesignSherpa-DV-81f6a103149e891ad5ef3b832630aa8275dbfc0f",
+      "archive_sha256": "8722c0fb75eabc8bae32cda4ead3485adab6cbc21c0cc92b2a5bc78da3795ceb",
+      "archive_bytes": 1701881
+    }
+  },
+  {
+    "id": "l0-module",
+    "repository": "HaxL0p4/L0p4Map",
+    "affected": {
+      "repository": "HaxL0p4/L0p4Map",
+      "sha": "5a1d38753beaa1b031c1828701dd3da5f3fe1350",
+      "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/HaxL0p4__L0p4Map-5a1d38753beaa1b031c1828701dd3da5f3fe1350",
+      "archive_sha256": "3cf6e3726a264518daa4d273234e8f5699d61de794193baaa8efd46fc7a689f0",
+      "archive_bytes": 4658902
+    },
+    "reference": {
+      "repository": "HaxL0p4/L0p4Map",
+      "sha": "1971dacc759d30efc0da8583a584b98fd0fbc355",
+      "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/HaxL0p4__L0p4Map-1971dacc759d30efc0da8583a584b98fd0fbc355",
+      "archive_sha256": "d1b9351f663c56e55c7f757922b48460e389666579e64425df5161620cbf8755",
+      "archive_bytes": 4658911
+    }
+  },
+  {
+    "id": "l0-entry",
+    "repository": "HaxL0p4/L0p4Map",
+    "affected": {
+      "repository": "HaxL0p4/L0p4Map",
+      "sha": "f707984c9f06f1c02d7935915eac2c457a3fa9d8",
+      "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/HaxL0p4__L0p4Map-f707984c9f06f1c02d7935915eac2c457a3fa9d8",
+      "archive_sha256": "264b8feca989ff7d136b731a1cc2dccfa85d51fe5e9523bd9e057224fe110c19",
+      "archive_bytes": 4658894
+    },
+    "reference": {
+      "repository": "HaxL0p4/L0p4Map",
+      "sha": "71e66e6c9cbfe6210be6d7c46a2adaea2f28d0bc",
+      "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/HaxL0p4__L0p4Map-71e66e6c9cbfe6210be6d7c46a2adaea2f28d0bc",
+      "archive_sha256": "ee51dbbc2e1e7d49569807130242c188f69aaa139161f40434b019fbc15dc061",
+      "archive_bytes": 4658884
+    }
+  },
+  {
+    "id": "apotrope-template",
+    "repository": "hexorcist404/apotrope",
+    "affected": {
+      "repository": "hexorcist404/apotrope",
+      "sha": "88a2b5dec4deb4ac6274a8e4ac82df0d8af59992",
+      "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/hexorcist404__apotrope-88a2b5dec4deb4ac6274a8e4ac82df0d8af59992",
+      "archive_sha256": "6d5c821031d34979b57e8f523194d8e1d087263504d0f4e0211cdf1b584aad55",
+      "archive_bytes": 279272
+    },
+    "reference": {
+      "repository": "hexorcist404/apotrope",
+      "sha": "ba414ba04f520e123b25de5e29b7572d4afee4a9",
+      "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/hexorcist404__apotrope-ba414ba04f520e123b25de5e29b7572d4afee4a9",
+      "archive_sha256": "8ad1e4a5c1f916e9b70287fb6472e1d2eb1f8d189ce4a4c1d1ba4185896e14ba",
+      "archive_bytes": 279630
+    }
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-06T19:04:23.857239+00:00",
+  "source_tree_sha256": "f4b030abefdc9189823f6e3a42482b9e4d2b43aabe3afebde6dd91b65a385d8d",
+  "source_archive_sha256": "c6ef18d85e3a27d343bcc7fa07a07dc7281b9aadc94f25923dad51ab12ed9821",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/58-stellium-cache-B-41/grading/stellium-cache/17ce276cd514/candidate/direct-dist/stellium-0.17.0-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/58-stellium-cache-B-41/release-artifacts/82339613375c82ad97e90cd57860acaab2fe676d207a37958ce0dc4a1b592214-stellium-0.17.0-py3-none-any.whl",
+      "sha256": "82339613375c82ad97e90cd57860acaab2fe676d207a37958ce0dc4a1b592214",
+      "bytes": 4414285
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/58-stellium-cache-B-41/grading/stellium-cache/17ce276cd514/candidate/from-sdist/stellium-0.17.0-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/58-stellium-cache-B-41/release-artifacts/72eb6faac32f7c1786a8e98c224c5912c50420c5f0335f2b1e611c1cf0289934-stellium-0.17.0-py3-none-any.whl",
+      "sha256": "72eb6faac32f7c1786a8e98c224c5912c50420c5f0335f2b1e611c1cf0289934",
+      "bytes": 4414285
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/58-stellium-cache-B-41/grading/stellium-cache/17ce276cd514/candidate/sdist/stellium-0.17.0.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/58-stellium-cache-B-41/release-artifacts/4dd5c75f30498501d10ba07902af6f3e18e26b3bf247830093f711e91269fca0-stellium-0.17.0.tar.gz",
+      "sha256": "4dd5c75f30498501d10ba07902af6f3e18e26b3bf247830093f711e91269fca0",
+      "bytes": 8369609
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

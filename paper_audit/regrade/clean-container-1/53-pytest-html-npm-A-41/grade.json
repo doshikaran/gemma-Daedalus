@@ -1,0 +1,98 @@
+{
+  "id": "pytest-html-npm",
+  "arm": "candidate",
+  "run_id": "2a47190b1cac",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": [
+        {
+          "args": [
+            "npm",
+            "ci",
+            "--ignore-scripts",
+            "--no-audit",
+            "--no-fund"
+          ],
+          "returncode": 0,
+          "stdout": "\nadded 443 packages in 3m\n",
+          "stderr": "npm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.\n",
+          "seconds": 8.267592749005416
+        },
+        {
+          "args": [
+            "npm",
+            "run",
+            "build"
+          ],
+          "returncode": 0,
+          "stdout": "\n> build\n> npm run build:css && npm run build:jsapp\n\n\n> build:css\n> sass --no-source-map --no-error-css src/layout/css/style.scss src/pytest_html/resources/style.css\n\n\n> build:jsapp\n> browserify ./src/pytest_html/scripts/index.js > ./src/pytest_html/resources/app.js\n\n",
+          "stderr": "",
+          "seconds": 5.291533077019267
+        }
+      ],
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,pathlib,json\nsys.path[:0]=[sys.argv[1],sys.argv[2]]\nimport pytest,pytest_html\nassert pathlib.Path(pytest_html.__file__).resolve().is_relative_to(pathlib.Path(sys.argv[1]).resolve())\np=pathlib.Path('test_release_fixture.py');p.write_text('def test_audit_release_482():\\n    assert 2+2==4\\n')\ncode=pytest.main(['-p','pytest_metadata.plugin','-p','pytest_html.plugin','--html=report.html','--self-contained-html','test_release_fixture.py','-q'])\nassert code==0\ns=pathlib.Path('report.html').read_text();assert 'test_audit_release_482'in s and '<html'in s.lower()\nprint(json.dumps({'html_report':True,'module_origin':pytest_html.__file__}))\n",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/53-pytest-html-npm-A-41/grading/pytest-html-npm/2a47190b1cac/candidate/repo/src",
+          "/workspace/scratch/93af20bbcd93/packaging_study/runtime/pytesthtml-deps"
+        ],
+        "returncode": 0,
+        "stdout": ".                                                                        [100%]\n- Generated html report: file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/53-pytest-html-npm-A-41/grading/pytest-html-npm/2a47190b1cac/candidate/consumer-source/report.html -\n1 passed in 0.01s\n{\"html_report\": true, \"module_origin\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/53-pytest-html-npm-A-41/grading/pytest-html-npm/2a47190b1cac/candidate/repo/src/pytest_html/__init__.py\"}\n",
+        "stderr": "",
+        "seconds": 0.4280404279998038
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/53-pytest-html-npm-A-41/grading/pytest-html-npm/2a47190b1cac/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "warning: Failed to parse `pyproject.toml` during settings discovery:\n  TOML parse error at line 87, column 11\n     |\n  87 | \t\t\"static\": [\"**/*.js\"], \n     |           ^\n  missing comma between array elements, expected `,`\n\nBuilding wheel...\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/53-pytest-html-npm-A-41/grading/pytest-html-npm/2a47190b1cac/candidate/direct-repo`\n  cause: Invalid `pyproject.toml`\n  cause: TOML parse error at line 87, column 11\n            |\n         87 | \t\t\"static\": [\"**/*.js\"], \n            |           ^\n         missing comma between array elements, expected `,`\n",
+        "seconds": 0.13006681099068373
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/53-pytest-html-npm-A-41/grading/pytest-html-npm/2a47190b1cac/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "warning: Failed to parse `pyproject.toml` during settings discovery:\n  TOML parse error at line 87, column 11\n     |\n  87 | \t\t\"static\": [\"**/*.js\"], \n     |           ^\n  missing comma between array elements, expected `,`\n\nBuilding source distribution...\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/53-pytest-html-npm-A-41/grading/pytest-html-npm/2a47190b1cac/candidate/release-repo`\n  cause: Invalid `pyproject.toml`\n  cause: TOML parse error at line 87, column 11\n            |\n         87 | \t\t\"static\": [\"**/*.js\"], \n            |           ^\n         missing comma between array elements, expected `,`\n",
+        "seconds": 0.12405162397772074
+      },
+      "pass": false
+    }
+  ]
+}

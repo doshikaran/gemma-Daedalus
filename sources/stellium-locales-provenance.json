@@ -1,0 +1,18 @@
+{
+  "id": "stellium-locales",
+  "repository": "katelouie/stellium",
+  "affected": {
+    "repository": "katelouie/stellium",
+    "sha": "03c4abbad1a8614c30916d1a454b43ab921a05b9",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/katelouie__stellium-03c4abbad1a8614c30916d1a454b43ab921a05b9",
+    "archive_sha256": "2dd763af49cd308e4730e12ba759e6af85ddc6ff1607b7dc41b800d04856a18d",
+    "archive_bytes": 29064541
+  },
+  "reference": {
+    "repository": "katelouie/stellium",
+    "sha": "0ddb421bbb45a96bf38508c0085a4af8aee2bd40",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/katelouie__stellium-0ddb421bbb45a96bf38508c0085a4af8aee2bd40",
+    "archive_sha256": "afff0086a0866cb8444794ad73256cc29a71be25ab67feb2f3c2e59137566cd2",
+    "archive_bytes": 29069332
+  }
+}

@@ -1,0 +1,578 @@
+[
+ {
+  "episode_id": "00-pyfiglet-154-A-19",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 4705,
+  "model_seconds": 684.7,
+  "tokens_per_model_second": 6.87,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "01-rtl-data-B-19",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 5777,
+  "model_seconds": 597.5,
+  "tokens_per_model_second": 9.67,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "02-apotrope-template-A-19",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 3782,
+  "model_seconds": 336.6,
+  "tokens_per_model_second": 11.24,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "03-stellium-locales-A-19",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 3822,
+  "model_seconds": 324.3,
+  "tokens_per_model_second": 11.78,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "04-stellium-glyphs-A-41",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 5221,
+  "model_seconds": 715.3,
+  "tokens_per_model_second": 7.3,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "05-pynecore-data-A-23",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 5409,
+  "model_seconds": 642.5,
+  "tokens_per_model_second": 8.42,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "06-rtl-data-B-23",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 7614,
+  "model_seconds": 840.9,
+  "tokens_per_model_second": 9.05,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "07-pytest-html-npm-A-23",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 4164,
+  "model_seconds": 394.5,
+  "tokens_per_model_second": 10.56,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "08-pixcull-sdist-A-41",
+  "power": "AC_at_launch_unmonitored",
+  "generated_tokens": 2776,
+  "model_seconds": 273.1,
+  "tokens_per_model_second": 10.17,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "09-tox-sdist-A-41",
+  "power": "AC_observed",
+  "generated_tokens": 4501,
+  "model_seconds": 314.4,
+  "tokens_per_model_second": 14.31,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "10-rtl-data-A-41",
+  "power": "AC_observed",
+  "generated_tokens": 2524,
+  "model_seconds": 357.4,
+  "tokens_per_model_second": 7.06,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "11-pytest-html-npm-B-19",
+  "power": "AC_observed",
+  "generated_tokens": 5013,
+  "model_seconds": 519.6,
+  "tokens_per_model_second": 9.65,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "12-s3-template-B-19",
+  "power": "AC_observed",
+  "generated_tokens": 8192,
+  "model_seconds": 731.6,
+  "tokens_per_model_second": 11.2,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "13-pynecore-data-B-41",
+  "power": "AC_observed",
+  "generated_tokens": 2946,
+  "model_seconds": 215.3,
+  "tokens_per_model_second": 13.69,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "14-stellium-locales-A-41",
+  "power": "AC_observed",
+  "generated_tokens": 1762,
+  "model_seconds": 200.9,
+  "tokens_per_model_second": 8.77,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "15-pyfiglet-154-B-41",
+  "power": "AC_observed",
+  "generated_tokens": 6733,
+  "model_seconds": 623.0,
+  "tokens_per_model_second": 10.81,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "16-apotrope-template-B-41",
+  "power": "AC_observed",
+  "generated_tokens": 5310,
+  "model_seconds": 523.5,
+  "tokens_per_model_second": 10.14,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "17-pixcull-sdist-B-19",
+  "power": "AC_observed",
+  "generated_tokens": 8192,
+  "model_seconds": 779.6,
+  "tokens_per_model_second": 10.51,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "18-pixcull-sdist-A-19",
+  "power": "AC_observed",
+  "generated_tokens": 5569,
+  "model_seconds": 389.4,
+  "tokens_per_model_second": 14.3,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "19-tox-sdist-A-19",
+  "power": "AC_observed",
+  "generated_tokens": 3982,
+  "model_seconds": 338.0,
+  "tokens_per_model_second": 11.78,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "20-stellium-locales-B-41",
+  "power": "AC_observed",
+  "generated_tokens": 3725,
+  "model_seconds": 684.0,
+  "tokens_per_model_second": 5.45,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "21-pytest-html-npm-A-19",
+  "power": "AC_observed",
+  "generated_tokens": 3632,
+  "model_seconds": 324.1,
+  "tokens_per_model_second": 11.21,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "22-stellium-glyphs-B-41",
+  "power": "AC_observed",
+  "generated_tokens": 6061,
+  "model_seconds": 789.1,
+  "tokens_per_model_second": 7.68,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "23-stellium-glyphs-B-19",
+  "power": "AC_observed",
+  "generated_tokens": 2703,
+  "model_seconds": 350.6,
+  "tokens_per_model_second": 7.71,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "24-tox-sdist-B-41",
+  "power": "AC_observed",
+  "generated_tokens": 8192,
+  "model_seconds": 907.2,
+  "tokens_per_model_second": 9.03,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "25-pyfiglet-154-B-23",
+  "power": "AC_observed",
+  "generated_tokens": 8036,
+  "model_seconds": 729.2,
+  "tokens_per_model_second": 11.02,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "26-pyfiglet-154-A-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 3501,
+  "model_seconds": 264.4,
+  "tokens_per_model_second": 13.24,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "27-pynecore-data-B-19",
+  "power": "BATTERY_observed",
+  "generated_tokens": 3380,
+  "model_seconds": 306.5,
+  "tokens_per_model_second": 11.03,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "28-s3-template-B-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 8192,
+  "model_seconds": 701.0,
+  "tokens_per_model_second": 11.69,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "29-s3-template-A-41",
+  "power": "BATTERY_observed",
+  "generated_tokens": 2356,
+  "model_seconds": 172.0,
+  "tokens_per_model_second": 13.7,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "30-pixcull-sdist-B-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 8168,
+  "model_seconds": 800.1,
+  "tokens_per_model_second": 10.21,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "31-stellium-locales-A-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 3891,
+  "model_seconds": 478.3,
+  "tokens_per_model_second": 8.14,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "32-pynecore-data-A-41",
+  "power": "BATTERY_observed",
+  "generated_tokens": 3648,
+  "model_seconds": 265.5,
+  "tokens_per_model_second": 13.74,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "33-stellium-cache-B-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 8192,
+  "model_seconds": 767.3,
+  "tokens_per_model_second": 10.68,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "34-l0-module-actual-B-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 5762,
+  "model_seconds": 611.2,
+  "tokens_per_model_second": 9.43,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "35-stellium-cache-A-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 8192,
+  "model_seconds": 980.6,
+  "tokens_per_model_second": 8.35,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "36-apotrope-template-A-41",
+  "power": "BATTERY_observed",
+  "generated_tokens": 4529,
+  "model_seconds": 1177.5,
+  "tokens_per_model_second": 3.85,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "37-apotrope-template-A-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 2099,
+  "model_seconds": 430.8,
+  "tokens_per_model_second": 4.87,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "38-stellium-glyphs-A-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 5595,
+  "model_seconds": 853.6,
+  "tokens_per_model_second": 6.55,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "39-pyfiglet-154-B-19",
+  "power": "BATTERY_observed",
+  "generated_tokens": 3752,
+  "model_seconds": 698.3,
+  "tokens_per_model_second": 5.37,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "40-apotrope-template-B-19",
+  "power": "BATTERY_observed",
+  "generated_tokens": 2130,
+  "model_seconds": 341.0,
+  "tokens_per_model_second": 6.25,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "41-stellium-locales-B-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 6712,
+  "model_seconds": 850.9,
+  "tokens_per_model_second": 7.89,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "42-stellium-glyphs-B-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 3605,
+  "model_seconds": 611.5,
+  "tokens_per_model_second": 5.9,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "43-s3-template-B-41",
+  "power": "BATTERY_observed",
+  "generated_tokens": 7441,
+  "model_seconds": 1089.1,
+  "tokens_per_model_second": 6.83,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "44-stellium-cache-B-19",
+  "power": "BATTERY_observed",
+  "generated_tokens": 6240,
+  "model_seconds": 1065.3,
+  "tokens_per_model_second": 5.86,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "45-stellium-cache-A-19",
+  "power": "BATTERY_observed",
+  "generated_tokens": 6828,
+  "model_seconds": 1191.6,
+  "tokens_per_model_second": 5.73,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "46-s3-template-A-19",
+  "power": "BATTERY_observed",
+  "generated_tokens": 8192,
+  "model_seconds": 1094.7,
+  "tokens_per_model_second": 7.48,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "47-pynecore-data-A-19",
+  "power": "BATTERY_observed",
+  "generated_tokens": 2749,
+  "model_seconds": 352.2,
+  "tokens_per_model_second": 7.8,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "48-tox-sdist-A-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 3882,
+  "model_seconds": 549.2,
+  "tokens_per_model_second": 7.07,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "49-rtl-data-A-23",
+  "power": "BATTERY_observed",
+  "generated_tokens": 5810,
+  "model_seconds": 1188.0,
+  "tokens_per_model_second": 4.89,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "50-apotrope-template-B-23",
+  "power": "AC_guarded_amendment_1_4",
+  "generated_tokens": 2498,
+  "model_seconds": 353.3,
+  "tokens_per_model_second": 7.07,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "51-rtl-data-A-19",
+  "power": "AC_guarded_amendment_1_4",
+  "generated_tokens": 3112,
+  "model_seconds": 472.7,
+  "tokens_per_model_second": 6.58,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "52-stellium-locales-B-19",
+  "power": "AC_guarded_amendment_1_4",
+  "generated_tokens": 6108,
+  "model_seconds": 728.9,
+  "tokens_per_model_second": 8.38,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "53-pytest-html-npm-A-41",
+  "power": "BATTERY_observed_amendment_1_6",
+  "generated_tokens": 8192,
+  "model_seconds": 827.5,
+  "tokens_per_model_second": 9.9,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "54-s3-template-A-23",
+  "power": "BATTERY_observed_amendment_1_6",
+  "generated_tokens": 5097,
+  "model_seconds": 517.5,
+  "tokens_per_model_second": 9.85,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "55-pixcull-sdist-A-23",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 5747,
+  "model_seconds": 791.3,
+  "tokens_per_model_second": 7.26,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "56-tox-sdist-B-19",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 6256,
+  "model_seconds": 829.6,
+  "tokens_per_model_second": 7.54,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "57-tox-sdist-B-23",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 4228,
+  "model_seconds": 889.1,
+  "tokens_per_model_second": 4.76,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "58-stellium-cache-B-41",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 2348,
+  "model_seconds": 251.0,
+  "tokens_per_model_second": 9.35,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "59-pytest-html-npm-B-23",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 3623,
+  "model_seconds": 388.0,
+  "tokens_per_model_second": 9.34,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "60-pytest-html-npm-B-41",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 7523,
+  "model_seconds": 1093.7,
+  "tokens_per_model_second": 6.88,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "61-l0-module-actual-B-19",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 4728,
+  "model_seconds": 1006.5,
+  "tokens_per_model_second": 4.7,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "62-l0-module-actual-A-41",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 8192,
+  "model_seconds": 1003.6,
+  "tokens_per_model_second": 8.16,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "63-stellium-glyphs-A-19",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 2040,
+  "model_seconds": 313.8,
+  "tokens_per_model_second": 6.5,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "64-pixcull-sdist-B-41",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 2018,
+  "model_seconds": 416.9,
+  "tokens_per_model_second": 4.84,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "65-pynecore-data-B-23",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 6114,
+  "model_seconds": 892.5,
+  "tokens_per_model_second": 6.85,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "66-l0-module-actual-A-19",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 2696,
+  "model_seconds": 286.5,
+  "tokens_per_model_second": 9.41,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "67-rtl-data-B-41",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 3466,
+  "model_seconds": 362.9,
+  "tokens_per_model_second": 9.55,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "68-l0-module-actual-A-23",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 2065,
+  "model_seconds": 205.5,
+  "tokens_per_model_second": 10.05,
+  "stop": "completion_claim"
+ },
+ {
+  "episode_id": "69-stellium-cache-A-41",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 8192,
+  "model_seconds": 794.9,
+  "tokens_per_model_second": 10.31,
+  "stop": "budget"
+ },
+ {
+  "episode_id": "70-pyfiglet-154-A-41",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 6136,
+  "model_seconds": 812.2,
+  "tokens_per_model_second": 7.56,
+  "stop": "action_limit"
+ },
+ {
+  "episode_id": "71-l0-module-actual-B-41",
+  "power": "AC_observed_at_checks",
+  "generated_tokens": 4882,
+  "model_seconds": 557.0,
+  "tokens_per_model_second": 8.76,
+  "stop": "completion_claim"
+ }
+]

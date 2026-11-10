@@ -1,0 +1,51 @@
+{"id": "pyfiglet-154", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "00-pyfiglet-154-A-19", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-03T18:13:39.123022+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "01-rtl-data-B-19", "contract_pass": false, "stop": "action_limit", "timestamp": "2026-11-03T18:23:57.138280+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{"id": "apotrope-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "02-apotrope-template-A-19", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-03T18:29:42.425776+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "03-stellium-locales-A-19", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-03T18:35:29.688896+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "04-stellium-glyphs-A-41", "contract_pass": false, "stop": "action_limit", "timestamp": "2026-11-03T18:47:50.560675+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{"id": "pynecore-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "05-pynecore-data-A-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-03T18:59:02.102018+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "06-rtl-data-B-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-03T19:13:18.198289+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "07-pytest-html-npm-A-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-03T19:21:19.813154+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{"id": "pixcull-sdist", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "08-pixcull-sdist-A-41", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-03T19:26:18.086788+00:00"}
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'Daedalus_Experiment/CONTENTS_SHA256.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+Traceback (most recent call last):
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/run_batch_native.py", line 81, in <module>
+    main()
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/run_batch_native.py", line 77, in main
+    run_batch.main()
+  File "/workspace/scratch/93af20bbcd93/packaging_study/run_batch.py", line 164, in main
+    result=episode(row,next(t for t in tasks if t['id']==row['task']),protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/93af20bbcd93/packaging_study/run_study.py", line 231, in episode
+    prepare(repo, task['id'])
+  File "/workspace/scratch/93af20bbcd93/packaging_study/run_study.py", line 177, in prepare
+    raise RuntimeError('tox version preparation failed: ' + json.dumps(result))
+RuntimeError: tox version preparation failed: {"args": ["uv", "build", "--python", "/usr/local/bin/python3", "--wheel", "--out-dir", "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/09-tox-sdist-A-41/repo/.agent-source-preparation", "--build-constraints", "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt", "--cache-dir", "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"], "returncode": 2, "stdout": "", "stderr": "Building wheel...\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/main_runs/09-tox-sdist-A-41/repo`\n  cause: Failed to resolve requirements from `build-system.requires`\n  cause: No solution found when resolving: `docutils>=0.21`, `hatch-vcs>=0.5`, `hatchling>=1.29`\n  cause: Because you require hatchling>=1.29 and hatchling==1.27.0, we can conclude that your requirements are unsatisfiable.\n", "seconds": 0.22271071800059872}

@@ -1,0 +1,16 @@
+{"id": "apotrope-template", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "50-apotrope-template-B-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T12:36:40.255715+00:00"}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "51-rtl-data-A-19", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T12:44:56.737757+00:00"}
+{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"completed_episode": "52-stellium-locales-B-19", "contract_pass": false, "stop": "action_limit", "timestamp": "2026-11-05T12:57:42.726595+00:00"}
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"completed_episode": "53-pytest-html-npm-A-41", "contract_pass": false, "stop": "infrastructure_error", "timestamp": "2026-11-05T13:05:19.860671+00:00"}
+Traceback (most recent call last):
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.4/run_batch_native_1_4.py", line 82, in <module>
+    main()
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.4/run_batch_native_1_4.py", line 78, in main
+    run_batch.main()
+  File "/workspace/scratch/93af20bbcd93/packaging_study/run_batch.py", line 168, in main
+    raise RuntimeError('Infrastructure outcome retained; review required before continuing')
+RuntimeError: Infrastructure outcome retained; review required before continuing

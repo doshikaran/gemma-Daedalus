@@ -1,0 +1,9 @@
+diff --git a/src/pynecore/types/series.py b/src/pynecore/types/series.py
+index 1e455c2..d2fc088 100644
+--- a/src/pynecore/types/series.py
++++ b/src/pynecore/types/series.py
+@@ -1,3 +1,4 @@
++from pynecore.core.series import SeriesImpl
+ from __future__ import annotations
+ from typing import TypeVar, Generic
+ 

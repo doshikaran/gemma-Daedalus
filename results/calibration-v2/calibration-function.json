@@ -1,0 +1,134 @@
+{
+  "case": "function",
+  "synthetic_calibration_only": true,
+  "calls": [
+    {
+      "step": 0,
+      "response": {
+        "content": "```bash\ncat app.py\n```",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 141,
+          "prompt_tokens": 141,
+          "total_tokens": 282,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "seconds": 9.23387851199982
+      },
+      "command_result": {
+        "returncode": 0,
+        "stdout": "def add_one(n):\n    return n\n",
+        "stderr": ""
+      }
+    },
+    {
+      "step": 1,
+      "response": {
+        "content": "```bash\ndef add_one(n):\n    return n + 1\n```",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 151,
+          "prompt_tokens": 192,
+          "total_tokens": 343,
+          "prompt_tokens_details": {
+            "cached_tokens": 136
+          }
+        },
+        "seconds": 8.320291709999992
+      },
+      "command_result": {
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "/bin/sh: 1: Syntax error: \"(\" unexpected\n"
+      }
+    },
+    {
+      "step": 2,
+      "response": {
+        "content": "```bash\necho \"def add_one(n):\\n    return n + 1\" > app.py\npython3 check.py\n```",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 164,
+          "prompt_tokens": 256,
+          "total_tokens": 420,
+          "prompt_tokens_details": {
+            "cached_tokens": 187
+          }
+        },
+        "seconds": 9.861822623999842
+      },
+      "command_result": {
+        "returncode": 0,
+        "stdout": "PASS\n",
+        "stderr": ""
+      }
+    },
+    {
+      "step": 3,
+      "response": {
+        "content": "```bash\ncat app.py\n```",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 141,
+          "prompt_tokens": 320,
+          "total_tokens": 461,
+          "prompt_tokens_details": {
+            "cached_tokens": 251
+          }
+        },
+        "seconds": 8.951949080999839
+      },
+      "command_result": {
+        "returncode": 0,
+        "stdout": "def add_one(n):\n    return n + 1\n",
+        "stderr": ""
+      }
+    },
+    {
+      "step": 4,
+      "response": {
+        "content": "```bash\necho \"def add_one(n):\\n    return n + 1\" > app.py\npython3 check.py\n```",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 164,
+          "prompt_tokens": 374,
+          "total_tokens": 538,
+          "prompt_tokens_details": {
+            "cached_tokens": 315
+          }
+        },
+        "seconds": 9.220832773999973
+      },
+      "command_result": {
+        "returncode": 0,
+        "stdout": "PASS\n",
+        "stderr": ""
+      }
+    },
+    {
+      "step": 5,
+      "response": {
+        "content": "COMPLETE",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 133,
+          "prompt_tokens": 438,
+          "total_tokens": 571,
+          "prompt_tokens_details": {
+            "cached_tokens": 369
+          }
+        },
+        "seconds": 7.322272620999911
+      }
+    }
+  ],
+  "check_unchanged": true,
+  "final_check": {
+    "returncode": 0,
+    "stdout": "PASS\n",
+    "stderr": ""
+  },
+  "pass": true
+}

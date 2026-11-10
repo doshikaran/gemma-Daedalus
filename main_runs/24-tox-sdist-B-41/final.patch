@@ -1,0 +1,20 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index a64c721..0ec8ce2 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -251,6 +251,8 @@ html.show_contexts = true
+ html.skip_covered = false
+ 
+ [tool.towncrier]
++[tool.hatch.build.targets.wheel]
++include = ["docs"]
+ name = "tox"
+ filename = "docs/changelog.rst"
+ directory = "docs/changelog"
+@@ -271,3 +273,6 @@ type = [
+ [tool.ty]
+ environment.python-version = "3.14"
+ src.exclude = []
++
++[tool.hatch.build.targets.wheel]
++include = ["docs"]

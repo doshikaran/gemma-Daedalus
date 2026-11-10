@@ -1,0 +1,40 @@
+53:{"id": "stellium-cache", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+54:{"completed_episode": "35-stellium-cache-A-23", "contract_pass": false, "stop": "budget", "timestamp": "2026-11-05T03:17:52.615594+00:00"}
+55:{"id": "apotrope-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+56:{"completed_episode": "36-apotrope-template-A-41", "contract_pass": false, "stop": "budget", "timestamp": "2026-11-05T03:38:09.081774+00:00"}
+57:{"id": "apotrope-template", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+58:{"completed_episode": "37-apotrope-template-A-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T03:45:42.803089+00:00"}
+59:{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+60:{"completed_episode": "38-stellium-glyphs-A-23", "contract_pass": false, "stop": "action_limit", "timestamp": "2026-11-05T04:01:17.670447+00:00"}
+61:{"id": "pyfiglet-154", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+62:{"completed_episode": "39-pyfiglet-154-B-19", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T04:13:55.570741+00:00"}
+63:{"id": "apotrope-template", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+64:{"completed_episode": "40-apotrope-template-B-19", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T04:19:54.786572+00:00"}
+65:{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+66:{"completed_episode": "41-stellium-locales-B-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T04:34:59.205321+00:00"}
+67:{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+68:{"completed_episode": "42-stellium-glyphs-B-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T04:45:53.862834+00:00"}
+69:{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+70:{"completed_episode": "43-s3-template-B-41", "contract_pass": false, "stop": "budget", "timestamp": "2026-11-05T05:06:15.933551+00:00"}
+71:{"id": "stellium-cache", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+72:{"completed_episode": "44-stellium-cache-B-19", "contract_pass": false, "stop": "budget", "timestamp": "2026-11-05T05:26:48.732643+00:00"}
+73:{"id": "stellium-cache", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+74:{"completed_episode": "45-stellium-cache-A-19", "contract_pass": false, "stop": "budget", "timestamp": "2026-11-05T05:47:23.602892+00:00"}
+75:{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+76:{"completed_episode": "46-s3-template-A-19", "contract_pass": false, "stop": "budget", "timestamp": "2026-11-05T06:05:57.655476+00:00"}
+77:{"id": "pynecore-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+78:{"completed_episode": "47-pynecore-data-A-19", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T06:12:18.272334+00:00"}
+79:{"id": "tox-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+80:{"completed_episode": "48-tox-sdist-A-23", "contract_pass": false, "stop": "completion_claim", "timestamp": "2026-11-05T06:21:55.490892+00:00"}
+81:{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+82:{"completed_episode": "49-rtl-data-A-23", "contract_pass": false, "stop": "budget", "timestamp": "2026-11-05T06:42:26.646519+00:00"}
+83:{"id": "apotrope-template", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+84:{"completed_episode": "50-apotrope-template-B-23", "contract_pass": false, "stop": "infrastructure_error", "timestamp": "2026-11-05T11:48:50.313655+00:00"}
+85:Traceback (most recent call last):
+86:  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.3/run_batch_native_1_3.py", line 125, in <module>
+87:    main()
+88:  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.3/run_batch_native_1_3.py", line 121, in main
+89:    run_batch.main()
+90:  File "/workspace/scratch/93af20bbcd93/packaging_study/run_batch.py", line 168, in main
+91:    raise RuntimeError('Infrastructure outcome retained; review required before continuing')
+92:RuntimeError: Infrastructure outcome retained; review required before continuing

@@ -1,0 +1,18 @@
+{
+  "id": "pytest-html-npm",
+  "repository": "pytest-dev/pytest-html",
+  "affected": {
+    "repository": "pytest-dev/pytest-html",
+    "sha": "e4070567db8baed0a33d12b8deca78b0015e2f1d",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/pytest-dev__pytest-html-e4070567db8baed0a33d12b8deca78b0015e2f1d",
+    "archive_sha256": "7e00bc03c7becd35e1128ef9c8d668dc12500a1e311eb3f1302560a21aebba2a",
+    "archive_bytes": 149831
+  },
+  "reference": {
+    "repository": "pytest-dev/pytest-html",
+    "sha": "f6d34545f9a8457f1d362268dd0ba8b47b8f6666",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/pytest-dev__pytest-html-f6d34545f9a8457f1d362268dd0ba8b47b8f6666",
+    "archive_sha256": "d17382d20fba3c0fe6e203c2ddc72d9f49018841f67f4addf2501259636ab317",
+    "archive_bytes": 149919
+  }
+}

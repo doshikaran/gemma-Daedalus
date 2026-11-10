@@ -1,0 +1,11 @@
+build_wheel	rc=0	removing build/bdist.linux-x86_64/wheel Successfully built dist/cocotb_framework-0.6.2-py3-none-any.whl 
+pip_on_path	rc=127	/usr/bin/bash: line 1: pip: command not found 
+python_m_pip_install	rc=1	note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packag
+uv_pip_system	rc=2	 hint: Consider creating a virtual environment, e.g., with `uv venv` 
+uv_venv_activate	rc=2	 hint: Consider creating a virtual environment, e.g., with `uv venv` 
+uv_pip_target	rc=0	Installed 1 package in 77ms  + cocotb-framework==0.6.2 (from file:///tmp/install-affordance/repo/dist/cocotb_framework-0.6.2-py3-none-any.whl) 
+uv_venv_python_flag	rc=0	Installed 1 package in 88ms  + cocotb-framework==0.6.2 (from file:///tmp/install-affordance/repo/dist/cocotb_framework-0.6.2-py3-none-any.whl) 
+consumer_from_target	rc=1	    from rich.console import Console ModuleNotFoundError: No module named 'rich' 
+
+# consumer_from_target above used python3 -I, which ignores PYTHONPATH (probe bug). Corrected run (same container, same agent env, cwd /tmp):
+consumer_from_target_corrected	rc=0	/tmp/install-affordance/t/CocoTBFramework/components/dfi/jedec_timings.py 1.25

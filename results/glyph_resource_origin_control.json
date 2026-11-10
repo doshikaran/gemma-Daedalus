@@ -1,0 +1,30 @@
+[
+  {
+    "label": "source-root",
+    "cwd": "/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/affected/repo",
+    "returncode": 0,
+    "stdout": "{\"svg_glyphs\": [\"Pholus\", \"Eris\"]}\n{\"resource_open_paths\": [\"/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/affected/repo/assets/glyphs/pholus.svg\", \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/affected/repo/assets/glyphs/eris.svg\"]}\n{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/affected/repo/src/stellium/__init__.py\"}}\n",
+    "stderr": ""
+  },
+  {
+    "label": "wheel-outside",
+    "cwd": "/workspace/scratch/93af20bbcd93/packaging_study/artifacts",
+    "returncode": 1,
+    "stdout": "{\"resource_open_paths\": []}\n{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/affected/wheel-installed/stellium/__init__.py\"}}\n",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 14, in <module>\nAssertionError: ('Pholus', 'unicode')\n"
+  },
+  {
+    "label": "wheel-source-root",
+    "cwd": "/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/affected/repo",
+    "returncode": 1,
+    "stdout": "{\"resource_open_paths\": []}\n{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/affected/wheel-installed/stellium/__init__.py\"}}\n",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 14, in <module>\nAssertionError: ('Pholus', 'unicode')\n"
+  },
+  {
+    "label": "reference-wheel-outside",
+    "cwd": "/workspace/scratch/93af20bbcd93/packaging_study/artifacts",
+    "returncode": 0,
+    "stdout": "{\"svg_glyphs\": [\"Pholus\", \"Eris\"]}\n{\"resource_open_paths\": [\"/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/reference/wheel-installed/stellium/data/glyphs/pholus.svg\", \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/reference/wheel-installed/stellium/data/glyphs/eris.svg\"]}\n{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/stellium-glyphs/c2c2778bce14/reference/wheel-installed/stellium/__init__.py\"}}\n",
+    "stderr": ""
+  }
+]

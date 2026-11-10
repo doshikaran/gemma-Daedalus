@@ -1,0 +1,13 @@
+id,repository,stratum,affected_source,affected_wheel,affected_sdist_wheel,reference_all,run_id
+rtl-data,sean-galloway/RTLDesignSherpa-DV,gap,True,False,False,True,36e8745ab34f
+l0-module-actual,HaxL0p4/L0p4Map,gap,True,False,False,True,e0ced5e39d56
+pyfiglet-154,pwaller/pyfiglet,gap,True,False,False,True,0df384803204
+apotrope-template,hexorcist404/apotrope,gap,True,False,False,True,6cdcf6df343c
+pynecore-data,PyneSys/pynecore,gap,True,False,False,True,2255d449477a
+pixcull-sdist,ChrisChen667788/pixcull,gap,True,True,False,True,72eecdff57aa
+stellium-locales,katelouie/stellium,gap,True,False,False,True,879718f64038
+stellium-glyphs,katelouie/stellium,gap,True,False,False,True,aa3de585a039
+stellium-cache,katelouie/stellium,gap,True,False,False,True,3ac188d4d22d
+tox-sdist,tox-dev/tox,gap,True,True,False,True,f1a9d6fd3331
+pytest-html-npm,pytest-dev/pytest-html,gap,True,True,False,True,8bd7fad59b15
+s3-template,TocConsulting/s3-security-scanner,source-failing-control,False,False,False,True,26c77dbed3ee

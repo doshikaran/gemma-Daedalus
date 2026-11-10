@@ -1,0 +1,202 @@
+{
+  "label": "offline-final-container",
+  "offline": true,
+  "started_utc": "2026-11-02T17:11:57.811770+00:00",
+  "finished_utc": "2026-11-02T17:15:07.423328+00:00",
+  "model_calls": 0,
+  "rows": [
+    {
+      "task": "rtl-data",
+      "arm": "affected",
+      "run_id": "b8508f525c5e",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "rtl-data",
+      "arm": "reference",
+      "run_id": "b8508f525c5e",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "l0-module-actual",
+      "arm": "affected",
+      "run_id": "17db35ae0c1c",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "l0-module-actual",
+      "arm": "reference",
+      "run_id": "17db35ae0c1c",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "pyfiglet-154",
+      "arm": "affected",
+      "run_id": "ed8a52b37df8",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "pyfiglet-154",
+      "arm": "reference",
+      "run_id": "ed8a52b37df8",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "apotrope-template",
+      "arm": "affected",
+      "run_id": "463e6d769393",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "apotrope-template",
+      "arm": "reference",
+      "run_id": "463e6d769393",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "pynecore-data",
+      "arm": "affected",
+      "run_id": "9e17f7f86652",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "pynecore-data",
+      "arm": "reference",
+      "run_id": "9e17f7f86652",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "pixcull-sdist",
+      "arm": "affected",
+      "run_id": "baf8d1b46fac",
+      "expected": "PPF",
+      "observed": "PPF",
+      "match": true
+    },
+    {
+      "task": "pixcull-sdist",
+      "arm": "reference",
+      "run_id": "baf8d1b46fac",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "stellium-locales",
+      "arm": "affected",
+      "run_id": "aebe4b4fa28c",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "stellium-locales",
+      "arm": "reference",
+      "run_id": "aebe4b4fa28c",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "stellium-glyphs",
+      "arm": "affected",
+      "run_id": "5f80615aab72",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "stellium-glyphs",
+      "arm": "reference",
+      "run_id": "5f80615aab72",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "stellium-cache",
+      "arm": "affected",
+      "run_id": "7561b37d2201",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "stellium-cache",
+      "arm": "reference",
+      "run_id": "7561b37d2201",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "tox-sdist",
+      "arm": "affected",
+      "run_id": "3d7cbe5ba7f2",
+      "expected": "PPF",
+      "observed": "PPF",
+      "match": true
+    },
+    {
+      "task": "tox-sdist",
+      "arm": "reference",
+      "run_id": "3d7cbe5ba7f2",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "pytest-html-npm",
+      "arm": "affected",
+      "run_id": "563874386ba1",
+      "expected": "PPF",
+      "observed": "PPF",
+      "match": true
+    },
+    {
+      "task": "pytest-html-npm",
+      "arm": "reference",
+      "run_id": "563874386ba1",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "s3-template",
+      "arm": "affected",
+      "run_id": "0be93d611893",
+      "expected": "FFF",
+      "observed": "FFF",
+      "match": true
+    },
+    {
+      "task": "s3-template",
+      "arm": "reference",
+      "run_id": "0be93d611893",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    }
+  ],
+  "all_match": true
+}

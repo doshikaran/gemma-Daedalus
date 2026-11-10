@@ -1,0 +1,18 @@
+{
+  "id": "pynecore-data",
+  "repository": "PyneSys/pynecore",
+  "affected": {
+    "repository": "PyneSys/pynecore",
+    "sha": "33639652d135083a182d1b195dc2411c25565ff6",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/PyneSys__pynecore-33639652d135083a182d1b195dc2411c25565ff6",
+    "archive_sha256": "5060ece3039dd5b3d9e6e338e40a97d3792cf537ef4226a7335f532fb5d5dae1",
+    "archive_bytes": 6874246
+  },
+  "reference": {
+    "repository": "PyneSys/pynecore",
+    "sha": "731d84b193df2a4c75e018c9f779d11eb3dd6594",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/PyneSys__pynecore-731d84b193df2a4c75e018c9f779d11eb3dd6594",
+    "archive_sha256": "83f12d76c75a3d6b5df0a07bcd4f149274e80bc1674ef9b07e616dfdc8e99351",
+    "archive_bytes": 6873806
+  }
+}

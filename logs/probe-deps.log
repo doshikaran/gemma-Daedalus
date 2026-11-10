@@ -1,0 +1,30 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+Resolved 15 packages in 16.10s
+Downloading pygments (1.2MiB)
+ Downloaded pygments
+Downloading cocotb (4.3MiB)
+Downloading scapy (2.6MiB)
+Downloading numpy (15.9MiB)
+ Downloaded scapy
+ Downloaded cocotb
+ Downloaded numpy
+Prepared 15 packages in 592ms
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 15 packages in 326ms
+ + cocotb==2.0.1
+ + cocotb-bus==0.3.0
+ + cocotb-coverage==2.0
+ + find-libpython==0.5.1
+ + jinja2==3.1.6
+ + markdown-it-py==4.2.0
+ + markupsafe==3.0.4
+ + mdurl==0.1.2
+ + numpy==2.3.4
+ + psutil==7.1.3
+ + pygments==2.21.0
+ + python-constraint==1.3.1
+ + pyyaml==6.0.3
+ + rich==14.2.0
+ + scapy==2.8.0

@@ -1,0 +1,202 @@
+{
+  "label": "online-warm-2",
+  "offline": false,
+  "started_utc": "2026-11-02T15:22:17.019994+00:00",
+  "finished_utc": "2026-11-02T15:25:56.817800+00:00",
+  "model_calls": 0,
+  "rows": [
+    {
+      "task": "rtl-data",
+      "arm": "affected",
+      "run_id": "6fc951a2d0f6",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "rtl-data",
+      "arm": "reference",
+      "run_id": "6fc951a2d0f6",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "l0-module-actual",
+      "arm": "affected",
+      "run_id": "b45641ac8912",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "l0-module-actual",
+      "arm": "reference",
+      "run_id": "b45641ac8912",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "pyfiglet-154",
+      "arm": "affected",
+      "run_id": "ce166bd67cae",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "pyfiglet-154",
+      "arm": "reference",
+      "run_id": "ce166bd67cae",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "apotrope-template",
+      "arm": "affected",
+      "run_id": "2fdfe5dcff3c",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "apotrope-template",
+      "arm": "reference",
+      "run_id": "2fdfe5dcff3c",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "pynecore-data",
+      "arm": "affected",
+      "run_id": "55737634ec84",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "pynecore-data",
+      "arm": "reference",
+      "run_id": "55737634ec84",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "pixcull-sdist",
+      "arm": "affected",
+      "run_id": "16b993650f43",
+      "expected": "PPF",
+      "observed": "PPF",
+      "match": true
+    },
+    {
+      "task": "pixcull-sdist",
+      "arm": "reference",
+      "run_id": "16b993650f43",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "stellium-locales",
+      "arm": "affected",
+      "run_id": "95fcb95e3d63",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "stellium-locales",
+      "arm": "reference",
+      "run_id": "95fcb95e3d63",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "stellium-glyphs",
+      "arm": "affected",
+      "run_id": "770db28bef3a",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "stellium-glyphs",
+      "arm": "reference",
+      "run_id": "770db28bef3a",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "stellium-cache",
+      "arm": "affected",
+      "run_id": "3ea397954b62",
+      "expected": "PFF",
+      "observed": "PFF",
+      "match": true
+    },
+    {
+      "task": "stellium-cache",
+      "arm": "reference",
+      "run_id": "3ea397954b62",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "tox-sdist",
+      "arm": "affected",
+      "run_id": "1a4980f739be",
+      "expected": "PPF",
+      "observed": "PPF",
+      "match": true
+    },
+    {
+      "task": "tox-sdist",
+      "arm": "reference",
+      "run_id": "1a4980f739be",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "pytest-html-npm",
+      "arm": "affected",
+      "run_id": "9adc3bee5c44",
+      "expected": "PPF",
+      "observed": "PPF",
+      "match": true
+    },
+    {
+      "task": "pytest-html-npm",
+      "arm": "reference",
+      "run_id": "9adc3bee5c44",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    },
+    {
+      "task": "s3-template",
+      "arm": "affected",
+      "run_id": "ba95d000c23a",
+      "expected": "FFF",
+      "observed": "FFF",
+      "match": true
+    },
+    {
+      "task": "s3-template",
+      "arm": "reference",
+      "run_id": "ba95d000c23a",
+      "expected": "PPP",
+      "observed": "PPP",
+      "match": true
+    }
+  ],
+  "all_match": true
+}

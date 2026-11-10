@@ -1,0 +1,21 @@
+{
+  "incident": "infrastructure (host hibernation during a model request)",
+  "episode": "50-apotrope-template-B-23",
+  "task": "apotrope-template",
+  "condition": "B",
+  "seed": 23,
+  "order": 50,
+  "occurred_utc": "2026-11-05T06:57:26+00:00 (host entered 'Low Power Sleep' at 1% battery); host woke from hibernate 2026-11-05T11:46:05+00:00 on AC attach",
+  "stage": "interact(): model request for step 10 in flight when the host hibernated; failed with TimeoutError after wake",
+  "model_calls_completed": 10,
+  "generated_tokens": 3301,
+  "interaction_wall_seconds_recorded": 1052.051258432999,
+  "error": "TimeoutError('timed out')",
+  "stop": "infrastructure_error",
+  "controller_action": "run_batch.main raised 'Infrastructure outcome retained; review required before continuing' and paused at 2026-11-05T11:48:51Z (frozen behaviour).",
+  "grade_exists": true,
+  "root_cause": "Host on battery since 2026-11-04T18:45Z; the amendment 1.3 launcher checked AC power only at start. Battery exhausted; macOS low-power sleep/hibernation suspended the native server and the VM mid-request.",
+  "retained_at": "pilots/v1.3-infrastructure/50-apotrope-template-B-23 (moved unchanged; pre-move hashes restoration_1.4/episode50_before_move.sha256, 571 files, verified after move)",
+  "disposition": "Study owner instruction 2026-11-05 ('can we resume?') following the proposed amendment 1.4: restart from a fresh workspace with original condition B, seed 23, order 50. Not counted as a main attempt. Decision made on infrastructure grounds only; the attempt's grade was not used.",
+  "recorded_utc": "2026-11-05T12:27:55.848205+00:00"
+}

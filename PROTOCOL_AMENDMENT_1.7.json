@@ -1,0 +1,16 @@
+{
+  "amendment": "1.7",
+  "timestamp_utc": "2026-11-06T17:57:46.837297+00:00",
+  "base": "1.6 (all freezes unchanged; no code change)",
+  "type": "procedural replacement only",
+  "authorized_by": "Study owner, 2026-11-06: 'can you please wrap up it?' after the proposed episode 55 procedure (same as episode 53).",
+  "incident": "pilots/v1.6-infrastructure/55-pixcull-sdist-A-23.INCIDENT.json",
+  "replacement": {
+    "episode": "55-pixcull-sdist-A-23",
+    "counted_as_main_attempt": false,
+    "restart": "fresh workspace, condition A, seed 23, order 55"
+  },
+  "controller": "amendment_1.6/launch_grid.sh --resume (unchanged, FREEZE_1.6 verified at start; its 53 frozen records plus records 53-54 verified against restoration_1.7/completed_runs_baseline.sha256 before launch).",
+  "completed_records_at_amendment": 55,
+  "outcomes_observed_at_amendment": "Provisional status counts only: 0 artifact-contract passes among 55 valid records."
+}

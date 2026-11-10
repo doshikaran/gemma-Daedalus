@@ -1,0 +1,7 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+Resolved 1 package in 8.22s
+Downloading numpy (17.1MiB)
+ Downloaded numpy
+Prepared 1 package in 473ms
+Installed 1 package in 16ms
+ + numpy==1.26.4

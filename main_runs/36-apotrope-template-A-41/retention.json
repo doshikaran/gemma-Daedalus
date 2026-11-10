@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-05T03:38:09.477772+00:00",
+  "source_tree_sha256": "4ce103dde130ada2c4097b463f4a04744a957cb877879ff259c68333f537cf1b",
+  "source_archive_sha256": "c1691fa32dd5db9ca1b5375acc6562d535aeaba4e04a59684e6e7081f0097da1",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/36-apotrope-template-A-41/grading/apotrope-template/a3b802459b0a/candidate/direct-dist/apotrope-0.1.3-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/36-apotrope-template-A-41/release-artifacts/8deff802dbfa14ac0cab6f88f01327bd2ad1e8cd381f75df398053a920cd18bb-apotrope-0.1.3-py3-none-any.whl",
+      "sha256": "8deff802dbfa14ac0cab6f88f01327bd2ad1e8cd381f75df398053a920cd18bb",
+      "bytes": 71045
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/36-apotrope-template-A-41/grading/apotrope-template/a3b802459b0a/candidate/from-sdist/apotrope-0.1.3-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/36-apotrope-template-A-41/release-artifacts/6e952813e05037eb646819965b8a523c95e382987d014286e481978ae77efc34-apotrope-0.1.3-py3-none-any.whl",
+      "sha256": "6e952813e05037eb646819965b8a523c95e382987d014286e481978ae77efc34",
+      "bytes": 71045
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/36-apotrope-template-A-41/grading/apotrope-template/a3b802459b0a/candidate/sdist/apotrope-0.1.3.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/36-apotrope-template-A-41/release-artifacts/a97248c78a253c4cb824d990537d72028475e5c2fd6449f958ddb65889e602e6-apotrope-0.1.3.tar.gz",
+      "sha256": "a97248c78a253c4cb824d990537d72028475e5c2fd6449f958ddb65889e602e6",
+      "bytes": 75322
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

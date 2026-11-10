@@ -1,0 +1,38 @@
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{
+  "synthetic_or_gold_control_only": true,
+  "main_model_calls": 0,
+  "checks": [
+    "72 unique episodes; balanced seeds and conditions",
+    "Deterministic randomized ordering",
+    "Action parsing rejects malformed and multiple tool blocks",
+    "Scripted read/edit/execute/format-error recovery/completion, with persisted trajectory",
+    "Generated-token exhaustion stops the episode",
+    "Final patch export retains new source and excludes ignored build debris",
+    "Main runner candidate-grading path rejects historical no-op and accepts upstream fix"
+  ],
+  "candidate_grading_controls": [
+    {
+      "arm": "affected",
+      "pass": false,
+      "states": {
+        "source": true,
+        "wheel": false,
+        "sdist-wheel": false
+      },
+      "output": "/workspace/scratch/93af20bbcd93/packaging_study/preflight_runs/18e1e450fb64465daa1b47d61bae8707"
+    },
+    {
+      "arm": "reference",
+      "pass": true,
+      "states": {
+        "source": true,
+        "wheel": true,
+        "sdist-wheel": true
+      },
+      "output": "/workspace/scratch/93af20bbcd93/packaging_study/preflight_runs/32536271087f43c283674d1b62a76b2d"
+    }
+  ],
+  "pass": true
+}

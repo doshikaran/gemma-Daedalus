@@ -1,0 +1,9 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index a64c721..a4607b0 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -271,3 +271,4 @@ type = [
+ [tool.ty]
+ environment.python-version = "3.14"
+ src.exclude = []
++version = "0.1.0"

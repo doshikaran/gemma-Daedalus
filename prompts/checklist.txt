@@ -1,0 +1,6 @@
+Conventional release-verification checklist:
+1. Check the required public operation in the source checkout.
+2. Build the direct wheel, install it, and exercise that operation in a fresh consumer directory outside the checkout.
+3. In a fresh source copy, build the sdist; rebuild its wheel without relying on checkout-only files or producer-only tools; install and exercise the same operation.
+4. Check which package file was imported and where required resources were read. A successful build or install alone does not establish runtime behavior.
+5. Retest the required operations after your final edit and state which artifact routes you verified.

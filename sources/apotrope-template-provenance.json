@@ -1,0 +1,18 @@
+{
+  "id": "apotrope-template",
+  "repository": "hexorcist404/apotrope",
+  "affected": {
+    "repository": "hexorcist404/apotrope",
+    "sha": "88a2b5dec4deb4ac6274a8e4ac82df0d8af59992",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/hexorcist404__apotrope-88a2b5dec4deb4ac6274a8e4ac82df0d8af59992",
+    "archive_sha256": "6d5c821031d34979b57e8f523194d8e1d087263504d0f4e0211cdf1b584aad55",
+    "archive_bytes": 279272
+  },
+  "reference": {
+    "repository": "hexorcist404/apotrope",
+    "sha": "ba414ba04f520e123b25de5e29b7572d4afee4a9",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/hexorcist404__apotrope-ba414ba04f520e123b25de5e29b7572d4afee4a9",
+    "archive_sha256": "8ad1e4a5c1f916e9b70287fb6472e1d2eb1f8d189ce4a4c1d1ba4185896e14ba",
+    "archive_bytes": 279630
+  }
+}

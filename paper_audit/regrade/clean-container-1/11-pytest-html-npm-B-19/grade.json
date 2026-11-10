@@ -1,0 +1,148 @@
+{
+  "id": "pytest-html-npm",
+  "arm": "candidate",
+  "run_id": "5a87ee629577",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": [
+        {
+          "args": [
+            "npm",
+            "ci",
+            "--ignore-scripts",
+            "--no-audit",
+            "--no-fund"
+          ],
+          "returncode": 0,
+          "stdout": "\nadded 443 packages in 7s\n",
+          "stderr": "npm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.\n",
+          "seconds": 7.062043560988968
+        },
+        {
+          "args": [
+            "npm",
+            "run",
+            "build"
+          ],
+          "returncode": 0,
+          "stdout": "\n> build\n> npm run build:css && npm run build:jsapp\n\n\n> build:css\n> sass --no-source-map --no-error-css src/layout/css/style.scss src/pytest_html/resources/style.css\n\n\n> build:jsapp\n> browserify ./src/pytest_html/scripts/index.js > ./src/pytest_html/resources/app.js\n\n",
+          "stderr": "",
+          "seconds": 3.625954051996814
+        }
+      ],
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,pathlib,json\nsys.path[:0]=[sys.argv[1],sys.argv[2]]\nimport pytest,pytest_html\nassert pathlib.Path(pytest_html.__file__).resolve().is_relative_to(pathlib.Path(sys.argv[1]).resolve())\np=pathlib.Path('test_release_fixture.py');p.write_text('def test_audit_release_482():\\n    assert 2+2==4\\n')\ncode=pytest.main(['-p','pytest_metadata.plugin','-p','pytest_html.plugin','--html=report.html','--self-contained-html','test_release_fixture.py','-q'])\nassert code==0\ns=pathlib.Path('report.html').read_text();assert 'test_audit_release_482'in s and '<html'in s.lower()\nprint(json.dumps({'html_report':True,'module_origin':pytest_html.__file__}))\n",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/repo/src",
+          "/workspace/scratch/93af20bbcd93/packaging_study/runtime/pytesthtml-deps"
+        ],
+        "returncode": 0,
+        "stdout": ".                                                                        [100%]\n- Generated html report: file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/consumer-source/report.html -\n1 passed in 0.01s\n{\"html_report\": true, \"module_origin\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/repo/src/pytest_html/__init__.py\"}\n",
+        "stderr": "",
+        "seconds": 0.33091709899599664
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building wheel...\nnpm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/direct-dist/pytest_html-0.0.0+audit-py3-none-any.whl\n",
+        "seconds": 15.831633836991386
+      },
+      "artifact_sha256": "9db0b1d24fc8ee3156b2b65fa241895ab043769b3fe9dc115894bf49b507e72a",
+      "install": {
+        "args": [
+          "/usr/local/bin/uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/direct-dist/pytest_html-0.0.0+audit-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 37ms\nPrepared 1 package in 52ms\nInstalled 1 package in 19ms\n + pytest-html==0.0.0+audit (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/direct-dist/pytest_html-0.0.0+audit-py3-none-any.whl)\n",
+        "seconds": 0.26639187600812875
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,pathlib,json\nsys.path[:0]=[sys.argv[1],sys.argv[2]]\nimport pytest,pytest_html\nassert pathlib.Path(pytest_html.__file__).resolve().is_relative_to(pathlib.Path(sys.argv[1]).resolve())\np=pathlib.Path('test_release_fixture.py');p.write_text('def test_audit_release_482():\\n    assert 2+2==4\\n')\ncode=pytest.main(['-p','pytest_metadata.plugin','-p','pytest_html.plugin','--html=report.html','--self-contained-html','test_release_fixture.py','-q'])\nassert code==0\ns=pathlib.Path('report.html').read_text();assert 'test_audit_release_482'in s and '<html'in s.lower()\nprint(json.dumps({'html_report':True,'module_origin':pytest_html.__file__}))\n",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/wheel-installed",
+          "/workspace/scratch/93af20bbcd93/packaging_study/runtime/pytesthtml-deps"
+        ],
+        "returncode": 0,
+        "stdout": ".                                                                        [100%]\n- Generated html report: file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/consumer-wheel/report.html -\n1 passed in 0.01s\n{\"html_report\": true, \"module_origin\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/wheel-installed/pytest_html/__init__.py\"}\n",
+        "stderr": "",
+        "seconds": 0.3993284699972719
+      },
+      "pass": true
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building source distribution...\nnpm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/sdist/pytest_html-0.0.0+audit.tar.gz\n",
+        "seconds": 17.44705879301182
+      },
+      "sdist_sha256": "0a81b11a00b2d05d7239ff3424fdb4ae108bf67a3daa790e3ae9d8c62684eeca",
+      "wheel_build": {
+        "args": [
+          "/usr/local/bin/uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "Building wheel...\n/bin/sh: 1: npm: not found\nTraceback (most recent call last):\n  File \"<string>\", line 11, in <module>\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpzAU3qr/lib/python3.12/site-packages/hatchling/build.py\", line 58, in build_wheel\n    return os.path.basename(next(builder.build(directory=wheel_directory, versions=['standard'])))\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpzAU3qr/lib/python3.12/site-packages/hatchling/builders/plugin/interface.py\", line 147, in build\n    build_hook.initialize(version, build_data)\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/extracted/pytest_html-0.0.0+audit/scripts/npm.py\", line 8, in initialize\n    subprocess.check_output(\"npm ci\", shell=True)\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/subprocess.py\", line 466, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command 'npm ci' returned non-zero exit status 127.\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/11-pytest-html-npm-B-19/grading/pytest-html-npm/5a87ee629577/candidate/extracted/pytest_html-0.0.0+audit`\n  cause: The build backend returned an error\n  cause: Call to `hatchling.build.build_wheel` failed (exit status: 1)\n\nhint: Build failures usually indicate a problem with the package or the build environment\n",
+        "seconds": 1.3285345930198673
+      },
+      "pass": false
+    }
+  ]
+}

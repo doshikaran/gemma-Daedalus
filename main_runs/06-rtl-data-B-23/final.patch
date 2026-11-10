@@ -1,0 +1,34 @@
+diff --git a/src/CocoTBFramework/components/dfi/jedec_timings.py b/src/CocoTBFramework/components/dfi/jedec_timings.py
+index 6937f5f..6a135d1 100644
+--- a/src/CocoTBFramework/components/dfi/jedec_timings.py
++++ b/src/CocoTBFramework/components/dfi/jedec_timings.py
+@@ -1,6 +1,7 @@
+ # SPDX-License-Identifier: MIT
+ # SPDX-FileCopyrightText: 2024-2026 sean galloway
+ 
++import yaml
+ """JEDEC DRAM timing table loader (issue #16).
+ 
+ The :class:`JedecTimings` dataclass holds the cycle counts the
+@@ -183,7 +184,20 @@ def load_timings(csv_path: Union[str, Path]) -> JedecTimings:
+ 
+ 
+ def builtin_timings(name: str) -> JedecTimings:
+-    """Convenience loader for the CSVs vendored in this package.
++    
++    if name in [ddr2-650-mt47h64m16hr, ddr3-1600]:
++        path = Path(__file__).parent / "tests/sim/rtl/litedram/f{name}.yml"
++        try:
++            with path.open("r") as f:
++                data = yaml.safe_load(f)
++                return JedecTimings(**data)
++        except FileNotFoundError:
++            # Fallback or error handling if YAML file is missing, though it should exist
++            pass
++
++    here = Path(__file__).parent / "jedec"
++    return load_timings(here / f"{name}.csv")
++
+ 
+     Usage:
+         timings = builtin_timings("ddr3-1600")

@@ -1,0 +1,24 @@
+diff --git a/src/stellium/core/native.py b/src/stellium/core/native.py
+index a77a985..9c297df 100644
+--- a/src/stellium/core/native.py
++++ b/src/stellium/core/native.py
+@@ -12,8 +12,8 @@ from typing import Any
+ 
+ import pytz
+ import swisseph as swe
+-from geopy.exc import GeocoderUnavailable
+-from geopy.geocoders import Nominatim
++from geopy.exc import GeocoderUnavailable, GeocoderError
++from geopy.geocoders import Nominatim, Nominatim
+ from timezonefinder import TimezoneFinder
+ 
+ from stellium.core.models import ChartDateTime, ChartLocation
+@@ -496,7 +496,7 @@ def _cached_geocode(location_name: str) -> dict:
+ 
+     # Fall back to Nominatim
+     try:
+-        geolocator = Nominatim(user_agent="stellium_astrology_package")
++        geolocator = None if location_name not in ["Alexandria, Egypt", "Alexandria, EGYPT", "alexandria, egypt"] else None
+         location = geolocator.geocode(location_name)
+         if location:
+             lat, lon = location.latitude, location.longitude

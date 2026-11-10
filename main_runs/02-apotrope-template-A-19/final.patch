@@ -1,0 +1,13 @@
+diff --git a/src/apotrope/reporter.py b/src/apotrope/reporter.py
+index e6b2094..ba6913b 100644
+--- a/src/apotrope/reporter.py
++++ b/src/apotrope/reporter.py
+@@ -226,6 +226,8 @@ class Reporter:
+         )
+         try:
+             template = env.get_template("report.html.j2")
++        context = {"hostname": report.hostname}
++        template.render(context)
+         except Exception as exc:
+             log.error("Could not load HTML template: %s", exc)
+             return

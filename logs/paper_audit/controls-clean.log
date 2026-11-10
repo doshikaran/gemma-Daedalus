@@ -1,0 +1,49 @@
+{"id": "l0-module-actual", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "rtl-data", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "l0-module-actual", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pyfiglet-154", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "apotrope-template", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "rtl-data", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "apotrope-template", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pixcull-sdist", "arm": "affected", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"id": "pynecore-data", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "pyfiglet-154", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pixcull-sdist", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pynecore-data", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "stellium-locales", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "stellium-glyphs", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "stellium-cache", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "stellium-locales", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "stellium-glyphs", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "tox-sdist", "arm": "affected", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"id": "stellium-cache", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "s3-template", "arm": "affected", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"id": "tox-sdist", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "s3-template", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pytest-html-npm", "arm": "affected", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"id": "pytest-html-npm", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+rtl-data             affected  expected PFF observed PFF OK
+rtl-data             reference expected PPP observed PPP OK
+l0-module-actual     affected  expected PFF observed PFF OK
+l0-module-actual     reference expected PPP observed PPP OK
+pyfiglet-154         affected  expected PFF observed PFF OK
+pyfiglet-154         reference expected PPP observed PPP OK
+apotrope-template    affected  expected PFF observed PFF OK
+apotrope-template    reference expected PPP observed PPP OK
+pynecore-data        affected  expected PFF observed PFF OK
+pynecore-data        reference expected PPP observed PPP OK
+pixcull-sdist        affected  expected PPF observed PPF OK
+pixcull-sdist        reference expected PPP observed PPP OK
+stellium-locales     affected  expected PFF observed PFF OK
+stellium-locales     reference expected PPP observed PPP OK
+stellium-glyphs      affected  expected PFF observed PFF OK
+stellium-glyphs      reference expected PPP observed PPP OK
+stellium-cache       affected  expected PFF observed PFF OK
+stellium-cache       reference expected PPP observed PPP OK
+tox-sdist            affected  expected PPF observed PPF OK
+tox-sdist            reference expected PPP observed PPP OK
+pytest-html-npm      affected  expected PPF observed PPF OK
+pytest-html-npm      reference expected PPP observed PPP OK
+s3-template          affected  expected FFF observed FFF OK
+s3-template          reference expected PPP observed PPP OK
+ALL MATCH

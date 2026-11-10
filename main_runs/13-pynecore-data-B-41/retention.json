@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-04T17:00:09.753452+00:00",
+  "source_tree_sha256": "3e5fa1cdd8ec1ee7a3fb7742cb6d225f36476760de46aea8c2df3ed0e0af8ce8",
+  "source_archive_sha256": "b00923f424d16d227348629ee1039106987e29cb0bbaa160a05491f0aeb8423b",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/13-pynecore-data-B-41/grading/pynecore-data/302c41615c9e/candidate/direct-dist/pynesys_pynecore-6.9.1-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/13-pynecore-data-B-41/release-artifacts/eb2af55fe51dbc16dc21fe8b9a90e2e5d0d4881e6100f721cfce397103a5f769-pynesys_pynecore-6.9.1-py3-none-any.whl",
+      "sha256": "eb2af55fe51dbc16dc21fe8b9a90e2e5d0d4881e6100f721cfce397103a5f769",
+      "bytes": 1547580
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/13-pynecore-data-B-41/grading/pynecore-data/302c41615c9e/candidate/from-sdist/pynesys_pynecore-6.9.1-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/13-pynecore-data-B-41/release-artifacts/30c6ea73e4b336bd5da64c349f814796637ab9a582dfa2660cf498f81f487ea8-pynesys_pynecore-6.9.1-py3-none-any.whl",
+      "sha256": "30c6ea73e4b336bd5da64c349f814796637ab9a582dfa2660cf498f81f487ea8",
+      "bytes": 1547580
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/13-pynecore-data-B-41/grading/pynecore-data/302c41615c9e/candidate/sdist/pynesys_pynecore-6.9.1.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/13-pynecore-data-B-41/release-artifacts/fe0f7679a8bb5e837d8d441b9b65260c96a826558ccdb3f21e1611f8f29cce76-pynesys_pynecore-6.9.1.tar.gz",
+      "sha256": "fe0f7679a8bb5e837d8d441b9b65260c96a826558ccdb3f21e1611f8f29cce76",
+      "bytes": 1434028
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

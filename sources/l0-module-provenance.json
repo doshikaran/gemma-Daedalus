@@ -1,0 +1,18 @@
+{
+  "id": "l0-module",
+  "repository": "HaxL0p4/L0p4Map",
+  "affected": {
+    "repository": "HaxL0p4/L0p4Map",
+    "sha": "5a1d38753beaa1b031c1828701dd3da5f3fe1350",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/HaxL0p4__L0p4Map-5a1d38753beaa1b031c1828701dd3da5f3fe1350",
+    "archive_sha256": "3cf6e3726a264518daa4d273234e8f5699d61de794193baaa8efd46fc7a689f0",
+    "archive_bytes": 4658902
+  },
+  "reference": {
+    "repository": "HaxL0p4/L0p4Map",
+    "sha": "1971dacc759d30efc0da8583a584b98fd0fbc355",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/HaxL0p4__L0p4Map-1971dacc759d30efc0da8583a584b98fd0fbc355",
+    "archive_sha256": "d1b9351f663c56e55c7f757922b48460e389666579e64425df5161620cbf8755",
+    "archive_bytes": 4658911
+  }
+}

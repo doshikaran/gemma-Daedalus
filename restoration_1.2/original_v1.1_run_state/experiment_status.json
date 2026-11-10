@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-11-01T17:58:27.291085+00:00",
+  "protocol_version": "1.1",
+  "phase": "running",
+  "planned": 72,
+  "completed": 0,
+  "current_episode": "00-pyfiglet-154-A-19",
+  "current_completed_responses": 2,
+  "current_generated_tokens": 355,
+  "artifact_contract_passes": 0,
+  "infrastructure_outcomes": 0,
+  "frozen_model": "Gemma 4 E4B QAT Q4_0; one CPU server, one slot, four threads",
+  "final_analysis_ready": false,
+  "manual_patch_and_verification_audit": "pending; automated contract pass is not a claim of unrestricted valid repair",
+  "error": null
+}

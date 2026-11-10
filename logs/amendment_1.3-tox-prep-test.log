@@ -1,0 +1,13 @@
+{"arm": "affected", "episode": "09-tox-sdist-A-41", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "affected", "episode": "19-tox-sdist-A-19", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "affected", "episode": "24-tox-sdist-B-41", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "affected", "episode": "48-tox-sdist-A-23", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "affected", "episode": "56-tox-sdist-B-19", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "affected", "episode": "57-tox-sdist-B-23", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "reference", "episode": "09-tox-sdist-A-41", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "reference", "episode": "19-tox-sdist-A-19", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "reference", "episode": "24-tox-sdist-B-41", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "reference", "episode": "48-tox-sdist-A-23", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "reference", "episode": "56-tox-sdist-B-19", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+{"arm": "reference", "episode": "57-tox-sdist-B-23", "frozen_ok": false, "fixed_ok": true, "version_py": true}
+PASS

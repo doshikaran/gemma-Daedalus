@@ -1,0 +1,147 @@
+{
+  "id": "pixcull-sdist",
+  "arm": "reference",
+  "run_id": "72eecdff57aa",
+  "source_sha": "2bc2eaeb0ad2e03ec8464c48b50ce43189861828",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/repo', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/pixcull-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from pixcull.i18n import load_locale,t\n a=load_locale('en_US');b=load_locale('zh_CN')\n assert len(a)>10 and len(b)>10\n key=next(k for k in a if k in b and a[k]!=b[k]);assert t(key,lang='en_US')==a[key]\n print(json.dumps({'english_keys':len(a),'chinese_keys':len(b),'translation_lookup':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"english_keys\": 192, \"chinese_keys\": 192, \"translation_lookup\": true}\n{\"import_origins\": {\"pixcull\": \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/repo/pixcull/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.1384519029998046
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building wheel...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/direct-dist/pixcull-2.43.4-py3-none-any.whl\n",
+        "seconds": 0.6597593430005873
+      },
+      "artifact_sha256": "3ff623eed6d3b0085f8e4e7a0ade38acf87b1cdf5c6d7460992139214cc840a0",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/direct-dist/pixcull-2.43.4-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python\nResolved 1 package in 2ms\nPrepared 1 package in 53ms\nwarning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\nInstalled 1 package in 28ms\n + pixcull==2.43.4 (from file:///workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/direct-dist/pixcull-2.43.4-py3-none-any.whl)\n",
+        "seconds": 0.10317743699943094
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/pixcull-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from pixcull.i18n import load_locale,t\n a=load_locale('en_US');b=load_locale('zh_CN')\n assert len(a)>10 and len(b)>10\n key=next(k for k in a if k in b and a[k]!=b[k]);assert t(key,lang='en_US')==a[key]\n print(json.dumps({'english_keys':len(a),'chinese_keys':len(b),'translation_lookup':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"english_keys\": 192, \"chinese_keys\": 192, \"translation_lookup\": true}\n{\"import_origins\": {\"pixcull\": \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/wheel-installed/pixcull/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.16430882799977553
+      },
+      "pass": true
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building source distribution...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/sdist/pixcull-2.43.4.tar.gz\n",
+        "seconds": 0.6423164460002226
+      },
+      "sdist_sha256": "8e3245220bae4fdcf951a990d19da8c1605b1dc518a7a05fec6098f40cdaf0fb",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building wheel...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/from-sdist/pixcull-2.43.4-py3-none-any.whl\n",
+        "seconds": 0.4960838050001257
+      },
+      "artifact_sha256": "6da7d6c7eb8998a8eb0f929e510dc2287a14e90024b9ae41cc37e66e7c66390e",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/from-sdist/pixcull-2.43.4-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python\nResolved 1 package in 2ms\nPrepared 1 package in 43ms\nwarning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\nInstalled 1 package in 23ms\n + pixcull==2.43.4 (from file:///workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/from-sdist/pixcull-2.43.4-py3-none-any.whl)\n",
+        "seconds": 0.09890160000031756
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/pixcull-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from pixcull.i18n import load_locale,t\n a=load_locale('en_US');b=load_locale('zh_CN')\n assert len(a)>10 and len(b)>10\n key=next(k for k in a if k in b and a[k]!=b[k]);assert t(key,lang='en_US')==a[key]\n print(json.dumps({'english_keys':len(a),'chinese_keys':len(b),'translation_lookup':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"english_keys\": 192, \"chinese_keys\": 192, \"translation_lookup\": true}\n{\"import_origins\": {\"pixcull\": \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/pixcull-sdist/72eecdff57aa/reference/sdist-installed/pixcull/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.16342122799960634
+      },
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "model_calls": 0,
+  "rows": [
+    {
+      "case": "ac_fresh",
+      "pause": false,
+      "reason": null,
+      "pass": true
+    },
+    {
+      "case": "battery_fresh",
+      "pause": true,
+      "reason": "host not on AC power: {\"source\": \"BATTERY\", \"percent\": 90, \"epoch\": 1999999990}",
+      "pass": true
+    },
+    {
+      "case": "ac_stale",
+      "pause": true,
+      "reason": "host power state stale (600 s old)",
+      "pass": true
+    },
+    {
+      "case": "missing",
+      "pause": true,
+      "reason": "host power state unreadable: FileNotFoundError(2, 'No such file or directory')",
+      "pass": true
+    },
+    {
+      "case": "corrupt",
+      "pause": true,
+      "reason": "host power state unreadable: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')",
+      "pass": true
+    }
+  ],
+  "live_state_problem": null,
+  "pass": true
+}

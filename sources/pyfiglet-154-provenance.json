@@ -1,0 +1,18 @@
+{
+  "id": "pyfiglet-154",
+  "repository": "pwaller/pyfiglet",
+  "affected": {
+    "repository": "pwaller/pyfiglet",
+    "sha": "b40b87c18a22a7e6727ed913353aa08a374e3070",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/pwaller__pyfiglet-b40b87c18a22a7e6727ed913353aa08a374e3070",
+    "archive_sha256": "ea98870486ae27ae51341a16f510f3741ee888c999142ab8d489a378f746ce57",
+    "archive_bytes": 1664170
+  },
+  "reference": {
+    "repository": "pwaller/pyfiglet",
+    "sha": "e8601f00030ceeef363d35dd53cc95e679f16877",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/pwaller__pyfiglet-e8601f00030ceeef363d35dd53cc95e679f16877",
+    "archive_sha256": "6e2da7468cb0b131adba1fa3994a4151b748279a6201ce717847f8f63f880887",
+    "archive_bytes": 1664194
+  }
+}

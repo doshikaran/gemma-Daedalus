@@ -1,0 +1,20 @@
+{
+  "incident": "infrastructure (pre-model provisioning defect)",
+  "episode": "09-tox-sdist-A-41",
+  "task": "tox-sdist",
+  "condition": "A",
+  "seed": 41,
+  "order": 9,
+  "occurred_utc": "2026-11-03T19:26:23.555430+00:00",
+  "stage": "run_study.prepare (tox version preparation), after git baseline, before prompt/model",
+  "model_calls": 0,
+  "generated_tokens": 0,
+  "trajectory_exists": false,
+  "result_record_exists": false,
+  "grade_exists": false,
+  "error": "RuntimeError('tox version preparation failed: {\"args\": [\"uv\", \"build\", \"--python\", \"/usr/local/bin/python3\", \"--wheel\", \"--out-dir\", \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/09-tox-sdist-A-41/repo/.agent-source-preparation\", \"--build-constraints\", \"/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt\", \"--cache-dir\", \"/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache\"], \"returncode\": 2, \"stdout\": \"\", \"stderr\": \"Building wheel...\\\\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/main_runs/09-tox-sdist-A-41/repo`\\\\n  cause: Failed to resolve requirements from `build-system.requires`\\\\n  cause: No solution found when resolving: `docutils>=0.21`, `hatch-vcs>=0.5`, `hatchling>=1.29`\\\\n  cause: Because you require hatchling>=1.29 and hatchling==1.27.0, we can conclude that your requirements are unsatisfiable.\\\\n\", \"seconds\": 0.22271071800059872}')",
+  "root_cause": "replay.build selects build-constraints-tox.txt only when a path component equals 'tox-sdist'. Episode work trees are main_runs/<NN>-tox-sdist-<C>-<seed>/repo, so the generic build-constraints.txt (hatchling==1.27.0) was used and tox's build-system.requires (hatchling>=1.29) was unsatisfiable. Grading paths (.../grading/tox-sdist/...) and the agent-environment preflight paths (.../corrected/tox-sdist/...) contain the exact component, which is why preflight did not detect it. Latent in frozen v1.1 code; not caused by the amendment 1.2 environment.",
+  "retained_at": "pilots/v1.2-infrastructure/09-tox-sdist-A-41 (moved unchanged; pre-move file hashes in restoration_1.3/episode09_failed_prep_before_move.sha256)",
+  "disposition": "Episode restarts from a fresh workspace with original condition A, seed 41 and order 9 under amendment 1.3. Not counted as a main attempt.",
+  "recorded_utc": "2026-11-04T02:52:31.828559+00:00"
+}

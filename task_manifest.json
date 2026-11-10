@@ -1,0 +1,418 @@
+{
+  "version": "1.0",
+  "selection": "Purposive historical bug sample; no population prevalence estimate",
+  "families": 12,
+  "repositories": 10,
+  "primary_gap_families": 11,
+  "source_failing_controls": 1,
+  "tasks": [
+    {
+      "id": "rtl-data",
+      "repository": "sean-galloway/RTLDesignSherpa-DV",
+      "mechanism": "bundled tables",
+      "stratum": "gap",
+      "contract": "The public builtin_timings loader must load DDR2 and DDR3 timing tables, including ddr2-650-mt47h64m16hr (tCK_ns 3.077) and ddr3-1600 (1.25).",
+      "preparation": "No extra preparation.",
+      "states": {
+        "affected": "PFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "36e8745ab34f",
+      "affected": {
+        "repository": "sean-galloway/RTLDesignSherpa-DV",
+        "sha": "d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d",
+        "archive_sha256": "972195a970143ed3ae0891094bcfdd35e426f4b4d7c8a252851fcd7453dfa052",
+        "archive_bytes": 1700631,
+        "tree_sha256": "d58ec84e7d0d9365a21c2550d7a351046337e0ba9b2d665f0b4ccde2a6412fe6"
+      },
+      "reference": {
+        "repository": "sean-galloway/RTLDesignSherpa-DV",
+        "sha": "81f6a103149e891ad5ef3b832630aa8275dbfc0f",
+        "archive_sha256": "8722c0fb75eabc8bae32cda4ead3485adab6cbc21c0cc92b2a5bc78da3795ceb",
+        "archive_bytes": 1701881,
+        "tree_sha256": "8018ad41bca826fd784250837f4d88691de6cec72f603f16d9bc6392070369ca"
+      },
+      "fix_url": "https://github.com/sean-galloway/RTLDesignSherpa-DV/commit/81f6a103149e891ad5ef3b832630aa8275dbfc0f",
+      "source_url": "https://codeload.github.com/sean-galloway/RTLDesignSherpa-DV/tar.gz/d77b364fc2f739d4dc4edd1fe6ee73ea832ad20d",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "l0-module-actual",
+      "repository": "HaxL0p4/L0p4Map",
+      "mechanism": "console entry point/module",
+      "stratum": "gap",
+      "contract": "The l0p4map console command must display its normal --help successfully after installation; source main.py --help must also work. No network scan or GUI execution is required.",
+      "preparation": "No extra preparation.",
+      "states": {
+        "affected": "PFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "e0ced5e39d56",
+      "affected": {
+        "repository": "HaxL0p4/L0p4Map",
+        "sha": "71e66e6c9cbfe6210be6d7c46a2adaea2f28d0bc",
+        "archive_sha256": "ee51dbbc2e1e7d49569807130242c188f69aaa139161f40434b019fbc15dc061",
+        "archive_bytes": 4658884,
+        "tree_sha256": "9d1c6c481e5a38872667e8f05a996ac29935bfba2df9b77a2030c1fb1dbc9a07"
+      },
+      "reference": {
+        "repository": "HaxL0p4/L0p4Map",
+        "sha": "5a1d38753beaa1b031c1828701dd3da5f3fe1350",
+        "archive_sha256": "3cf6e3726a264518daa4d273234e8f5699d61de794193baaa8efd46fc7a689f0",
+        "archive_bytes": 4658902,
+        "tree_sha256": "6473ccaa2af5e7b6d022476c83008e4cb2c508165c307677211bcbb864bc2d79"
+      },
+      "fix_url": "https://github.com/HaxL0p4/L0p4Map/commit/5a1d38753beaa1b031c1828701dd3da5f3fe1350",
+      "source_url": "https://codeload.github.com/HaxL0p4/L0p4Map/tar.gz/71e66e6c9cbfe6210be6d7c46a2adaea2f28d0bc",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "pyfiglet-154",
+      "repository": "pwaller/pyfiglet",
+      "mechanism": "font resource extensions",
+      "stratum": "gap",
+      "contract": "pyfiglet.figlet_format must render ordinary text with the bundled circle and future fonts. Preserve both font profiles and normal package imports.",
+      "preparation": "Copy both upstream fonts-standard and fonts-contrib into pyfiglet/fonts, matching upstream release preparation. Apply equally to both revisions and all build routes.",
+      "states": {
+        "affected": "PFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "0df384803204",
+      "affected": {
+        "repository": "pwaller/pyfiglet",
+        "sha": "b40b87c18a22a7e6727ed913353aa08a374e3070",
+        "archive_sha256": "ea98870486ae27ae51341a16f510f3741ee888c999142ab8d489a378f746ce57",
+        "archive_bytes": 1664170,
+        "tree_sha256": "718abce08193d97d36ecb66e43f4decfd30d23df4e4a30875ea0cc1bdd2dc23b"
+      },
+      "reference": {
+        "repository": "pwaller/pyfiglet",
+        "sha": "e8601f00030ceeef363d35dd53cc95e679f16877",
+        "archive_sha256": "6e2da7468cb0b131adba1fa3994a4151b748279a6201ce717847f8f63f880887",
+        "archive_bytes": 1664194,
+        "tree_sha256": "2f73eac847849affeef95eb1d0e657a780786bb0e88d583ca53bd7c824dfb6e8"
+      },
+      "fix_url": "https://github.com/pwaller/pyfiglet/commit/e8601f00030ceeef363d35dd53cc95e679f16877",
+      "source_url": "https://codeload.github.com/pwaller/pyfiglet/tar.gz/b40b87c18a22a7e6727ed913353aa08a374e3070",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "apotrope-template",
+      "repository": "hexorcist404/apotrope",
+      "mechanism": "HTML template",
+      "stratum": "gap",
+      "contract": "Reporter.generate_html_report must create an HTML report containing the hostname from an AuditReport fixture. The scope is offline report export, without a Windows system scan.",
+      "preparation": "No extra preparation.",
+      "states": {
+        "affected": "PFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "6cdcf6df343c",
+      "affected": {
+        "repository": "hexorcist404/apotrope",
+        "sha": "88a2b5dec4deb4ac6274a8e4ac82df0d8af59992",
+        "archive_sha256": "6d5c821031d34979b57e8f523194d8e1d087263504d0f4e0211cdf1b584aad55",
+        "archive_bytes": 279272,
+        "tree_sha256": "c0b06ec741c6e1085c9f77e99ce8c4c85a44f0a6d495252996ee3be78f8ae45e"
+      },
+      "reference": {
+        "repository": "hexorcist404/apotrope",
+        "sha": "ba414ba04f520e123b25de5e29b7572d4afee4a9",
+        "archive_sha256": "8ad1e4a5c1f916e9b70287fb6472e1d2eb1f8d189ce4a4c1d1ba4185896e14ba",
+        "archive_bytes": 279630,
+        "tree_sha256": "094fac7f5135899e4f7d1335e2b5a50a9d4e4c4f45c876182f4cd7e038336167"
+      },
+      "fix_url": "https://github.com/hexorcist404/apotrope/commit/ba414ba04f520e123b25de5e29b7572d4afee4a9",
+      "source_url": "https://codeload.github.com/hexorcist404/apotrope/tar.gz/88a2b5dec4deb4ac6274a8e4ac82df0d8af59992",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "pynecore-data",
+      "repository": "PyneSys/pynecore",
+      "mechanism": "transformer JSON resources",
+      "stratum": "gap",
+      "contract": "The installed pynecore package must import normally and expose callable pynecore.types.Series. Do not remove the transformer initialization to hide its data-loading failure.",
+      "preparation": "No extra preparation.",
+      "states": {
+        "affected": "PFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "2255d449477a",
+      "affected": {
+        "repository": "PyneSys/pynecore",
+        "sha": "33639652d135083a182d1b195dc2411c25565ff6",
+        "archive_sha256": "5060ece3039dd5b3d9e6e338e40a97d3792cf537ef4226a7335f532fb5d5dae1",
+        "archive_bytes": 6874246,
+        "tree_sha256": "3e5fa1cdd8ec1ee7a3fb7742cb6d225f36476760de46aea8c2df3ed0e0af8ce8"
+      },
+      "reference": {
+        "repository": "PyneSys/pynecore",
+        "sha": "731d84b193df2a4c75e018c9f779d11eb3dd6594",
+        "archive_sha256": "83f12d76c75a3d6b5df0a07bcd4f149274e80bc1674ef9b07e616dfdc8e99351",
+        "archive_bytes": 6873806,
+        "tree_sha256": "35506e93ea01d11dcd255169a20568dd687a64352174b58dfbcdcfb5485243be"
+      },
+      "fix_url": "https://github.com/PyneSys/pynecore/commit/731d84b193df2a4c75e018c9f779d11eb3dd6594",
+      "source_url": "https://codeload.github.com/PyneSys/pynecore/tar.gz/33639652d135083a182d1b195dc2411c25565ff6",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "pixcull-sdist",
+      "repository": "ChrisChen667788/pixcull",
+      "mechanism": "missing source modules in sdist",
+      "stratum": "gap",
+      "contract": "pixcull.i18n.load_locale and t must load English and Chinese dictionaries and return a real translated value. Both direct-wheel and source-distribution consumers are supported.",
+      "preparation": "Use the separate numpy 1.26.4 dependency directory ahead of shared dependencies; this operation does not launch the GUI or inference models.",
+      "states": {
+        "affected": "PPF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "72eecdff57aa",
+      "affected": {
+        "repository": "ChrisChen667788/pixcull",
+        "sha": "6fa20228e9fc8f91055b57ffd7b426a5642d2105",
+        "archive_sha256": "05e4829461fc47244968cf2174328de1768c75defdf776ccb50ccf4ca3536d2e",
+        "archive_bytes": 49720347,
+        "tree_sha256": "8430974881889232ed842067c8cc63dea55b9a5d55456679df7d22a114fefa3e"
+      },
+      "reference": {
+        "repository": "ChrisChen667788/pixcull",
+        "sha": "2bc2eaeb0ad2e03ec8464c48b50ce43189861828",
+        "archive_sha256": "b56e42bcb40d9baeca10b9f33618cf69eae0219a8b89997a066d2cbd5e05180b",
+        "archive_bytes": 49725701,
+        "tree_sha256": "493825d5c06d04db69ec9ea9facaed89e7dee133a351fb014f84c4148f566b04"
+      },
+      "fix_url": "https://github.com/ChrisChen667788/pixcull/commit/2bc2eaeb0ad2e03ec8464c48b50ce43189861828",
+      "source_url": "https://codeload.github.com/ChrisChen667788/pixcull/tar.gz/6fa20228e9fc8f91055b57ffd7b426a5642d2105",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "stellium-locales",
+      "repository": "katelouie/stellium",
+      "mechanism": "translation catalogs",
+      "stratum": "gap",
+      "contract": "stellium.i18n must list zh_CN, translate Chart Overview to 星盘概览, and preserve an unknown translation key.",
+      "preparation": "No extra preparation.",
+      "states": {
+        "affected": "PFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "879718f64038",
+      "affected": {
+        "repository": "katelouie/stellium",
+        "sha": "03c4abbad1a8614c30916d1a454b43ab921a05b9",
+        "archive_sha256": "2dd763af49cd308e4730e12ba759e6af85ddc6ff1607b7dc41b800d04856a18d",
+        "archive_bytes": 29064541,
+        "tree_sha256": "07d5a90f7b56fadb73837c7f4adc81573b6341518970f3ce1c394ec876930311"
+      },
+      "reference": {
+        "repository": "katelouie/stellium",
+        "sha": "0ddb421bbb45a96bf38508c0085a4af8aee2bd40",
+        "archive_sha256": "afff0086a0866cb8444794ad73256cc29a71be25ab67feb2f3c2e59137566cd2",
+        "archive_bytes": 29069332,
+        "tree_sha256": "99d85fee9cdb4692db1b59ae2b40dabe3d81852862657d4f329753438f77f596"
+      },
+      "fix_url": "https://github.com/katelouie/stellium/commit/0ddb421bbb45a96bf38508c0085a4af8aee2bd40",
+      "source_url": "https://codeload.github.com/katelouie/stellium/tar.gz/03c4abbad1a8614c30916d1a454b43ab921a05b9",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "stellium-glyphs",
+      "repository": "katelouie/stellium",
+      "mechanism": "SVG resources and source-relative paths",
+      "stratum": "gap",
+      "contract": "stellium.visualization.core.get_glyph must return valid SVG data for both Pholus and Eris, rather than its Unicode fallback. Source usage from the checkout root and installed usage outside it must work.",
+      "preparation": "Source check runs from the source root; installed checks use clean consumers. An additional installed-wheel/source-CWD control records actual SVG open paths.",
+      "states": {
+        "affected": "PFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "aa3de585a039",
+      "affected": {
+        "repository": "katelouie/stellium",
+        "sha": "fda9d8dc35697447635f2c368d0de571d717a682",
+        "archive_sha256": "e87113c4d0da3acae7809506d1de01105b334e701e9222c86a4324decacaca95",
+        "archive_bytes": 29356117,
+        "tree_sha256": "4cdadcf5f5002a10775049d03900c5a4994cf59521abdc81a22ac85dc94539d5"
+      },
+      "reference": {
+        "repository": "katelouie/stellium",
+        "sha": "295f123e4c858ced14db9e4ae1cd1573e377b5a8",
+        "archive_sha256": "cf276de406c91da22ca26c4f77b95c5c894d0404280ca6807a364d84e3126f83",
+        "archive_bytes": 29367304,
+        "tree_sha256": "cb532c89804e780eabf5e7a98049691192611c3aacee51e074497f175aace59e"
+      },
+      "fix_url": "https://github.com/katelouie/stellium/commit/295f123e4c858ced14db9e4ae1cd1573e377b5a8",
+      "source_url": "https://codeload.github.com/katelouie/stellium/tar.gz/fda9d8dc35697447635f2c368d0de571d717a682",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "stellium-cache",
+      "repository": "katelouie/stellium",
+      "mechanism": "offline geolocation cache",
+      "stratum": "gap",
+      "contract": "Native must resolve Alexandria, Egypt at approximately latitude 31.2 and longitude 29.9 from bundled data with online geocoding disabled. Use a fixed date/time and preserve ordinary construction.",
+      "preparation": "Patch Nominatim.geocode to raise during grading, preventing an online service from concealing missing cache data. Use fresh consumers to avoid cache leakage.",
+      "states": {
+        "affected": "PFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "3ac188d4d22d",
+      "affected": {
+        "repository": "katelouie/stellium",
+        "sha": "d20df904129f8506152955ac5b15054b1d578939",
+        "archive_sha256": "c7090cf5e2ccefb5c424d259f41c75a6ea9144bfe24bb19fa510d44e1d5c8a42",
+        "archive_bytes": 24895593,
+        "tree_sha256": "86d2b39f43dcc7302b3d1e79c5246e16fd2f1790e93c8c295dfc5e47463cbb8d"
+      },
+      "reference": {
+        "repository": "katelouie/stellium",
+        "sha": "edd2f89625780bd78b51ccf6d920dd5075ff09b6",
+        "archive_sha256": "208a2eca770a08c6ccd20fbe5b7f21da2fd3737ae846eebfe438e148f4799295",
+        "archive_bytes": 25257634,
+        "tree_sha256": "804b412b4dae922110df7ff901af594c84ab5ee5264db584ebb2ab510907f622"
+      },
+      "fix_url": "https://github.com/katelouie/stellium/commit/edd2f89625780bd78b51ccf6d920dd5075ff09b6",
+      "source_url": "https://codeload.github.com/katelouie/stellium/tar.gz/d20df904129f8506152955ac5b15054b1d578939",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "tox-sdist",
+      "repository": "tox-dev/tox",
+      "mechanism": "manpage required during rebuild",
+      "stratum": "gap",
+      "contract": "The tox --help command must succeed from the source, direct wheel and wheel rebuilt from the sdist. The source archive must contain inputs needed for the latter build.",
+      "preparation": "Generate the source development version.py through a preparatory wheel build before the source check; use hatchling 1.29.0 constraints. Direct and sdist routes use separate fresh source copies.",
+      "states": {
+        "affected": "PPF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "f1a9d6fd3331",
+      "affected": {
+        "repository": "tox-dev/tox",
+        "sha": "dcd955238b7f8d76291d99052e6838a76d9fcbd9",
+        "archive_sha256": "9acb87815c0443b7569c413509924b4bb4e1b0e6450ad9df5a95ebca03cf2cc3",
+        "archive_bytes": 460659,
+        "tree_sha256": "1af3796e47d798dbf93c4e4464e6ade3723bb133b08973d0b6506bc1a809e116"
+      },
+      "reference": {
+        "repository": "tox-dev/tox",
+        "sha": "ef45bd8e8576c086c5d620888eeaebf9d4e5409c",
+        "archive_sha256": "4d01e9537071c8f5b53a76dbaf8720a1992288ab1e6d0575d93e2adf7397662a",
+        "archive_bytes": 460749,
+        "tree_sha256": "15447038e126f64e92e4779acdbf2183fa9cab41573c033f93d5b65ca9cb4b79"
+      },
+      "fix_url": "https://github.com/tox-dev/tox/commit/ef45bd8e8576c086c5d620888eeaebf9d4e5409c",
+      "source_url": "https://codeload.github.com/tox-dev/tox/tar.gz/dcd955238b7f8d76291d99052e6838a76d9fcbd9",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "pytest-html-npm",
+      "repository": "pytest-dev/pytest-html",
+      "mechanism": "sdist rebuild invokes absent npm",
+      "stratum": "gap",
+      "contract": "pytest-html must generate a self-contained HTML report for a passing pytest test. A consumer must be able to rebuild its published sdist without npm when the compiled JavaScript asset has been prepared for release.",
+      "preparation": "Run npm ci and npm run build as release preparation; make fresh prepared copies for direct and sdist builds. The sdist-to-wheel step uses a PATH verified to contain no npm. Disable pytest plugin autoload and load only metadata and html plugins.",
+      "states": {
+        "affected": "PPF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "8bd7fad59b15",
+      "affected": {
+        "repository": "pytest-dev/pytest-html",
+        "sha": "e4070567db8baed0a33d12b8deca78b0015e2f1d",
+        "archive_sha256": "7e00bc03c7becd35e1128ef9c8d668dc12500a1e311eb3f1302560a21aebba2a",
+        "archive_bytes": 149831,
+        "tree_sha256": "2573ef573b3660ccdf1a74ebf648dfc78b9514952e2cbfae24fb39ab3bfe2078"
+      },
+      "reference": {
+        "repository": "pytest-dev/pytest-html",
+        "sha": "f6d34545f9a8457f1d362268dd0ba8b47b8f6666",
+        "archive_sha256": "d17382d20fba3c0fe6e203c2ddc72d9f49018841f67f4addf2501259636ab317",
+        "archive_bytes": 149919,
+        "tree_sha256": "a96a0cd4b8c7d8481f1e2c84753c6f1f9edd41eadde552c1a5f0d66f90e17b56"
+      },
+      "fix_url": "https://github.com/pytest-dev/pytest-html/commit/f6d34545f9a8457f1d362268dd0ba8b47b8f6666",
+      "source_url": "https://codeload.github.com/pytest-dev/pytest-html/tar.gz/e4070567db8baed0a33d12b8deca78b0015e2f1d",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    },
+    {
+      "id": "s3-template",
+      "repository": "TocConsulting/s3-security-scanner",
+      "mechanism": "template absent even in source",
+      "stratum": "source-failing-control",
+      "contract": "HTMLReporter.generate_report must write an HTML report including the name of a synthetic S3 bucket and a valid nonempty summary. No AWS calls or bucket scans are required.",
+      "preparation": "Use one offline bucket fixture and all required aggregate fields. This is explicitly a source-failing control, not evidence of source success hiding installation failure.",
+      "states": {
+        "affected": "FFF",
+        "reference": "PPP"
+      },
+      "validation_run_id": "26c77dbed3ee",
+      "affected": {
+        "repository": "TocConsulting/s3-security-scanner",
+        "sha": "7e314d99ff2cbcae4b1b2db1e2a29169f1a253eb",
+        "archive_sha256": "8baf2847c1119dc98d24bbffccae6158a3310b33cc14efe3b7a9499102d7fc6e",
+        "archive_bytes": 930094,
+        "tree_sha256": "e8a7bd7624bdf700f2961d976f861f4f19b581dbbc2d99f3d225431efc2bf6a5"
+      },
+      "reference": {
+        "repository": "TocConsulting/s3-security-scanner",
+        "sha": "09286154d8785644bfd9709c3aa5aec14747b2f3",
+        "archive_sha256": "c3aa8c96fa3a764eb1210f80197eb0871803c81ff5590a92dd897ebeee620f69",
+        "archive_bytes": 939940,
+        "tree_sha256": "83878fd0082f5194825379ea1d300f1d590291ae65c8c5c35046f9389f6482b0"
+      },
+      "fix_url": "https://github.com/TocConsulting/s3-security-scanner/commit/09286154d8785644bfd9709c3aa5aec14747b2f3",
+      "source_url": "https://codeload.github.com/TocConsulting/s3-security-scanner/tar.gz/7e314d99ff2cbcae4b1b2db1e2a29169f1a253eb",
+      "required_states": [
+        "source",
+        "wheel",
+        "sdist-wheel"
+      ]
+    }
+  ]
+}

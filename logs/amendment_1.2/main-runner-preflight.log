@@ -1,0 +1,41 @@
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{
+  "synthetic_or_gold_control_only": true,
+  "main_model_calls": 0,
+  "checks": [
+    "72 unique episodes; balanced seeds and conditions",
+    "Deterministic randomized ordering",
+    "Declared analysis recovers a known paired contrast and rejects incomplete data",
+    "Action parsing rejects malformed and multiple tool blocks",
+    "Scripted read/edit/execute/format-error recovery/completion, with persisted trajectory",
+    "Generated-token exhaustion stops the episode",
+    "An inference response interrupted by the wall budget is scored as budget exhaustion, with token uncertainty retained",
+    "Final patch export retains new source and excludes ignored build debris",
+    "Patch remains relative to original baseline even if the agent commits",
+    "Main runner candidate-grading path rejects historical no-op and accepts upstream fix"
+  ],
+  "candidate_grading_controls": [
+    {
+      "arm": "affected",
+      "pass": false,
+      "states": {
+        "source": true,
+        "wheel": false,
+        "sdist-wheel": false
+      },
+      "output": "/workspace/scratch/93af20bbcd93/packaging_study/preflight_runs/b67923070ab54d59af7c8603ae9f8c70"
+    },
+    {
+      "arm": "reference",
+      "pass": true,
+      "states": {
+        "source": true,
+        "wheel": true,
+        "sdist-wheel": true
+      },
+      "output": "/workspace/scratch/93af20bbcd93/packaging_study/preflight_runs/91e221b697764d2589948a2ed592a9e4"
+    }
+  ],
+  "pass": true
+}

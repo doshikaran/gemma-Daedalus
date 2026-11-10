@@ -1,0 +1,92 @@
+{
+  "case": "function",
+  "synthetic_calibration_only": true,
+  "calls": [
+    {
+      "step": 0,
+      "response": {
+        "content": "```bash\nls -F\ncat app.py\n```",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 111,
+          "prompt_tokens": 141,
+          "total_tokens": 252,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "seconds": 14.729385248000199
+      },
+      "command_result": {
+        "returncode": 0,
+        "stdout": "__pycache__/\napp.py\ncheck.py\ndef add_one(n):\n    return n\n",
+        "stderr": ""
+      }
+    },
+    {
+      "step": 1,
+      "response": {
+        "content": "```bash\nsed -i 's/return n/return n + 1/' app.py\n```",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 151,
+          "prompt_tokens": 210,
+          "total_tokens": 361,
+          "prompt_tokens_details": {
+            "cached_tokens": 136
+          }
+        },
+        "seconds": 17.315373094999813
+      },
+      "command_result": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "step": 2,
+      "response": {
+        "content": "```bash\npython3 check.py\n```",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 111,
+          "prompt_tokens": 261,
+          "total_tokens": 372,
+          "prompt_tokens_details": {
+            "cached_tokens": 205
+          }
+        },
+        "seconds": 13.561225402000218
+      },
+      "command_result": {
+        "returncode": 0,
+        "stdout": "PASS\n",
+        "stderr": ""
+      }
+    },
+    {
+      "step": 3,
+      "response": {
+        "content": "COMPLETE\nFixed `add_one` in `app.py` to return `n + 1` for any integer. Verified the fix using `check.py`.",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 36,
+          "prompt_tokens": 303,
+          "total_tokens": 339,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          }
+        },
+        "seconds": 4.538969829000052
+      }
+    }
+  ],
+  "check_unchanged": true,
+  "final_check": {
+    "returncode": 0,
+    "stdout": "PASS\n",
+    "stderr": ""
+  },
+  "pass": true
+}

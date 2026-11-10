@@ -1,0 +1,110 @@
+{
+  "episode_id": "26-pyfiglet-154-A-23",
+  "task": "pyfiglet-154",
+  "condition": "A",
+  "seed": 23,
+  "order": 26,
+  "scope": "gap",
+  "stop": "action_limit",
+  "calls": 24,
+  "commands": 2,
+  "format_errors": 22,
+  "generated_tokens": 3501,
+  "generated_token_accounting": "complete",
+  "interaction_wall_seconds": 264.9919389870047,
+  "patch_sha256": "9eb7666151a3750d098c71a600f7bb012b54fd48cccb2b3d7df7972f61ed91b8",
+  "artifact_contract_pass": false,
+  "pattern": "PFF",
+  "grade": {
+    "source": {
+      "pass": true,
+      "steps": {
+        "probe": {
+          "returncode": 0,
+          "tail": "{\"rendered\": [\"circle\", \"future\"]}\n{\"import_origins\": {\"pyfiglet\": \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/repo/pyfiglet/__init__.py\"}}\n"
+        }
+      }
+    },
+    "wheel": {
+      "pass": false,
+      "steps": {
+        "build": {
+          "returncode": 0,
+          "tail": " 'pyfiglet-1.0.3.dist-info/WHEEL'\nadding 'pyfiglet-1.0.3.dist-info/entry_points.txt'\nadding 'pyfiglet-1.0.3.dist-info/top_level.txt'\nadding 'pyfiglet-1.0.3.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/direct-dist/pyfiglet-1.0.3-py3-none-any.whl\n"
+        },
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 47ms\nPrepared 1 package in 228ms\nInstalled 1 package in 210ms\n + pyfiglet==1.0.3 (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/direct-dist/pyfiglet-1.0.3-py3-none-any.whl)\n"
+        },
+        "probe": {
+          "returncode": 1,
+          "tail": "didate/wheel-installed/pyfiglet/__init__.py\", line 129, in __init__\n    self.data = self.preloadFont(font)\n                ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/wheel-installed/pyfiglet/__init__.py\", line 169, in preloadFont\n    raise FontNotFound(font)\npyfiglet.FontNotFound: circle\n"
+        }
+      }
+    },
+    "sdist-wheel": {
+      "pass": false,
+      "steps": {
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 33ms\nPrepared 1 package in 184ms\nInstalled 1 package in 181ms\n + pyfiglet==1.0.3 (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/from-sdist/pyfiglet-1.0.3-py3-none-any.whl)\n"
+        },
+        "sdist_build": {
+          "returncode": 0,
+          "tail": "nts/zone7___.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet.egg-info/SOURCES.txt -> pyfiglet-1.0.3/pyfiglet.egg-info\nWriting pyfiglet-1.0.3/setup.cfg\nCreating tar archive\nremoving 'pyfiglet-1.0.3' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/sdist/pyfiglet-1.0.3.tar.gz\n"
+        },
+        "wheel_build": {
+          "returncode": 0,
+          "tail": "g 'pyfiglet-1.0.3.dist-info/WHEEL'\nadding 'pyfiglet-1.0.3.dist-info/entry_points.txt'\nadding 'pyfiglet-1.0.3.dist-info/top_level.txt'\nadding 'pyfiglet-1.0.3.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/from-sdist/pyfiglet-1.0.3-py3-none-any.whl\n"
+        },
+        "probe": {
+          "returncode": 1,
+          "tail": "didate/sdist-installed/pyfiglet/__init__.py\", line 129, in __init__\n    self.data = self.preloadFont(font)\n                ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/sdist-installed/pyfiglet/__init__.py\", line 169, in preloadFont\n    raise FontNotFound(font)\npyfiglet.FontNotFound: circle\n"
+        }
+      }
+    }
+  },
+  "patch": {
+    "files_total": 576,
+    "preparation_common": 576,
+    "debris": 0,
+    "agent_files": [],
+    "agent_added_lines": {},
+    "test_files_touched": [],
+    "test_files_deleted": []
+  },
+  "commands_detail": [
+    {
+      "step": 18,
+      "command": "pip install -e .",
+      "tags": [
+        "install:editable"
+      ],
+      "returncode": 127,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "/bin/bash: line 1: pip: command not found\n"
+    },
+    {
+      "step": 19,
+      "command": "python -c \"import pyfiglet; print('pyfiglet imported successfully')\"",
+      "tags": [
+        "run:python"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "pyfiglet imported successfully\n"
+    }
+  ],
+  "final_message": "ls pyfiglet/",
+  "final_message_is_complete": false,
+  "sources": {
+    "result.json": "main_runs/26-pyfiglet-154-A-23/result.json",
+    "final.patch": "main_runs/26-pyfiglet-154-A-23/final.patch",
+    "calls.json": "main_runs/26-pyfiglet-154-A-23/calls.json",
+    "trajectory.json": "main_runs/26-pyfiglet-154-A-23/trajectory.json",
+    "prompt.txt": "main_runs/26-pyfiglet-154-A-23/prompt.txt",
+    "final-source.tar.gz": "main_runs/26-pyfiglet-154-A-23/final-source.tar.gz"
+  }
+}

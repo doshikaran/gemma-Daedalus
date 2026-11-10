@@ -1,0 +1,18 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index a64c721..f300746 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -269,5 +269,13 @@ type = [
+ ]
+ 
+ [tool.ty]
++[tool.hatch.build.targets.wheel]
++include = ["docs"]
++include = ["docs"]
+ environment.python-version = "3.14"
+ src.exclude = []
++
++include = ["docs"]
++
++[tool.hatch.build.targets.wheel]
++include = ["docs"]

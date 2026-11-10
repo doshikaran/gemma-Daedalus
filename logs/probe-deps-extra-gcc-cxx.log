@@ -1,0 +1,38 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+Resolved 24 packages in 16.18s
+Downloading typst (24.8MiB)
+Downloading botocore (13.5MiB)
+Downloading timezonefinder (26.9MiB)
+Downloading h3 (1.0MiB)
+ Downloaded h3
+ Downloaded botocore
+   Building pyswisseph==2.10.3.2
+ Downloaded typst
+ Downloaded timezonefinder
+WARN Failed to acquire build lock: Could not create temporary file
+      Built pyswisseph==2.10.3.2
+Prepared 23 packages in 1m 12s
+Installed 23 packages in 48ms
+ + boto3==1.40.61
+ + botocore==1.40.76
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + dnspython==2.8.0
+ + flatbuffers==25.12.19
+ + geographiclib==2.1
+ + geopy==2.4.1
+ + h3==4.5.0
+ + idna==3.20
+ + jmespath==1.1.0
+ + pycparser==3.12
+ + pyswisseph==2.10.3.2
+ + python-dateutil==2.9.0.post0
+ + pytz==2025.2
+ + requests==2.32.5
+ + s3transfer==0.14.0
+ + six==1.17.0
+ + svgwrite==1.4.3
+ + timezonefinder==8.1.0
+ + typst==0.14.5
+ + urllib3==2.8.0

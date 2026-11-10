@@ -1,0 +1,147 @@
+{
+  "id": "apotrope-template",
+  "arm": "candidate",
+  "run_id": "35ddbc1aec8e",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/repo/src', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from apotrope.models import AuditReport\n from apotrope.reporter import Reporter\n from datetime import datetime\n p=pathlib.Path('report.html')\n if p.exists():p.unlink()\n r=AuditReport(hostname='audit-host-482',os_version='offline-fixture',scan_timestamp=datetime(2026,1,2),scan_duration=0,score=75)\n Reporter().generate_html_report(r,str(p))\n text=p.read_text();assert 'audit-host-482' in text and '<html' in text.lower()\n print(json.dumps({'html_written':True,'host_present':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"html_written\": true, \"host_present\": true}\n{\"import_origins\": {\"apotrope\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/repo/src/apotrope/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.3367731969919987
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "-INFO\nwriting dependency_links to src/apotrope.egg-info/dependency_links.txt\nwriting entry points to src/apotrope.egg-info/entry_points.txt\nwriting requirements to src/apotrope.egg-info/requires.txt\nwriting top-level names to src/apotrope.egg-info/top_level.txt\nreading manifest file 'src/apotrope.egg-info/SOURCES.txt'\nadding license file 'LICENSE'\nwriting manifest file 'src/apotrope.egg-info/SOURCES.txt'\ninstalling to build/bdist.linux-x86_64/wheel\nrunning install\nrunning install_lib\ncreating build/bdist.linux-x86_64/wheel\ncreating build/bdist.linux-x86_64/wheel/apotrope\ncopying build/lib/apotrope/scanner.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/cis_map.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/models.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncreating build/bdist.linux-x86_64/wheel/apotrope/checks\ncopying build/lib/apotrope/checks/os_info.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/misc.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/startup.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/services.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/encryption.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/firewall.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/accounts.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/antivirus.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/powershell.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/updates.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/smb.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/__init__.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/network.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/uac.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/rdp.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/scoring.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/profile.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/reporter.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/__init__.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/cli.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/utils.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/exceptions.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/compare.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/__main__.py -> build/bdist.linux-x86_64/wheel/./apotrope\nrunning install_egg_info\nCopying src/apotrope.egg-info to build/bdist.linux-x86_64/wheel/./apotrope-0.1.3-py3.12.egg-info\nrunning install_scripts\ncreating build/bdist.linux-x86_64/wheel/apotrope-0.1.3.dist-info/WHEEL\ncreating '/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/direct-dist/.tmp-3pfu6to1/apotrope-0.1.3-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it\nadding 'apotrope/__init__.py'\nadding 'apotrope/__main__.py'\nadding 'apotrope/cis_map.py'\nadding 'apotrope/cli.py'\nadding 'apotrope/compare.py'\nadding 'apotrope/exceptions.py'\nadding 'apotrope/models.py'\nadding 'apotrope/profile.py'\nadding 'apotrope/reporter.py'\nadding 'apotrope/scanner.py'\nadding 'apotrope/scoring.py'\nadding 'apotrope/utils.py'\nadding 'apotrope/checks/__init__.py'\nadding 'apotrope/checks/accounts.py'\nadding 'apotrope/checks/antivirus.py'\nadding 'apotrope/checks/encryption.py'\nadding 'apotrope/checks/firewall.py'\nadding 'apotrope/checks/misc.py'\nadding 'apotrope/checks/network.py'\nadding 'apotrope/checks/os_info.py'\nadding 'apotrope/checks/powershell.py'\nadding 'apotrope/checks/rdp.py'\nadding 'apotrope/checks/services.py'\nadding 'apotrope/checks/smb.py'\nadding 'apotrope/checks/startup.py'\nadding 'apotrope/checks/uac.py'\nadding 'apotrope/checks/updates.py'\nadding 'apotrope-0.1.3.dist-info/licenses/LICENSE'\nadding 'apotrope-0.1.3.dist-info/METADATA'\nadding 'apotrope-0.1.3.dist-info/WHEEL'\nadding 'apotrope-0.1.3.dist-info/entry_points.txt'\nadding 'apotrope-0.1.3.dist-info/top_level.txt'\nadding 'apotrope-0.1.3.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/direct-dist/apotrope-0.1.3-py3-none-any.whl\n",
+        "seconds": 1.7456915980146732
+      },
+      "artifact_sha256": "8cbb7b8c409c3c10cc53252b7ebe5c239d691d7f04e58d4afd0179c411f263e8",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/direct-dist/apotrope-0.1.3-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 42ms\nPrepared 1 package in 63ms\nInstalled 1 package in 31ms\n + apotrope==0.1.3 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/direct-dist/apotrope-0.1.3-py3-none-any.whl)\n",
+        "seconds": 0.30928250099532306
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from apotrope.models import AuditReport\n from apotrope.reporter import Reporter\n from datetime import datetime\n p=pathlib.Path('report.html')\n if p.exists():p.unlink()\n r=AuditReport(hostname='audit-host-482',os_version='offline-fixture',scan_timestamp=datetime(2026,1,2),scan_duration=0,score=75)\n Reporter().generate_html_report(r,str(p))\n text=p.read_text();assert 'audit-host-482' in text and '<html' in text.lower()\n print(json.dumps({'html_written':True,'host_present':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"apotrope\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/wheel-installed/apotrope/__init__.py\"}}\n",
+        "stderr": "Could not load HTML template: 'report.html.j2' not found in search path: '/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/templates'\nTraceback (most recent call last):\n  File \"<string>\", line 13, in <module>\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'report.html'\n",
+        "seconds": 0.21762058400781825
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "   License :: OSI Approved :: MIT License\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  dist._finalize_license_expression()\n/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpMjr0D8/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.\n!!\n\n        ********************************************************************************\n        Please consider removing the following classifiers in favor of a SPDX license expression:\n\n        License :: OSI Approved :: MIT License\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  self._finalize_license_expression()\nrunning sdist\nrunning egg_info\nwriting src/apotrope.egg-info/PKG-INFO\nwriting dependency_links to src/apotrope.egg-info/dependency_links.txt\nwriting entry points to src/apotrope.egg-info/entry_points.txt\nwriting requirements to src/apotrope.egg-info/requires.txt\nwriting top-level names to src/apotrope.egg-info/top_level.txt\nreading manifest file 'src/apotrope.egg-info/SOURCES.txt'\nadding license file 'LICENSE'\nwriting manifest file 'src/apotrope.egg-info/SOURCES.txt'\nrunning check\ncreating apotrope-0.1.3\ncreating apotrope-0.1.3/src/apotrope\ncreating apotrope-0.1.3/src/apotrope.egg-info\ncreating apotrope-0.1.3/src/apotrope/checks\ncreating apotrope-0.1.3/tests\ncopying files to apotrope-0.1.3...\ncopying LICENSE -> apotrope-0.1.3\ncopying README.md -> apotrope-0.1.3\ncopying pyproject.toml -> apotrope-0.1.3\ncopying src/apotrope/__init__.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/__main__.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/cis_map.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/cli.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/compare.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/exceptions.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/models.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/profile.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/reporter.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/scanner.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/scoring.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope/utils.py -> apotrope-0.1.3/src/apotrope\ncopying src/apotrope.egg-info/PKG-INFO -> apotrope-0.1.3/src/apotrope.egg-info\ncopying src/apotrope.egg-info/SOURCES.txt -> apotrope-0.1.3/src/apotrope.egg-info\ncopying src/apotrope.egg-info/dependency_links.txt -> apotrope-0.1.3/src/apotrope.egg-info\ncopying src/apotrope.egg-info/entry_points.txt -> apotrope-0.1.3/src/apotrope.egg-info\ncopying src/apotrope.egg-info/requires.txt -> apotrope-0.1.3/src/apotrope.egg-info\ncopying src/apotrope.egg-info/top_level.txt -> apotrope-0.1.3/src/apotrope.egg-info\ncopying src/apotrope/checks/__init__.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/accounts.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/antivirus.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/encryption.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/firewall.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/misc.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/network.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/os_info.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/powershell.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/rdp.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/services.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/smb.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/startup.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/uac.py -> apotrope-0.1.3/src/apotrope/checks\ncopying src/apotrope/checks/updates.py -> apotrope-0.1.3/src/apotrope/checks\ncopying tests/test_cli.py -> apotrope-0.1.3/tests\ncopying tests/test_compare.py -> apotrope-0.1.3/tests\ncopying tests/test_profile.py -> apotrope-0.1.3/tests\ncopying tests/test_reporter.py -> apotrope-0.1.3/tests\ncopying tests/test_scanner.py -> apotrope-0.1.3/tests\ncopying tests/test_scenarios.py -> apotrope-0.1.3/tests\ncopying tests/test_scoring.py -> apotrope-0.1.3/tests\ncopying tests/test_utils.py -> apotrope-0.1.3/tests\ncopying src/apotrope.egg-info/SOURCES.txt -> apotrope-0.1.3/src/apotrope.egg-info\nWriting apotrope-0.1.3/setup.cfg\nCreating tar archive\nremoving 'apotrope-0.1.3' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/sdist/apotrope-0.1.3.tar.gz\n",
+        "seconds": 1.7667830889986362
+      },
+      "sdist_sha256": "b94034e24b7d0f357b616dad57ae05c1a93760f4923cf63eacaf59c816aac157",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "KG-INFO\nwriting dependency_links to src/apotrope.egg-info/dependency_links.txt\nwriting entry points to src/apotrope.egg-info/entry_points.txt\nwriting requirements to src/apotrope.egg-info/requires.txt\nwriting top-level names to src/apotrope.egg-info/top_level.txt\nreading manifest file 'src/apotrope.egg-info/SOURCES.txt'\nadding license file 'LICENSE'\nwriting manifest file 'src/apotrope.egg-info/SOURCES.txt'\ninstalling to build/bdist.linux-x86_64/wheel\nrunning install\nrunning install_lib\ncreating build/bdist.linux-x86_64/wheel\ncreating build/bdist.linux-x86_64/wheel/apotrope\ncopying build/lib/apotrope/scanner.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/cis_map.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/models.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncreating build/bdist.linux-x86_64/wheel/apotrope/checks\ncopying build/lib/apotrope/checks/os_info.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/misc.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/startup.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/services.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/encryption.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/firewall.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/accounts.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/antivirus.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/powershell.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/updates.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/smb.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/__init__.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/network.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/uac.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/checks/rdp.py -> build/bdist.linux-x86_64/wheel/./apotrope/checks\ncopying build/lib/apotrope/scoring.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/profile.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/reporter.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/__init__.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/cli.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/utils.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/exceptions.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/compare.py -> build/bdist.linux-x86_64/wheel/./apotrope\ncopying build/lib/apotrope/__main__.py -> build/bdist.linux-x86_64/wheel/./apotrope\nrunning install_egg_info\nCopying src/apotrope.egg-info to build/bdist.linux-x86_64/wheel/./apotrope-0.1.3-py3.12.egg-info\nrunning install_scripts\ncreating build/bdist.linux-x86_64/wheel/apotrope-0.1.3.dist-info/WHEEL\ncreating '/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/from-sdist/.tmp-je5dfzig/apotrope-0.1.3-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it\nadding 'apotrope/__init__.py'\nadding 'apotrope/__main__.py'\nadding 'apotrope/cis_map.py'\nadding 'apotrope/cli.py'\nadding 'apotrope/compare.py'\nadding 'apotrope/exceptions.py'\nadding 'apotrope/models.py'\nadding 'apotrope/profile.py'\nadding 'apotrope/reporter.py'\nadding 'apotrope/scanner.py'\nadding 'apotrope/scoring.py'\nadding 'apotrope/utils.py'\nadding 'apotrope/checks/__init__.py'\nadding 'apotrope/checks/accounts.py'\nadding 'apotrope/checks/antivirus.py'\nadding 'apotrope/checks/encryption.py'\nadding 'apotrope/checks/firewall.py'\nadding 'apotrope/checks/misc.py'\nadding 'apotrope/checks/network.py'\nadding 'apotrope/checks/os_info.py'\nadding 'apotrope/checks/powershell.py'\nadding 'apotrope/checks/rdp.py'\nadding 'apotrope/checks/services.py'\nadding 'apotrope/checks/smb.py'\nadding 'apotrope/checks/startup.py'\nadding 'apotrope/checks/uac.py'\nadding 'apotrope/checks/updates.py'\nadding 'apotrope-0.1.3.dist-info/licenses/LICENSE'\nadding 'apotrope-0.1.3.dist-info/METADATA'\nadding 'apotrope-0.1.3.dist-info/WHEEL'\nadding 'apotrope-0.1.3.dist-info/entry_points.txt'\nadding 'apotrope-0.1.3.dist-info/top_level.txt'\nadding 'apotrope-0.1.3.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/from-sdist/apotrope-0.1.3-py3-none-any.whl\n",
+        "seconds": 1.8329128969926387
+      },
+      "artifact_sha256": "f41c8704ea8632a171080bc60e99cb43001ca887f5cdbcebe65e3d2386593e21",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/from-sdist/apotrope-0.1.3-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 45ms\nPrepared 1 package in 66ms\nInstalled 1 package in 31ms\n + apotrope==0.1.3 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/from-sdist/apotrope-0.1.3-py3-none-any.whl)\n",
+        "seconds": 0.3278660869982559
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from apotrope.models import AuditReport\n from apotrope.reporter import Reporter\n from datetime import datetime\n p=pathlib.Path('report.html')\n if p.exists():p.unlink()\n r=AuditReport(hostname='audit-host-482',os_version='offline-fixture',scan_timestamp=datetime(2026,1,2),scan_duration=0,score=75)\n Reporter().generate_html_report(r,str(p))\n text=p.read_text();assert 'audit-host-482' in text and '<html' in text.lower()\n print(json.dumps({'html_written':True,'host_present':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"apotrope\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/sdist-installed/apotrope/__init__.py\"}}\n",
+        "stderr": "Could not load HTML template: 'report.html.j2' not found in search path: '/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/50-apotrope-template-B-23/grading/apotrope-template/35ddbc1aec8e/candidate/templates'\nTraceback (most recent call last):\n  File \"<string>\", line 13, in <module>\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'report.html'\n",
+        "seconds": 0.22682291598175652
+      },
+      "pass": false
+    }
+  ]
+}

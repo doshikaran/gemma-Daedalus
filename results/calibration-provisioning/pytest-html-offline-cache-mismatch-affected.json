@@ -1,0 +1,98 @@
+{
+  "id": "pytest-html-npm",
+  "arm": "affected",
+  "run_id": "c937acd6aff0",
+  "source_sha": "e4070567db8baed0a33d12b8deca78b0015e2f1d",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": [
+        {
+          "args": [
+            "npm",
+            "ci",
+            "--ignore-scripts",
+            "--no-audit",
+            "--no-fund"
+          ],
+          "returncode": 0,
+          "stdout": "\nadded 443 packages in 3s\n",
+          "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\nnpm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.\n",
+          "seconds": 3.1488753619996714
+        },
+        {
+          "args": [
+            "npm",
+            "run",
+            "build"
+          ],
+          "returncode": 0,
+          "stdout": "\n> build\n> npm run build:css && npm run build:jsapp\n\n\n> build:css\n> sass --no-source-map --no-error-css src/layout/css/style.scss src/pytest_html/resources/style.css\n\n\n> build:jsapp\n> browserify ./src/pytest_html/scripts/index.js > ./src/pytest_html/resources/app.js\n\n",
+          "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\nnpm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\nnpm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n",
+          "seconds": 1.1012982180000108
+        }
+      ],
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,pathlib,json\nsys.path[:0]=[sys.argv[1],sys.argv[2]]\nimport pytest,pytest_html\nassert pathlib.Path(pytest_html.__file__).resolve().is_relative_to(pathlib.Path(sys.argv[1]).resolve())\np=pathlib.Path('test_release_fixture.py');p.write_text('def test_audit_release_482():\\n    assert 2+2==4\\n')\ncode=pytest.main(['-p','pytest_metadata.plugin','-p','pytest_html.plugin','--html=report.html','--self-contained-html','test_release_fixture.py','-q'])\nassert code==0\ns=pathlib.Path('report.html').read_text();assert 'test_audit_release_482'in s and '<html'in s.lower()\nprint(json.dumps({'html_report':True,'module_origin':pytest_html.__file__}))\n",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/repo/src",
+          "/workspace/scratch/93af20bbcd93/packaging_study/runtime/pytesthtml-deps"
+        ],
+        "returncode": 0,
+        "stdout": ".                                                                        [100%]\n- Generated html report: file:///workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/consumer-source/report.html -\n1 passed in 0.00s\n{\"html_report\": true, \"module_origin\": \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/repo/src/pytest_html/__init__.py\"}\n",
+        "stderr": "",
+        "seconds": 0.21576677500024743
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "Building wheel...\nnpm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\nnpm error code ENOTCACHED\nnpm error request to https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz failed: cache mode is 'only-if-cached' but no cached response is available.\nnpm error A complete log of this run can be found in: /root/.npm/_logs/2026-11-01T16_46_42_156Z-debug-0.log\nTraceback (most recent call last):\n  File \"<string>\", line 11, in <module>\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpNAX4QH/lib/python3.12/site-packages/hatchling/build.py\", line 58, in build_wheel\n    return os.path.basename(next(builder.build(directory=wheel_directory, versions=['standard'])))\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpNAX4QH/lib/python3.12/site-packages/hatchling/builders/plugin/interface.py\", line 147, in build\n    build_hook.initialize(version, build_data)\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/direct-repo/scripts/npm.py\", line 8, in initialize\n    subprocess.check_output(\"npm ci\", shell=True)\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 466, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command 'npm ci' returned non-zero exit status 1.\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/direct-repo`\n  cause: The build backend returned an error\n  cause: Call to `hatchling.build.build_wheel` failed (exit status: 1)\n\nhint: Build failures usually indicate a problem with the package or the build environment\n",
+        "seconds": 1.4814566069999273
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "Building source distribution...\nnpm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\nnpm error code ENOTCACHED\nnpm error request to https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz failed: cache mode is 'only-if-cached' but no cached response is available.\nnpm error A complete log of this run can be found in: /root/.npm/_logs/2026-11-01T16_46_45_491Z-debug-0.log\nTraceback (most recent call last):\n  File \"<string>\", line 11, in <module>\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpsdRAIA/lib/python3.12/site-packages/hatchling/build.py\", line 34, in build_sdist\n    return os.path.basename(next(builder.build(directory=sdist_directory, versions=['standard'])))\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpsdRAIA/lib/python3.12/site-packages/hatchling/builders/plugin/interface.py\", line 147, in build\n    build_hook.initialize(version, build_data)\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/release-repo/scripts/npm.py\", line 8, in initialize\n    subprocess.check_output(\"npm ci\", shell=True)\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 466, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command 'npm ci' returned non-zero exit status 1.\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/tasks/pytest-html-npm/c937acd6aff0/affected/release-repo`\n  cause: The build backend returned an error\n  cause: Call to `hatchling.build.build_sdist` failed (exit status: 1)\n\nhint: Build failures usually indicate a problem with the package or the build environment\n",
+        "seconds": 1.501071328999842
+      },
+      "pass": false
+    }
+  ]
+}

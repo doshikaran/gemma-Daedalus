@@ -1,0 +1,17 @@
+diff --git a/src/stellium/data/geocode_cache.json b/src/stellium/data/geocode_cache.json
+index fd82a5f..78048bd 100644
+--- a/src/stellium/data/geocode_cache.json
++++ b/src/stellium/data/geocode_cache.json
+@@ -1174,5 +1174,11 @@
+     "latitude": 47.3744,
+     "longitude": 8.541,
+     "timezone": "Europe/Paris"
++  },
++  "Alexandria, Egypt": {
++    "address": "Alexandria, Egypt",
++    "latitude": 31.2,
++    "longitude": 29.9,
++    "timezone": "Africa/Cairo"
+   }
+ }
+\ No newline at end of file

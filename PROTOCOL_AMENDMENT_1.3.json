@@ -1,0 +1,40 @@
+{
+  "amendment": "1.3",
+  "timestamp_utc": "2026-11-04T02:55:15.704302+00:00",
+  "base": "Protocol 1.1 (FREEZE.json) with amendment 1.2 (amendment_1.2/FREEZE_1.2.json); both unchanged and verified at start.",
+  "authorized_by": "Study owner instruction, 2026-11-03, after the episode 09 preparation incident.",
+  "incident": {
+    "episode": "09-tox-sdist-A-41",
+    "classification": "infrastructure: pre-model provisioning defect",
+    "model_calls": 0,
+    "generated_tokens": 0,
+    "record": "pilots/v1.2-infrastructure/09-tox-sdist-A-41.INCIDENT.json",
+    "retained_directory": "pilots/v1.2-infrastructure/09-tox-sdist-A-41"
+  },
+  "root_cause": "run_study.prepare('tox-sdist') calls replay.build, which selects build-constraints-tox.txt only when a path component equals 'tox-sdist'. Episode trees are main_runs/<NN>-tox-sdist-<C>-<seed>/repo, so the generic build-constraints.txt (hatchling==1.27.0) was used and tox's build-system.requires (hatchling>=1.29) could not resolve. Latent in frozen v1.1 code; grading and the agent-environment preflight used paths containing the exact component and were unaffected.",
+  "experimental_setup_correction": "amendment_1.3/run_batch_native_1_3.py overrides only the tox-sdist branch of run_study.prepare, selecting build-constraints-tox.txt by task ID. The uv build command is otherwise identical to replay.build (same interpreter, wheel output directory, cache and environment). Grading already used the same constraint file for the same tox source preparation, so preparation now matches grading. All other tasks call the frozen prepare unchanged.",
+  "verification": {
+    "tox_preparation_test": "restoration_1.3/tox_prep_tests/offline-1/result.json: all six actual tox episode IDs x affected/reference, offline, zero model calls. Frozen prepare fails in all 12 (reproduces the incident); amended prepare succeeds in all 12 and generates src/tox/version.py (0.0.0+audit). Git status after preparation is empty (version.py is ignored by tox's .gitignore; wheel output is in the excluded .agent-source-preparation/), so agent patches are unaffected."
+  },
+  "replacement": {
+    "episode": "09-tox-sdist-A-41",
+    "disposition": "Restarts from a fresh workspace with its original order 9, condition A and seed 41. The failed preparation attempt is not a main attempt.",
+    "counted_as_main_attempt": false
+  },
+  "outcomes_observed_when_introduced": {
+    "completed_result_records": 9,
+    "tox_outcomes": 0,
+    "observed": "Nine completed non-tox episodes (00-08) had been observed by the orchestrator through controller lines (artifact_contract_pass, stop reason) and episode 00's per-state grade rows. All nine were automated artifact-contract failures (0 passes); stop reasons: completion_claim 7, action_limit 2.",
+    "byte_identity": "The nine result.json files and all other files in main_runs/00-08 are hash-recorded in restoration_1.3/completed_runs_baseline.sha256; the nine result.json hashes are frozen in amendment_1.3/FREEZE_1.3.json and verified at controller start.",
+    "outcome_based_change": false,
+    "rationale": "The correction is forced by a deterministic preparation failure that occurs before any model call, affects only the tox family, applies equally to both conditions and all seeds, and does not alter prompts, model, budgets, grading or scoring."
+  },
+  "model_prompts_seeds_budgets_conditions_scoring_unchanged": true,
+  "evidence_packaging_correction": {
+    "separate_from_scoring": true,
+    "defect": "run_batch.checkpoint added the root CONTENTS_SHA256.json as a member and then wrote a second member with the same name (generated manifest). All payload hashes were correct; standard readers resolve the duplicate name to the generated manifest.",
+    "audit": "restoration_1.3/checkpoint_archives/audit-after-ep08-paused.json (287 members, 1 duplicate name, 0 payload mismatches, 0 missing). The archive is preserved unchanged as restoration_1.3/checkpoint_archives/Daedalus_Experiment_Checkpoint.after-ep08-paused.zip.",
+    "correction": "Amendment 1.3 checkpoint writer omits the root CONTENTS_SHA256.json member (the file itself stays on disk unchanged), writes one generated manifest, additionally packages amendment_1.2/ and amendment_1.3/ scripts, incident records and amendment logs, and rejects any archive with duplicate names or a member whose hash differs from the manifest."
+  },
+  "launcher": "amendment_1.3/launch_grid.sh --resume"
+}

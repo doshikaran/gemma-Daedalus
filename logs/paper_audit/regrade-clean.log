@@ -1,0 +1,145 @@
+{"id": "pyfiglet-154", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "00-pyfiglet-154-A-19", "task": "pyfiglet-154", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:18:59.566035+00:00"}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "01-rtl-data-B-19", "task": "rtl-data", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:19:13.424824+00:00"}
+{"id": "apotrope-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "02-apotrope-template-A-19", "task": "apotrope-template", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:19:21.569967+00:00"}
+{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "03-stellium-locales-A-19", "task": "stellium-locales", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:19:27.458487+00:00"}
+{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "04-stellium-glyphs-A-41", "task": "stellium-glyphs", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:19:41.439625+00:00"}
+{"id": "pynecore-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "05-pynecore-data-A-23", "task": "pynecore-data", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:19:55.675629+00:00"}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "06-rtl-data-B-23", "task": "rtl-data", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:20:06.732967+00:00"}
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "07-pytest-html-npm-A-23", "task": "pytest-html-npm", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:20:14.366607+00:00"}
+{"id": "pixcull-sdist", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "08-pixcull-sdist-A-41", "task": "pixcull-sdist", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:21:12.935427+00:00"}
+{"id": "tox-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "09-tox-sdist-A-41", "task": "tox-sdist", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T08:21:19.770063+00:00"}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "10-rtl-data-A-41", "task": "rtl-data", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:21:28.826840+00:00"}
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "11-pytest-html-npm-B-19", "task": "pytest-html-npm", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T08:21:38.014888+00:00"}
+{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "12-s3-template-B-19", "task": "s3-template", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:22:42.369140+00:00"}
+{"id": "pynecore-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "13-pynecore-data-B-41", "task": "pynecore-data", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:22:49.986410+00:00"}
+{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "14-stellium-locales-A-41", "task": "stellium-locales", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:23:01.921073+00:00"}
+{"id": "pyfiglet-154", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "15-pyfiglet-154-B-41", "task": "pyfiglet-154", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:23:17.206276+00:00"}
+{"id": "apotrope-template", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "16-apotrope-template-B-41", "task": "apotrope-template", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:23:31.529451+00:00"}
+{"id": "pixcull-sdist", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "17-pixcull-sdist-B-19", "task": "pixcull-sdist", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:23:38.717803+00:00"}
+{"id": "pixcull-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "18-pixcull-sdist-A-19", "task": "pixcull-sdist", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T08:23:46.137387+00:00"}
+{"id": "tox-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "19-tox-sdist-A-19", "task": "tox-sdist", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T08:23:52.323546+00:00"}
+{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "20-stellium-locales-B-41", "task": "stellium-locales", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:24:01.541232+00:00"}
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "21-pytest-html-npm-A-19", "task": "pytest-html-npm", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T08:24:15.464250+00:00"}
+{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "22-stellium-glyphs-B-41", "task": "stellium-glyphs", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:40:44.693125+00:00"}
+{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "23-stellium-glyphs-B-19", "task": "stellium-glyphs", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:41:09.196762+00:00"}
+{"id": "tox-sdist", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "24-tox-sdist-B-41", "task": "tox-sdist", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:41:31.788215+00:00"}
+{"id": "pyfiglet-154", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "25-pyfiglet-154-B-23", "task": "pyfiglet-154", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:41:35.595277+00:00"}
+{"id": "pyfiglet-154", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "26-pyfiglet-154-A-23", "task": "pyfiglet-154", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:41:57.706173+00:00"}
+{"id": "pynecore-data", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "27-pynecore-data-B-19", "task": "pynecore-data", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:42:23.871432+00:00"}
+{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "28-s3-template-B-23", "task": "s3-template", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:42:39.008969+00:00"}
+{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "29-s3-template-A-41", "task": "s3-template", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T08:42:48.099649+00:00"}
+{"id": "pixcull-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "30-pixcull-sdist-B-23", "task": "pixcull-sdist", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T08:43:17.405604+00:00"}
+{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "31-stellium-locales-A-23", "task": "stellium-locales", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:43:55.374936+00:00"}
+{"id": "pynecore-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "32-pynecore-data-A-41", "task": "pynecore-data", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T08:45:21.091960+00:00"}
+{"id": "stellium-cache", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "33-stellium-cache-B-23", "task": "stellium-cache", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:01:01.924698+00:00"}
+{"id": "l0-module-actual", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "34-l0-module-actual-B-23", "task": "l0-module-actual", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:01:28.512355+00:00"}
+{"id": "stellium-cache", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "35-stellium-cache-A-23", "task": "stellium-cache", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:01:47.590681+00:00"}
+{"id": "apotrope-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "36-apotrope-template-A-41", "task": "apotrope-template", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T09:02:22.951669+00:00"}
+{"id": "apotrope-template", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "37-apotrope-template-A-23", "task": "apotrope-template", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:02:33.704267+00:00"}
+{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "38-stellium-glyphs-A-23", "task": "stellium-glyphs", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:02:46.123909+00:00"}
+{"id": "pyfiglet-154", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "39-pyfiglet-154-B-19", "task": "pyfiglet-154", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T09:03:51.738988+00:00"}
+{"id": "apotrope-template", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "40-apotrope-template-B-19", "task": "apotrope-template", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:06:02.412947+00:00"}
+{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "41-stellium-locales-B-23", "task": "stellium-locales", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:06:20.031781+00:00"}
+{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "42-stellium-glyphs-B-23", "task": "stellium-glyphs", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:12:47.176518+00:00"}
+{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "43-s3-template-B-41", "task": "s3-template", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T09:13:10.180137+00:00"}
+{"id": "stellium-cache", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "44-stellium-cache-B-19", "task": "stellium-cache", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:13:21.298706+00:00"}
+{"id": "stellium-cache", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "45-stellium-cache-A-19", "task": "stellium-cache", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:28:42.815208+00:00"}
+{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "46-s3-template-A-19", "task": "s3-template", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T09:29:05.367254+00:00"}
+{"id": "pynecore-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "47-pynecore-data-A-19", "task": "pynecore-data", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:29:19.249089+00:00"}
+{"id": "tox-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "48-tox-sdist-A-23", "task": "tox-sdist", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T09:29:38.243647+00:00"}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "49-rtl-data-A-23", "task": "rtl-data", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:29:50.094735+00:00"}
+{"id": "apotrope-template", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "50-apotrope-template-B-23", "task": "apotrope-template", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:30:01.418462+00:00"}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "51-rtl-data-A-19", "task": "rtl-data", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:30:09.190043+00:00"}
+{"id": "stellium-locales", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "52-stellium-locales-B-19", "task": "stellium-locales", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:30:35.255171+00:00"}
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "53-pytest-html-npm-A-41", "task": "pytest-html-npm", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:31:50.001208+00:00"}
+{"id": "s3-template", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "54-s3-template-A-23", "task": "s3-template", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T09:35:21.310513+00:00"}
+{"id": "pixcull-sdist", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "55-pixcull-sdist-A-23", "task": "pixcull-sdist", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T09:50:39.264531+00:00"}
+{"id": "tox-sdist", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "56-tox-sdist-B-19", "task": "tox-sdist", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T09:50:51.875314+00:00"}
+{"id": "tox-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "57-tox-sdist-B-23", "task": "tox-sdist", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T09:50:55.289211+00:00"}
+{"id": "stellium-cache", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "58-stellium-cache-B-41", "task": "stellium-cache", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T09:51:09.222631+00:00"}
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "59-pytest-html-npm-B-23", "task": "pytest-html-npm", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T09:51:27.284473+00:00"}
+{"id": "pytest-html-npm", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "60-pytest-html-npm-B-41", "task": "pytest-html-npm", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T09:53:59.511565+00:00"}
+{"id": "l0-module-actual", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "61-l0-module-actual-B-19", "task": "l0-module-actual", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T10:10:37.481558+00:00"}
+{"id": "l0-module-actual", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "62-l0-module-actual-A-41", "task": "l0-module-actual", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T10:10:48.496649+00:00"}
+{"id": "stellium-glyphs", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "63-stellium-glyphs-A-19", "task": "stellium-glyphs", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T10:11:00.063313+00:00"}
+{"id": "pixcull-sdist", "arm": "candidate", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"episode_id": "64-pixcull-sdist-B-41", "task": "pixcull-sdist", "recorded": "PPF", "observed": "PPF", "match": true, "error": null, "started_utc": "2026-11-07T10:11:20.871615+00:00"}
+{"id": "pynecore-data", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "65-pynecore-data-B-23", "task": "pynecore-data", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T10:11:49.234729+00:00"}
+{"id": "l0-module-actual", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "66-l0-module-actual-A-19", "task": "l0-module-actual", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T10:12:45.862314+00:00"}
+{"id": "rtl-data", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "67-rtl-data-B-41", "task": "rtl-data", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T10:13:19.303642+00:00"}
+{"id": "l0-module-actual", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "68-l0-module-actual-A-23", "task": "l0-module-actual", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T10:14:02.703456+00:00"}
+{"id": "stellium-cache", "arm": "candidate", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "69-stellium-cache-A-41", "task": "stellium-cache", "recorded": "FFF", "observed": "FFF", "match": true, "error": null, "started_utc": "2026-11-07T10:18:17.665712+00:00"}
+{"id": "pyfiglet-154", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "70-pyfiglet-154-A-41", "task": "pyfiglet-154", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T10:18:40.118713+00:00"}
+{"id": "l0-module-actual", "arm": "candidate", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"episode_id": "71-l0-module-actual-B-41", "task": "l0-module-actual", "recorded": "PFF", "observed": "PFF", "match": true, "error": null, "started_utc": "2026-11-07T10:23:42.898435+00:00"}
+MATCH 72 / 72

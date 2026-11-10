@@ -1,0 +1,18 @@
+{
+  "id": "s3-template",
+  "repository": "TocConsulting/s3-security-scanner",
+  "affected": {
+    "repository": "TocConsulting/s3-security-scanner",
+    "sha": "7e314d99ff2cbcae4b1b2db1e2a29169f1a253eb",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/TocConsulting__s3-security-scanner-7e314d99ff2cbcae4b1b2db1e2a29169f1a253eb",
+    "archive_sha256": "8baf2847c1119dc98d24bbffccae6158a3310b33cc14efe3b7a9499102d7fc6e",
+    "archive_bytes": 930094
+  },
+  "reference": {
+    "repository": "TocConsulting/s3-security-scanner",
+    "sha": "09286154d8785644bfd9709c3aa5aec14747b2f3",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/TocConsulting__s3-security-scanner-09286154d8785644bfd9709c3aa5aec14747b2f3",
+    "archive_sha256": "c3aa8c96fa3a764eb1210f80197eb0871803c81ff5590a92dd897ebeee620f69",
+    "archive_bytes": 939940
+  }
+}

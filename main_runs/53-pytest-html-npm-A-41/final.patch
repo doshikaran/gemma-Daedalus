@@ -1,0 +1,75 @@
+diff --git a/fix_pyproject.py b/fix_pyproject.py
+new file mode 100644
+index 0000000..02dbd37
+--- /dev/null
++++ b/fix_pyproject.py
+@@ -0,0 +1,49 @@
++import toml
++import sys
++
++try:
++    with open('pyproject.toml', 'r') as f:
++        data = toml.load(f)
++except FileNotFoundError:
++    print("pyproject.toml not found.")
++    sys.exit(1)
++except Exception as e:
++    print(f"Error loading pyproject.toml: {e}")
++    sys.exit(1)
++
++# Assuming the package definition is under [tool.hatch.build.targets.wheel] or similar.
++# We need to find where the package metadata is defined and add 'data' or 'include' for static assets.
++
++# A common pattern for data inclusion in hatchling is within the build configuration.
++# I will look for a section that defines the package and add the data inclusion there.
++
++# If the structure is complex, I will try to add a 'data' key to the root of the package definition
++# if it exists, or modify the build targets.
++
++# Since I don't know the exact structure, I will attempt to add a 'data' key to the top level of the build configuration.
++# This is a heuristic fix.
++
++if 'tool' in data and 'hatch' in data['tool']:
++    # Attempt to add data inclusion under the wheel build target if it exists
++    if 'build' in data['tool']['hatch'] and 'targets' in data['tool']['hatch']['build']:
++        wheel_target = data['tool']['hatch']['build']['targets'].get('wheel', {})
++        if isinstance(wheel_target, dict):
++            wheel_target['data'] = {'static': ["**/*.js"]}
++        else:
++            # If it's not a dict, we might need to wrap it or add it differently.
++            pass
++
++    # If the above fails, we might need to add it to the package definition itself.
++    # This is highly dependent on the package structure.
++
++    # For safety, I will try to add a 'data' key to the package definition if it's a dictionary.
++    if 'project' in data['tool']['hatch']:
++        data['tool']['hatch']['project']['data'] = {'static': ["**/*.js"]}
++    elif 'project' in data:
++        data['project']['data'] = {'static': ["**/*.js"]}
++
++# Write the modified content back to pyproject.toml
++with open('pyproject.toml', 'w') as f:
++    toml.dump(data, f)
++
++print("pyproject.toml modified successfully.")
+diff --git a/pyproject.toml b/pyproject.toml
+index 3d78222..9385615 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -83,6 +83,9 @@ features = [
+ source = "vcs"
+ 
+ [tool.hatch.build.targets.wheel]
++tdata = [
++		"static": ["**/*.js"], 
++]
+ exclude = [
+   "src/pytest_html/scripts/*",
+ ]
+@@ -95,5 +98,4 @@ exclude = [
+ [tool.hatch.build.hooks.vcs]
+ version-file = "src/pytest_html/__version.py"
+ 
+-[tool.hatch.build.hooks.custom]
+ path = "scripts/npm.py"

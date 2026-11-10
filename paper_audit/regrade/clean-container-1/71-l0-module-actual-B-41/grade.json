@@ -1,0 +1,71 @@
+{
+  "id": "l0-module-actual",
+  "arm": "candidate",
+  "run_id": "edb500fd5f70",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/71-l0-module-actual-B-41/grading/l0-module-actual/edb500fd5f70/candidate/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/71-l0-module-actual-B-41/grading/l0-module-actual/edb500fd5f70/candidate/repo', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import runpy\n sys.argv=['l0p4map','--help']\n if stage=='source':runpy.run_path(str(base/'main.py'),run_name='__main__')\n else:\n  from importlib.metadata import distribution\n  entry=next(x for x in distribution('l0p4map').entry_points if x.name=='l0p4map')\n  entry.load()()\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "usage: l0p4map [-h] [-V] {scan,gui} ...\n\nL0p4Map \u2014 network monitoring & visualization tool\n\npositional arguments:\n  {scan,gui}\n    scan         scan network and print results\n    gui          launch the GUI (default when no command given)\n\noptions:\n  -h, --help     show this help message and exit\n  -V, --version  show program's version number and exit\n\nexamples:\n  sudo l0p4map                          launch GUI\n  sudo l0p4map scan                     scan local subnet, table output\n  sudo l0p4map scan -t 192.168.1.0/24   scan specific subnet\n  sudo l0p4map scan -o json             JSON output\n  sudo l0p4map scan -o csv -f out.csv   save CSV to file\n{\"import_origins\": {}}\n",
+        "stderr": "",
+        "seconds": 0.2447981000004802
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/71-l0-module-actual-B-41/grading/l0-module-actual/edb500fd5f70/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "warning: Failed to parse `pyproject.toml` during settings discovery:\n  TOML parse error at line 51, column 10\n     |\n  51 | [project.scripts]\n     |          ^^^^^^^\n  duplicate key\n\nBuilding wheel...\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/71-l0-module-actual-B-41/grading/l0-module-actual/edb500fd5f70/candidate/direct-repo`\n  cause: Invalid `pyproject.toml`\n  cause: TOML parse error at line 51, column 10\n            |\n         51 | [project.scripts]\n            |          ^^^^^^^\n         duplicate key\n",
+        "seconds": 0.2259235420206096
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/71-l0-module-actual-B-41/grading/l0-module-actual/edb500fd5f70/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "warning: Failed to parse `pyproject.toml` during settings discovery:\n  TOML parse error at line 51, column 10\n     |\n  51 | [project.scripts]\n     |          ^^^^^^^\n  duplicate key\n\nBuilding source distribution...\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/71-l0-module-actual-B-41/grading/l0-module-actual/edb500fd5f70/candidate/release-repo`\n  cause: Invalid `pyproject.toml`\n  cause: TOML parse error at line 51, column 10\n            |\n         51 | [project.scripts]\n            |          ^^^^^^^\n         duplicate key\n",
+        "seconds": 0.22494524798821658
+      },
+      "pass": false
+    }
+  ]
+}

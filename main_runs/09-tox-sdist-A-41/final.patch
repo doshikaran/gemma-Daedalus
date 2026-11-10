@@ -1,0 +1,14 @@
+diff --git a/setup.py b/setup.py
+new file mode 100644
+index 0000000..74d2dd3
+--- /dev/null
++++ b/setup.py
+@@ -0,0 +1,8 @@
++from setuptools import setup
++setup(
++    name="tombi",
++    version="0.1.0",
++    packages=["tombi"],
++    package_dir={"": "src"},
++    install_requires=[],
++)

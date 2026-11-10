@@ -1,0 +1,107 @@
+{
+  "families": [
+    {
+      "id": "rtl-data",
+      "repository": "sean-galloway/RTLDesignSherpa-DV",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "l0-module-actual",
+      "repository": "HaxL0p4/L0p4Map",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "pyfiglet-154",
+      "repository": "pwaller/pyfiglet",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "apotrope-template",
+      "repository": "hexorcist404/apotrope",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "pynecore-data",
+      "repository": "PyneSys/pynecore",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "pixcull-sdist",
+      "repository": "ChrisChen667788/pixcull",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "stellium-locales",
+      "repository": "katelouie/stellium",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "stellium-glyphs",
+      "repository": "katelouie/stellium",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "stellium-cache",
+      "repository": "katelouie/stellium",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "tox-sdist",
+      "repository": "tox-dev/tox",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "pytest-html-npm",
+      "repository": "pytest-dev/pytest-html",
+      "stratum": "gap",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    },
+    {
+      "id": "s3-template",
+      "repository": "TocConsulting/s3-security-scanner",
+      "stratum": "source-failing-control",
+      "A": 0,
+      "B": 0,
+      "B_minus_A": 0
+    }
+  ],
+  "primary_family_mean_difference": 0,
+  "repository_macro_difference": 0,
+  "repository_cluster_percentile_95_interval": [
+    0,
+    0
+  ],
+  "interpretation": "Descriptive paired guidance comparison; small, purposive, correlated cohort."
+}

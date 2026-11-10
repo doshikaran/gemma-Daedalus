@@ -1,0 +1,147 @@
+{
+  "id": "l0-module-actual",
+  "arm": "candidate",
+  "run_id": "749fc887397f",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/repo', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import runpy\n sys.argv=['l0p4map','--help']\n if stage=='source':runpy.run_path(str(base/'main.py'),run_name='__main__')\n else:\n  from importlib.metadata import distribution\n  entry=next(x for x in distribution('l0p4map').entry_points if x.name=='l0p4map')\n  entry.load()()\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "usage: l0p4map [-h] [-V] {scan,gui} ...\n\nL0p4Map \u2014 network monitoring & visualization tool\n\npositional arguments:\n  {scan,gui}\n    scan         scan network and print results\n    gui          launch the GUI (default when no command given)\n\noptions:\n  -h, --help     show this help message and exit\n  -V, --version  show program's version number and exit\n\nexamples:\n  sudo l0p4map                          launch GUI\n  sudo l0p4map scan                     scan local subnet, table output\n  sudo l0p4map scan -t 192.168.1.0/24   scan specific subnet\n  sudo l0p4map scan -o json             JSON output\n  sudo l0p4map scan -o csv -f out.csv   save CSV to file\n{\"import_origins\": {}}\n",
+        "stderr": "",
+        "seconds": 0.692314070998691
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "he/builds-v0/.tmpi1Uzpf/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.\n!!\n\n        ********************************************************************************\n        Please consider removing the following classifiers in favor of a SPDX license expression:\n\n        License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  dist._finalize_license_expression()\n/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpi1Uzpf/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.\n!!\n\n        ********************************************************************************\n        Please consider removing the following classifiers in favor of a SPDX license expression:\n\n        License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  self._finalize_license_expression()\nrunning bdist_wheel\nrunning build\nrunning build_py\ncreating build/lib/ui\ncopying ui/app.py -> build/lib/ui\ncreating build/lib/core\ncopying core/scanner.py -> build/lib/core\nrunning egg_info\nwriting l0p4map.egg-info/PKG-INFO\nwriting dependency_links to l0p4map.egg-info/dependency_links.txt\nwriting entry points to l0p4map.egg-info/entry_points.txt\nwriting requirements to l0p4map.egg-info/requires.txt\nwriting top-level names to l0p4map.egg-info/top_level.txt\nreading manifest file 'l0p4map.egg-info/SOURCES.txt'\nadding license file 'LICENSE'\nwriting manifest file 'l0p4map.egg-info/SOURCES.txt'\ncreating build/lib/ui/assets\ncopying ui/assets/logosite.png -> build/lib/ui/assets\ncopying ui/assets/vis-network.min.js -> build/lib/ui/assets\ncopying ui/assets/graph.html -> build/lib/ui/assets\ncopying ui/assets/logo.png -> build/lib/ui/assets\ncopying ui/assets/screenLogo.png -> build/lib/ui/assets\ncopying ui/assets/vis-network.min.css -> build/lib/ui/assets\ncopying core/oui.csv -> build/lib/core\ncopying ui/assets/graph.html -> build/lib/ui/assets\ncopying ui/assets/logo.png -> build/lib/ui/assets\ncopying ui/assets/logosite.png -> build/lib/ui/assets\ncopying ui/assets/screenLogo.png -> build/lib/ui/assets\ncopying ui/assets/vis-network.min.css -> build/lib/ui/assets\ncopying ui/assets/vis-network.min.js -> build/lib/ui/assets\ninstalling to build/bdist.linux-x86_64/wheel\nrunning install\nrunning install_lib\ncreating build/bdist.linux-x86_64/wheel\ncreating build/bdist.linux-x86_64/wheel/ui\ncopying build/lib/ui/app.py -> build/bdist.linux-x86_64/wheel/./ui\ncreating build/bdist.linux-x86_64/wheel/ui/assets\ncopying build/lib/ui/assets/logosite.png -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/vis-network.min.js -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/graph.html -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/logo.png -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/screenLogo.png -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/vis-network.min.css -> build/bdist.linux-x86_64/wheel/./ui/assets\ncreating build/bdist.linux-x86_64/wheel/core\ncopying build/lib/core/scanner.py -> build/bdist.linux-x86_64/wheel/./core\ncopying build/lib/core/oui.csv -> build/bdist.linux-x86_64/wheel/./core\nrunning install_egg_info\nCopying l0p4map.egg-info to build/bdist.linux-x86_64/wheel/./l0p4map-1.0.0-py3.12.egg-info\nrunning install_scripts\ncreating build/bdist.linux-x86_64/wheel/l0p4map-1.0.0.dist-info/WHEEL\ncreating '/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/direct-dist/.tmp-7yug7h0r/l0p4map-1.0.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it\nadding 'core/oui.csv'\nadding 'core/scanner.py'\nadding 'l0p4map-1.0.0.dist-info/licenses/LICENSE'\nadding 'ui/app.py'\nadding 'ui/assets/graph.html'\nadding 'ui/assets/logo.png'\nadding 'ui/assets/logosite.png'\nadding 'ui/assets/screenLogo.png'\nadding 'ui/assets/vis-network.min.css'\nadding 'ui/assets/vis-network.min.js'\nadding 'l0p4map-1.0.0.dist-info/METADATA'\nadding 'l0p4map-1.0.0.dist-info/WHEEL'\nadding 'l0p4map-1.0.0.dist-info/entry_points.txt'\nadding 'l0p4map-1.0.0.dist-info/top_level.txt'\nadding 'l0p4map-1.0.0.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/direct-dist/l0p4map-1.0.0-py3-none-any.whl\n",
+        "seconds": 7.4347487300110515
+      },
+      "artifact_sha256": "f5613c029b3be7b3b2de04c00607b0ca7dbbf4444cd2b62fba24e9d571114806",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/direct-dist/l0p4map-1.0.0-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 63ms\nPrepared 1 package in 99ms\nInstalled 1 package in 46ms\n + l0p4map==1.0.0 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/direct-dist/l0p4map-1.0.0-py3-none-any.whl)\n",
+        "seconds": 0.4460379469965119
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import runpy\n sys.argv=['l0p4map','--help']\n if stage=='source':runpy.run_path(str(base/'main.py'),run_name='__main__')\n else:\n  from importlib.metadata import distribution\n  entry=next(x for x in distribution('l0p4map').entry_points if x.name=='l0p4map')\n  entry.load()()\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 12, in <module>\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py\", line 205, in load\n    module = import_module(match.group('module'))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'main'\n",
+        "seconds": 0.3278143350034952
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "or details.\n        ********************************************************************************\n\n!!\n  self._finalize_license_expression()\nrunning egg_info\ncreating l0p4map.egg-info\nwriting l0p4map.egg-info/PKG-INFO\nwriting dependency_links to l0p4map.egg-info/dependency_links.txt\nwriting entry points to l0p4map.egg-info/entry_points.txt\nwriting requirements to l0p4map.egg-info/requires.txt\nwriting top-level names to l0p4map.egg-info/top_level.txt\nwriting manifest file 'l0p4map.egg-info/SOURCES.txt'\nreading manifest file 'l0p4map.egg-info/SOURCES.txt'\nadding license file 'LICENSE'\nwriting manifest file 'l0p4map.egg-info/SOURCES.txt'\n/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpaH5apD/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated\n!!\n\n        ********************************************************************************\n        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).\n\n        This deprecation is overdue, please update your project and remove deprecated\n        calls to avoid build errors in the future.\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  corresp(dist, value, root_dir)\n/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpaH5apD/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.\n!!\n\n        ********************************************************************************\n        Please consider removing the following classifiers in favor of a SPDX license expression:\n\n        License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  dist._finalize_license_expression()\n/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpaH5apD/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.\n!!\n\n        ********************************************************************************\n        Please consider removing the following classifiers in favor of a SPDX license expression:\n\n        License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  self._finalize_license_expression()\nrunning sdist\nrunning egg_info\nwriting l0p4map.egg-info/PKG-INFO\nwriting dependency_links to l0p4map.egg-info/dependency_links.txt\nwriting entry points to l0p4map.egg-info/entry_points.txt\nwriting requirements to l0p4map.egg-info/requires.txt\nwriting top-level names to l0p4map.egg-info/top_level.txt\nreading manifest file 'l0p4map.egg-info/SOURCES.txt'\nadding license file 'LICENSE'\nwriting manifest file 'l0p4map.egg-info/SOURCES.txt'\nrunning check\ncreating l0p4map-1.0.0\ncreating l0p4map-1.0.0/core\ncreating l0p4map-1.0.0/l0p4map.egg-info\ncreating l0p4map-1.0.0/ui\ncreating l0p4map-1.0.0/ui/assets\ncopying files to l0p4map-1.0.0...\ncopying LICENSE -> l0p4map-1.0.0\ncopying README.md -> l0p4map-1.0.0\ncopying pyproject.toml -> l0p4map-1.0.0\ncopying core/oui.csv -> l0p4map-1.0.0/core\ncopying core/scanner.py -> l0p4map-1.0.0/core\ncopying l0p4map.egg-info/PKG-INFO -> l0p4map-1.0.0/l0p4map.egg-info\ncopying l0p4map.egg-info/SOURCES.txt -> l0p4map-1.0.0/l0p4map.egg-info\ncopying l0p4map.egg-info/dependency_links.txt -> l0p4map-1.0.0/l0p4map.egg-info\ncopying l0p4map.egg-info/entry_points.txt -> l0p4map-1.0.0/l0p4map.egg-info\ncopying l0p4map.egg-info/requires.txt -> l0p4map-1.0.0/l0p4map.egg-info\ncopying l0p4map.egg-info/top_level.txt -> l0p4map-1.0.0/l0p4map.egg-info\ncopying ui/app.py -> l0p4map-1.0.0/ui\ncopying ui/assets/graph.html -> l0p4map-1.0.0/ui/assets\ncopying ui/assets/logo.png -> l0p4map-1.0.0/ui/assets\ncopying ui/assets/logosite.png -> l0p4map-1.0.0/ui/assets\ncopying ui/assets/screenLogo.png -> l0p4map-1.0.0/ui/assets\ncopying ui/assets/vis-network.min.css -> l0p4map-1.0.0/ui/assets\ncopying ui/assets/vis-network.min.js -> l0p4map-1.0.0/ui/assets\ncopying l0p4map.egg-info/SOURCES.txt -> l0p4map-1.0.0/l0p4map.egg-info\nWriting l0p4map-1.0.0/setup.cfg\nCreating tar archive\nremoving 'l0p4map-1.0.0' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/sdist/l0p4map-1.0.0.tar.gz\n",
+        "seconds": 1.3030680129886605
+      },
+      "sdist_sha256": "d492504b075bb92908661a9a6d809c7f5bbdca0999c07a68136f00a7a1faa0ac",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "       calls to avoid build errors in the future.\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  corresp(dist, value, root_dir)\n/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpDrp5ha/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.\n!!\n\n        ********************************************************************************\n        Please consider removing the following classifiers in favor of a SPDX license expression:\n\n        License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  dist._finalize_license_expression()\n/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache/builds-v0/.tmpDrp5ha/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.\n!!\n\n        ********************************************************************************\n        Please consider removing the following classifiers in favor of a SPDX license expression:\n\n        License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)\n\n        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n        ********************************************************************************\n\n!!\n  self._finalize_license_expression()\nrunning bdist_wheel\nrunning build\nrunning build_py\ncreating build/lib/ui\ncopying ui/app.py -> build/lib/ui\ncreating build/lib/core\ncopying core/scanner.py -> build/lib/core\nrunning egg_info\nwriting l0p4map.egg-info/PKG-INFO\nwriting dependency_links to l0p4map.egg-info/dependency_links.txt\nwriting entry points to l0p4map.egg-info/entry_points.txt\nwriting requirements to l0p4map.egg-info/requires.txt\nwriting top-level names to l0p4map.egg-info/top_level.txt\nreading manifest file 'l0p4map.egg-info/SOURCES.txt'\nadding license file 'LICENSE'\nwriting manifest file 'l0p4map.egg-info/SOURCES.txt'\ncreating build/lib/ui/assets\ncopying ui/assets/logosite.png -> build/lib/ui/assets\ncopying ui/assets/vis-network.min.js -> build/lib/ui/assets\ncopying ui/assets/graph.html -> build/lib/ui/assets\ncopying ui/assets/logo.png -> build/lib/ui/assets\ncopying ui/assets/screenLogo.png -> build/lib/ui/assets\ncopying ui/assets/vis-network.min.css -> build/lib/ui/assets\ncopying core/oui.csv -> build/lib/core\ninstalling to build/bdist.linux-x86_64/wheel\nrunning install\nrunning install_lib\ncreating build/bdist.linux-x86_64/wheel\ncreating build/bdist.linux-x86_64/wheel/ui\ncopying build/lib/ui/app.py -> build/bdist.linux-x86_64/wheel/./ui\ncreating build/bdist.linux-x86_64/wheel/ui/assets\ncopying build/lib/ui/assets/logosite.png -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/vis-network.min.js -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/graph.html -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/logo.png -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/screenLogo.png -> build/bdist.linux-x86_64/wheel/./ui/assets\ncopying build/lib/ui/assets/vis-network.min.css -> build/bdist.linux-x86_64/wheel/./ui/assets\ncreating build/bdist.linux-x86_64/wheel/core\ncopying build/lib/core/scanner.py -> build/bdist.linux-x86_64/wheel/./core\ncopying build/lib/core/oui.csv -> build/bdist.linux-x86_64/wheel/./core\nrunning install_egg_info\nCopying l0p4map.egg-info to build/bdist.linux-x86_64/wheel/./l0p4map-1.0.0-py3.12.egg-info\nrunning install_scripts\ncreating build/bdist.linux-x86_64/wheel/l0p4map-1.0.0.dist-info/WHEEL\ncreating '/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/from-sdist/.tmp-o32ugh3e/l0p4map-1.0.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it\nadding 'core/oui.csv'\nadding 'core/scanner.py'\nadding 'l0p4map-1.0.0.dist-info/licenses/LICENSE'\nadding 'ui/app.py'\nadding 'ui/assets/graph.html'\nadding 'ui/assets/logo.png'\nadding 'ui/assets/logosite.png'\nadding 'ui/assets/screenLogo.png'\nadding 'ui/assets/vis-network.min.css'\nadding 'ui/assets/vis-network.min.js'\nadding 'l0p4map-1.0.0.dist-info/METADATA'\nadding 'l0p4map-1.0.0.dist-info/WHEEL'\nadding 'l0p4map-1.0.0.dist-info/entry_points.txt'\nadding 'l0p4map-1.0.0.dist-info/top_level.txt'\nadding 'l0p4map-1.0.0.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/from-sdist/l0p4map-1.0.0-py3-none-any.whl\n",
+        "seconds": 3.561563060997287
+      },
+      "artifact_sha256": "6988febe40ad1002ba69107c1a6da3b1fd354df3fff2b33f258e0bdba48e5388",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/from-sdist/l0p4map-1.0.0-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 64ms\nPrepared 1 package in 99ms\nInstalled 1 package in 39ms\n + l0p4map==1.0.0 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/from-sdist/l0p4map-1.0.0-py3-none-any.whl)\n",
+        "seconds": 0.468644629989285
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/68-l0-module-actual-A-23/grading/l0-module-actual/749fc887397f/candidate/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import runpy\n sys.argv=['l0p4map','--help']\n if stage=='source':runpy.run_path(str(base/'main.py'),run_name='__main__')\n else:\n  from importlib.metadata import distribution\n  entry=next(x for x in distribution('l0p4map').entry_points if x.name=='l0p4map')\n  entry.load()()\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 12, in <module>\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py\", line 205, in load\n    module = import_module(match.group('module'))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'main'\n",
+        "seconds": 0.25824053699034266
+      },
+      "pass": false
+    }
+  ]
+}

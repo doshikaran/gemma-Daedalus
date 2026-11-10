@@ -1,0 +1,12 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 3d78222..8670f85 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -83,6 +83,7 @@ features = [
+ source = "vcs"
+ 
+ [tool.hatch.build.targets.wheel]
++include = ["src/pytest_html/resources/"]
+ exclude = [
+   "src/pytest_html/scripts/*",
+ ]

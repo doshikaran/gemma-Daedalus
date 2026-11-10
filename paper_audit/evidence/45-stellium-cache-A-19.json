@@ -1,0 +1,187 @@
+{
+  "episode_id": "45-stellium-cache-A-19",
+  "task": "stellium-cache",
+  "condition": "A",
+  "seed": 19,
+  "order": 45,
+  "scope": "gap",
+  "stop": "budget",
+  "calls": 21,
+  "commands": 9,
+  "format_errors": 11,
+  "generated_tokens": 6828,
+  "generated_token_accounting": "lower_bound_partial_timeout",
+  "interaction_wall_seconds": 1200.0243491429865,
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "artifact_contract_pass": false,
+  "pattern": "PFF",
+  "grade": {
+    "source": {
+      "pass": true,
+      "steps": {
+        "probe": {
+          "returncode": 0,
+          "tail": "{\"cached_location_resolved\": true, \"network_geocoding\": false}\n{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/45-stellium-cache-A-19/grading/stellium-cache/41d7a5ea43bd/candidate/repo/src/stellium/__init__.py\"}}\n"
+        }
+      }
+    },
+    "wheel": {
+      "pass": false,
+      "steps": {
+        "build": {
+          "returncode": 0,
+          "tail": "m-0.17.0.dist-info/WHEEL'\nadding 'stellium-0.17.0.dist-info/entry_points.txt'\nadding 'stellium-0.17.0.dist-info/top_level.txt'\nadding 'stellium-0.17.0.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/45-stellium-cache-A-19/grading/stellium-cache/41d7a5ea43bd/candidate/direct-dist/stellium-0.17.0-py3-none-any.whl\n"
+        },
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 56ms\nPrepared 1 package in 120ms\nInstalled 1 package in 118ms\n + stellium==0.17.0 (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/45-stellium-cache-A-19/grading/stellium-cache/41d7a5ea43bd/candidate/direct-dist/stellium-0.17.0-py3-none-any.whl)\n"
+        },
+        "probe": {
+          "returncode": 1,
+          "tail": "ation_input)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/45-stellium-cache-A-19/grading/stellium-cache/41d7a5ea43bd/candidate/wheel-installed/stellium/core/native.py\", line 134, in _process_location\n    raise ValueError(f\"Could not geocode location: {loc_in}\")\nValueError: Could not geocode location: Alexandria, Egypt\n"
+        }
+      }
+    },
+    "sdist-wheel": {
+      "pass": false,
+      "steps": {
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 57ms\nPrepared 1 package in 116ms\nInstalled 1 package in 96ms\n + stellium==0.17.0 (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/45-stellium-cache-A-19/grading/stellium-cache/41d7a5ea43bd/candidate/from-sdist/stellium-0.17.0-py3-none-any.whl)\n"
+        },
+        "sdist_build": {
+          "returncode": 0,
+          "tail": "asing.py -> stellium-0.17.0/tests\ncopying src/stellium.egg-info/SOURCES.txt -> stellium-0.17.0/src/stellium.egg-info\nWriting stellium-0.17.0/setup.cfg\nCreating tar archive\nremoving 'stellium-0.17.0' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/45-stellium-cache-A-19/grading/stellium-cache/41d7a5ea43bd/candidate/sdist/stellium-0.17.0.tar.gz\n"
+        },
+        "wheel_build": {
+          "returncode": 0,
+          "tail": "um-0.17.0.dist-info/WHEEL'\nadding 'stellium-0.17.0.dist-info/entry_points.txt'\nadding 'stellium-0.17.0.dist-info/top_level.txt'\nadding 'stellium-0.17.0.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/45-stellium-cache-A-19/grading/stellium-cache/41d7a5ea43bd/candidate/from-sdist/stellium-0.17.0-py3-none-any.whl\n"
+        },
+        "probe": {
+          "returncode": 1,
+          "tail": "ation_input)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/main_runs/45-stellium-cache-A-19/grading/stellium-cache/41d7a5ea43bd/candidate/sdist-installed/stellium/core/native.py\", line 134, in _process_location\n    raise ValueError(f\"Could not geocode location: {loc_in}\")\nValueError: Could not geocode location: Alexandria, Egypt\n"
+        }
+      }
+    }
+  },
+  "patch": {
+    "files_total": 0,
+    "preparation_common": 0,
+    "debris": 0,
+    "agent_files": [],
+    "agent_added_lines": {},
+    "test_files_touched": [],
+    "test_files_deleted": []
+  },
+  "commands_detail": [
+    {
+      "step": 1,
+      "command": "ls -R",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": ".py\ntest_progression_types.py\ntest_progressions.py\ntest_prompt_text.py\ntest_returns.py\ntest_returns_builder.py\ntest_search.py\ntest_synthesis.py\ntest_synthesis_visualization.py\ntest_vedic_charts.py\ntest_visualization.py\ntest_visualization_extended_canvas.py\ntest_visualization_layers.py\ntest_voc.py\ntest_zodiacal_releasing.py\n\n./web:\nREADME.md\ncomponents\nconfig.py\nmain.py\npages\nrequirements.txt\nstate.py\n\n./web/components:\nbirth_input.py\nbirth_input_unified.py\nchart_display.py\nchart_options.py\ncode_preview.py\ndate_input.py\nheader.py\nlocation_input.py\nnotable_selector.py\npdf_options.py\nreport_options.py\ntime_input.py\n\n./web/pages:\nexplore.py\nhome.py\nnatal.py\nplanner.py\nrelationships.py\ntiming.py\n"
+    },
+    {
+      "step": 3,
+      "command": "cat src/stellium/utils/time.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": ")\n    utc_dt = dt.datetime(year, month, day, hour, minute, second, tzinfo=pytz.UTC)\n\n    # Convert to target timezone if not UTC\n    if timezone != \"UTC\":\n        tz = pytz.timezone(timezone)\n        return utc_dt.astimezone(tz)\n\n    return utc_dt\n\n\ndef offset_julian_day(jd: float, days: float) -> float:\n    \"\"\"\n    Offset a Julian Day by a number of days.\n\n    Args:\n        jd: Starting Julian Day number\n        days: Number of days to add (can be negative)\n\n    Returns:\n        New Julian Day number\n\n    Example:\n        >>> jd = 2460682.0  # Jan 6, 2025\n        >>> jd_tomorrow = offset_julian_day(jd, 1.0)\n        >>> jd_yesterday = offset_julian_day(jd, -1.0)\n    \"\"\"\n    return jd + days\n"
+    },
+    {
+      "step": 5,
+      "command": "cat src/stellium/presentation/sections/_utils.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "nerate 2-4 character abbreviation for house system names.\n\n    Args:\n        system_name: Full house system name (e.g., \"Placidus\", \"Whole Sign\")\n\n    Returns:\n        Short abbreviation (e.g., \"Pl\", \"WS\")\n\n    Example:\n        >>> abbreviate_house_system(\"Placidus\")\n        'Pl'\n        >>> abbreviate_house_system(\"Whole Sign\")\n        'WS'\n    \"\"\"\n    abbreviations = {\n        \"Placidus\": \"Pl\",\n        \"Whole Sign\": \"WS\",\n        \"Koch\": \"Ko\",\n        \"Equal\": \"Eq\",\n        \"Porphyry\": \"Po\",\n        \"Regiomontanus\": \"Re\",\n        \"Campanus\": \"Ca\",\n        \"Morinus\": \"Mo\",\n        \"Meridian\": \"Me\",\n        \"Alcabitius\": \"Al\",\n    }\n    return abbreviations.get(system_name, system_name[:4])\n"
+    },
+    {
+      "step": 7,
+      "command": "cat src/stellium/presentation/sections/core.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "ables for a MultiChart.\"\"\"\n        from stellium.core.chart_utils import get_chart_labels\n\n        labels = get_chart_labels(multichart)\n        tables = []\n\n        for i, (chart, label) in enumerate(\n            zip(multichart.charts, labels, strict=False)\n        ):\n            chart_data = self._generate_single_chart_data(chart, title=label)\n            tables.append(\n                {\n                    \"title\": chart_data.get(\"title\", f\"Chart {i + 1}\"),\n                    \"headers\": chart_data[\"headers\"],\n                    \"rows\": chart_data[\"rows\"],\n                }\n            )\n\n        return {\n            \"type\": \"side_by_side_tables\",\n            \"tables\": tables,\n        }\n"
+    },
+    {
+      "step": 9,
+      "command": "cat src/stellium/utils/cache.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "bda: _default_cache.clear(cache_type)\n        wrapper.cache_size = lambda: _default_cache.size(cache_type)\n\n        return wrapper\n\n    return decorator\n\n\ndef clear_cache(cache_type: str | None = None) -> int:\n    \"\"\"Clear cache entries. Returns number of files removed.\"\"\"\n    return _default_cache.clear(cache_type)\n\n\ndef cache_size(cache_type: str | None = None) -> dict[str, int]:\n    \"\"\"Get cache size information.\"\"\"\n    return _default_cache.size(cache_type)\n\n\ndef cache_info() -> dict[str, Any]:\n    \"\"\"Get comprehensive cache information.\"\"\"\n    return _default_cache.get_stats()\n\n\ndef get_default_cache() -> Cache:\n    \"\"\"Get the default global cache instance.\"\"\"\n    return _default_cache\n"
+    },
+    {
+      "step": 11,
+      "command": "cat src/stellium/presentation/sections/core.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "ables for a MultiChart.\"\"\"\n        from stellium.core.chart_utils import get_chart_labels\n\n        labels = get_chart_labels(multichart)\n        tables = []\n\n        for i, (chart, label) in enumerate(\n            zip(multichart.charts, labels, strict=False)\n        ):\n            chart_data = self._generate_single_chart_data(chart, title=label)\n            tables.append(\n                {\n                    \"title\": chart_data.get(\"title\", f\"Chart {i + 1}\"),\n                    \"headers\": chart_data[\"headers\"],\n                    \"rows\": chart_data[\"rows\"],\n                }\n            )\n\n        return {\n            \"type\": \"side_by_side_tables\",\n            \"tables\": tables,\n        }\n"
+    },
+    {
+      "step": 13,
+      "command": "ls web/components/",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "birth_input.py\nbirth_input_unified.py\nchart_display.py\nchart_options.py\ncode_preview.py\ndate_input.py\nheader.py\nlocation_input.py\nnotable_selector.py\npdf_options.py\nreport_options.py\ntime_input.py\n"
+    },
+    {
+      "step": 14,
+      "command": "cat web/components/location_input.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "{\"place\": \"Place\", \"coords\": \"Coords\"},\n                value=state[\"mode\"],\n                on_change=on_mode_change,\n            ).props(\"dense no-caps size=sm\")\n\n        # Content container\n        refs[\"content_container\"] = ui.element(\"div\").classes(\"w-full\")\n        with refs[\"content_container\"]:\n            create_content()\n\n    return {\n        \"get_mode\": lambda: state[\"mode\"],\n        \"get_place\": lambda: state[\"place_value\"],\n        \"get_coords\": lambda: (\n            float(state[\"latitude\"]) if state[\"latitude\"] else None,\n            float(state[\"longitude\"]) if state[\"longitude\"] else None,\n        ),\n        \"get_selected_location\": lambda: state[\"selected_location\"],\n    }\n"
+    },
+    {
+      "step": 17,
+      "command": "cat web/components/location_input.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "{\"place\": \"Place\", \"coords\": \"Coords\"},\n                value=state[\"mode\"],\n                on_change=on_mode_change,\n            ).props(\"dense no-caps size=sm\")\n\n        # Content container\n        refs[\"content_container\"] = ui.element(\"div\").classes(\"w-full\")\n        with refs[\"content_container\"]:\n            create_content()\n\n    return {\n        \"get_mode\": lambda: state[\"mode\"],\n        \"get_place\": lambda: state[\"place_value\"],\n        \"get_coords\": lambda: (\n            float(state[\"latitude\"]) if state[\"latitude\"] else None,\n            float(state[\"longitude\"]) if state[\"longitude\"] else None,\n        ),\n        \"get_selected_location\": lambda: state[\"selected_location\"],\n    }\n"
+    }
+  ],
+  "final_message": "",
+  "final_message_is_complete": false,
+  "sources": {
+    "result.json": "main_runs/45-stellium-cache-A-19/result.json",
+    "final.patch": "main_runs/45-stellium-cache-A-19/final.patch",
+    "calls.json": "main_runs/45-stellium-cache-A-19/calls.json",
+    "trajectory.json": "main_runs/45-stellium-cache-A-19/trajectory.json",
+    "prompt.txt": "main_runs/45-stellium-cache-A-19/prompt.txt",
+    "final-source.tar.gz": "main_runs/45-stellium-cache-A-19/final-source.tar.gz"
+  }
+}

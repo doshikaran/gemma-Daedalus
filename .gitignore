@@ -1,0 +1,50 @@
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.venv/
+venv/
+.env
+
+# --- Package-manager caches (rebuilt by reproduce.py) ---
+.npm-cache/
+.uv-cache/
+node_modules/
+
+# --- Downloaded inputs (pinned URLs/hashes are recorded instead; see README) ---
+# Model weights
+*.gguf
+# llama.cpp binaries/sources and dependency installs
+runtime/
+# Upstream repository archives and extracted trees; keep provenance metadata
+sources/*
+!sources/*-provenance.json
+
+# --- Bulky regenerable scratch trees inside run/audit directories ---
+# Per-control working copies (restoration_1.2/controls/*/work, ~18 GB)
+restoration_1.2/controls/*/work/
+# Regrade build/install workspaces and extracted sources (~11 GB)
+paper_audit/regrade/**/grading/
+paper_audit/regrade/**/final-source/
+# Checked-out repos and build outputs in pilots / preflight / audit runs
+pilots/**/repo/
+pilots/**/grading/
+pilots/**/final-source/
+preflight_runs/**/repo/
+preflight_runs/**/build/
+preflight_runs/**/candidate/
+agent_environment_audit/**/repo/
+agent_environment_audit/**/dist/
+restoration_1.2/**/repo/
+restoration_1.3/**/repo/

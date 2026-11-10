@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-04T18:22:04.970746+00:00",
+  "source_tree_sha256": "4cdadcf5f5002a10775049d03900c5a4994cf59521abdc81a22ac85dc94539d5",
+  "source_archive_sha256": "d22c2172d6693905f246b09da3a07e76776b6045939fb111a37ccbb874fb5fe2",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/22-stellium-glyphs-B-41/grading/stellium-glyphs/03959d873356/candidate/direct-dist/stellium-0.21.1-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/22-stellium-glyphs-B-41/release-artifacts/120d9acb327613dad13a53ef1dac36a93a1e54aae728178076975bddce5e4f39-stellium-0.21.1-py3-none-any.whl",
+      "sha256": "120d9acb327613dad13a53ef1dac36a93a1e54aae728178076975bddce5e4f39",
+      "bytes": 7924853
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/22-stellium-glyphs-B-41/grading/stellium-glyphs/03959d873356/candidate/from-sdist/stellium-0.21.1-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/22-stellium-glyphs-B-41/release-artifacts/072aaf99bea914405f11cd7b2242a29c6539ca222a550e1b0e1ab23ea2baa25f-stellium-0.21.1-py3-none-any.whl",
+      "sha256": "072aaf99bea914405f11cd7b2242a29c6539ca222a550e1b0e1ab23ea2baa25f",
+      "bytes": 7924853
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/22-stellium-glyphs-B-41/grading/stellium-glyphs/03959d873356/candidate/sdist/stellium-0.21.1.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/22-stellium-glyphs-B-41/release-artifacts/a44982fd6f71410af35d91719fd742e10c91102f1e7a5a128bcf2819cee73fc7-stellium-0.21.1.tar.gz",
+      "sha256": "a44982fd6f71410af35d91719fd742e10c91102f1e7a5a128bcf2819cee73fc7",
+      "bytes": 11934813
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

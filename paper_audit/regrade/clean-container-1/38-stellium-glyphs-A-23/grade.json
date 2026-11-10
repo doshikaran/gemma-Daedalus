@@ -1,0 +1,147 @@
+{
+  "id": "stellium-glyphs",
+  "arm": "candidate",
+  "run_id": "1a3e1c42d5ed",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/repo/src', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from stellium.visualization.core import get_glyph\n from xml.etree import ElementTree as ET\n for name in ['Pholus','Eris']:\n  g=get_glyph(name);assert g['type']=='svg',(name,g['type'])\n  assert ET.fromstring(g['value']).tag.endswith('svg')\n print(json.dumps({'svg_glyphs':['Pholus','Eris']}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"svg_glyphs\": [\"Pholus\", \"Eris\"]}\n{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/repo/src/stellium/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 1.8024042710021604
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": " 'stellium/engines/voc.py'\nadding 'stellium/i18n/__init__.py'\nadding 'stellium/i18n/loader.py'\nadding 'stellium/i18n/locales/zh_CN/strings.json'\nadding 'stellium/io/__init__.py'\nadding 'stellium/io/aaf.py'\nadding 'stellium/io/csv.py'\nadding 'stellium/io/dataframe.py'\nadding 'stellium/planner/__init__.py'\nadding 'stellium/planner/almanac.py'\nadding 'stellium/planner/builder.py'\nadding 'stellium/planner/contract.py'\nadding 'stellium/planner/events.py'\nadding 'stellium/planner/renderer.py'\nadding 'stellium/presentation/__init__.py'\nadding 'stellium/presentation/builder.py'\nadding 'stellium/presentation/renderers.py'\nadding 'stellium/presentation/section_types.py'\nadding 'stellium/presentation/typst_render.py'\nadding 'stellium/presentation/typst_runtime.py'\nadding 'stellium/presentation/sections/__init__.py'\nadding 'stellium/presentation/sections/_utils.py'\nadding 'stellium/presentation/sections/aspects.py'\nadding 'stellium/presentation/sections/core.py'\nadding 'stellium/presentation/sections/dignities.py'\nadding 'stellium/presentation/sections/midpoint_tree.py'\nadding 'stellium/presentation/sections/midpoints.py'\nadding 'stellium/presentation/sections/misc.py'\nadding 'stellium/presentation/sections/profection_visualization.py'\nadding 'stellium/presentation/sections/rectification.py'\nadding 'stellium/presentation/sections/timing.py'\nadding 'stellium/presentation/sections/transit_periods.py'\nadding 'stellium/presentation/sections/transits.py'\nadding 'stellium/presentation/sections/zr_visualization.py'\nadding 'stellium/presentation/typst_theme/components.typ'\nadding 'stellium/presentation/typst_theme/engine.typ'\nadding 'stellium/presentation/typst_theme/glyphs.typ'\nadding 'stellium/presentation/typst_theme/palettes.typ'\nadding 'stellium/presentation/typst_theme/planner.typ'\nadding 'stellium/presentation/typst_theme/planner_components.typ'\nadding 'stellium/presentation/typst_theme/report.typ'\nadding 'stellium/rectification/__init__.py'\nadding 'stellium/rectification/_data.py'\nadding 'stellium/rectification/_recast.py'\nadding 'stellium/rectification/analysis.py'\nadding 'stellium/rectification/evidence.py'\nadding 'stellium/rectification/firdaria.py'\nadding 'stellium/rectification/matrix.py'\nadding 'stellium/rectification/model.py'\nadding 'stellium/rectification/timing.py'\nadding 'stellium/returns/__init__.py'\nadding 'stellium/returns/builder.py'\nadding 'stellium/utils/__init__.py'\nadding 'stellium/utils/cache.py'\nadding 'stellium/utils/chart_ruler.py'\nadding 'stellium/utils/chart_shape.py'\nadding 'stellium/utils/houses.py'\nadding 'stellium/utils/planetary_crossing.py'\nadding 'stellium/utils/progressions.py'\nadding 'stellium/utils/time.py'\nadding 'stellium/visualization/__init__.py'\nadding 'stellium/visualization/builder.py'\nadding 'stellium/visualization/composer.py'\nadding 'stellium/visualization/config.py'\nadding 'stellium/visualization/core.py'\nadding 'stellium/visualization/ephemeris.py'\nadding 'stellium/visualization/extended_canvas.py'\nadding 'stellium/visualization/grid.py'\nadding 'stellium/visualization/layer_factory.py'\nadding 'stellium/visualization/moon_phase.py'\nadding 'stellium/visualization/palettes.py'\nadding 'stellium/visualization/reference_sheet.py'\nadding 'stellium/visualization/themes.py'\nadding 'stellium/visualization/atlas/__init__.py'\nadding 'stellium/visualization/atlas/builder.py'\nadding 'stellium/visualization/atlas/config.py'\nadding 'stellium/visualization/atlas/renderer.py'\nadding 'stellium/visualization/dial/__init__.py'\nadding 'stellium/visualization/dial/builder.py'\nadding 'stellium/visualization/dial/config.py'\nadding 'stellium/visualization/dial/layers.py'\nadding 'stellium/visualization/dial/renderer.py'\nadding 'stellium/visualization/layers/__init__.py'\nadding 'stellium/visualization/layers/angles.py'\nadding 'stellium/visualization/layers/aspects.py'\nadding 'stellium/visualization/layers/base.py'\nadding 'stellium/visualization/layers/chart_frame.py'\nadding 'stellium/visualization/layers/houses.py'\nadding 'stellium/visualization/layers/info_corners.py'\nadding 'stellium/visualization/layers/planets.py'\nadding 'stellium/visualization/layers/zodiac.py'\nadding 'stellium/visualization/layout/__init__.py'\nadding 'stellium/visualization/layout/engine.py'\nadding 'stellium/visualization/layout/measurer.py'\nadding 'stellium/visualization/vedic/__init__.py'\nadding 'stellium/visualization/vedic/north_indian.py'\nadding 'stellium/visualization/vedic/south_indian.py'\nadding 'stellium-0.21.1.dist-info/licenses/LICENSE'\nadding 'stellium-0.21.1.dist-info/METADATA'\nadding 'stellium-0.21.1.dist-info/WHEEL'\nadding 'stellium-0.21.1.dist-info/entry_points.txt'\nadding 'stellium-0.21.1.dist-info/top_level.txt'\nadding 'stellium-0.21.1.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/direct-dist/stellium-0.21.1-py3-none-any.whl\n",
+        "seconds": 4.059008230018662
+      },
+      "artifact_sha256": "60d96a8d5c12bf85520d66bc1df6a5760eb01b1dbcb2a792b8cfccd22ea53157",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/direct-dist/stellium-0.21.1-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 87ms\nPrepared 1 package in 520ms\nInstalled 1 package in 465ms\n + stellium==0.21.1 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/direct-dist/stellium-0.21.1-py3-none-any.whl)\n",
+        "seconds": 1.3857261039956938
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from stellium.visualization.core import get_glyph\n from xml.etree import ElementTree as ET\n for name in ['Pholus','Eris']:\n  g=get_glyph(name);assert g['type']=='svg',(name,g['type'])\n  assert ET.fromstring(g['value']).tag.endswith('svg')\n print(json.dumps({'svg_glyphs':['Pholus','Eris']}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/wheel-installed/stellium/__init__.py\"}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAssertionError: ('Pholus', 'unicode')\n",
+        "seconds": 4.853567442012718
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "um-0.21.1/src/stellium/visualization/vedic\ncopying tests/test_almuten.py -> stellium-0.21.1/tests\ncopying tests/test_analysis.py -> stellium-0.21.1/tests\ncopying tests/test_antiscia.py -> stellium-0.21.1/tests\ncopying tests/test_applying_separating.py -> stellium-0.21.1/tests\ncopying tests/test_arabic_parts.py -> stellium-0.21.1/tests\ncopying tests/test_arc_directions.py -> stellium-0.21.1/tests\ncopying tests/test_aspect_engine.py -> stellium-0.21.1/tests\ncopying tests/test_aspect_registry.py -> stellium-0.21.1/tests\ncopying tests/test_astronomical_ground_truth.py -> stellium-0.21.1/tests\ncopying tests/test_atlas.py -> stellium-0.21.1/tests\ncopying tests/test_bazi.py -> stellium-0.21.1/tests\ncopying tests/test_cache.py -> stellium-0.21.1/tests\ncopying tests/test_celestial_registry.py -> stellium-0.21.1/tests\ncopying tests/test_chart_builder.py -> stellium-0.21.1/tests\ncopying tests/test_chart_builder_extended.py -> stellium-0.21.1/tests\ncopying tests/test_chart_shape.py -> stellium-0.21.1/tests\ncopying tests/test_cli.py -> stellium-0.21.1/tests\ncopying tests/test_comparison.py -> stellium-0.21.1/tests\ncopying tests/test_comparison_extended.py -> stellium-0.21.1/tests\ncopying tests/test_cookbooks.py -> stellium-0.21.1/tests\ncopying tests/test_core_models.py -> stellium-0.21.1/tests\ncopying tests/test_csv_parser.py -> stellium-0.21.1/tests\ncopying tests/test_dataframe_parser.py -> stellium-0.21.1/tests\ncopying tests/test_declination_aspects.py -> stellium-0.21.1/tests\ncopying tests/test_dial_charts.py -> stellium-0.21.1/tests\ncopying tests/test_dignities.py -> stellium-0.21.1/tests\ncopying tests/test_directions.py -> stellium-0.21.1/tests\ncopying tests/test_dispositors.py -> stellium-0.21.1/tests\ncopying tests/test_doc_codeblocks.py -> stellium-0.21.1/tests\ncopying tests/test_electional.py -> stellium-0.21.1/tests\ncopying tests/test_ephemeris_engine.py -> stellium-0.21.1/tests\ncopying tests/test_ephemeris_paths.py -> stellium-0.21.1/tests\ncopying tests/test_firdaria.py -> stellium-0.21.1/tests\ncopying tests/test_fixed_stars.py -> stellium-0.21.1/tests\ncopying tests/test_get_component_result.py -> stellium-0.21.1/tests\ncopying tests/test_house_systems.py -> stellium-0.21.1/tests\ncopying tests/test_input_validation.py -> stellium-0.21.1/tests\ncopying tests/test_integration.py -> stellium-0.21.1/tests\ncopying tests/test_io_aaf.py -> stellium-0.21.1/tests\ncopying tests/test_length_of_life.py -> stellium-0.21.1/tests\ncopying tests/test_logging.py -> stellium-0.21.1/tests\ncopying tests/test_midpoints.py -> stellium-0.21.1/tests\ncopying tests/test_moiety_orbs.py -> stellium-0.21.1/tests\ncopying tests/test_multichart.py -> stellium-0.21.1/tests\ncopying tests/test_multiwheel.py -> stellium-0.21.1/tests\ncopying tests/test_native.py -> stellium-0.21.1/tests\ncopying tests/test_notable_biography.py -> stellium-0.21.1/tests\ncopying tests/test_notables.py -> stellium-0.21.1/tests\ncopying tests/test_orb_engines.py -> stellium-0.21.1/tests\ncopying tests/test_packaging.py -> stellium-0.21.1/tests\ncopying tests/test_palettes.py -> stellium-0.21.1/tests\ncopying tests/test_pattern_engine.py -> stellium-0.21.1/tests\ncopying tests/test_planetary_years.py -> stellium-0.21.1/tests\ncopying tests/test_planner_almanac.py -> stellium-0.21.1/tests\ncopying tests/test_presentation_builder.py -> stellium-0.21.1/tests\ncopying tests/test_presentation_renderers.py -> stellium-0.21.1/tests\ncopying tests/test_presentation_sections.py -> stellium-0.21.1/tests\ncopying tests/test_profections.py -> stellium-0.21.1/tests\ncopying tests/test_progression_types.py -> stellium-0.21.1/tests\ncopying tests/test_progressions.py -> stellium-0.21.1/tests\ncopying tests/test_prompt_text.py -> stellium-0.21.1/tests\ncopying tests/test_returns.py -> stellium-0.21.1/tests\ncopying tests/test_returns_builder.py -> stellium-0.21.1/tests\ncopying tests/test_search.py -> stellium-0.21.1/tests\ncopying tests/test_sect_rectification.py -> stellium-0.21.1/tests\ncopying tests/test_synthesis.py -> stellium-0.21.1/tests\ncopying tests/test_synthesis_visualization.py -> stellium-0.21.1/tests\ncopying tests/test_typst_runtime.py -> stellium-0.21.1/tests\ncopying tests/test_typst_theme_palettes.py -> stellium-0.21.1/tests\ncopying tests/test_vedic_charts.py -> stellium-0.21.1/tests\ncopying tests/test_visualization.py -> stellium-0.21.1/tests\ncopying tests/test_visualization_extended_canvas.py -> stellium-0.21.1/tests\ncopying tests/test_visualization_layers.py -> stellium-0.21.1/tests\ncopying tests/test_voc.py -> stellium-0.21.1/tests\ncopying tests/test_zodiacal_releasing.py -> stellium-0.21.1/tests\ncopying src/stellium.egg-info/SOURCES.txt -> stellium-0.21.1/src/stellium.egg-info\nWriting stellium-0.21.1/setup.cfg\nCreating tar archive\nremoving 'stellium-0.21.1' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/sdist/stellium-0.21.1.tar.gz\n",
+        "seconds": 17.16314613999566
+      },
+      "sdist_sha256": "10cc28784fb544951df02d5869f019eac2a858e8edf6b115e0690d10ccc9487d",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "g 'stellium/engines/voc.py'\nadding 'stellium/i18n/__init__.py'\nadding 'stellium/i18n/loader.py'\nadding 'stellium/i18n/locales/zh_CN/strings.json'\nadding 'stellium/io/__init__.py'\nadding 'stellium/io/aaf.py'\nadding 'stellium/io/csv.py'\nadding 'stellium/io/dataframe.py'\nadding 'stellium/planner/__init__.py'\nadding 'stellium/planner/almanac.py'\nadding 'stellium/planner/builder.py'\nadding 'stellium/planner/contract.py'\nadding 'stellium/planner/events.py'\nadding 'stellium/planner/renderer.py'\nadding 'stellium/presentation/__init__.py'\nadding 'stellium/presentation/builder.py'\nadding 'stellium/presentation/renderers.py'\nadding 'stellium/presentation/section_types.py'\nadding 'stellium/presentation/typst_render.py'\nadding 'stellium/presentation/typst_runtime.py'\nadding 'stellium/presentation/sections/__init__.py'\nadding 'stellium/presentation/sections/_utils.py'\nadding 'stellium/presentation/sections/aspects.py'\nadding 'stellium/presentation/sections/core.py'\nadding 'stellium/presentation/sections/dignities.py'\nadding 'stellium/presentation/sections/midpoint_tree.py'\nadding 'stellium/presentation/sections/midpoints.py'\nadding 'stellium/presentation/sections/misc.py'\nadding 'stellium/presentation/sections/profection_visualization.py'\nadding 'stellium/presentation/sections/rectification.py'\nadding 'stellium/presentation/sections/timing.py'\nadding 'stellium/presentation/sections/transit_periods.py'\nadding 'stellium/presentation/sections/transits.py'\nadding 'stellium/presentation/sections/zr_visualization.py'\nadding 'stellium/presentation/typst_theme/components.typ'\nadding 'stellium/presentation/typst_theme/engine.typ'\nadding 'stellium/presentation/typst_theme/glyphs.typ'\nadding 'stellium/presentation/typst_theme/palettes.typ'\nadding 'stellium/presentation/typst_theme/planner.typ'\nadding 'stellium/presentation/typst_theme/planner_components.typ'\nadding 'stellium/presentation/typst_theme/report.typ'\nadding 'stellium/rectification/__init__.py'\nadding 'stellium/rectification/_data.py'\nadding 'stellium/rectification/_recast.py'\nadding 'stellium/rectification/analysis.py'\nadding 'stellium/rectification/evidence.py'\nadding 'stellium/rectification/firdaria.py'\nadding 'stellium/rectification/matrix.py'\nadding 'stellium/rectification/model.py'\nadding 'stellium/rectification/timing.py'\nadding 'stellium/returns/__init__.py'\nadding 'stellium/returns/builder.py'\nadding 'stellium/utils/__init__.py'\nadding 'stellium/utils/cache.py'\nadding 'stellium/utils/chart_ruler.py'\nadding 'stellium/utils/chart_shape.py'\nadding 'stellium/utils/houses.py'\nadding 'stellium/utils/planetary_crossing.py'\nadding 'stellium/utils/progressions.py'\nadding 'stellium/utils/time.py'\nadding 'stellium/visualization/__init__.py'\nadding 'stellium/visualization/builder.py'\nadding 'stellium/visualization/composer.py'\nadding 'stellium/visualization/config.py'\nadding 'stellium/visualization/core.py'\nadding 'stellium/visualization/ephemeris.py'\nadding 'stellium/visualization/extended_canvas.py'\nadding 'stellium/visualization/grid.py'\nadding 'stellium/visualization/layer_factory.py'\nadding 'stellium/visualization/moon_phase.py'\nadding 'stellium/visualization/palettes.py'\nadding 'stellium/visualization/reference_sheet.py'\nadding 'stellium/visualization/themes.py'\nadding 'stellium/visualization/atlas/__init__.py'\nadding 'stellium/visualization/atlas/builder.py'\nadding 'stellium/visualization/atlas/config.py'\nadding 'stellium/visualization/atlas/renderer.py'\nadding 'stellium/visualization/dial/__init__.py'\nadding 'stellium/visualization/dial/builder.py'\nadding 'stellium/visualization/dial/config.py'\nadding 'stellium/visualization/dial/layers.py'\nadding 'stellium/visualization/dial/renderer.py'\nadding 'stellium/visualization/layers/__init__.py'\nadding 'stellium/visualization/layers/angles.py'\nadding 'stellium/visualization/layers/aspects.py'\nadding 'stellium/visualization/layers/base.py'\nadding 'stellium/visualization/layers/chart_frame.py'\nadding 'stellium/visualization/layers/houses.py'\nadding 'stellium/visualization/layers/info_corners.py'\nadding 'stellium/visualization/layers/planets.py'\nadding 'stellium/visualization/layers/zodiac.py'\nadding 'stellium/visualization/layout/__init__.py'\nadding 'stellium/visualization/layout/engine.py'\nadding 'stellium/visualization/layout/measurer.py'\nadding 'stellium/visualization/vedic/__init__.py'\nadding 'stellium/visualization/vedic/north_indian.py'\nadding 'stellium/visualization/vedic/south_indian.py'\nadding 'stellium-0.21.1.dist-info/licenses/LICENSE'\nadding 'stellium-0.21.1.dist-info/METADATA'\nadding 'stellium-0.21.1.dist-info/WHEEL'\nadding 'stellium-0.21.1.dist-info/entry_points.txt'\nadding 'stellium-0.21.1.dist-info/top_level.txt'\nadding 'stellium-0.21.1.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/from-sdist/stellium-0.21.1-py3-none-any.whl\n",
+        "seconds": 13.8959951249999
+      },
+      "artifact_sha256": "4bf88d5cf298d6603cd81a197d6902bc8ce881b611377156ac531dbb2247666d",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/from-sdist/stellium-0.21.1-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 205ms\nPrepared 1 package in 496ms\nInstalled 1 package in 477ms\n + stellium==0.21.1 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/from-sdist/stellium-0.21.1-py3-none-any.whl)\n",
+        "seconds": 2.0061690650181845
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from stellium.visualization.core import get_glyph\n from xml.etree import ElementTree as ET\n for name in ['Pholus','Eris']:\n  g=get_glyph(name);assert g['type']=='svg',(name,g['type'])\n  assert ET.fromstring(g['value']).tag.endswith('svg')\n print(json.dumps({'svg_glyphs':['Pholus','Eris']}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"stellium\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/38-stellium-glyphs-A-23/grading/stellium-glyphs/1a3e1c42d5ed/candidate/sdist-installed/stellium/__init__.py\"}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAssertionError: ('Pholus', 'unicode')\n",
+        "seconds": 5.0584200769953895
+      },
+      "pass": false
+    }
+  ]
+}

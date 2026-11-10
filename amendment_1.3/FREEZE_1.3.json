@@ -1,0 +1,30 @@
+{
+  "amendment": "1.3",
+  "timestamp_utc": "2026-11-04T02:55:36.266148+00:00",
+  "type": "Local freeze of amendment 1.3 configuration before resuming; not external preregistration",
+  "completed_main_episodes_at_freeze": 9,
+  "remaining_episodes": 63,
+  "files": {
+    "PROTOCOL_AMENDMENT_1.3.json": "b8f14beddfdbd5f0df5a2896b534809fe2844668f57927de385535032b22fbde",
+    "FREEZE.json": "e85bc12aa5421c631730e74630040c285abb784b46d03ac94596d5b0ddb909ca",
+    "amendment_1.2/FREEZE_1.2.json": "6457c4be29f24c0c68383daa9681602bfe4ebcfd000b51436f70f6843af47451",
+    "amendment_1.3/run_batch_native_1_3.py": "87eafb73f11de4acb01a7e9b2397f88ceab1ed3c195b993af4bc31eff50f1b36",
+    "amendment_1.3/tox_preparation_test.py": "194f98e1c9943ce39101fe2d2e51d95e57baaf99a973d4f89da8c5b1ded66ffb",
+    "amendment_1.3/launch_grid.sh": "8aa1f63ec6cb785b3fd5afb6553fb7ae4afe6ed30a060fc7b2f9c118e26eddef",
+    "build-constraints-tox.txt": "4c3f3d915c08691aa90657a978126da1c541bf919a23d7ce87097fab2941d629",
+    "restoration_1.3/completed_runs_baseline.sha256": "4f7c8fe02195044d0b90bef34fef4c9703f2cbe8b96619aadc07ba233b59c9cd",
+    "restoration_1.3/tox_prep_tests/offline-1/result.json": "86eee69eeadd5bda2e067d01f681a2ba1eef38f3bf4b577c92a4f603596d4a34",
+    "pilots/v1.2-infrastructure/09-tox-sdist-A-41.INCIDENT.json": "6c1e3e83d488ab278192615bb1844fcca2a97b2cd7ba3a631f436c52fcfe0dfb"
+  },
+  "completed_result_records_at_amendment": {
+    "main_runs/00-pyfiglet-154-A-19/result.json": "5171d23fec4824aeaf9322684eeb2550e37ff6bfead82542b14692127c21f85d",
+    "main_runs/01-rtl-data-B-19/result.json": "b9afa8778594bc37db6828aa9c868d065af8d931555fcfb830d826daa8a7976e",
+    "main_runs/02-apotrope-template-A-19/result.json": "9fef37920154f44e5f5fe7d025fd4b69afb10682f9cceed09b7bdd8844fb364b",
+    "main_runs/03-stellium-locales-A-19/result.json": "a580d4b0a3b336d8295e1455cfcb8540c6cd8416f75bc67b3a4c6e6fc0e73d84",
+    "main_runs/04-stellium-glyphs-A-41/result.json": "542f681fe227f5e7720aefba46f254712b38dec5009059e163acfc9e58e7fad7",
+    "main_runs/05-pynecore-data-A-23/result.json": "9c89990ede2a7c05e9c7052cda0e9106f79f43567619f943f063fe2a75692273",
+    "main_runs/06-rtl-data-B-23/result.json": "414d70a84d31c392056ccf0cad700822b74fd0cdf7062e62821b33afa5cd8e5d",
+    "main_runs/07-pytest-html-npm-A-23/result.json": "683de0490634f38c7ec6758785eaf95fcc6a6f6c0a0717492a7f796ba43c8081",
+    "main_runs/08-pixcull-sdist-A-41/result.json": "ec269723985c11440cc8d79fe21cc1f9632892ce0e328cbaad9aef700f68c590"
+  }
+}

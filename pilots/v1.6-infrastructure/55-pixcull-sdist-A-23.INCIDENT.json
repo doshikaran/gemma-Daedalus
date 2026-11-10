@@ -1,0 +1,19 @@
+{
+  "incident": "infrastructure (host CPU contention from unrelated user workloads; frozen 240 s per-request timeout)",
+  "episode": "55-pixcull-sdist-A-23",
+  "task": "pixcull-sdist",
+  "condition": "A",
+  "seed": 23,
+  "order": 55,
+  "occurred_utc": "2026-11-05T18:49:34Z",
+  "stage": "interact(): 11th model request (step 10, ~8.7k-token context) failed with TimeoutError after 240 s",
+  "model_calls_completed": 10,
+  "generated_tokens": 7076,
+  "interaction_wall_seconds_recorded": 1079.097560055001,
+  "error": "TimeoutError('timed out')",
+  "stop": "infrastructure_error",
+  "evidence": "Host load average 38 at 18:50Z: ~10 concurrent clang++ processes from a Unity Android NDK (IL2CPP) build, MetaXRSimulator SyntheticEnvironmentServer (~35-55% CPU, running ~15.5 h), Chrome renderers. Native decode had fallen to ~8.5 tok/s. Process list: pilots/v1.6-infrastructure/55-pixcull-sdist-A-23.host_processes_after_pause.txt. The amendment 1.5 gate only acts before an episode starts.",
+  "retained_at": "pilots/v1.6-infrastructure/55-pixcull-sdist-A-23 (moved unchanged; pre-move hashes restoration_1.7/episode55_before_move.sha256, 3,531 files, verified after move)",
+  "disposition": "Study owner instruction 2026-11-06 ('can you please wrap up it?') following the proposed procedure: restart from a fresh workspace with condition A, seed 23, order 55. Not counted as a main attempt. Grade not used for the decision.",
+  "recorded_utc": "2026-11-06T17:57:46.837297+00:00"
+}

@@ -1,0 +1,51 @@
+{"id": "l0-module-actual", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "rtl-data", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "l0-module-actual", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pyfiglet-154", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "apotrope-template", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "rtl-data", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "apotrope-template", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pyfiglet-154", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pynecore-data", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "pixcull-sdist", "arm": "affected", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"id": "pixcull-sdist", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "pynecore-data", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "stellium-locales", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "stellium-glyphs", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "stellium-cache", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "stellium-locales", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "stellium-glyphs", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "stellium-cache", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "tox-sdist", "arm": "affected", "stages": {"source": true, "wheel": true, "sdist-wheel": false}}
+{"id": "s3-template", "arm": "affected", "stages": {"source": false, "wheel": false, "sdist-wheel": false}}
+{"id": "s3-template", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+{"id": "tox-sdist", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+Traceback (most recent call last):
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/control_replay.py", line 77, in <module>
+    main()
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/control_replay.py", line 59, in main
+    results = dict(zip([t['id'] for t in tasks], pool.map(lambda t: run(t['id'], out), tasks)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/control_replay.py", line 59, in <lambda>
+    results = dict(zip([t['id'] for t in tasks], pool.map(lambda t: run(t['id'], out), tasks)))
+                                                                    ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/control_replay.py", line 31, in run
+    records = replay_pytesthtml.main(output_root=out / 'work')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/93af20bbcd93/packaging_study/replay_pytesthtml.py", line 19, in main
+    fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+BlockingIOError: [Errno 11] Resource temporarily unavailable

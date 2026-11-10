@@ -1,0 +1,1 @@
+Aborted 2026-11-07: ran concurrently with the clean-container control replay and hit the per-task grader lock (BlockingIOError). No result; rerun as post-grid-contaminated-container-2.

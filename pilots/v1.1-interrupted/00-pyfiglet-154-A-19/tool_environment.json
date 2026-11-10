@@ -1,0 +1,17 @@
+{
+  "PATH": "/root/.codex/tmp/arg0-linux/codex-arg0IpeibT:/opt/codex/codex-path:/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override:/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin:/opt/codex/runtimes/codex-primary-runtime/dependencies/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/fallback",
+  "HOME": "/root",
+  "LANG": "C.UTF-8",
+  "LC_ALL": "C.UTF-8",
+  "UV_OFFLINE": "1",
+  "UV_CACHE_DIR": "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache",
+  "UV_PYTHON": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "UV_BUILD_CONSTRAINT": "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+  "npm_config_offline": "true",
+  "npm_config_cache": "/workspace/scratch/93af20bbcd93/packaging_study/.npm-cache",
+  "NPM_CONFIG_CACHE": "/workspace/scratch/93af20bbcd93/packaging_study/.npm-cache",
+  "SETUPTOOLS_SCM_PRETEND_VERSION": "0.0.0+audit",
+  "CC": "gcc",
+  "CXX": "g++",
+  "PYTHONPATH": "/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps"
+}

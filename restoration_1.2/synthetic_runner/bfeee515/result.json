@@ -1,0 +1,231 @@
+{
+  "synthetic_only": true,
+  "historical_task_text": false,
+  "main_study": false,
+  "stop": "completion_claim",
+  "generated_tokens": 2799,
+  "calls": 15,
+  "interaction_seconds": 174.30363555600002,
+  "per_call": [
+    {
+      "step": 0,
+      "prompt_tokens": 283,
+      "completion_tokens": 137,
+      "cached_tokens": 0,
+      "seconds": 7.99,
+      "finish": "stop",
+      "format_error": false,
+      "command": "ls -R"
+    },
+    {
+      "step": 1,
+      "prompt_tokens": 386,
+      "completion_tokens": 146,
+      "cached_tokens": 278,
+      "seconds": 6.88,
+      "finish": "stop",
+      "format_error": false,
+      "command": "cat src/calmsg/__init__.py"
+    },
+    {
+      "step": 2,
+      "prompt_tokens": 490,
+      "completion_tokens": 398,
+      "cached_tokens": 381,
+      "seconds": 17.4,
+      "finish": "stop",
+      "format_error": false,
+      "command": "cat src/calmsg/message.txt"
+    },
+    {
+      "step": 3,
+      "prompt_tokens": 804,
+      "completion_tokens": 237,
+      "cached_tokens": 485,
+      "seconds": 13.55,
+      "finish": "stop",
+      "format_error": false,
+      "command": "cat src/calmsg/__init__.py"
+    },
+    {
+      "step": 4,
+      "prompt_tokens": 998,
+      "completion_tokens": 142,
+      "cached_tokens": 804,
+      "seconds": 8.45,
+      "finish": "stop",
+      "format_error": false,
+      "command": "sed -i 's/files(__package__).joinpath/files(\"calmsg\").joinpath/' src/calmsg/__init__.py"
+    },
+    {
+      "step": 5,
+      "prompt_tokens": 1084,
+      "completion_tokens": 146,
+      "cached_tokens": 998,
+      "seconds": 7.7,
+      "finish": "stop",
+      "format_error": false,
+      "command": "cat src/calmsg/__init__.py"
+    },
+    {
+      "step": 6,
+      "prompt_tokens": 1190,
+      "completion_tokens": 227,
+      "cached_tokens": 1084,
+      "seconds": 12.46,
+      "finish": "stop",
+      "format_error": false,
+      "command": "python -m build"
+    },
+    {
+      "step": 7,
+      "prompt_tokens": 1352,
+      "completion_tokens": 40,
+      "cached_tokens": 1190,
+      "seconds": 3.89,
+      "finish": "stop",
+      "format_error": false,
+      "command": "pip install build"
+    },
+    {
+      "step": 8,
+      "prompt_tokens": 1431,
+      "completion_tokens": 143,
+      "cached_tokens": 1352,
+      "seconds": 8.48,
+      "finish": "stop",
+      "format_error": false,
+      "command": "python -m pip install build"
+    },
+    {
+      "step": 9,
+      "prompt_tokens": 1608,
+      "completion_tokens": 193,
+      "cached_tokens": 1431,
+      "seconds": 12.79,
+      "finish": "stop",
+      "format_error": false,
+      "command": "python -m build"
+    },
+    {
+      "step": 10,
+      "prompt_tokens": 1737,
+      "completion_tokens": 239,
+      "cached_tokens": 1608,
+      "seconds": 15.66,
+      "finish": "stop",
+      "format_error": false,
+      "command": "cat <<EOF > test_message.py\nfrom calmsg import message\n\nprint(message())\nEOF\npython test_message.py"
+    },
+    {
+      "step": 11,
+      "prompt_tokens": 1983,
+      "completion_tokens": 207,
+      "cached_tokens": 1737,
+      "seconds": 15.51,
+      "finish": "stop",
+      "format_error": false,
+      "command": "cd /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/synthetic_runner/bfeee515/repo/\ncat <<EOF > test_mess"
+    },
+    {
+      "step": 12,
+      "prompt_tokens": 2197,
+      "completion_tokens": 201,
+      "cached_tokens": 1983,
+      "seconds": 14.92,
+      "finish": "stop",
+      "format_error": false,
+      "command": "cd /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/synthetic_runner/bfeee515/repo/\nexport PYTHONPATH=$PY"
+    },
+    {
+      "step": 13,
+      "prompt_tokens": 2329,
+      "completion_tokens": 266,
+      "cached_tokens": 2197,
+      "seconds": 19.12,
+      "finish": "stop",
+      "format_error": true,
+      "command": ""
+    },
+    {
+      "step": 14,
+      "prompt_tokens": 2485,
+      "completion_tokens": 77,
+      "cached_tokens": 2329,
+      "seconds": 7.26,
+      "finish": "stop",
+      "format_error": false,
+      "command": ""
+    }
+  ],
+  "prefix_cache_probe": {
+    "cold": {
+      "seconds": 58.5011608289999,
+      "usage": {
+        "completion_tokens": 47,
+        "prompt_tokens": 4609,
+        "total_tokens": 4656,
+        "prompt_tokens_details": {
+          "cached_tokens": 137
+        }
+      },
+      "timings": {
+        "cache_n": 137,
+        "prompt_n": 4472,
+        "prompt_ms": 55580.161,
+        "prompt_per_token_ms": 12.42847965116279,
+        "prompt_per_second": 80.4603642655875,
+        "predicted_n": 47,
+        "predicted_ms": 2608.648,
+        "predicted_per_token_ms": 56.709739130434784,
+        "predicted_per_second": 17.633655441439398
+      }
+    },
+    "repeat_same_prefix": {
+      "seconds": 3.528826922999997,
+      "usage": {
+        "completion_tokens": 59,
+        "prompt_tokens": 4609,
+        "total_tokens": 4668,
+        "prompt_tokens_details": {
+          "cached_tokens": 4608
+        }
+      },
+      "timings": {
+        "cache_n": 4608,
+        "prompt_n": 1,
+        "prompt_ms": 62.927,
+        "prompt_per_token_ms": 62.927,
+        "prompt_per_second": 15.891429751934782,
+        "predicted_n": 59,
+        "predicted_ms": 3447.485,
+        "predicted_per_token_ms": 59.43939655172414,
+        "predicted_per_second": 16.82385855195889
+      }
+    },
+    "extended_by_one_turn": {
+      "seconds": 4.214131486000042,
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 4630,
+        "total_tokens": 4694,
+        "prompt_tokens_details": {
+          "cached_tokens": 4609
+        }
+      },
+      "timings": {
+        "cache_n": 4609,
+        "prompt_n": 21,
+        "prompt_ms": 531.705,
+        "prompt_per_token_ms": 25.319285714285716,
+        "prompt_per_second": 39.495584957824356,
+        "predicted_n": 64,
+        "predicted_ms": 3671.407,
+        "predicted_per_token_ms": 58.27630158730159,
+        "predicted_per_second": 17.15963389512522
+      }
+    },
+    "cache_effective": true
+  },
+  "patch": "diff --git a/src/calmsg/__init__.py b/src/calmsg/__init__.py\nindex a75bceb..5daeff1 100644\n--- a/src/calmsg/__init__.py\n+++ b/src/calmsg/__init__.py\n@@ -1,3 +1,3 @@\n from importlib.resources import files\n def message():\n-    return files(__package__).joinpath(\"message.txt\").read_text().strip()\n+    return files(\"calmsg\").joinpath(\"message.txt\").read_text().strip()\n"
+}

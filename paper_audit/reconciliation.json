@@ -1,0 +1,2092 @@
+{
+  "plan": {
+    "plan_rows": 72,
+    "regenerated_plan_identical": true,
+    "records": 72,
+    "record_ids_match_plan": true,
+    "record_fields_match_plan": true,
+    "protocol_versions": [
+      "1.1"
+    ],
+    "conditions": {
+      "A": 36,
+      "B": 36
+    },
+    "main_study_flag_all_true": true,
+    "infrastructure_records": 0
+  },
+  "analysis": {
+    "recomputed_equals_frozen": true,
+    "artifact_contract_passes": 0,
+    "frozen_file_sha256": "7b76b38c07a21eefa993dd5e0cab84369c2ac779679f6a9446348ab72ef9a005"
+  },
+  "graders": {
+    "frozen_grader_files": {
+      "analyze.py": {
+        "frozen": "2b4e717bce13c9fedd3c72858834f5e3e898887268e3d708228f2f96d21c1042",
+        "now": "2b4e717bce13c9fedd3c72858834f5e3e898887268e3d708228f2f96d21c1042",
+        "match": true
+      },
+      "build-constraints-tox.txt": {
+        "frozen": "4c3f3d915c08691aa90657a978126da1c541bf919a23d7ce87097fab2941d629",
+        "now": "4c3f3d915c08691aa90657a978126da1c541bf919a23d7ce87097fab2941d629",
+        "match": true
+      },
+      "build-constraints.txt": {
+        "frozen": "08e1cb8155946b748b4de0f545e29793c9965d4a76b6e8736df4f332597c63a0",
+        "now": "08e1cb8155946b748b4de0f545e29793c9965d4a76b6e8736df4f332597c63a0",
+        "match": true
+      },
+      "replay.py": {
+        "frozen": "fe9389df085e408da2bf950b344fd5d169a5d2749db35774c3a036abb74ce4c3",
+        "now": "fe9389df085e408da2bf950b344fd5d169a5d2749db35774c3a036abb74ce4c3",
+        "match": true
+      },
+      "replay_pytesthtml.py": {
+        "frozen": "a9fbbfd149444fe9769a8cb19b12c015972f628aaa6736423fc74f42797a1ba7",
+        "now": "a9fbbfd149444fe9769a8cb19b12c015972f628aaa6736423fc74f42797a1ba7",
+        "match": true
+      },
+      "run_study.py": {
+        "frozen": "c6004c752af24389eee0e21eaef0a6dede0da1215d8eb0a5d12f747cd9149be8",
+        "now": "c6004c752af24389eee0e21eaef0a6dede0da1215d8eb0a5d12f747cd9149be8",
+        "match": true
+      },
+      "task_manifest.json": {
+        "frozen": "d892092741461673efd2ace78e32a68ddf61da63847943a50a7b5ce5704d5a5f",
+        "now": "d892092741461673efd2ace78e32a68ddf61da63847943a50a7b5ce5704d5a5f",
+        "match": true
+      }
+    },
+    "note": "run_study.episode calls verify_freeze() after the agent finishes and before grading; a mismatch raises before any record is written. Records do not store per-episode grader hashes."
+  },
+  "controls": {
+    "frozen_v1_1_results": {
+      "rows": 24,
+      "matches": 24,
+      "detail": {
+        "rtl-data/affected": {
+          "expected": "PFF",
+          "observed": "PFF",
+          "match": true
+        },
+        "rtl-data/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "l0-module-actual/affected": {
+          "expected": "PFF",
+          "observed": "PFF",
+          "match": true
+        },
+        "l0-module-actual/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "pyfiglet-154/affected": {
+          "expected": "PFF",
+          "observed": "PFF",
+          "match": true
+        },
+        "pyfiglet-154/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "apotrope-template/affected": {
+          "expected": "PFF",
+          "observed": "PFF",
+          "match": true
+        },
+        "apotrope-template/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "pynecore-data/affected": {
+          "expected": "PFF",
+          "observed": "PFF",
+          "match": true
+        },
+        "pynecore-data/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "pixcull-sdist/affected": {
+          "expected": "PPF",
+          "observed": "PPF",
+          "match": true
+        },
+        "pixcull-sdist/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "stellium-locales/affected": {
+          "expected": "PFF",
+          "observed": "PFF",
+          "match": true
+        },
+        "stellium-locales/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "stellium-glyphs/affected": {
+          "expected": "PFF",
+          "observed": "PFF",
+          "match": true
+        },
+        "stellium-glyphs/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "stellium-cache/affected": {
+          "expected": "PFF",
+          "observed": "PFF",
+          "match": true
+        },
+        "stellium-cache/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "tox-sdist/affected": {
+          "expected": "PPF",
+          "observed": "PPF",
+          "match": true
+        },
+        "tox-sdist/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "pytest-html-npm/affected": {
+          "expected": "PPF",
+          "observed": "PPF",
+          "match": true
+        },
+        "pytest-html-npm/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        },
+        "s3-template/affected": {
+          "expected": "FFF",
+          "observed": "FFF",
+          "match": true
+        },
+        "s3-template/reference": {
+          "expected": "PPP",
+          "observed": "PPP",
+          "match": true
+        }
+      }
+    },
+    "replays": {
+      "offline-1": {
+        "rows": 24,
+        "matches": 24
+      },
+      "offline-final-container": {
+        "rows": 24,
+        "matches": 24
+      },
+      "online-warm-1": {
+        "rows": 0,
+        "matches": 0,
+        "note": "ABORTED: wrapper double-locked pytest-html-npm (BlockingIOError); superseded by online-warm-2. Partial work retained."
+      },
+      "online-warm-2": {
+        "rows": 24,
+        "matches": 24
+      },
+      "post-grid-clean-container": {
+        "rows": 24,
+        "matches": 24
+      },
+      "post-grid-contaminated-container": {
+        "rows": 0,
+        "matches": 0,
+        "note": "Aborted 2026-11-07: ran concurrently with the clean-container control replay and hit the per-task grader lock (BlockingIOError). No result; rerun as post-grid-contaminated-container-2."
+      },
+      "post-grid-contaminated-container-2": {
+        "rows": 24,
+        "matches": 24
+      }
+    }
+  },
+  "budgets": {
+    "rows": [
+      {
+        "episode_id": "00-pyfiglet-154-A-19",
+        "stop": "completion_claim",
+        "calls": 23,
+        "generated_tokens": 4705,
+        "sum_completion_tokens": 4705,
+        "wall": 686.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "01-rtl-data-B-19",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 5777,
+        "sum_completion_tokens": 5777,
+        "wall": 605.0,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "02-apotrope-template-A-19",
+        "stop": "completion_claim",
+        "calls": 12,
+        "generated_tokens": 3782,
+        "sum_completion_tokens": 3782,
+        "wall": 337.6,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "03-stellium-locales-A-19",
+        "stop": "completion_claim",
+        "calls": 19,
+        "generated_tokens": 3822,
+        "sum_completion_tokens": 3822,
+        "wall": 327.2,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "04-stellium-glyphs-A-41",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 5221,
+        "sum_completion_tokens": 5221,
+        "wall": 718.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "05-pynecore-data-A-23",
+        "stop": "completion_claim",
+        "calls": 23,
+        "generated_tokens": 5409,
+        "sum_completion_tokens": 5409,
+        "wall": 650.9,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "06-rtl-data-B-23",
+        "stop": "completion_claim",
+        "calls": 19,
+        "generated_tokens": 7614,
+        "sum_completion_tokens": 7614,
+        "wall": 843.4,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "07-pytest-html-npm-A-23",
+        "stop": "completion_claim",
+        "calls": 21,
+        "generated_tokens": 4164,
+        "sum_completion_tokens": 4164,
+        "wall": 412.4,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "08-pixcull-sdist-A-41",
+        "stop": "completion_claim",
+        "calls": 11,
+        "generated_tokens": 2776,
+        "sum_completion_tokens": 2776,
+        "wall": 275.2,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "09-tox-sdist-A-41",
+        "stop": "completion_claim",
+        "calls": 20,
+        "generated_tokens": 4501,
+        "sum_completion_tokens": 4501,
+        "wall": 315.9,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "10-rtl-data-A-41",
+        "stop": "completion_claim",
+        "calls": 12,
+        "generated_tokens": 2524,
+        "sum_completion_tokens": 2524,
+        "wall": 358.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "11-pytest-html-npm-B-19",
+        "stop": "completion_claim",
+        "calls": 8,
+        "generated_tokens": 5013,
+        "sum_completion_tokens": 5013,
+        "wall": 521.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "12-s3-template-B-19",
+        "stop": "budget",
+        "calls": 14,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 733.0,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "13-pynecore-data-B-41",
+        "stop": "completion_claim",
+        "calls": 8,
+        "generated_tokens": 2946,
+        "sum_completion_tokens": 2946,
+        "wall": 215.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "14-stellium-locales-A-41",
+        "stop": "completion_claim",
+        "calls": 7,
+        "generated_tokens": 1762,
+        "sum_completion_tokens": 1762,
+        "wall": 201.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "15-pyfiglet-154-B-41",
+        "stop": "completion_claim",
+        "calls": 12,
+        "generated_tokens": 6733,
+        "sum_completion_tokens": 6733,
+        "wall": 626.5,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "16-apotrope-template-B-41",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 5310,
+        "sum_completion_tokens": 5310,
+        "wall": 527.5,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "17-pixcull-sdist-B-19",
+        "stop": "budget",
+        "calls": 20,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 782.4,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "18-pixcull-sdist-A-19",
+        "stop": "completion_claim",
+        "calls": 17,
+        "generated_tokens": 5569,
+        "sum_completion_tokens": 5569,
+        "wall": 389.5,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "19-tox-sdist-A-19",
+        "stop": "completion_claim",
+        "calls": 19,
+        "generated_tokens": 3982,
+        "sum_completion_tokens": 3982,
+        "wall": 341.4,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "20-stellium-locales-B-41",
+        "stop": "completion_claim",
+        "calls": 9,
+        "generated_tokens": 3725,
+        "sum_completion_tokens": 3725,
+        "wall": 685.4,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "21-pytest-html-npm-A-19",
+        "stop": "completion_claim",
+        "calls": 13,
+        "generated_tokens": 3632,
+        "sum_completion_tokens": 3632,
+        "wall": 325.5,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "22-stellium-glyphs-B-41",
+        "stop": "completion_claim",
+        "calls": 19,
+        "generated_tokens": 6061,
+        "sum_completion_tokens": 6061,
+        "wall": 790.7,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "23-stellium-glyphs-B-19",
+        "stop": "completion_claim",
+        "calls": 11,
+        "generated_tokens": 2703,
+        "sum_completion_tokens": 2703,
+        "wall": 352.2,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "24-tox-sdist-B-41",
+        "stop": "budget",
+        "calls": 22,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 909.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "25-pyfiglet-154-B-23",
+        "stop": "completion_claim",
+        "calls": 21,
+        "generated_tokens": 8036,
+        "sum_completion_tokens": 8036,
+        "wall": 732.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "26-pyfiglet-154-A-23",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 3501,
+        "sum_completion_tokens": 3501,
+        "wall": 265.0,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "27-pynecore-data-B-19",
+        "stop": "completion_claim",
+        "calls": 12,
+        "generated_tokens": 3380,
+        "sum_completion_tokens": 3380,
+        "wall": 308.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "28-s3-template-B-23",
+        "stop": "budget",
+        "calls": 16,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 704.1,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "29-s3-template-A-41",
+        "stop": "completion_claim",
+        "calls": 12,
+        "generated_tokens": 2356,
+        "sum_completion_tokens": 2356,
+        "wall": 172.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "30-pixcull-sdist-B-23",
+        "stop": "completion_claim",
+        "calls": 18,
+        "generated_tokens": 8168,
+        "sum_completion_tokens": 8168,
+        "wall": 804.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "31-stellium-locales-A-23",
+        "stop": "completion_claim",
+        "calls": 22,
+        "generated_tokens": 3891,
+        "sum_completion_tokens": 3891,
+        "wall": 482.4,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "32-pynecore-data-A-41",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 3648,
+        "sum_completion_tokens": 3648,
+        "wall": 265.9,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "33-stellium-cache-B-23",
+        "stop": "budget",
+        "calls": 12,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 777.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "34-l0-module-actual-B-23",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 5762,
+        "sum_completion_tokens": 5762,
+        "wall": 615.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "35-stellium-cache-A-23",
+        "stop": "budget",
+        "calls": 20,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 980.7,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "36-apotrope-template-A-41",
+        "stop": "budget",
+        "calls": 21,
+        "generated_tokens": 4529,
+        "sum_completion_tokens": 4529,
+        "wall": 1200.1,
+        "accounting": "lower_bound_partial_timeout",
+        "deadline_partial_call": true,
+        "which_budget": "wall",
+        "problems": []
+      },
+      {
+        "episode_id": "37-apotrope-template-A-23",
+        "stop": "completion_claim",
+        "calls": 11,
+        "generated_tokens": 2099,
+        "sum_completion_tokens": 2099,
+        "wall": 431.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "38-stellium-glyphs-A-23",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 5595,
+        "sum_completion_tokens": 5595,
+        "wall": 853.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "39-pyfiglet-154-B-19",
+        "stop": "completion_claim",
+        "calls": 17,
+        "generated_tokens": 3752,
+        "sum_completion_tokens": 3752,
+        "wall": 701.1,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "40-apotrope-template-B-19",
+        "stop": "completion_claim",
+        "calls": 10,
+        "generated_tokens": 2130,
+        "sum_completion_tokens": 2130,
+        "wall": 342.0,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "41-stellium-locales-B-23",
+        "stop": "completion_claim",
+        "calls": 12,
+        "generated_tokens": 6712,
+        "sum_completion_tokens": 6712,
+        "wall": 868.9,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "42-stellium-glyphs-B-23",
+        "stop": "completion_claim",
+        "calls": 13,
+        "generated_tokens": 3605,
+        "sum_completion_tokens": 3605,
+        "wall": 613.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "43-s3-template-B-41",
+        "stop": "budget",
+        "calls": 14,
+        "generated_tokens": 7441,
+        "sum_completion_tokens": 7441,
+        "wall": 1200.0,
+        "accounting": "lower_bound_partial_timeout",
+        "deadline_partial_call": true,
+        "which_budget": "wall",
+        "problems": []
+      },
+      {
+        "episode_id": "44-stellium-cache-B-19",
+        "stop": "budget",
+        "calls": 12,
+        "generated_tokens": 6240,
+        "sum_completion_tokens": 6240,
+        "wall": 1200.1,
+        "accounting": "lower_bound_partial_timeout",
+        "deadline_partial_call": true,
+        "which_budget": "wall",
+        "problems": []
+      },
+      {
+        "episode_id": "45-stellium-cache-A-19",
+        "stop": "budget",
+        "calls": 21,
+        "generated_tokens": 6828,
+        "sum_completion_tokens": 6828,
+        "wall": 1200.0,
+        "accounting": "lower_bound_partial_timeout",
+        "deadline_partial_call": true,
+        "which_budget": "wall",
+        "problems": []
+      },
+      {
+        "episode_id": "46-s3-template-A-19",
+        "stop": "budget",
+        "calls": 13,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 1096.4,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "47-pynecore-data-A-19",
+        "stop": "completion_claim",
+        "calls": 10,
+        "generated_tokens": 2749,
+        "sum_completion_tokens": 2749,
+        "wall": 353.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "48-tox-sdist-A-23",
+        "stop": "completion_claim",
+        "calls": 18,
+        "generated_tokens": 3882,
+        "sum_completion_tokens": 3882,
+        "wall": 553.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "49-rtl-data-A-23",
+        "stop": "budget",
+        "calls": 13,
+        "generated_tokens": 5810,
+        "sum_completion_tokens": 5810,
+        "wall": 1200.0,
+        "accounting": "lower_bound_partial_timeout",
+        "deadline_partial_call": true,
+        "which_budget": "wall",
+        "problems": []
+      },
+      {
+        "episode_id": "50-apotrope-template-B-23",
+        "stop": "completion_claim",
+        "calls": 12,
+        "generated_tokens": 2498,
+        "sum_completion_tokens": 2498,
+        "wall": 354.6,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "51-rtl-data-A-19",
+        "stop": "completion_claim",
+        "calls": 14,
+        "generated_tokens": 3112,
+        "sum_completion_tokens": 3112,
+        "wall": 474.7,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "52-stellium-locales-B-19",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 6108,
+        "sum_completion_tokens": 6108,
+        "wall": 729.1,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "53-pytest-html-npm-A-41",
+        "stop": "completion_claim",
+        "calls": 14,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 861.5,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "54-s3-template-A-23",
+        "stop": "completion_claim",
+        "calls": 16,
+        "generated_tokens": 5097,
+        "sum_completion_tokens": 5097,
+        "wall": 519.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "55-pixcull-sdist-A-23",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 5747,
+        "sum_completion_tokens": 5747,
+        "wall": 794.9,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "56-tox-sdist-B-19",
+        "stop": "completion_claim",
+        "calls": 22,
+        "generated_tokens": 6256,
+        "sum_completion_tokens": 6256,
+        "wall": 832.5,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "57-tox-sdist-B-23",
+        "stop": "budget",
+        "calls": 23,
+        "generated_tokens": 4228,
+        "sum_completion_tokens": 4228,
+        "wall": 1200.1,
+        "accounting": "lower_bound_partial_timeout",
+        "deadline_partial_call": true,
+        "which_budget": "wall",
+        "problems": []
+      },
+      {
+        "episode_id": "58-stellium-cache-B-41",
+        "stop": "completion_claim",
+        "calls": 10,
+        "generated_tokens": 2348,
+        "sum_completion_tokens": 2348,
+        "wall": 252.3,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "59-pytest-html-npm-B-23",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 3623,
+        "sum_completion_tokens": 3623,
+        "wall": 393.1,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "60-pytest-html-npm-B-41",
+        "stop": "budget",
+        "calls": 16,
+        "generated_tokens": 7523,
+        "sum_completion_tokens": 7523,
+        "wall": 1200.1,
+        "accounting": "lower_bound_partial_timeout",
+        "deadline_partial_call": true,
+        "which_budget": "wall",
+        "problems": []
+      },
+      {
+        "episode_id": "61-l0-module-actual-B-19",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 4728,
+        "sum_completion_tokens": 4728,
+        "wall": 1033.9,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "62-l0-module-actual-A-41",
+        "stop": "budget",
+        "calls": 21,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 1006.9,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "63-stellium-glyphs-A-19",
+        "stop": "completion_claim",
+        "calls": 11,
+        "generated_tokens": 2040,
+        "sum_completion_tokens": 2040,
+        "wall": 315.2,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "64-pixcull-sdist-B-41",
+        "stop": "completion_claim",
+        "calls": 10,
+        "generated_tokens": 2018,
+        "sum_completion_tokens": 2018,
+        "wall": 419.2,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "65-pynecore-data-B-23",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 6114,
+        "sum_completion_tokens": 6114,
+        "wall": 895.5,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "66-l0-module-actual-A-19",
+        "stop": "completion_claim",
+        "calls": 17,
+        "generated_tokens": 2696,
+        "sum_completion_tokens": 2696,
+        "wall": 289.8,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "67-rtl-data-B-41",
+        "stop": "completion_claim",
+        "calls": 6,
+        "generated_tokens": 3466,
+        "sum_completion_tokens": 3466,
+        "wall": 364.1,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "68-l0-module-actual-A-23",
+        "stop": "completion_claim",
+        "calls": 7,
+        "generated_tokens": 2065,
+        "sum_completion_tokens": 2065,
+        "wall": 206.0,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "69-stellium-cache-A-41",
+        "stop": "budget",
+        "calls": 23,
+        "generated_tokens": 8192,
+        "sum_completion_tokens": 8192,
+        "wall": 798.0,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "tokens",
+        "problems": []
+      },
+      {
+        "episode_id": "70-pyfiglet-154-A-41",
+        "stop": "action_limit",
+        "calls": 24,
+        "generated_tokens": 6136,
+        "sum_completion_tokens": 6136,
+        "wall": 815.6,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      },
+      {
+        "episode_id": "71-l0-module-actual-B-41",
+        "stop": "completion_claim",
+        "calls": 8,
+        "generated_tokens": 4882,
+        "sum_completion_tokens": 4882,
+        "wall": 575.5,
+        "accounting": "complete",
+        "deadline_partial_call": false,
+        "which_budget": "",
+        "problems": []
+      }
+    ],
+    "stops": {
+      "completion_claim": 43,
+      "budget": 16,
+      "action_limit": 13
+    },
+    "budget_by_kind": {
+      "tokens": 9,
+      "wall": 7
+    },
+    "partial_deadline_calls": 7,
+    "max_calls": 24,
+    "max_tokens": 8192,
+    "max_wall": 1200.1
+  },
+  "infrastructure": {
+    "incidents": [
+      {
+        "episode": "09-tox-sdist-A-41",
+        "retained_at": "pilots/v1.2-infrastructure/09-tox-sdist-A-41",
+        "retained_exists": true,
+        "incident": "infrastructure (pre-model provisioning defect)",
+        "model_calls": 0,
+        "generated_tokens": 0,
+        "replacement_record_exists": true,
+        "retained_record_stop": null
+      },
+      {
+        "episode": "50-apotrope-template-B-23",
+        "retained_at": "pilots/v1.3-infrastructure/50-apotrope-template-B-23",
+        "retained_exists": true,
+        "incident": "infrastructure (host hibernation during a model request)",
+        "model_calls": 10,
+        "generated_tokens": 3301,
+        "replacement_record_exists": true,
+        "retained_record_stop": "infrastructure_error"
+      },
+      {
+        "episode": "53-pytest-html-npm-A-41",
+        "retained_at": "pilots/v1.4-infrastructure/53-pytest-html-npm-A-41",
+        "retained_exists": true,
+        "incident": "infrastructure (host CPU contention; frozen 240 s per-request timeout)",
+        "model_calls": 1,
+        "generated_tokens": 168,
+        "replacement_record_exists": true,
+        "retained_record_stop": "infrastructure_error"
+      },
+      {
+        "episode": "55-pixcull-sdist-A-23",
+        "retained_at": "pilots/v1.6-infrastructure/55-pixcull-sdist-A-23",
+        "retained_exists": true,
+        "incident": "infrastructure (host CPU contention from unrelated user workloads; frozen 240 s per-request timeout)",
+        "model_calls": 10,
+        "generated_tokens": 7076,
+        "replacement_record_exists": true,
+        "retained_record_stop": "infrastructure_error"
+      }
+    ],
+    "amendments": [
+      "PROTOCOL_AMENDMENT_1.1.json",
+      "PROTOCOL_AMENDMENT_1.2.json",
+      "PROTOCOL_AMENDMENT_1.3.json",
+      "PROTOCOL_AMENDMENT_1.4.json",
+      "PROTOCOL_AMENDMENT_1.5.json",
+      "PROTOCOL_AMENDMENT_1.6.json",
+      "PROTOCOL_AMENDMENT_1.7.json"
+    ],
+    "setup_and_interrupted_attempts": [
+      "pilots/v1.0-setup/00-pyfiglet-154-A-19",
+      "pilots/v1.1-interrupted/00-pyfiglet-154-A-19"
+    ]
+  },
+  "host_power_sleep": {
+    "rows": [
+      {
+        "episode_id": "00-pyfiglet-154-A-19",
+        "start_utc": "2026-11-03T18:01:57+00:00",
+        "end_utc": "2026-11-03T18:13:39+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "01-rtl-data-B-19",
+        "start_utc": "2026-11-03T18:13:43+00:00",
+        "end_utc": "2026-11-03T18:23:57+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "02-apotrope-template-A-19",
+        "start_utc": "2026-11-03T18:23:59+00:00",
+        "end_utc": "2026-11-03T18:29:42+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "03-stellium-locales-A-19",
+        "start_utc": "2026-11-03T18:29:46+00:00",
+        "end_utc": "2026-11-03T18:35:29+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "04-stellium-glyphs-A-41",
+        "start_utc": "2026-11-03T18:35:36+00:00",
+        "end_utc": "2026-11-03T18:47:50+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "AC"
+        ]
+      },
+      {
+        "episode_id": "05-pynecore-data-A-23",
+        "start_utc": "2026-11-03T18:47:57+00:00",
+        "end_utc": "2026-11-03T18:59:02+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "AC"
+        ]
+      },
+      {
+        "episode_id": "06-rtl-data-B-23",
+        "start_utc": "2026-11-03T18:59:06+00:00",
+        "end_utc": "2026-11-03T19:13:18+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "AC"
+        ]
+      },
+      {
+        "episode_id": "07-pytest-html-npm-A-23",
+        "start_utc": "2026-11-03T19:13:29+00:00",
+        "end_utc": "2026-11-03T19:21:19+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "08-pixcull-sdist-A-41",
+        "start_utc": "2026-11-03T19:21:34+00:00",
+        "end_utc": "2026-11-03T19:26:18+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_at_launch_unmonitored",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "09-tox-sdist-A-41",
+        "start_utc": "2026-11-04T16:22:09+00:00",
+        "end_utc": "2026-11-04T16:27:33+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "10-rtl-data-A-41",
+        "start_utc": "2026-11-04T16:27:36+00:00",
+        "end_utc": "2026-11-04T16:33:46+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "11-pytest-html-npm-B-19",
+        "start_utc": "2026-11-04T16:34:02+00:00",
+        "end_utc": "2026-11-04T16:43:44+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "12-s3-template-B-19",
+        "start_utc": "2026-11-04T16:43:55+00:00",
+        "end_utc": "2026-11-04T16:56:15+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "AC"
+        ]
+      },
+      {
+        "episode_id": "13-pynecore-data-B-41",
+        "start_utc": "2026-11-04T16:56:20+00:00",
+        "end_utc": "2026-11-04T17:00:08+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "14-stellium-locales-A-41",
+        "start_utc": "2026-11-04T17:00:15+00:00",
+        "end_utc": "2026-11-04T17:03:52+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "15-pyfiglet-154-B-41",
+        "start_utc": "2026-11-04T17:03:58+00:00",
+        "end_utc": "2026-11-04T17:14:40+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "16-apotrope-template-B-41",
+        "start_utc": "2026-11-04T17:14:44+00:00",
+        "end_utc": "2026-11-04T17:23:38+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "17-pixcull-sdist-B-19",
+        "start_utc": "2026-11-04T17:23:43+00:00",
+        "end_utc": "2026-11-04T17:36:54+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "18-pixcull-sdist-A-19",
+        "start_utc": "2026-11-04T17:37:01+00:00",
+        "end_utc": "2026-11-04T17:43:38+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "AC"
+        ]
+      },
+      {
+        "episode_id": "19-tox-sdist-A-19",
+        "start_utc": "2026-11-04T17:43:45+00:00",
+        "end_utc": "2026-11-04T17:49:35+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "20-stellium-locales-B-41",
+        "start_utc": "2026-11-04T17:49:41+00:00",
+        "end_utc": "2026-11-04T18:01:24+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "AC"
+        ]
+      },
+      {
+        "episode_id": "21-pytest-html-npm-A-19",
+        "start_utc": "2026-11-04T18:01:40+00:00",
+        "end_utc": "2026-11-04T18:08:17+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "22-stellium-glyphs-B-41",
+        "start_utc": "2026-11-04T18:08:35+00:00",
+        "end_utc": "2026-11-04T18:22:02+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "23-stellium-glyphs-B-19",
+        "start_utc": "2026-11-04T18:22:10+00:00",
+        "end_utc": "2026-11-04T18:28:19+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "24-tox-sdist-B-41",
+        "start_utc": "2026-11-04T18:28:26+00:00",
+        "end_utc": "2026-11-04T18:43:39+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "AC"
+        ]
+      },
+      {
+        "episode_id": "25-pyfiglet-154-B-23",
+        "start_utc": "2026-11-04T18:43:44+00:00",
+        "end_utc": "2026-11-04T18:56:12+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "26-pyfiglet-154-A-23",
+        "start_utc": "2026-11-04T18:56:18+00:00",
+        "end_utc": "2026-11-04T19:01:00+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "27-pynecore-data-B-19",
+        "start_utc": "2026-11-04T19:01:07+00:00",
+        "end_utc": "2026-11-04T19:06:30+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "28-s3-template-B-23",
+        "start_utc": "2026-11-04T19:06:36+00:00",
+        "end_utc": "2026-11-04T19:18:26+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "29-s3-template-A-41",
+        "start_utc": "2026-11-04T19:18:28+00:00",
+        "end_utc": "2026-11-04T19:21:27+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "30-pixcull-sdist-B-23",
+        "start_utc": "2026-11-04T19:21:33+00:00",
+        "end_utc": "2026-11-04T19:35:06+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "31-stellium-locales-A-23",
+        "start_utc": "2026-11-04T19:35:14+00:00",
+        "end_utc": "2026-11-05T00:55:53+00:00",
+        "host_asleep_seconds_in_window": 18734,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "32-pynecore-data-A-41",
+        "start_utc": "2026-11-05T00:56:08+00:00",
+        "end_utc": "2026-11-05T02:37:09+00:00",
+        "host_asleep_seconds_in_window": 5790,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "33-stellium-cache-B-23",
+        "start_utc": "2026-11-05T02:37:17+00:00",
+        "end_utc": "2026-11-05T02:50:29+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "34-l0-module-actual-B-23",
+        "start_utc": "2026-11-05T02:50:34+00:00",
+        "end_utc": "2026-11-05T03:01:04+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "35-stellium-cache-A-23",
+        "start_utc": "2026-11-05T03:01:16+00:00",
+        "end_utc": "2026-11-05T03:17:52+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "36-apotrope-template-A-41",
+        "start_utc": "2026-11-05T03:17:58+00:00",
+        "end_utc": "2026-11-05T03:38:08+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "37-apotrope-template-A-23",
+        "start_utc": "2026-11-05T03:38:13+00:00",
+        "end_utc": "2026-11-05T03:45:42+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "38-stellium-glyphs-A-23",
+        "start_utc": "2026-11-05T03:45:53+00:00",
+        "end_utc": "2026-11-05T04:01:17+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "39-pyfiglet-154-B-19",
+        "start_utc": "2026-11-05T04:01:47+00:00",
+        "end_utc": "2026-11-05T04:13:55+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "40-apotrope-template-B-19",
+        "start_utc": "2026-11-05T04:14:03+00:00",
+        "end_utc": "2026-11-05T04:19:54+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "41-stellium-locales-B-23",
+        "start_utc": "2026-11-05T04:20:05+00:00",
+        "end_utc": "2026-11-05T04:34:59+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "42-stellium-glyphs-B-23",
+        "start_utc": "2026-11-05T04:35:13+00:00",
+        "end_utc": "2026-11-05T04:45:53+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "43-s3-template-B-41",
+        "start_utc": "2026-11-05T04:46:03+00:00",
+        "end_utc": "2026-11-05T05:06:15+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "44-stellium-cache-B-19",
+        "start_utc": "2026-11-05T05:06:25+00:00",
+        "end_utc": "2026-11-05T05:26:48+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "45-stellium-cache-A-19",
+        "start_utc": "2026-11-05T05:27:02+00:00",
+        "end_utc": "2026-11-05T05:47:23+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "46-s3-template-A-19",
+        "start_utc": "2026-11-05T05:47:31+00:00",
+        "end_utc": "2026-11-05T06:05:57+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "47-pynecore-data-A-19",
+        "start_utc": "2026-11-05T06:06:05+00:00",
+        "end_utc": "2026-11-05T06:12:18+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "48-tox-sdist-A-23",
+        "start_utc": "2026-11-05T06:12:28+00:00",
+        "end_utc": "2026-11-05T06:21:55+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "49-rtl-data-A-23",
+        "start_utc": "2026-11-05T06:22:02+00:00",
+        "end_utc": "2026-11-05T06:42:26+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "50-apotrope-template-B-23",
+        "start_utc": "2026-11-05T12:30:35+00:00",
+        "end_utc": "2026-11-05T12:36:40+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_guarded_amendment_1_4",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "51-rtl-data-A-19",
+        "start_utc": "2026-11-05T12:36:46+00:00",
+        "end_utc": "2026-11-05T12:44:56+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_guarded_amendment_1_4",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "52-stellium-locales-B-19",
+        "start_utc": "2026-11-05T12:45:08+00:00",
+        "end_utc": "2026-11-05T12:57:42+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_guarded_amendment_1_4",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "53-pytest-html-npm-A-41",
+        "start_utc": "2026-11-05T18:06:06+00:00",
+        "end_utc": "2026-11-05T18:21:06+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed_amendment_1_6",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "54-s3-template-A-23",
+        "start_utc": "2026-11-05T18:21:45+00:00",
+        "end_utc": "2026-11-05T18:30:33+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "BATTERY_observed_amendment_1_6",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "55-pixcull-sdist-A-23",
+        "start_utc": "2026-11-06T17:59:26+00:00",
+        "end_utc": "2026-11-06T18:12:53+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "56-tox-sdist-B-19",
+        "start_utc": "2026-11-06T18:18:52+00:00",
+        "end_utc": "2026-11-06T18:32:47+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "57-tox-sdist-B-23",
+        "start_utc": "2026-11-06T18:33:44+00:00",
+        "end_utc": "2026-11-06T18:54:17+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "58-stellium-cache-B-41",
+        "start_utc": "2026-11-06T18:59:51+00:00",
+        "end_utc": "2026-11-06T19:04:21+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "59-pytest-html-npm-B-23",
+        "start_utc": "2026-11-06T19:04:57+00:00",
+        "end_utc": "2026-11-06T19:12:48+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "60-pytest-html-npm-B-41",
+        "start_utc": "2026-11-06T19:14:19+00:00",
+        "end_utc": "2026-11-06T19:36:06+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "AC",
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "61-l0-module-actual-B-19",
+        "start_utc": "2026-11-06T19:37:25+00:00",
+        "end_utc": "2026-11-06T19:55:09+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "62-l0-module-actual-A-41",
+        "start_utc": "2026-11-06T20:00:12+00:00",
+        "end_utc": "2026-11-06T20:17:10+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": [
+          "BATT"
+        ]
+      },
+      {
+        "episode_id": "63-stellium-glyphs-A-19",
+        "start_utc": "2026-11-06T20:17:37+00:00",
+        "end_utc": "2026-11-06T20:23:17+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "64-pixcull-sdist-B-41",
+        "start_utc": "2026-11-06T20:23:50+00:00",
+        "end_utc": "2026-11-06T20:30:59+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "65-pynecore-data-B-23",
+        "start_utc": "2026-11-06T20:31:28+00:00",
+        "end_utc": "2026-11-06T20:46:38+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "66-l0-module-actual-A-19",
+        "start_utc": "2026-11-06T20:47:03+00:00",
+        "end_utc": "2026-11-06T20:52:00+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "67-rtl-data-B-41",
+        "start_utc": "2026-11-06T20:52:24+00:00",
+        "end_utc": "2026-11-06T20:58:38+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "68-l0-module-actual-A-23",
+        "start_utc": "2026-11-06T20:59:02+00:00",
+        "end_utc": "2026-11-06T21:02:35+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "69-stellium-cache-A-41",
+        "start_utc": "2026-11-06T21:03:00+00:00",
+        "end_utc": "2026-11-06T21:16:32+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "70-pyfiglet-154-A-41",
+        "start_utc": "2026-11-06T21:16:59+00:00",
+        "end_utc": "2026-11-06T21:30:55+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      },
+      {
+        "episode_id": "71-l0-module-actual-B-41",
+        "start_utc": "2026-11-06T21:31:20+00:00",
+        "end_utc": "2026-11-06T21:40:56+00:00",
+        "host_asleep_seconds_in_window": 0,
+        "power_at_start": "AC_observed_at_checks",
+        "power_sources_logged_at_sleep_wake_in_window": []
+      }
+    ],
+    "episodes_overlapping_sleep": [
+      "31-stellium-locales-A-23",
+      "32-pynecore-data-A-41"
+    ],
+    "episodes_by_power_at_start": {
+      "AC_at_launch_unmonitored": [
+        "00-pyfiglet-154-A-19",
+        "01-rtl-data-B-19",
+        "02-apotrope-template-A-19",
+        "03-stellium-locales-A-19",
+        "04-stellium-glyphs-A-41",
+        "05-pynecore-data-A-23",
+        "06-rtl-data-B-23",
+        "07-pytest-html-npm-A-23",
+        "08-pixcull-sdist-A-41"
+      ],
+      "AC_guarded_amendment_1_4": [
+        "50-apotrope-template-B-23",
+        "51-rtl-data-A-19",
+        "52-stellium-locales-B-19"
+      ],
+      "AC_observed": [
+        "09-tox-sdist-A-41",
+        "10-rtl-data-A-41",
+        "11-pytest-html-npm-B-19",
+        "12-s3-template-B-19",
+        "13-pynecore-data-B-41",
+        "14-stellium-locales-A-41",
+        "15-pyfiglet-154-B-41",
+        "16-apotrope-template-B-41",
+        "17-pixcull-sdist-B-19",
+        "18-pixcull-sdist-A-19",
+        "19-tox-sdist-A-19",
+        "20-stellium-locales-B-41",
+        "21-pytest-html-npm-A-19",
+        "22-stellium-glyphs-B-41",
+        "23-stellium-glyphs-B-19",
+        "24-tox-sdist-B-41",
+        "25-pyfiglet-154-B-23"
+      ],
+      "AC_observed_at_checks": [
+        "55-pixcull-sdist-A-23",
+        "56-tox-sdist-B-19",
+        "57-tox-sdist-B-23",
+        "58-stellium-cache-B-41",
+        "59-pytest-html-npm-B-23",
+        "60-pytest-html-npm-B-41",
+        "61-l0-module-actual-B-19",
+        "62-l0-module-actual-A-41",
+        "63-stellium-glyphs-A-19",
+        "64-pixcull-sdist-B-41",
+        "65-pynecore-data-B-23",
+        "66-l0-module-actual-A-19",
+        "67-rtl-data-B-41",
+        "68-l0-module-actual-A-23",
+        "69-stellium-cache-A-41",
+        "70-pyfiglet-154-A-41",
+        "71-l0-module-actual-B-41"
+      ],
+      "BATTERY_observed": [
+        "26-pyfiglet-154-A-23",
+        "27-pynecore-data-B-19",
+        "28-s3-template-B-23",
+        "29-s3-template-A-41",
+        "30-pixcull-sdist-B-23",
+        "31-stellium-locales-A-23",
+        "32-pynecore-data-A-41",
+        "33-stellium-cache-B-23",
+        "34-l0-module-actual-B-23",
+        "35-stellium-cache-A-23",
+        "36-apotrope-template-A-41",
+        "37-apotrope-template-A-23",
+        "38-stellium-glyphs-A-23",
+        "39-pyfiglet-154-B-19",
+        "40-apotrope-template-B-19",
+        "41-stellium-locales-B-23",
+        "42-stellium-glyphs-B-23",
+        "43-s3-template-B-41",
+        "44-stellium-cache-B-19",
+        "45-stellium-cache-A-19",
+        "46-s3-template-A-19",
+        "47-pynecore-data-A-19",
+        "48-tox-sdist-A-23",
+        "49-rtl-data-A-23"
+      ],
+      "BATTERY_observed_amendment_1_6": [
+        "53-pytest-html-npm-A-41",
+        "54-s3-template-A-23"
+      ]
+    },
+    "note": "Window = prompt.txt mtime to result.json mtime (includes preparation and grading). macOS logs the power source only at sleep/wake events, so power at start comes from the orchestrator-observed windows in POWER_WINDOWS (documented in the session and amendments), not from a continuous record."
+  },
+  "load_gate": [
+    {
+      "episode": "53-pytest-html-npm-A-41",
+      "waited_seconds": 165.1,
+      "reading": {
+        "load1": 4.94,
+        "load5": 13.17,
+        "load15": 12.14,
+        "epoch": 1793901941,
+        "utc": "2026-11-05T18:05:41Z"
+      }
+    },
+    {
+      "episode": "54-s3-template-A-23",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 4.88,
+        "load5": 6.53,
+        "load15": 8.45,
+        "epoch": 1793902903,
+        "utc": "2026-11-05T18:21:43Z"
+      }
+    },
+    {
+      "episode": "55-pixcull-sdist-A-23",
+      "waited_seconds": 30.0,
+      "reading": {
+        "load1": 5.35,
+        "load5": 6.67,
+        "load15": 7.67,
+        "epoch": 1793903459,
+        "utc": "2026-11-05T18:30:59Z"
+      }
+    },
+    {
+      "episode": "55-pixcull-sdist-A-23",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 2.86,
+        "load5": 2.1,
+        "load15": 1.71,
+        "epoch": 1793987958,
+        "utc": "2026-11-06T17:59:18Z"
+      }
+    },
+    {
+      "episode": "56-tox-sdist-B-19",
+      "waited_seconds": 345.2,
+      "reading": {
+        "load1": 4.69,
+        "load5": 8.3,
+        "load15": 6.77,
+        "epoch": 1793989116,
+        "utc": "2026-11-06T18:18:36Z"
+      }
+    },
+    {
+      "episode": "57-tox-sdist-B-23",
+      "waited_seconds": 45.0,
+      "reading": {
+        "load1": 4.18,
+        "load5": 6.58,
+        "load15": 6.93,
+        "epoch": 1793990018,
+        "utc": "2026-11-06T18:33:38Z"
+      }
+    },
+    {
+      "episode": "58-stellium-cache-B-41",
+      "waited_seconds": 300.6,
+      "reading": {
+        "load1": 5.05,
+        "load5": 12.06,
+        "load15": 11.93,
+        "epoch": 1793991581,
+        "utc": "2026-11-06T18:59:41Z"
+      }
+    },
+    {
+      "episode": "59-pytest-html-npm-B-23",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 4.71,
+        "load5": 7.92,
+        "load15": 10.05,
+        "epoch": 1793991882,
+        "utc": "2026-11-06T19:04:42Z"
+      }
+    },
+    {
+      "episode": "60-pytest-html-npm-B-41",
+      "waited_seconds": 45.0,
+      "reading": {
+        "load1": 4.25,
+        "load5": 6.54,
+        "load15": 8.41,
+        "epoch": 1793992438,
+        "utc": "2026-11-06T19:13:58Z"
+      }
+    },
+    {
+      "episode": "61-l0-module-actual-B-19",
+      "waited_seconds": 45.0,
+      "reading": {
+        "load1": 4.6,
+        "load5": 6.3,
+        "load15": 6.65,
+        "epoch": 1793993836,
+        "utc": "2026-11-06T19:37:16Z"
+      }
+    },
+    {
+      "episode": "62-l0-module-actual-A-41",
+      "waited_seconds": 285.1,
+      "reading": {
+        "load1": 4.65,
+        "load5": 7.64,
+        "load15": 7.83,
+        "epoch": 1793995205,
+        "utc": "2026-11-06T20:00:05Z"
+      }
+    },
+    {
+      "episode": "63-stellium-glyphs-A-19",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 5.06,
+        "load5": 5.77,
+        "load15": 6.59,
+        "epoch": 1793996242,
+        "utc": "2026-11-06T20:17:22Z"
+      }
+    },
+    {
+      "episode": "64-pixcull-sdist-B-41",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 4.3,
+        "load5": 5.22,
+        "load15": 6.05,
+        "epoch": 1793996618,
+        "utc": "2026-11-06T20:23:38Z"
+      }
+    },
+    {
+      "episode": "65-pynecore-data-B-23",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 4.68,
+        "load5": 5.28,
+        "load15": 5.74,
+        "epoch": 1793997084,
+        "utc": "2026-11-06T20:31:24Z"
+      }
+    },
+    {
+      "episode": "66-l0-module-actual-A-19",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 4.3,
+        "load5": 5.29,
+        "load15": 5.58,
+        "epoch": 1793998016,
+        "utc": "2026-11-06T20:46:56Z"
+      }
+    },
+    {
+      "episode": "67-rtl-data-B-41",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 4.67,
+        "load5": 5.26,
+        "load15": 5.5,
+        "epoch": 1793998331,
+        "utc": "2026-11-06T20:52:11Z"
+      }
+    },
+    {
+      "episode": "68-l0-module-actual-A-23",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 3.88,
+        "load5": 5.03,
+        "load15": 5.36,
+        "epoch": 1793998737,
+        "utc": "2026-11-06T20:58:57Z"
+      }
+    },
+    {
+      "episode": "69-stellium-cache-A-41",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 4.87,
+        "load5": 5.1,
+        "load15": 5.31,
+        "epoch": 1793998963,
+        "utc": "2026-11-06T21:02:43Z"
+      }
+    },
+    {
+      "episode": "70-pyfiglet-154-A-41",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 5.13,
+        "load5": 5.39,
+        "load15": 5.35,
+        "epoch": 1793999804,
+        "utc": "2026-11-06T21:16:44Z"
+      }
+    },
+    {
+      "episode": "71-l0-module-actual-B-41",
+      "waited_seconds": 15.0,
+      "reading": {
+        "load1": 4.32,
+        "load5": 5.15,
+        "load15": 5.32,
+        "epoch": 1794000676,
+        "utc": "2026-11-06T21:31:16Z"
+      }
+    }
+  ],
+  "issues_detected_by_script": []
+}

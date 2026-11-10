@@ -1,0 +1,24 @@
+diff --git a/pixcull/data/locales/en_US.json b/pixcull/data/locales/en_US.json
+new file mode 100644
+index 0000000..9e7e4fb
+--- /dev/null
++++ b/pixcull/data/locales/en_US.json
+@@ -0,0 +1 @@
++{"onboard.title": "Welcome", "onboard.dismiss": "Dismiss", "onboard.tip1": "Tip 1", "onboard.tip2": "Tip 2", "onboard.tip3": "Tip 3", "onboard.aria": "Aria", "onboard.close": "Close"}
+diff --git a/pixcull/data/locales/zh_CN.json b/pixcull/data/locales/zh_CN.json
+new file mode 100644
+index 0000000..e53ac1a
+--- /dev/null
++++ b/pixcull/data/locales/zh_CN.json
+@@ -0,0 +1 @@
++{"onboard.title": "欢迎", "onboard.dismiss": "关闭", "onboard.tip1": "提示 1", "onboard.tip2": "提示 2", "onboard.tip3": "提示 3", "onboard.aria": "可访问性", "onboard.close": "关闭"}
+diff --git a/pixcull/i18n.py b/pixcull/i18n.py
+index 2dc68f2..687090b 100644
+--- a/pixcull/i18n.py
++++ b/pixcull/i18n.py
+@@ -1,3 +1,5 @@
++from pathlib import Path
++_LOCALE_DIR = Path(__file__).parent / "data" / "locales"
+ """v0.8-P0-1 — server-side i18n.
+ 
+ Loads a locale (key → translated string map) from pixcull/locale/

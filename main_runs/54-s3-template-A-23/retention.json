@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-05T18:30:34.029535+00:00",
+  "source_tree_sha256": "5f8ccadce4976dcc11c55fdaafa2c913fff542e10a73740ccf959903745ff2cf",
+  "source_archive_sha256": "d3046f95346846022d952df52d0fc4490e9fb065757da424b57c1fc6b568549c",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/54-s3-template-A-23/grading/s3-template/0b5f53392dae/candidate/direct-dist/s3_security_scanner-1.0.5-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/54-s3-template-A-23/release-artifacts/f4abab4027083bcb5eafd1ca7d88af544d2a2592ee0127e68bef0f35949e4c02-s3_security_scanner-1.0.5-py3-none-any.whl",
+      "sha256": "f4abab4027083bcb5eafd1ca7d88af544d2a2592ee0127e68bef0f35949e4c02",
+      "bytes": 126428
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/54-s3-template-A-23/grading/s3-template/0b5f53392dae/candidate/from-sdist/s3_security_scanner-1.0.5-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/54-s3-template-A-23/release-artifacts/2d4691a697655cf5275bb1d4420fdf41667eafc6614ad534965fe9f2748295f1-s3_security_scanner-1.0.5-py3-none-any.whl",
+      "sha256": "2d4691a697655cf5275bb1d4420fdf41667eafc6614ad534965fe9f2748295f1",
+      "bytes": 126428
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/54-s3-template-A-23/grading/s3-template/0b5f53392dae/candidate/sdist/s3_security_scanner-1.0.5.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/54-s3-template-A-23/release-artifacts/1e184d721ebe52a1e471684c625b228f72e9fe488c754af8842c6c2425ef5baf-s3_security_scanner-1.0.5.tar.gz",
+      "sha256": "1e184d721ebe52a1e471684c625b228f72e9fe488c754af8842c6c2425ef5baf",
+      "bytes": 151749
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

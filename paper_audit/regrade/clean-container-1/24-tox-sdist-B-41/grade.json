@@ -1,0 +1,89 @@
+{
+  "id": "tox-sdist",
+  "arm": "candidate",
+  "run_id": "b19602eac3ea",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/source-preparation",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints-tox.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "warning: Failed to parse `pyproject.toml` during settings discovery:\n  TOML parse error at line 254, column 27\n      |\n  254 | [tool.hatch.build.targets.wheel]\n      |                           ^^^^^\n  duplicate key\n\nBuilding wheel...\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/repo`\n  cause: Invalid `pyproject.toml`\n  cause: TOML parse error at line 254, column 27\n             |\n         254 | [tool.hatch.build.targets.wheel]\n             |                           ^^^^^\n         duplicate key\n",
+        "seconds": 0.1584653810132295
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/repo/src', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/tox-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from tox.run import run\n sys.argv=['tox','--help']\n run()\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/repo/src/tox/__init__.py\", line 3, in <module>\n    from .run import main\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/repo/src/tox/run.py\", line 14, in <module>\n    from tox.session.state import State\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/repo/src/tox/session/state.py\", line 8, in <module>\n    from tox.journal import Journal\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/repo/src/tox/journal/__init__.py\", line 10, in <module>\n    from .main import Journal\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/repo/src/tox/journal/main.py\", line 9, in <module>\n    from tox.version import version\nModuleNotFoundError: No module named 'tox.version'\n",
+        "seconds": 0.44263266801135615
+      },
+      "pass": false
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints-tox.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "warning: Failed to parse `pyproject.toml` during settings discovery:\n  TOML parse error at line 254, column 27\n      |\n  254 | [tool.hatch.build.targets.wheel]\n      |                           ^^^^^\n  duplicate key\n\nBuilding wheel...\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/direct-repo`\n  cause: Invalid `pyproject.toml`\n  cause: TOML parse error at line 254, column 27\n             |\n         254 | [tool.hatch.build.targets.wheel]\n             |                           ^^^^^\n         duplicate key\n",
+        "seconds": 0.17142804799368605
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints-tox.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "warning: Failed to parse `pyproject.toml` during settings discovery:\n  TOML parse error at line 254, column 27\n      |\n  254 | [tool.hatch.build.targets.wheel]\n      |                           ^^^^^\n  duplicate key\n\nBuilding source distribution...\nerror: Failed to build `/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/24-tox-sdist-B-41/grading/tox-sdist/b19602eac3ea/candidate/release-repo`\n  cause: Invalid `pyproject.toml`\n  cause: TOML parse error at line 254, column 27\n             |\n         254 | [tool.hatch.build.targets.wheel]\n             |                           ^^^^^\n         duplicate key\n",
+        "seconds": 0.1699763159849681
+      },
+      "pass": false
+    }
+  ]
+}

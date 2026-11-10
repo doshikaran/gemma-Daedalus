@@ -1,0 +1,13 @@
+diff --git a/src/pynecore/types/series.py b/src/pynecore/types/series.py
+index 1e455c2..b1a8f99 100644
+--- a/src/pynecore/types/series.py
++++ b/src/pynecore/types/series.py
+@@ -19,7 +19,7 @@ class Series(Generic[T]):
+     hover comes from ``series.pyi``, not from here.
+     """
+ 
+-    def __new__(cls, val: T) -> T:
++    def __call__(self, val: T) -> T:
+         return val
+ 
+ 

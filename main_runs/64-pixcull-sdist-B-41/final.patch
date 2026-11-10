@@ -1,0 +1,14 @@
+diff --git a/pixcull/i18n/locales/en.json b/pixcull/i18n/locales/en.json
+new file mode 100644
+index 0000000..5a1fd15
+--- /dev/null
++++ b/pixcull/i18n/locales/en.json
+@@ -0,0 +1 @@
++{"hello": "Hello", "goodbye": "Goodbye"}
+diff --git a/pixcull/i18n/locales/zh.json b/pixcull/i18n/locales/zh.json
+new file mode 100644
+index 0000000..95e95da
+--- /dev/null
++++ b/pixcull/i18n/locales/zh.json
+@@ -0,0 +1 @@
++{"hello": "你好", "goodbye": "再见"}

@@ -1,0 +1,32 @@
+{
+  "amendment": "1.4",
+  "timestamp_utc": "2026-11-05T12:29:11.132489+00:00",
+  "base": "1.3 (FREEZE.json, FREEZE_1.2.json, FREEZE_1.3.json unchanged)",
+  "authorized_by": "Study owner, 2026-11-05: 'can we resume?' in reply to the proposed amendment 1.4 (move episode 50 to pilots, restart it with the same condition/seed, disclose the sleep overlap of episodes 31 and 32, add a between-episode AC-power guard, verify freezes and the 50 completed records, resume).",
+  "incident": "pilots/v1.3-infrastructure/50-apotrope-template-B-23.INCIDENT.json: host battery exhausted, macOS low-power hibernation 06:57:26-11:46:05 UTC during a model request; recorded stop infrastructure_error (TimeoutError); controller paused per frozen code.",
+  "replacement": {
+    "episode": "50-apotrope-template-B-23",
+    "original_attempt": "moved unchanged to pilots/v1.3-infrastructure/ (571 files, hashes restoration_1.4/episode50_before_move.sha256, verified after move); 10 responses, 3301 generated tokens",
+    "counted_as_main_attempt": false,
+    "restart": "fresh workspace, condition B, seed 23, order 50",
+    "decision_basis": "infrastructure only; the attempt's grade was not inspected or used"
+  },
+  "change": "amendment_1.4/run_batch_native_1_4.py wraps the amendment 1.3 checkpoint: after each saved episode it reads logs/amendment_1.4/power_state.json (written every 20 s on the host by amendment_1.4/power_watch.sh) and pauses cleanly through the frozen pause path if the host is not on AC or the state is older than 180 s. Also refuses to start without fresh AC state. No change to model, prompts, seeds, budgets, tools, grading, scoring or analysis.",
+  "verification": "restoration_1.4/power_guard_test.json (5 synthetic cases + live state, zero model calls): PASS.",
+  "disclosed_threat_sleep_overlap": {
+    "source": "restoration_1.3/pause_ep50_hibernation/pmset_sleep_wake_2026-11-04_05.txt (lid closed on battery 2026-11-04T19:36Z to 2026-11-05T02:34Z with periodic DarkWakes)",
+    "episodes": {
+      "31-stellium-locales-A-23": "window spanned host sleep; recorded interaction_wall_seconds 482.4, stop completion_claim, no infrastructure error",
+      "32-pynecore-data-A-41": "window spanned host sleep; recorded interaction_wall_seconds 265.9, stop action_limit, no infrastructure error"
+    },
+    "disposition": "Retained unchanged. The VM and native server were suspended together and in-episode monotonic timers did not advance across the sleep, so budgets were unaffected. Not replaced, to avoid outcome-dependent replacement; flagged for sensitivity analysis."
+  },
+  "completed_records_at_amendment": 50,
+  "outcomes_observed_at_amendment": "Provisional counts from the status file only: 0 artifact-contract passes among 50 valid records.",
+  "evidence": [
+    "restoration_1.4/",
+    "pilots/v1.3-infrastructure/",
+    "restoration_1.3/pause_ep50_hibernation/",
+    "logs/amendment_1.3/main-batch-20261104T162126Z.log"
+  ]
+}

@@ -1,0 +1,506 @@
+[
+  {
+    "task": "pyfiglet-154",
+    "condition": "A",
+    "seed": 19,
+    "order": 0,
+    "episode_id": "00-pyfiglet-154-A-19"
+  },
+  {
+    "task": "rtl-data",
+    "condition": "B",
+    "seed": 19,
+    "order": 1,
+    "episode_id": "01-rtl-data-B-19"
+  },
+  {
+    "task": "apotrope-template",
+    "condition": "A",
+    "seed": 19,
+    "order": 2,
+    "episode_id": "02-apotrope-template-A-19"
+  },
+  {
+    "task": "stellium-locales",
+    "condition": "A",
+    "seed": 19,
+    "order": 3,
+    "episode_id": "03-stellium-locales-A-19"
+  },
+  {
+    "task": "stellium-glyphs",
+    "condition": "A",
+    "seed": 41,
+    "order": 4,
+    "episode_id": "04-stellium-glyphs-A-41"
+  },
+  {
+    "task": "pynecore-data",
+    "condition": "A",
+    "seed": 23,
+    "order": 5,
+    "episode_id": "05-pynecore-data-A-23"
+  },
+  {
+    "task": "rtl-data",
+    "condition": "B",
+    "seed": 23,
+    "order": 6,
+    "episode_id": "06-rtl-data-B-23"
+  },
+  {
+    "task": "pytest-html-npm",
+    "condition": "A",
+    "seed": 23,
+    "order": 7,
+    "episode_id": "07-pytest-html-npm-A-23"
+  },
+  {
+    "task": "pixcull-sdist",
+    "condition": "A",
+    "seed": 41,
+    "order": 8,
+    "episode_id": "08-pixcull-sdist-A-41"
+  },
+  {
+    "task": "tox-sdist",
+    "condition": "A",
+    "seed": 41,
+    "order": 9,
+    "episode_id": "09-tox-sdist-A-41"
+  },
+  {
+    "task": "rtl-data",
+    "condition": "A",
+    "seed": 41,
+    "order": 10,
+    "episode_id": "10-rtl-data-A-41"
+  },
+  {
+    "task": "pytest-html-npm",
+    "condition": "B",
+    "seed": 19,
+    "order": 11,
+    "episode_id": "11-pytest-html-npm-B-19"
+  },
+  {
+    "task": "s3-template",
+    "condition": "B",
+    "seed": 19,
+    "order": 12,
+    "episode_id": "12-s3-template-B-19"
+  },
+  {
+    "task": "pynecore-data",
+    "condition": "B",
+    "seed": 41,
+    "order": 13,
+    "episode_id": "13-pynecore-data-B-41"
+  },
+  {
+    "task": "stellium-locales",
+    "condition": "A",
+    "seed": 41,
+    "order": 14,
+    "episode_id": "14-stellium-locales-A-41"
+  },
+  {
+    "task": "pyfiglet-154",
+    "condition": "B",
+    "seed": 41,
+    "order": 15,
+    "episode_id": "15-pyfiglet-154-B-41"
+  },
+  {
+    "task": "apotrope-template",
+    "condition": "B",
+    "seed": 41,
+    "order": 16,
+    "episode_id": "16-apotrope-template-B-41"
+  },
+  {
+    "task": "pixcull-sdist",
+    "condition": "B",
+    "seed": 19,
+    "order": 17,
+    "episode_id": "17-pixcull-sdist-B-19"
+  },
+  {
+    "task": "pixcull-sdist",
+    "condition": "A",
+    "seed": 19,
+    "order": 18,
+    "episode_id": "18-pixcull-sdist-A-19"
+  },
+  {
+    "task": "tox-sdist",
+    "condition": "A",
+    "seed": 19,
+    "order": 19,
+    "episode_id": "19-tox-sdist-A-19"
+  },
+  {
+    "task": "stellium-locales",
+    "condition": "B",
+    "seed": 41,
+    "order": 20,
+    "episode_id": "20-stellium-locales-B-41"
+  },
+  {
+    "task": "pytest-html-npm",
+    "condition": "A",
+    "seed": 19,
+    "order": 21,
+    "episode_id": "21-pytest-html-npm-A-19"
+  },
+  {
+    "task": "stellium-glyphs",
+    "condition": "B",
+    "seed": 41,
+    "order": 22,
+    "episode_id": "22-stellium-glyphs-B-41"
+  },
+  {
+    "task": "stellium-glyphs",
+    "condition": "B",
+    "seed": 19,
+    "order": 23,
+    "episode_id": "23-stellium-glyphs-B-19"
+  },
+  {
+    "task": "tox-sdist",
+    "condition": "B",
+    "seed": 41,
+    "order": 24,
+    "episode_id": "24-tox-sdist-B-41"
+  },
+  {
+    "task": "pyfiglet-154",
+    "condition": "B",
+    "seed": 23,
+    "order": 25,
+    "episode_id": "25-pyfiglet-154-B-23"
+  },
+  {
+    "task": "pyfiglet-154",
+    "condition": "A",
+    "seed": 23,
+    "order": 26,
+    "episode_id": "26-pyfiglet-154-A-23"
+  },
+  {
+    "task": "pynecore-data",
+    "condition": "B",
+    "seed": 19,
+    "order": 27,
+    "episode_id": "27-pynecore-data-B-19"
+  },
+  {
+    "task": "s3-template",
+    "condition": "B",
+    "seed": 23,
+    "order": 28,
+    "episode_id": "28-s3-template-B-23"
+  },
+  {
+    "task": "s3-template",
+    "condition": "A",
+    "seed": 41,
+    "order": 29,
+    "episode_id": "29-s3-template-A-41"
+  },
+  {
+    "task": "pixcull-sdist",
+    "condition": "B",
+    "seed": 23,
+    "order": 30,
+    "episode_id": "30-pixcull-sdist-B-23"
+  },
+  {
+    "task": "stellium-locales",
+    "condition": "A",
+    "seed": 23,
+    "order": 31,
+    "episode_id": "31-stellium-locales-A-23"
+  },
+  {
+    "task": "pynecore-data",
+    "condition": "A",
+    "seed": 41,
+    "order": 32,
+    "episode_id": "32-pynecore-data-A-41"
+  },
+  {
+    "task": "stellium-cache",
+    "condition": "B",
+    "seed": 23,
+    "order": 33,
+    "episode_id": "33-stellium-cache-B-23"
+  },
+  {
+    "task": "l0-module-actual",
+    "condition": "B",
+    "seed": 23,
+    "order": 34,
+    "episode_id": "34-l0-module-actual-B-23"
+  },
+  {
+    "task": "stellium-cache",
+    "condition": "A",
+    "seed": 23,
+    "order": 35,
+    "episode_id": "35-stellium-cache-A-23"
+  },
+  {
+    "task": "apotrope-template",
+    "condition": "A",
+    "seed": 41,
+    "order": 36,
+    "episode_id": "36-apotrope-template-A-41"
+  },
+  {
+    "task": "apotrope-template",
+    "condition": "A",
+    "seed": 23,
+    "order": 37,
+    "episode_id": "37-apotrope-template-A-23"
+  },
+  {
+    "task": "stellium-glyphs",
+    "condition": "A",
+    "seed": 23,
+    "order": 38,
+    "episode_id": "38-stellium-glyphs-A-23"
+  },
+  {
+    "task": "pyfiglet-154",
+    "condition": "B",
+    "seed": 19,
+    "order": 39,
+    "episode_id": "39-pyfiglet-154-B-19"
+  },
+  {
+    "task": "apotrope-template",
+    "condition": "B",
+    "seed": 19,
+    "order": 40,
+    "episode_id": "40-apotrope-template-B-19"
+  },
+  {
+    "task": "stellium-locales",
+    "condition": "B",
+    "seed": 23,
+    "order": 41,
+    "episode_id": "41-stellium-locales-B-23"
+  },
+  {
+    "task": "stellium-glyphs",
+    "condition": "B",
+    "seed": 23,
+    "order": 42,
+    "episode_id": "42-stellium-glyphs-B-23"
+  },
+  {
+    "task": "s3-template",
+    "condition": "B",
+    "seed": 41,
+    "order": 43,
+    "episode_id": "43-s3-template-B-41"
+  },
+  {
+    "task": "stellium-cache",
+    "condition": "B",
+    "seed": 19,
+    "order": 44,
+    "episode_id": "44-stellium-cache-B-19"
+  },
+  {
+    "task": "stellium-cache",
+    "condition": "A",
+    "seed": 19,
+    "order": 45,
+    "episode_id": "45-stellium-cache-A-19"
+  },
+  {
+    "task": "s3-template",
+    "condition": "A",
+    "seed": 19,
+    "order": 46,
+    "episode_id": "46-s3-template-A-19"
+  },
+  {
+    "task": "pynecore-data",
+    "condition": "A",
+    "seed": 19,
+    "order": 47,
+    "episode_id": "47-pynecore-data-A-19"
+  },
+  {
+    "task": "tox-sdist",
+    "condition": "A",
+    "seed": 23,
+    "order": 48,
+    "episode_id": "48-tox-sdist-A-23"
+  },
+  {
+    "task": "rtl-data",
+    "condition": "A",
+    "seed": 23,
+    "order": 49,
+    "episode_id": "49-rtl-data-A-23"
+  },
+  {
+    "task": "apotrope-template",
+    "condition": "B",
+    "seed": 23,
+    "order": 50,
+    "episode_id": "50-apotrope-template-B-23"
+  },
+  {
+    "task": "rtl-data",
+    "condition": "A",
+    "seed": 19,
+    "order": 51,
+    "episode_id": "51-rtl-data-A-19"
+  },
+  {
+    "task": "stellium-locales",
+    "condition": "B",
+    "seed": 19,
+    "order": 52,
+    "episode_id": "52-stellium-locales-B-19"
+  },
+  {
+    "task": "pytest-html-npm",
+    "condition": "A",
+    "seed": 41,
+    "order": 53,
+    "episode_id": "53-pytest-html-npm-A-41"
+  },
+  {
+    "task": "s3-template",
+    "condition": "A",
+    "seed": 23,
+    "order": 54,
+    "episode_id": "54-s3-template-A-23"
+  },
+  {
+    "task": "pixcull-sdist",
+    "condition": "A",
+    "seed": 23,
+    "order": 55,
+    "episode_id": "55-pixcull-sdist-A-23"
+  },
+  {
+    "task": "tox-sdist",
+    "condition": "B",
+    "seed": 19,
+    "order": 56,
+    "episode_id": "56-tox-sdist-B-19"
+  },
+  {
+    "task": "tox-sdist",
+    "condition": "B",
+    "seed": 23,
+    "order": 57,
+    "episode_id": "57-tox-sdist-B-23"
+  },
+  {
+    "task": "stellium-cache",
+    "condition": "B",
+    "seed": 41,
+    "order": 58,
+    "episode_id": "58-stellium-cache-B-41"
+  },
+  {
+    "task": "pytest-html-npm",
+    "condition": "B",
+    "seed": 23,
+    "order": 59,
+    "episode_id": "59-pytest-html-npm-B-23"
+  },
+  {
+    "task": "pytest-html-npm",
+    "condition": "B",
+    "seed": 41,
+    "order": 60,
+    "episode_id": "60-pytest-html-npm-B-41"
+  },
+  {
+    "task": "l0-module-actual",
+    "condition": "B",
+    "seed": 19,
+    "order": 61,
+    "episode_id": "61-l0-module-actual-B-19"
+  },
+  {
+    "task": "l0-module-actual",
+    "condition": "A",
+    "seed": 41,
+    "order": 62,
+    "episode_id": "62-l0-module-actual-A-41"
+  },
+  {
+    "task": "stellium-glyphs",
+    "condition": "A",
+    "seed": 19,
+    "order": 63,
+    "episode_id": "63-stellium-glyphs-A-19"
+  },
+  {
+    "task": "pixcull-sdist",
+    "condition": "B",
+    "seed": 41,
+    "order": 64,
+    "episode_id": "64-pixcull-sdist-B-41"
+  },
+  {
+    "task": "pynecore-data",
+    "condition": "B",
+    "seed": 23,
+    "order": 65,
+    "episode_id": "65-pynecore-data-B-23"
+  },
+  {
+    "task": "l0-module-actual",
+    "condition": "A",
+    "seed": 19,
+    "order": 66,
+    "episode_id": "66-l0-module-actual-A-19"
+  },
+  {
+    "task": "rtl-data",
+    "condition": "B",
+    "seed": 41,
+    "order": 67,
+    "episode_id": "67-rtl-data-B-41"
+  },
+  {
+    "task": "l0-module-actual",
+    "condition": "A",
+    "seed": 23,
+    "order": 68,
+    "episode_id": "68-l0-module-actual-A-23"
+  },
+  {
+    "task": "stellium-cache",
+    "condition": "A",
+    "seed": 41,
+    "order": 69,
+    "episode_id": "69-stellium-cache-A-41"
+  },
+  {
+    "task": "pyfiglet-154",
+    "condition": "A",
+    "seed": 41,
+    "order": 70,
+    "episode_id": "70-pyfiglet-154-A-41"
+  },
+  {
+    "task": "l0-module-actual",
+    "condition": "B",
+    "seed": 41,
+    "order": 71,
+    "episode_id": "71-l0-module-actual-B-41"
+  }
+]

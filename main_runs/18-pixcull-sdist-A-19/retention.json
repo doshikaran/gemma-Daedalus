@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-04T17:43:40.950296+00:00",
+  "source_tree_sha256": "8430974881889232ed842067c8cc63dea55b9a5d55456679df7d22a114fefa3e",
+  "source_archive_sha256": "8dd619529282d60f8b34f328c55da5f432fdbd2e1e6cb77d683ec868cfea375e",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/18-pixcull-sdist-A-19/grading/pixcull-sdist/276543d991ac/candidate/direct-dist/pixcull-2.43.3-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/18-pixcull-sdist-A-19/release-artifacts/1307ab97054be38fa12082cec0a3a04e03cf3b463885ab8b973eb6a4b4b48628-pixcull-2.43.3-py3-none-any.whl",
+      "sha256": "1307ab97054be38fa12082cec0a3a04e03cf3b463885ab8b973eb6a4b4b48628",
+      "bytes": 4845492
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/18-pixcull-sdist-A-19/grading/pixcull-sdist/276543d991ac/candidate/from-sdist/pixcull-2.43.3-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/18-pixcull-sdist-A-19/release-artifacts/b70faa815b712fc485c998bfffd3daf516f88ec3cbcd05741514079aeb9c0dcf-pixcull-2.43.3-py3-none-any.whl",
+      "sha256": "b70faa815b712fc485c998bfffd3daf516f88ec3cbcd05741514079aeb9c0dcf",
+      "bytes": 397224
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/18-pixcull-sdist-A-19/grading/pixcull-sdist/276543d991ac/candidate/sdist/pixcull-2.43.3.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/18-pixcull-sdist-A-19/release-artifacts/bf8be1f6f41ad1fb0a595087e09478e07d559f17997129b88b3da36acb2fc5ef-pixcull-2.43.3.tar.gz",
+      "sha256": "bf8be1f6f41ad1fb0a595087e09478e07d559f17997129b88b3da36acb2fc5ef",
+      "bytes": 369123
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

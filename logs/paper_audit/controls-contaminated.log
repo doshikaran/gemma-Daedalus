@@ -1,0 +1,28 @@
+{"id": "apotrope-template", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "apotrope-template", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}
+Traceback (most recent call last):
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/control_replay.py", line 78, in <module>
+    main()
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/control_replay.py", line 60, in main
+    results = dict(zip([t['id'] for t in tasks], pool.map(lambda t: run(t['id'], out), tasks)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/control_replay.py", line 60, in <lambda>
+    results = dict(zip([t['id'] for t in tasks], pool.map(lambda t: run(t['id'], out), tasks)))
+                                                                    ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/93af20bbcd93/packaging_study/amendment_1.2/control_replay.py", line 33, in run
+    fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+BlockingIOError: [Errno 11] Resource temporarily unavailable

@@ -1,0 +1,147 @@
+{
+  "id": "rtl-data",
+  "arm": "candidate",
+  "run_id": "52a0b1fc08fc",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/repo/src', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from CocoTBFramework.components.dfi.jedec_timings import builtin_timings\n out={name:builtin_timings(name).tCK_ns for name in ['ddr2-650-mt47h64m16hr','ddr3-1600']}\n assert out=={'ddr2-650-mt47h64m16hr':3.077,'ddr3-1600':1.25},out\n print(json.dumps(out))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"ddr2-650-mt47h64m16hr\": 3.077, \"ddr3-1600\": 1.25}\n{\"import_origins\": {\"CocoTBFramework\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/repo/src/CocoTBFramework/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.5317082210094668
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "'CocoTBFramework/components/dfi/dfi_signals.py'\nadding 'CocoTBFramework/components/dfi/dfi_slave_phy.py'\nadding 'CocoTBFramework/components/dfi/dfi_timing.py'\nadding 'CocoTBFramework/components/dfi/dram_state.py'\nadding 'CocoTBFramework/components/dfi/jedec_timings.py'\nadding 'CocoTBFramework/components/dfi/lpddr_ca.py'\nadding 'CocoTBFramework/components/dfi/behaviors/__init__.py'\nadding 'CocoTBFramework/components/dfi/behaviors/base.py'\nadding 'CocoTBFramework/components/dfi/behaviors/events.py'\nadding 'CocoTBFramework/components/dfi/behaviors/exceptions.py'\nadding 'CocoTBFramework/components/dfi/behaviors/registry.py'\nadding 'CocoTBFramework/components/dfi/behaviors/v3_1.py'\nadding 'CocoTBFramework/components/dfi/behaviors/v4_0.py'\nadding 'CocoTBFramework/components/fifo/__init__.py'\nadding 'CocoTBFramework/components/fifo/fifo_command_handler.py'\nadding 'CocoTBFramework/components/fifo/fifo_component_base.py'\nadding 'CocoTBFramework/components/fifo/fifo_factories.py'\nadding 'CocoTBFramework/components/fifo/fifo_master.py'\nadding 'CocoTBFramework/components/fifo/fifo_monitor.py'\nadding 'CocoTBFramework/components/fifo/fifo_monitor_base.py'\nadding 'CocoTBFramework/components/fifo/fifo_packet.py'\nadding 'CocoTBFramework/components/fifo/fifo_sequence.py'\nadding 'CocoTBFramework/components/fifo/fifo_slave.py'\nadding 'CocoTBFramework/components/gaxi/__init__.py'\nadding 'CocoTBFramework/components/gaxi/coverage_hooks.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_command_handler.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_component_base.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_factories.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_master.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_monitor.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_monitor_base.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_packet.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_sequence.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_slave.py'\nadding 'CocoTBFramework/components/shared/__init__.py'\nadding 'CocoTBFramework/components/shared/apb_common.py'\nadding 'CocoTBFramework/components/shared/arbiter_compliance.py'\nadding 'CocoTBFramework/components/shared/arbiter_master.py'\nadding 'CocoTBFramework/components/shared/arbiter_monitor.py'\nadding 'CocoTBFramework/components/shared/data_strategies.py'\nadding 'CocoTBFramework/components/shared/debug_object.py'\nadding 'CocoTBFramework/components/shared/field_config.py'\nadding 'CocoTBFramework/components/shared/flex_config_gen.py'\nadding 'CocoTBFramework/components/shared/flex_randomizer.py'\nadding 'CocoTBFramework/components/shared/init_kwargs.py'\nadding 'CocoTBFramework/components/shared/master_statistics.py'\nadding 'CocoTBFramework/components/shared/memory_model.py'\nadding 'CocoTBFramework/components/shared/monitor_statistics.py'\nadding 'CocoTBFramework/components/shared/packet.py'\nadding 'CocoTBFramework/components/shared/packet_factory.py'\nadding 'CocoTBFramework/components/shared/protocol_error_handler.py'\nadding 'CocoTBFramework/components/shared/protocol_types.py'\nadding 'CocoTBFramework/components/shared/randomization_config.py'\nadding 'CocoTBFramework/components/shared/signal_mapping_helper.py'\nadding 'CocoTBFramework/components/smbus/__init__.py'\nadding 'CocoTBFramework/components/smbus/smbus_components.py'\nadding 'CocoTBFramework/components/smbus/smbus_packet.py'\nadding 'CocoTBFramework/components/uart/__init__.py'\nadding 'CocoTBFramework/components/uart/uart_components.py'\nadding 'CocoTBFramework/components/uart/uart_packet.py'\nadding 'CocoTBFramework/components/wavedrom/__init__.py'\nadding 'CocoTBFramework/components/wavedrom/constraint_solver.py'\nadding 'CocoTBFramework/components/wavedrom/signal_binder.py'\nadding 'CocoTBFramework/components/wavedrom/utility.py'\nadding 'CocoTBFramework/components/wavedrom/wavejson_gen.py'\nadding 'CocoTBFramework/scoreboards/__init__.py'\nadding 'CocoTBFramework/scoreboards/apb_gaxi_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/apb_gaxi_transformer.py'\nadding 'CocoTBFramework/scoreboards/apb_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/axi4_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/base_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/dfi_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/fifo_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/gaxi_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/axi4/__init__.py'\nadding 'CocoTBFramework/scoreboards/axi4/axi4_dwidth_converter_scoreboard.py'\nadding 'cocotb_framework-0.6.1.dist-info/licenses/LICENSE'\nadding 'cocotb_framework-0.6.1.dist-info/METADATA'\nadding 'cocotb_framework-0.6.1.dist-info/WHEEL'\nadding 'cocotb_framework-0.6.1.dist-info/top_level.txt'\nadding 'cocotb_framework-0.6.1.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/direct-dist/cocotb_framework-0.6.1-py3-none-any.whl\n",
+        "seconds": 1.7588947460171767
+      },
+      "artifact_sha256": "38c0f5c4373c3efba841879618a6712813e1a1e82fa99124d2cdef1ca680bef4",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/direct-dist/cocotb_framework-0.6.1-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 36ms\nPrepared 1 package in 68ms\nInstalled 1 package in 51ms\n + cocotb-framework==0.6.1 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/direct-dist/cocotb_framework-0.6.1-py3-none-any.whl)\n",
+        "seconds": 0.2984824790037237
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from CocoTBFramework.components.dfi.jedec_timings import builtin_timings\n out={name:builtin_timings(name).tCK_ns for name in ['ddr2-650-mt47h64m16hr','ddr3-1600']}\n assert out=={'ddr2-650-mt47h64m16hr':3.077,'ddr3-1600':1.25},out\n print(json.dumps(out))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"CocoTBFramework\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/wheel-installed/CocoTBFramework/__init__.py\"}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/wheel-installed/CocoTBFramework/components/dfi/jedec_timings.py\", line 192, in builtin_timings\n    return load_timings(here / f\"{name}.csv\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/wheel-installed/CocoTBFramework/components/dfi/jedec_timings.py\", line 107, in load_timings\n    raise FileNotFoundError(f\"JEDEC CSV not found: {csv_path}\")\nFileNotFoundError: JEDEC CSV not found: /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/wheel-installed/CocoTBFramework/components/dfi/jedec/ddr2-650-mt47h64m16hr.csv\n",
+        "seconds": 0.5185979020025115
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/init_kwargs.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/master_statistics.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/memory_model.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/monitor_statistics.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/packet.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/packet_factory.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/protocol_error_handler.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/protocol_types.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/randomization_config.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/shared/signal_mapping_helper.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/shared\ncopying src/CocoTBFramework/components/smbus/__init__.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/smbus\ncopying src/CocoTBFramework/components/smbus/smbus_components.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/smbus\ncopying src/CocoTBFramework/components/smbus/smbus_packet.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/smbus\ncopying src/CocoTBFramework/components/uart/__init__.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/uart\ncopying src/CocoTBFramework/components/uart/uart_components.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/uart\ncopying src/CocoTBFramework/components/uart/uart_packet.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/uart\ncopying src/CocoTBFramework/components/wavedrom/__init__.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/wavedrom\ncopying src/CocoTBFramework/components/wavedrom/constraint_solver.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/wavedrom\ncopying src/CocoTBFramework/components/wavedrom/signal_binder.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/wavedrom\ncopying src/CocoTBFramework/components/wavedrom/utility.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/wavedrom\ncopying src/CocoTBFramework/components/wavedrom/wavejson_gen.py -> cocotb_framework-0.6.1/src/CocoTBFramework/components/wavedrom\ncopying src/CocoTBFramework/scoreboards/__init__.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/apb_gaxi_scoreboard.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/apb_gaxi_transformer.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/apb_scoreboard.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/axi4_scoreboard.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/base_scoreboard.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/dfi_scoreboard.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/fifo_scoreboard.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/gaxi_scoreboard.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards\ncopying src/CocoTBFramework/scoreboards/axi4/__init__.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards/axi4\ncopying src/CocoTBFramework/scoreboards/axi4/axi4_dwidth_converter_scoreboard.py -> cocotb_framework-0.6.1/src/CocoTBFramework/scoreboards/axi4\ncopying src/cocotb_framework.egg-info/PKG-INFO -> cocotb_framework-0.6.1/src/cocotb_framework.egg-info\ncopying src/cocotb_framework.egg-info/SOURCES.txt -> cocotb_framework-0.6.1/src/cocotb_framework.egg-info\ncopying src/cocotb_framework.egg-info/dependency_links.txt -> cocotb_framework-0.6.1/src/cocotb_framework.egg-info\ncopying src/cocotb_framework.egg-info/requires.txt -> cocotb_framework-0.6.1/src/cocotb_framework.egg-info\ncopying src/cocotb_framework.egg-info/top_level.txt -> cocotb_framework-0.6.1/src/cocotb_framework.egg-info\ncopying src/cocotb_framework.egg-info/SOURCES.txt -> cocotb_framework-0.6.1/src/cocotb_framework.egg-info\nWriting cocotb_framework-0.6.1/setup.cfg\nCreating tar archive\nremoving 'cocotb_framework-0.6.1' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist/cocotb_framework-0.6.1.tar.gz\n",
+        "seconds": 1.6214526440016925
+      },
+      "sdist_sha256": "dac5a862e8998a90e6798a0d6afc0616af777f4ba8240b1e28a760f478dd1d00",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": " 'CocoTBFramework/components/dfi/dfi_signals.py'\nadding 'CocoTBFramework/components/dfi/dfi_slave_phy.py'\nadding 'CocoTBFramework/components/dfi/dfi_timing.py'\nadding 'CocoTBFramework/components/dfi/dram_state.py'\nadding 'CocoTBFramework/components/dfi/jedec_timings.py'\nadding 'CocoTBFramework/components/dfi/lpddr_ca.py'\nadding 'CocoTBFramework/components/dfi/behaviors/__init__.py'\nadding 'CocoTBFramework/components/dfi/behaviors/base.py'\nadding 'CocoTBFramework/components/dfi/behaviors/events.py'\nadding 'CocoTBFramework/components/dfi/behaviors/exceptions.py'\nadding 'CocoTBFramework/components/dfi/behaviors/registry.py'\nadding 'CocoTBFramework/components/dfi/behaviors/v3_1.py'\nadding 'CocoTBFramework/components/dfi/behaviors/v4_0.py'\nadding 'CocoTBFramework/components/fifo/__init__.py'\nadding 'CocoTBFramework/components/fifo/fifo_command_handler.py'\nadding 'CocoTBFramework/components/fifo/fifo_component_base.py'\nadding 'CocoTBFramework/components/fifo/fifo_factories.py'\nadding 'CocoTBFramework/components/fifo/fifo_master.py'\nadding 'CocoTBFramework/components/fifo/fifo_monitor.py'\nadding 'CocoTBFramework/components/fifo/fifo_monitor_base.py'\nadding 'CocoTBFramework/components/fifo/fifo_packet.py'\nadding 'CocoTBFramework/components/fifo/fifo_sequence.py'\nadding 'CocoTBFramework/components/fifo/fifo_slave.py'\nadding 'CocoTBFramework/components/gaxi/__init__.py'\nadding 'CocoTBFramework/components/gaxi/coverage_hooks.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_command_handler.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_component_base.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_factories.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_master.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_monitor.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_monitor_base.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_packet.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_sequence.py'\nadding 'CocoTBFramework/components/gaxi/gaxi_slave.py'\nadding 'CocoTBFramework/components/shared/__init__.py'\nadding 'CocoTBFramework/components/shared/apb_common.py'\nadding 'CocoTBFramework/components/shared/arbiter_compliance.py'\nadding 'CocoTBFramework/components/shared/arbiter_master.py'\nadding 'CocoTBFramework/components/shared/arbiter_monitor.py'\nadding 'CocoTBFramework/components/shared/data_strategies.py'\nadding 'CocoTBFramework/components/shared/debug_object.py'\nadding 'CocoTBFramework/components/shared/field_config.py'\nadding 'CocoTBFramework/components/shared/flex_config_gen.py'\nadding 'CocoTBFramework/components/shared/flex_randomizer.py'\nadding 'CocoTBFramework/components/shared/init_kwargs.py'\nadding 'CocoTBFramework/components/shared/master_statistics.py'\nadding 'CocoTBFramework/components/shared/memory_model.py'\nadding 'CocoTBFramework/components/shared/monitor_statistics.py'\nadding 'CocoTBFramework/components/shared/packet.py'\nadding 'CocoTBFramework/components/shared/packet_factory.py'\nadding 'CocoTBFramework/components/shared/protocol_error_handler.py'\nadding 'CocoTBFramework/components/shared/protocol_types.py'\nadding 'CocoTBFramework/components/shared/randomization_config.py'\nadding 'CocoTBFramework/components/shared/signal_mapping_helper.py'\nadding 'CocoTBFramework/components/smbus/__init__.py'\nadding 'CocoTBFramework/components/smbus/smbus_components.py'\nadding 'CocoTBFramework/components/smbus/smbus_packet.py'\nadding 'CocoTBFramework/components/uart/__init__.py'\nadding 'CocoTBFramework/components/uart/uart_components.py'\nadding 'CocoTBFramework/components/uart/uart_packet.py'\nadding 'CocoTBFramework/components/wavedrom/__init__.py'\nadding 'CocoTBFramework/components/wavedrom/constraint_solver.py'\nadding 'CocoTBFramework/components/wavedrom/signal_binder.py'\nadding 'CocoTBFramework/components/wavedrom/utility.py'\nadding 'CocoTBFramework/components/wavedrom/wavejson_gen.py'\nadding 'CocoTBFramework/scoreboards/__init__.py'\nadding 'CocoTBFramework/scoreboards/apb_gaxi_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/apb_gaxi_transformer.py'\nadding 'CocoTBFramework/scoreboards/apb_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/axi4_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/base_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/dfi_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/fifo_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/gaxi_scoreboard.py'\nadding 'CocoTBFramework/scoreboards/axi4/__init__.py'\nadding 'CocoTBFramework/scoreboards/axi4/axi4_dwidth_converter_scoreboard.py'\nadding 'cocotb_framework-0.6.1.dist-info/licenses/LICENSE'\nadding 'cocotb_framework-0.6.1.dist-info/METADATA'\nadding 'cocotb_framework-0.6.1.dist-info/WHEEL'\nadding 'cocotb_framework-0.6.1.dist-info/top_level.txt'\nadding 'cocotb_framework-0.6.1.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/from-sdist/cocotb_framework-0.6.1-py3-none-any.whl\n",
+        "seconds": 1.7372636510117445
+      },
+      "artifact_sha256": "3e5e757258ce94398618bbee97457fd32b5f2c0a9deae8b88f568c1c92402b13",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/from-sdist/cocotb_framework-0.6.1-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 38ms\nPrepared 1 package in 72ms\nInstalled 1 package in 53ms\n + cocotb-framework==0.6.1 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/from-sdist/cocotb_framework-0.6.1-py3-none-any.whl)\n",
+        "seconds": 0.3166396309970878
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from CocoTBFramework.components.dfi.jedec_timings import builtin_timings\n out={name:builtin_timings(name).tCK_ns for name in ['ddr2-650-mt47h64m16hr','ddr3-1600']}\n assert out=={'ddr2-650-mt47h64m16hr':3.077,'ddr3-1600':1.25},out\n print(json.dumps(out))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"CocoTBFramework\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist-installed/CocoTBFramework/__init__.py\"}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist-installed/CocoTBFramework/components/dfi/jedec_timings.py\", line 192, in builtin_timings\n    return load_timings(here / f\"{name}.csv\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist-installed/CocoTBFramework/components/dfi/jedec_timings.py\", line 107, in load_timings\n    raise FileNotFoundError(f\"JEDEC CSV not found: {csv_path}\")\nFileNotFoundError: JEDEC CSV not found: /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/10-rtl-data-A-41/grading/rtl-data/52a0b1fc08fc/candidate/sdist-installed/CocoTBFramework/components/dfi/jedec/ddr2-650-mt47h64m16hr.csv\n",
+        "seconds": 0.5643739049846772
+      },
+      "pass": false
+    }
+  ]
+}

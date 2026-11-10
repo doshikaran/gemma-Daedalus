@@ -1,0 +1,18 @@
+{
+  "id": "pixcull-sdist",
+  "repository": "ChrisChen667788/pixcull",
+  "affected": {
+    "repository": "ChrisChen667788/pixcull",
+    "sha": "6fa20228e9fc8f91055b57ffd7b426a5642d2105",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/ChrisChen667788__pixcull-6fa20228e9fc8f91055b57ffd7b426a5642d2105",
+    "archive_sha256": "05e4829461fc47244968cf2174328de1768c75defdf776ccb50ccf4ca3536d2e",
+    "archive_bytes": 49720347
+  },
+  "reference": {
+    "repository": "ChrisChen667788/pixcull",
+    "sha": "2bc2eaeb0ad2e03ec8464c48b50ce43189861828",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/ChrisChen667788__pixcull-2bc2eaeb0ad2e03ec8464c48b50ce43189861828",
+    "archive_sha256": "b56e42bcb40d9baeca10b9f33618cf69eae0219a8b89997a066d2cbd5e05180b",
+    "archive_bytes": 49725701
+  }
+}

@@ -1,0 +1,7 @@
+diff --git a/MANIFEST.in b/MANIFEST.in
+new file mode 100644
+index 0000000..caed945
+--- /dev/null
++++ b/MANIFEST.in
+@@ -0,0 +1 @@
++src/pytest_html/resources/*

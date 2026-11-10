@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-04T19:01:01.814265+00:00",
+  "source_tree_sha256": "fe8778fc4874fb318950c4b983086f846a521a549543fda47a4559ee59e8655f",
+  "source_archive_sha256": "4abbfac68d2c63095af19dacdacbc78b39076bb8103805211ba6d77525bb3e3a",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/direct-dist/pyfiglet-1.0.3-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/release-artifacts/f48695a83ea05e6a46dd0f1cd30961f729bf5bc01dc47f2d2978ca53ab20312e-pyfiglet-1.0.3-py3-none-any.whl",
+      "sha256": "f48695a83ea05e6a46dd0f1cd30961f729bf5bc01dc47f2d2978ca53ab20312e",
+      "bytes": 1086992
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/from-sdist/pyfiglet-1.0.3-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/release-artifacts/196b6d0fc6a93588674b7678d606761d421d5c4d9e7f72ac4c7b52e3211be3cf-pyfiglet-1.0.3-py3-none-any.whl",
+      "sha256": "196b6d0fc6a93588674b7678d606761d421d5c4d9e7f72ac4c7b52e3211be3cf",
+      "bytes": 1086992
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/grading/pyfiglet-154/23e1517c6cb1/candidate/sdist/pyfiglet-1.0.3.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/26-pyfiglet-154-A-23/release-artifacts/dcea1b0f57c3fa03e4b28017d36ef88e76a795ce40df0c77288ef103b3d327c8-pyfiglet-1.0.3.tar.gz",
+      "sha256": "dcea1b0f57c3fa03e4b28017d36ef88e76a795ce40df0c77288ef103b3d327c8",
+      "bytes": 833228
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

@@ -1,0 +1,254 @@
+{
+  "episode_id": "46-s3-template-A-19",
+  "task": "s3-template",
+  "condition": "A",
+  "seed": 19,
+  "order": 46,
+  "scope": "source-failing-control",
+  "stop": "budget",
+  "calls": 13,
+  "commands": 7,
+  "format_errors": 6,
+  "generated_tokens": 8192,
+  "generated_token_accounting": "complete",
+  "interaction_wall_seconds": 1096.3742704879987,
+  "patch_sha256": "0c51d4af6c49c9c647ade280edf8ac73b98710828cb8d18f12a5859c5e6a1bf5",
+  "artifact_contract_pass": false,
+  "pattern": "FFF",
+  "grade": {
+    "source": {
+      "pass": false,
+      "steps": {
+        "probe": {
+          "returncode": 1,
+          "tail": "^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps/jinja2/loaders.py\", line 209, in get_source\n    raise TemplateNotFound(\njinja2.exceptions.TemplateNotFound: 'report.html' not found in search path: '/workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/grading/s3-template/c3190765dd4b/candidate/repo/s3_security_scanner/templates'\n"
+        }
+      }
+    },
+    "wheel": {
+      "pass": false,
+      "steps": {
+        "build": {
+          "returncode": 0,
+          "tail": "s3_security_scanner-1.0.5.dist-info/entry_points.txt'\nadding 's3_security_scanner-1.0.5.dist-info/top_level.txt'\nadding 's3_security_scanner-1.0.5.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/grading/s3-template/c3190765dd4b/candidate/direct-dist/s3_security_scanner-1.0.5-py3-none-any.whl\n"
+        },
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 44ms\nPrepared 1 package in 64ms\nInstalled 1 package in 33ms\n + s3-security-scanner==1.0.5 (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/grading/s3-template/c3190765dd4b/candidate/direct-dist/s3_security_scanner-1.0.5-py3-none-any.whl)\n"
+        },
+        "probe": {
+          "returncode": 1,
+          "tail": "^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps/jinja2/loaders.py\", line 209, in get_source\n    raise TemplateNotFound(\njinja2.exceptions.TemplateNotFound: 'report.html' not found in search path: '/workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/grading/s3-template/c3190765dd4b/candidate/wheel-installed/s3_security_scanner/templates'\n"
+        }
+      }
+    },
+    "sdist-wheel": {
+      "pass": false,
+      "steps": {
+        "install": {
+          "returncode": 0,
+          "tail": "Using CPython 3.12.14\nResolved 1 package in 57ms\nPrepared 1 package in 79ms\nInstalled 1 package in 37ms\n + s3-security-scanner==1.0.5 (from file:///workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/grading/s3-template/c3190765dd4b/candidate/from-sdist/s3_security_scanner-1.0.5-py3-none-any.whl)\n"
+        },
+        "sdist_build": {
+          "returncode": 0,
+          "tail": "urity_scanner.egg-info/SOURCES.txt -> s3_security_scanner-1.0.5/s3_security_scanner.egg-info\nWriting s3_security_scanner-1.0.5/setup.cfg\nCreating tar archive\nremoving 's3_security_scanner-1.0.5' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/grading/s3-template/c3190765dd4b/candidate/sdist/s3_security_scanner-1.0.5.tar.gz\n"
+        },
+        "wheel_build": {
+          "returncode": 0,
+          "tail": "'s3_security_scanner-1.0.5.dist-info/entry_points.txt'\nadding 's3_security_scanner-1.0.5.dist-info/top_level.txt'\nadding 's3_security_scanner-1.0.5.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/grading/s3-template/c3190765dd4b/candidate/from-sdist/s3_security_scanner-1.0.5-py3-none-any.whl\n"
+        },
+        "probe": {
+          "returncode": 1,
+          "tail": "^^^^^^^\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps/jinja2/loaders.py\", line 209, in get_source\n    raise TemplateNotFound(\njinja2.exceptions.TemplateNotFound: 'report.html' not found in search path: '/workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/grading/s3-template/c3190765dd4b/candidate/sdist-installed/s3_security_scanner/templates'\n"
+        }
+      }
+    }
+  },
+  "patch": {
+    "files_total": 1,
+    "preparation_common": 0,
+    "debris": 0,
+    "agent_files": [
+      {
+        "path": "fix_reporter.py",
+        "status": "new",
+        "post_blob": "b247349",
+        "binary": false,
+        "added": 72,
+        "removed": 0,
+        "bytes": 3586,
+        "debris": false,
+        "test_file": false,
+        "preparation_common": false
+      }
+    ],
+    "agent_added_lines": {
+      "fix_reporter.py": [
+        "import re",
+        "",
+        "def apply_fixes(file_path):",
+        "    with open(file_path, 'r') as f:",
+        "        content = f.read()",
+        "",
+        "    # 1. Modify generate_report signature",
+        "    # Original:",
+        "    # def generate_report(",
+        "    #     self,",
+        "    #     results: List[Dict[str, Any]],",
+        "    #     summary: Dict[str, Any],",
+        "    #     output_file: str,",
+        "    # ) -> str:",
+        "    ",
+        "    # Target replacement for signature:",
+        "    signature_pattern = r\"def generate_report\\(\\n        self,\\n        results: List[Dict\\[str, Any]],\\n        summary: Dict\\[str, Any],\\n        output_file: str,\\n    \\) -> str:\"",
+        "    new_signature = r\"def generate_report(\\n        self,\\n        results: List[Dict[str, Any]],\\n        summary: Dict[str, Any],\\n        bucket_name: str,\\n        output_file: str,\\n    ) -> str:\"",
+        "    ",
+        "    content = re.sub(signature_pattern, new_signature, content)",
+        "",
+        "    # 2. Ensure enhanced_summary is non-empty and contains bucket_name if summary is empty",
+        "    # Original block:",
+        "    #         # Enhance summary with additional stats",
+        "    #         enhanced_summary = summary.copy()",
+        "    #         enhanced_summary.setdefault(\"total_objects_scanned\", 0)",
+        "    #         enhanced_summary.setdefault(\"total_sensitive_objects\", 0)",
+        "    #         enhanced_summary.setdefault(\"total_public_objects\", 0)",
+        "    ",
+        "    # Target replacement block:",
+        "    summary_enhancement_pattern = r\"        # Enhance summary with additional stats\\n        enhanced_summary = summary.copy()\\n        enhanced_summary.setdefault(\\\"total_objects_scanned\\\", 0)\\n        enhanced_summary.setdefault(\\\"total_sensitive_objects\\\", 0)\\n        enhanced_summary.setdefault(\\\"total_public_objects\\\", 0)\"",
+        "    ",
+        "    new_summary_enhancement = r\"\"\"        # Enhance summary with additional stats",
+        "        enhanced_summary = summary.copy()",
+        "        if not enhanced_summary and bucket_name:",
+        "            enhanced_summary[\"bucket_name\"] = bucket_name",
+        "            enhanced_summary[\"status\"] = \"Scan completed successfully (Synthetic)\"",
+        "        enhanced_summary.setdefault(\"total_objects_scanned\", 0)",
+        "        enhanced_summary.setdefault(\"total_sensitive_objects\", 0)",
+        "        enhanced_summary.setdefault(\"total_public_objects\", 0)\"\"\"",
+        "    ",
+        "    content = re.sub(summary_enhancement_pattern, new_summary_enhancement, content)",
+        "",
+        "    # 3. Pass bucket_name to template.render",
+        "    # Original block:",
+        "    #         # Render template",
+        "    #         html_content = template.render(",
+        "    #             summary=enhanced_summary,",
+        "    #             results=enhanced_results,",
+        "    #             compliance_summary=compliance_summary,",
+        "    #             **chart_data,",
+        "    #         )",
+        "    ",
+        "    # Target replacement block:",
+        "    render_pattern = r\"        # Render template\\n        html_content = template.render(\\n            summary=enhanced_summary,\\n            results=enhanced_results,\\n            compliance_summary=compliance_summary,\\n            **chart_data,\\n        )\"",
+        "    ",
+        "    new_render_call = r\"\"\"        # Render template",
+        "        html_content = template.render(",
+        "            summary=enhanced_summary,",
+        "            results=enhanced_results,",
+        "            compliance_summary=compliance_summary,",
+        "            bucket_name=bucket_name,",
+        "            **chart_data,",
+        "        )\"\"\"",
+        "    ",
+        "    content = re.sub(render_pattern, new_render_call, content)",
+        "",
+        "    with open(file_path, 'w') as f:",
+        "        f.write(content)",
+        "",
+        "if __name__ == \"__main__\":",
+        "    apply_fixes(\"s3_security_scanner/html_reporter.py\")"
+      ]
+    },
+    "test_files_touched": [],
+    "test_files_deleted": []
+  },
+  "commands_detail": [
+    {
+      "step": 0,
+      "command": "ls -R",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "\n./s3_security_scanner/analyzers:\n__init__.py\ndns_analyzer.py\npattern_analyzer.py\n\n./s3_security_scanner/checks:\n__init__.py\naccess_control.py\naccount_security.py\nbase.py\ncloudtrail_logging.py\ndns_security.py\nencryption.py\ngdpr_compliance.py\niso_compliance.py\nlogging_monitoring.py\nobject_security.py\nsoc2_monitoring.py\nthreat_detection.py\nversioning_lifecycle.py\n\n./s3_security_scanner/discovery:\n__init__.py\nbucket_discovery.py\ndns_validator.py\nhttp_validator.py\npermutation_generator.py\ns3_bucket_wordlist.txt\nsubdomain_wordlist.txt\nwordlist_manager.py\n\n./tests:\n__init__.py\ntest_cli.py\ntest_cloudtrail_logging.py\ntest_compliance.py\ntest_gdpr_compliance.py\ntest_scanner.py\ntest_soc2_monitoring.py\n"
+    },
+    {
+      "step": 1,
+      "command": "cat s3_security_scanner/html_reporter.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "an_time\"]\n            if isinstance(scan_time, str):\n                try:\n                    enhanced_summary[\"scan_time\"] = datetime.fromisoformat(\n                        scan_time.replace(\"Z\", \"+00:00\")\n                    ).strftime(\"%Y-%m-%d %H:%M:%S UTC\")\n                except ValueError:\n                    pass\n\n        # Render template\n        html_content = template.render(\n            summary=enhanced_summary,\n            results=enhanced_results,\n            compliance_summary=compliance_summary,\n            **chart_data,\n        )\n\n        # Write to file\n        with open(output_file, \"w\", encoding=\"utf-8\") as f:\n            f.write(html_content)\n\n        return output_file\n"
+    },
+    {
+      "step": 3,
+      "command": "sed -i 's/def generate_report(\\n        self,\\n        results: List[Dict[str, Any]],\\n        summary: Dict[str, Any],\\n        output_file: str,\\n    ) -> str:/def generate_report(\\n        self,\\n        results: List[Dict[str, Any]],\\n        summary: Dict[str, Any],\\n        bucket_name: str,\\n        output_file: str,\\n    ) -> str:/g' s3_security_scanner/html_reporter.py\nsed -i 's/        # Enhance summary with additional stats\\n        enhanced_summary = summary.copy()\\n        enhanced_summary.setdefault(\"total_objects_scanned\", 0)\\n        enhanced_summary.setdefault(\"total_sensitive_objects\", 0)\\n        enhanced_summary.setdefault(\"total_public_objects\", 0)\\n\\n        # Calculate object-level statistics/g' s3_security_scanner/html_reporter.py'\nsed -i 's/        # Enhance summary with additional stats\\n        enhanced_summary = summary.copy()\\n        if not enhanced_summary and bucket_name:\\n            enhanced_summary[\"bucket_name\"] = bucket_name\\n            enhanced_summary[\"status\"] = \"Scan completed successfully (Synthetic)\" # Ensure non-empty summary\\n        enhanced_summary.setdefault(\"total_objects_scanned\", 0)\\n        enhanced_summary.setdefault(\"total_sensitive_objects\", 0)\\n        enhanced_summary.setdefault(\"total_public_objects\", 0)/g' s3_security_scanner/html_reporter.py\nsed -i 's/        # Render template\\n        html_content = template.render(\\n            summary=enhanced_summary,\\n            results=enhanced_results,\\n            compliance_summary=compliance_summary,\\n            **chart_data,\\n        )\\n/        # Render template\\n        html_content = template.render(\\n            summary=enhanced_summary,\\n            results=enhanced_results,\\n            compliance_summary=compliance_summary,\\n            bucket_name=bucket_name,\\n            **chart_data,\\n        )\\n/g' s3_security_scanner/html_reporter.py",
+      "tags": [
+        "edit?"
+      ],
+      "returncode": 1,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "/usr/bin/sed: -e expression #1, char 337: unterminated `s' command\n/usr/bin/sed: -e expression #1, char 515: Invalid preceding regular expression\n"
+    },
+    {
+      "step": 4,
+      "command": "cat s3_security_scanner/html_reporter.py",
+      "tags": [
+        "inspect/other"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "an_time\"]\n            if isinstance(scan_time, str):\n                try:\n                    enhanced_summary[\"scan_time\"] = datetime.fromisoformat(\n                        scan_time.replace(\"Z\", \"+00:00\")\n                    ).strftime(\"%Y-%m-%d %H:%M:%S UTC\")\n                except ValueError:\n                    pass\n\n        # Render template\n        html_content = template.render(\n            summary=enhanced_summary,\n            results=enhanced_results,\n            compliance_summary=compliance_summary,\n            **chart_data,\n        )\n\n        # Write to file\n        with open(output_file, \"w\", encoding=\"utf-8\") as f:\n            f.write(html_content)\n\n        return output_file\n"
+    },
+    {
+      "step": 6,
+      "command": "python3 fix_reporter.py s3_security_scanner/html_reporter.py",
+      "tags": [
+        "run:python"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "/usr/local/bin/python3: can't open file '/workspace/scratch/93af20bbcd93/packaging_study/main_runs/46-s3-template-A-19/repo/fix_reporter.py': [Errno 2] No such file or directory\n"
+    },
+    {
+      "step": 7,
+      "command": "cat <<EOF > fix_reporter.py\nimport re\n\ndef apply_fixes(file_path):\n    with open(file_path, 'r') as f:\n        content = f.read()\n\n    # 1. Modify generate_report signature\n    # Original:\n    # def generate_report(\n    #     self,\n    #     results: List[Dict[str, Any]],\n    #     summary: Dict[str, Any],\n    #     output_file: str,\n    # ) -> str:\n    \n    # Target replacement for signature:\n    signature_pattern = r\"def generate_report\\(\\n        self,\\n        results: List[Dict\\[str, Any]],\\n        summary: Dict\\[str, Any],\\n        output_file: str,\\n    \\) -> str:\"\n    new_signature = r\"def generate_report(\\n        self,\\n        results: List[Dict[str, Any]],\\n        summary: Dict[str, Any],\\n        bucket_name: str,\\n        output_file: str,\\n    ) -> str:\"\n    \n    content = re.sub(signature_pattern, new_signature, content)\n\n    # 2. Ensure enhanced_summary is non-empty and contains bucket_name if summary is empty\n    # Original block:\n    #         # Enhance summary with additional stats\n    #         enhanced_summary = summary.copy()\n    #         enhanced_summary.setdefault(\"total_objects_scanned\", 0)\n    #         enhanced_summary.setdefault(\"total_sensitive_objects\", 0)\n    #         enhanced_summary.setdefault(\"total_public_objects\", 0)\n    \n    # Target replacement block:\n    summary_enhancement_pattern = r\"        # Enhance summary with additional stats\\n        enhanced_summary = summary.copy()\\n        enhanced_summary.setdefault(\\\"total_objects_scanned\\\", 0)\\n        enhanced_summary.setdefault(\\\"total_sensitive_objects\\\", 0)\\n        enhanced_summary.setdefault(\\\"total_public_objects\\\", 0)\"\n    \n    new_summary_enhancement = r\"\"\"        # Enhance summary with additional stats\n        enhanced_summary = summary.copy()\n        if not enhanced_summary and bucket_name:\n            enhanced_summary[\"bucket_name\"] = bucket_name\n            enhanced_summary[\"status\"] = \"Scan completed successfully (Synthetic)\"\n        enhanced_summary.setdefault(\"total_objects_scanned\", 0)\n        enhanced_summary.setdefault(\"total_sensitive_objects\", 0)\n        enhanced_summary.setdefault(\"total_public_objects\", 0)\"\"\"\n    \n    content = re.sub(summary_enhancement_pattern, new_summary_enhancement, content)\n\n    # 3. Pass bucket_name to template.render\n    # Original block:\n    #         # Render template\n    #         html_content = template.render(\n    #             summary=enhanced_summary,\n    #             results=enhanced_results,\n    #             compliance_summary=compliance_summary,\n    #             **chart_data,\n    #         )\n    \n    # Target replacement block:\n    render_pattern = r\"        # Render template\\n        html_content = template.render(\\n            summary=enhanced_summary,\\n            results=enhanced_results,\\n            compliance_summary=compliance_summary,\\n            **chart_data,\\n        )\"\n    \n    new_render_call = r\"\"\"        # Render template\n        html_content = template.render(\n            summary=enhanced_summary,\n            results=enhanced_results,\n            compliance_summary=compliance_summary,\n            bucket_name=bucket_name,\n            **chart_data,\n        )\"\"\"\n    \n    content = re.sub(render_pattern, new_render_call, content)\n\n    with open(file_path, 'w') as f:\n        f.write(content)\n\nif __name__ == \"__main__\":\n    apply_fixes(\"s3_security_scanner/html_reporter.py\")\nEOF\npython3 fix_reporter.py",
+      "tags": [
+        "run:python",
+        "edit?"
+      ],
+      "returncode": 1,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/re/_parser.py\", line 862, in _parse\n    p = _parse_sub(source, state, sub_verbose, nested + 1)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/re/_parser.py\", line 460, in _parse_sub\n    itemsappend(_parse(source, state, verbose, nested + 1,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/re/_parser.py\", line 690, in _parse\n    raise source.error(\"multiple repeat\",\nre.error: multiple repeat at position 211\n"
+    },
+    {
+      "step": 10,
+      "command": "python3 fix_reporter.py",
+      "tags": [
+        "run:python"
+      ],
+      "returncode": 1,
+      "timeout": false,
+      "rejected": null,
+      "output_tail": "            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/re/_parser.py\", line 862, in _parse\n    p = _parse_sub(source, state, sub_verbose, nested + 1)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/re/_parser.py\", line 460, in _parse_sub\n    itemsappend(_parse(source, state, verbose, nested + 1,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/uv-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/re/_parser.py\", line 690, in _parse\n    raise source.error(\"multiple repeat\",\nre.error: multiple repeat at position 211\n"
+    }
+  ],
+  "final_message": "```bash\ncat <<EOF > fix_reporter.py\nimport re\n\ndef apply_fixes(file_path):\n    with open(file_path, 'r') as f:\n        content = f.read()\n\n    # 1. Modify generate_report signature\n    # Original:\n    # def generate_report(\n    #     self,\n    #     results: List[Dict[str, Any]],\n    #     summary: Dict[str, Any],\n    #     output_file: str,\n    # ) -> str:\n    \n    # Target replacement for signature:\n    signature_pattern = r\"(def generate_report\\(\\n        self,\\n        results: List\\[Dict\\[str, Any\\]\\],\\n        summary: Dict\\[str, Any\\]\\n        output_file: str,\\n    \\) -> str:)\"\n    new_signature = r\"def generate_report(\\n        self,\\n        results: List[Dict[str, Any]],\\n        summary: Dict[str, Any],\\n        bucket_name: str,\\n        output_file: str,\\n    ) -> str:\"\n    \n    content = re.sub(signature_pattern, new_signature, content)\n\n    # 2. Ensure enhanced_summary is non-empty and contains bucket_name if summary is empty\n    # Original block:\n    #         # Enhance summary with additional stats\n    #         enhanced_summary = summary.copy()\n    #         enhanced_summary.setdefault(\"total_objects_scanned\", 0)\n    #         enhanced_summary.setdefault(\"total_sensitive_objects\", 0)\n    #         enhanced_summary.setdefault(\"total_public_objects\", 0)\n    \n    # Target replacement block:\n    summary_enhancement_pattern = r\"(        # Enhance summary with additional stats\\n        enhanced_summary = summary.copy()\\n        enhanced_summary.setdefault(\\\"total_objects_scanned\\\", 0)\\n        enhanced_summary.setdefault(\\\"total_sensitive_objects\\\", 0)\\n        enhanced_summary.setdefault(\\\"total_public_objects\\\", 0)\"\n    \n    new_summary_enhancement = r\"\"\"        # Enhance summary with additional stats\n        enhanced_summary = summary.copy()\n        if not enhanced_summary and bucket_name:\n            enhanced_summary[\"bucket_name\"] = bucket_name\n            enhanced_summary[\"status\"] = \"Scan completed successfully (Synthetic)\"\n        enhanced_summary.setdefault(\"total_objects_scanned\", 0)\n        enhanced_summary.setdefault(\"total_sensitive_objects",
+  "final_message_is_complete": false,
+  "sources": {
+    "result.json": "main_runs/46-s3-template-A-19/result.json",
+    "final.patch": "main_runs/46-s3-template-A-19/final.patch",
+    "calls.json": "main_runs/46-s3-template-A-19/calls.json",
+    "trajectory.json": "main_runs/46-s3-template-A-19/trajectory.json",
+    "prompt.txt": "main_runs/46-s3-template-A-19/prompt.txt",
+    "final-source.tar.gz": "main_runs/46-s3-template-A-19/final-source.tar.gz"
+  }
+}

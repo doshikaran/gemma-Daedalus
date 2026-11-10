@@ -1,0 +1,20 @@
+31306 31300 01-14:38:37  23.5 /Applications/MetaXRSimulator.app/Contents/Resources/MetaXRSimulator/synthetic_env_server/synth_env_server.app/Contents/MacOS/SyntheticEnvironmentServer LivingRoom -batchmode
+90314  1033 01-01:07:43  19.6 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.80/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome
+ 3160  3151 04-03:10:23  18.4 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Renderer).app/Contents/MacOS/Cursor Helper (Renderer) --type=renderer --user-data-dir=/Users/karandoshi/Library/Application Suppor
+  405     1 18-02:47:20  11.6 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer -daemon
+  417     1 18-02:47:20   7.7 /usr/sbin/coreaudiod
+ 1033     1 18-02:46:24   6.4 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+ 5896  4455 04-03:03:55   2.2 claude
+ 1039  1033 18-02:46:23   1.5 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.80/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (
+ 3154  3151 04-03:10:23   1.1 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper --type=gpu-process --disable-skia-graphite --user-data-dir=/Users/karandoshi/Library/Application S
+20608  1033 10-00:08:44   0.8 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.80/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome
+28703     1    23:07:22   0.4 /System/Library/CoreServices/Siri.app/Contents/MacOS/Siri launchd
+  421     1 18-02:47:20   0.4 /usr/libexec/airportd
+57332     1    01:23:14   0.3 /System/Library/DriverExtensions/AppleCentauriAlpha.dext/AppleCentauriAlpha com.apple.driver.AppleCentauriAlpha 0x10006ba4d com.apple.driver.AppleCentauriAlpha
+57149  1033 02-15:05:15   0.3 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.80/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome
+42879  1033    15:00:50   0.3 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.80/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome
+24513     1 04-00:54:08   0.3 /System/Library/Frameworks/Virtualization.framework/Versions/A/XPCServices/com.apple.Virtualization.VirtualMachine.xpc/Contents/MacOS/com.apple.Virtualization.VirtualMachine
+ 3855  3151 04-03:10:21   0.3 Cursor Helper (Plugin): extension-host (user) Daedalus_Experiment [1-1]                       
+ 1176  1033 18-02:45:32   0.3 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.80/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome
+ 1067  1033 18-02:46:20   0.3 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.80/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome
+ 4454  3151 04-03:09:09   0.2 Cursor Helper: terminal pty-host                    

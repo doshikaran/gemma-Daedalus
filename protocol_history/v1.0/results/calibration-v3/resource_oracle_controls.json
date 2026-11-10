@@ -1,0 +1,5 @@
+{
+  "affected_returncode": 1,
+  "reference_returncode": 0,
+  "reference_stdout": "PASS\n"
+}

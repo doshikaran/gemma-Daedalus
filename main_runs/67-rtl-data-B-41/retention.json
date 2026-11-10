@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-06T20:58:39.376344+00:00",
+  "source_tree_sha256": "071dc0da1835161fca9c7c4445bd573fce42a178d1d83c6104f6b152ff950980",
+  "source_archive_sha256": "9117efcd4da4b54fcb01d658a6f2c5c8c60600a5393f071c53bbfc39bc2a5c30",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/67-rtl-data-B-41/grading/rtl-data/9510c8b8dba2/candidate/direct-dist/cocotb_framework-0.6.1-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/67-rtl-data-B-41/release-artifacts/5a534a6435e968e21a1e32d1b930593323d0bf3b259f32e1614269bc726aa3ff-cocotb_framework-0.6.1-py3-none-any.whl",
+      "sha256": "5a534a6435e968e21a1e32d1b930593323d0bf3b259f32e1614269bc726aa3ff",
+      "bytes": 536641
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/67-rtl-data-B-41/grading/rtl-data/9510c8b8dba2/candidate/from-sdist/cocotb_framework-0.6.1-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/67-rtl-data-B-41/release-artifacts/9a03c2961e4bd8596001ce33420e609c52c7c24e7a8cc25dbdc5767e1b0253e0-cocotb_framework-0.6.1-py3-none-any.whl",
+      "sha256": "9a03c2961e4bd8596001ce33420e609c52c7c24e7a8cc25dbdc5767e1b0253e0",
+      "bytes": 536641
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/67-rtl-data-B-41/grading/rtl-data/9510c8b8dba2/candidate/sdist/cocotb_framework-0.6.1.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/67-rtl-data-B-41/release-artifacts/44f6456e57afcaa5bd3101c161a254d8136b8e12112ad735389059aac0a5e67a-cocotb_framework-0.6.1.tar.gz",
+      "sha256": "44f6456e57afcaa5bd3101c161a254d8136b8e12112ad735389059aac0a5e67a",
+      "bytes": 442069
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "tox-sdist",
+  "repository": "tox-dev/tox",
+  "affected": {
+    "repository": "tox-dev/tox",
+    "sha": "dcd955238b7f8d76291d99052e6838a76d9fcbd9",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/tox-dev__tox-dcd955238b7f8d76291d99052e6838a76d9fcbd9",
+    "archive_sha256": "9acb87815c0443b7569c413509924b4bb4e1b0e6450ad9df5a95ebca03cf2cc3",
+    "archive_bytes": 460659
+  },
+  "reference": {
+    "repository": "tox-dev/tox",
+    "sha": "ef45bd8e8576c086c5d620888eeaebf9d4e5409c",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/tox-dev__tox-ef45bd8e8576c086c5d620888eeaebf9d4e5409c",
+    "archive_sha256": "4d01e9537071c8f5b53a76dbaf8720a1992288ab1e6d0575d93e2adf7397662a",
+    "archive_bytes": 460749
+  }
+}

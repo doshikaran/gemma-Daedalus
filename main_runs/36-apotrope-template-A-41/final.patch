@@ -1,0 +1,13 @@
+diff --git a/src/apotrope/reporter.py b/src/apotrope/reporter.py
+index e6b2094..980b686 100644
+--- a/src/apotrope/reporter.py
++++ b/src/apotrope/reporter.py
+@@ -205,7 +205,7 @@ class Reporter:
+             path:   Destination file path for the HTML file.
+         """
+         try:
+-            from jinja2 import Environment, FileSystemLoader
++            from jinja2 import Environment, FileSystemLoader, select_filters, select_filters, select_filters
+         except ImportError:
+             log.error("Jinja2 not installed — cannot generate HTML report")
+             return

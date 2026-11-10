@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-06T18:54:18.980729+00:00",
+  "source_tree_sha256": "60d2fd5b0a28665b6354751c9ab93520c21c2249167262e53e4b28c09852c7c5",
+  "source_archive_sha256": "192a3e18ce08817983aad88824846cf50a18fd26752f7358d70bb82aa41abf04",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/57-tox-sdist-B-23/grading/tox-sdist/df3d60b69935/candidate/direct-dist/tox-0.0.0+audit-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/57-tox-sdist-B-23/release-artifacts/b2e60fe285825974f990fd6fed1adc9bd379b412c7dfd5b6a6a2eaa20b7d562b-tox-0.0.0+audit-py3-none-any.whl",
+      "sha256": "b2e60fe285825974f990fd6fed1adc9bd379b412c7dfd5b6a6a2eaa20b7d562b",
+      "bytes": 207695
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/57-tox-sdist-B-23/grading/tox-sdist/df3d60b69935/candidate/sdist/tox-0.0.0+audit.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/57-tox-sdist-B-23/release-artifacts/4a0875ad14263ca56e2f2b3e65c291a85c8fd4c6d6734c33fa72dfecf106d063-tox-0.0.0+audit.tar.gz",
+      "sha256": "4a0875ad14263ca56e2f2b3e65c291a85c8fd4c6d6734c33fa72dfecf106d063",
+      "bytes": 265095
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/57-tox-sdist-B-23/grading/tox-sdist/df3d60b69935/candidate/source-preparation/tox-0.0.0+audit-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/57-tox-sdist-B-23/release-artifacts/b2e60fe285825974f990fd6fed1adc9bd379b412c7dfd5b6a6a2eaa20b7d562b-tox-0.0.0+audit-py3-none-any.whl",
+      "sha256": "b2e60fe285825974f990fd6fed1adc9bd379b412c7dfd5b6a6a2eaa20b7d562b",
+      "bytes": 207695
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

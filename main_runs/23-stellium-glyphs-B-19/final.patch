@@ -1,0 +1,13 @@
+diff --git a/src/stellium/visualization/core.py b/src/stellium/visualization/core.py
+index 7b6d652..9057235 100644
+--- a/src/stellium/visualization/core.py
++++ b/src/stellium/visualization/core.py
+@@ -91,7 +91,7 @@ def get_glyph(object_name: str) -> dict[str, str]:
+     obj_info = get_object_info(object_name)
+     if obj_info:
+         # Check if there's an SVG path
+-        if obj_info.glyph_svg_path:
++        if obj_info.glyph_svg_path or obj_info.glyph_unicode_fallback:
+             # Resolve to absolute path for SVG reading
+             # The path is relative to project root
+             svg_path = Path(obj_info.glyph_svg_path)

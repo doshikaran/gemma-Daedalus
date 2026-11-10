@@ -1,0 +1,12 @@
+{
+  "archive": "restoration_1.3/checkpoint_archives/Daedalus_Experiment_Checkpoint.after-ep08-paused.zip",
+  "sha256": "c742244caf7b0bfd6fd2b5d09c6eb926b9ad5626889d4bbadd7bcc0603fa2e43",
+  "members": 287,
+  "duplicate_names": {
+    "Daedalus_Experiment/CONTENTS_SHA256.json": 2
+  },
+  "duplicate_detail": "First copy is the root CONTENTS_SHA256.json (original v1.1 checkpoint manifest, byte-identical to the on-disk file); second copy is the newly generated manifest. Standard readers resolve the name to the second copy.",
+  "payload_hash_mismatches": [],
+  "manifest_entries_missing_from_archive": [],
+  "testzip": null
+}

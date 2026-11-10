@@ -1,0 +1,31 @@
+diff --git a/pixcull/i18n.py b/pixcull/i18n.py
+index 2dc68f2..5d7665b 100644
+--- a/pixcull/i18n.py
++++ b/pixcull/i18n.py
+@@ -66,6 +66,26 @@ def load_locale(lang: str) -> dict[str, str]:
+ 
+ 
+ @lru_cache(maxsize=8)
++def _load_locale_normalized(norm: str) -> dict[str, str]:
++
++    # Use importlib.resources to access package data files reliably
++    try:
++        # Assuming locale files are packaged in a 'locales' subdirectory within the package
++        resource_path = importlib.resources.files('locales') / f'{norm}.json'
++        try:
++            data = json.loads(resource_path.read_text(encoding='utf-8'))
++        except (OSError, json.JSONDecodeError):
++            return {}
++    except Exception:
++        # Fallback if resources cannot be accessed
++        return {}
++
++    if not isinstance(data, dict):
++        return {}
++    # Only str \u2192 str entries. Anything else (a list, a nested
++    # object) is invalid for v1.
++    return {str(k): str(v) for k, v in data.items()
++            if isinstance(v, str)}
+ def _load_locale_normalized(norm: str) -> dict[str, str]:
+     """LRU-cached locale loader keyed by the *normalised* name.
+ 

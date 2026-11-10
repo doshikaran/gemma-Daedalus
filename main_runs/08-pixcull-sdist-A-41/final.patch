@@ -1,0 +1,27 @@
+diff --git a/pixcull/i18n.py b/pixcull/i18n.py
+index 2dc68f2..ce9edff 100644
+--- a/pixcull/i18n.py
++++ b/pixcull/i18n.py
+@@ -30,7 +30,7 @@ import json
+ from functools import lru_cache
+ from pathlib import Path
+ 
+-_LOCALE_DIR = Path(__file__).resolve().parent / "locale"
++_LOCALE_DIR = Path(__file__).resolve().parent / "locales"
+ 
+ # Supported locales. The ORDER is the fallback chain when the
+ # client's preferred lang isn't explicitly in the list — we use
+diff --git a/pixcull/locales/en_US.json b/pixcull/locales/en_US.json
+new file mode 100644
+index 0000000..d6dfe4e
+--- /dev/null
++++ b/pixcull/locales/en_US.json
+@@ -0,0 +1 @@
++{"greeting": "Hello", "welcome": "Welcome"}
+diff --git a/pixcull/locales/zh_CN.json b/pixcull/locales/zh_CN.json
+new file mode 100644
+index 0000000..5ad6ba6
+--- /dev/null
++++ b/pixcull/locales/zh_CN.json
+@@ -0,0 +1 @@
++{"greeting": "你好", "welcome": "欢迎"}

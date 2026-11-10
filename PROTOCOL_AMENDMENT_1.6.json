@@ -1,0 +1,14 @@
+{
+  "amendment": "1.6",
+  "timestamp_utc": "2026-11-05T17:58:56.686930+00:00",
+  "base": "1.5 (FREEZE.json, FREEZE_1.2-1.5 unchanged)",
+  "authorized_by": "Study owner, 2026-11-05: asked to start without AC power, then approved the proposed amendment 1.6; Low Power Mode on battery switched off by the owner before launch.",
+  "change": "amendment_1.6/run_batch_native_1_6.py replaces the amendment 1.4 AC-only guard (used at start, by the 1.5 pre-episode gate and after each saved episode) with: run on AC, or on battery at >= 35% with Low Power Mode off; state from logs/amendment_1.6/power_state.json written every 20 s by amendment_1.6/power_watch.sh; stale (>180 s) or unknown state pauses. amendment_1.6/launch_grid.sh applies the same rule at launch. The 1.5 load gate is unchanged. Nothing inside episodes, budgets, timeouts, grading, scoring or analysis changes.",
+  "threats": [
+    "On battery macOS cannot be held awake against lid close (caffeinate -s applies only on AC); a lid close mid-episode would again produce an infrastructure outcome, retained and disclosed. Owner asked to keep the lid open.",
+    "Battery-powered and AC-powered episodes may differ in throughput; per-call timings are in every trajectory and the power state log records which episodes ran on battery."
+  ],
+  "verification": "restoration_1.6/power_guard_test.json (8 synthetic cases, wiring into the 1.4/1.5 call sites, live state; zero model calls): PASS.",
+  "completed_records_at_amendment": 53,
+  "outcomes_observed_at_amendment": "Provisional counts from the status file only: 0 artifact-contract passes among 53 valid records."
+}

@@ -1,0 +1,56 @@
+{
+  "model_calls": 0,
+  "rows": [
+    {
+      "case": "ac",
+      "pause": false,
+      "reason": null,
+      "pass": true
+    },
+    {
+      "case": "battery_high",
+      "pause": false,
+      "reason": null,
+      "pass": true
+    },
+    {
+      "case": "battery_at_min",
+      "pause": false,
+      "reason": null,
+      "pass": true
+    },
+    {
+      "case": "battery_low",
+      "pause": true,
+      "reason": "battery below 35% or unknown source: {\"source\": \"BATTERY\", \"percent\": 34, \"lowpowermode\": 0, \"epoch\": 1999999990}",
+      "pass": true
+    },
+    {
+      "case": "low_power_mode",
+      "pause": true,
+      "reason": "Low Power Mode on or unknown: {\"source\": \"BATTERY\", \"percent\": 90, \"lowpowermode\": 1, \"epoch\": 1999999990}",
+      "pass": true
+    },
+    {
+      "case": "lpm_unknown",
+      "pause": true,
+      "reason": "Low Power Mode on or unknown: {\"source\": \"AC\", \"percent\": 90, \"lowpowermode\": null, \"epoch\": 1999999990}",
+      "pass": true
+    },
+    {
+      "case": "stale",
+      "pause": true,
+      "reason": "host power state stale (600 s old)",
+      "pass": true
+    },
+    {
+      "case": "missing",
+      "pause": true,
+      "reason": "host power state unreadable: FileNotFoundError(2, 'No such file or directory')",
+      "pass": true
+    }
+  ],
+  "guard_replaces_1_4": true,
+  "live_state_problem": null,
+  "pass": true
+}

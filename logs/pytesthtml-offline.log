@@ -1,0 +1,2 @@
+{"id": "pytest-html-npm", "arm": "affected", "stages": {"source": true, "wheel": false, "sdist-wheel": false}}
+{"id": "pytest-html-npm", "arm": "reference", "stages": {"source": true, "wheel": true, "sdist-wheel": true}}

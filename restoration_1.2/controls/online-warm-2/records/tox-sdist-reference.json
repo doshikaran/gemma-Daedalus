@@ -1,0 +1,165 @@
+{
+  "id": "tox-sdist",
+  "arm": "reference",
+  "run_id": "1a4980f739be",
+  "source_sha": "ef45bd8e8576c086c5d620888eeaebf9d4e5409c",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/source-preparation",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints-tox.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building wheel...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/source-preparation/tox-0.0.0+audit-py3-none-any.whl\n",
+        "seconds": 3.122272431999818
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/repo/src', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/tox-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from tox.run import run\n sys.argv=['tox','--help']\n run()\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "ROOT: No loadable tox.ini or setup.cfg or pyproject.toml or tox.toml found, assuming empty tox.ini at /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/consumer/source\nusage: tox [-h] [--colored {yes,no}] [--stderr-color {BLACK,BLUE,CYAN,GREEN,LIGHTBLACK_EX,LIGHTBLUE_EX,LIGHTCYAN_EX,LIGHTGREEN_EX,LIGHTMAGENTA_EX,LIGHTRED_EX,LIGHTWHITE_EX,LIGHTYELLOW_EX,MAGENTA,RED,RESET,WHITE,YELLOW}] [-v | -q]\n           [--exit-and-dump-after seconds] [-c file] [--workdir dir] [--root dir] [--runner {virtualenv}] [--version] [--no-provision [REQ_JSON]] [--no-recreate-provision] [-r] [-x OVERRIDE]\n           {run,r,run-parallel,p,depends,de,man,list,l,devenv,d,schema,config,c,quickstart,q,exec,e,legacy,le} ...\n\ncreate and set up environments to run command(s) in them\n\noptions:\n  -h, --help                  show this help message and exit\n  --colored {yes,no}          should output be enriched with colors, default is yes unless TERM=dumb or NO_COLOR is defined. (default: no)\n  --stderr-color {BLACK,BLUE,CYAN,GREEN,LIGHTBLACK_EX,LIGHTBLUE_EX,LIGHTCYAN_EX,LIGHTGREEN_EX,LIGHTMAGENTA_EX,LIGHTRED_EX,LIGHTWHITE_EX,LIGHTYELLOW_EX,MAGENTA,RED,RESET,WHITE,YELLOW}\n                              color for stderr output, use RESET for terminal defaults. (default: RED)\n  --exit-and-dump-after seconds\n                              dump tox threads after n seconds and exit the app - useful to debug when tox hangs, 0 means disabled (default: 0)\n  -c file, --conf file        configuration file/folder for tox (if not specified will discover one) (default: None)\n  --workdir dir               tox working directory (if not specified will be the folder of the config file) (default: None)\n  --root dir                  project root directory (if not specified will be the folder of the config file) (default: None)\n  --runner {virtualenv}       the tox run engine to use when not explicitly stated in tox env configuration (default: virtualenv)\n  --version                   show program's and plugins version number and exit\n  --no-provision [REQ_JSON]   do not perform provision, but fail and if a path was provided write provision metadata as JSON to it (default: False)\n  --no-recreate-provision     if recreate is set do not recreate provision tox environment (default: False)\n  -r, --recreate              recreate the tox environments (default: False)\n  -x OVERRIDE, --override OVERRIDE\n                              configuration override(s), e.g., -x testenv:pypy3.ignore_errors=True (default: [])\n\nverbosity:\n  every -v increases, every -q decreases verbosity level, default WARNING, map 0=CRITICAL|1=ERROR|2=WARNING|3=INFO|4=DEBUG|5=NOTSET\n\n  -v, --verbose               increase verbosity (default: 2)\n  -q, --quiet                 decrease verbosity (default: 0)\n\nsubcommands:\n  tox command to execute (by default legacy)\n\n  {run,r,run-parallel,p,depends,de,man,list,l,devenv,d,schema,config,c,quickstart,q,exec,e,legacy,le}\n    run (r)                   run environments\n    run-parallel (p)          run environments in parallel\n    depends (de)              visualize tox environment dependencies\n    man                       Set up tox man page for current shell\n    list (l)                  list environments\n    devenv (d)                sets up a development environment at ENVDIR based on the tox configuration specified\n    schema                    Generate schema for tox configuration\n    config (c)                show tox configuration\n    quickstart (q)            Command line script to quickly create a tox config file for a Python project\n    exec (e)                  execute an arbitrary command within a tox environment\n    legacy (le)               legacy entry-point command\n\nconfig file '/root/.config/tox/config.ini' missing (change via env var TOX_USER_CONFIG_FILE)\n{\"import_origins\": {\"tox\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/repo/src/tox/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.99545120699986
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints-tox.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building wheel...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/direct-dist/tox-0.0.0+audit-py3-none-any.whl\n",
+        "seconds": 2.939503084999842
+      },
+      "artifact_sha256": "b2e60fe285825974f990fd6fed1adc9bd379b412c7dfd5b6a6a2eaa20b7d562b",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/direct-dist/tox-0.0.0+audit-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 59ms\nPrepared 1 package in 103ms\nwarning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\nInstalled 1 package in 258ms\n + tox==0.0.0+audit (from file:///workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/direct-dist/tox-0.0.0+audit-py3-none-any.whl)\n",
+        "seconds": 0.653289309999991
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/tox-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from tox.run import run\n sys.argv=['tox','--help']\n run()\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "ROOT: No loadable tox.ini or setup.cfg or pyproject.toml or tox.toml found, assuming empty tox.ini at /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/consumer/wheel\nusage: tox [-h] [--colored {yes,no}] [--stderr-color {BLACK,BLUE,CYAN,GREEN,LIGHTBLACK_EX,LIGHTBLUE_EX,LIGHTCYAN_EX,LIGHTGREEN_EX,LIGHTMAGENTA_EX,LIGHTRED_EX,LIGHTWHITE_EX,LIGHTYELLOW_EX,MAGENTA,RED,RESET,WHITE,YELLOW}] [-v | -q]\n           [--exit-and-dump-after seconds] [-c file] [--workdir dir] [--root dir] [--runner {virtualenv}] [--version] [--no-provision [REQ_JSON]] [--no-recreate-provision] [-r] [-x OVERRIDE]\n           {run,r,run-parallel,p,depends,de,man,list,l,devenv,d,schema,config,c,quickstart,q,exec,e,legacy,le} ...\n\ncreate and set up environments to run command(s) in them\n\noptions:\n  -h, --help                  show this help message and exit\n  --colored {yes,no}          should output be enriched with colors, default is yes unless TERM=dumb or NO_COLOR is defined. (default: no)\n  --stderr-color {BLACK,BLUE,CYAN,GREEN,LIGHTBLACK_EX,LIGHTBLUE_EX,LIGHTCYAN_EX,LIGHTGREEN_EX,LIGHTMAGENTA_EX,LIGHTRED_EX,LIGHTWHITE_EX,LIGHTYELLOW_EX,MAGENTA,RED,RESET,WHITE,YELLOW}\n                              color for stderr output, use RESET for terminal defaults. (default: RED)\n  --exit-and-dump-after seconds\n                              dump tox threads after n seconds and exit the app - useful to debug when tox hangs, 0 means disabled (default: 0)\n  -c file, --conf file        configuration file/folder for tox (if not specified will discover one) (default: None)\n  --workdir dir               tox working directory (if not specified will be the folder of the config file) (default: None)\n  --root dir                  project root directory (if not specified will be the folder of the config file) (default: None)\n  --runner {virtualenv}       the tox run engine to use when not explicitly stated in tox env configuration (default: virtualenv)\n  --version                   show program's and plugins version number and exit\n  --no-provision [REQ_JSON]   do not perform provision, but fail and if a path was provided write provision metadata as JSON to it (default: False)\n  --no-recreate-provision     if recreate is set do not recreate provision tox environment (default: False)\n  -r, --recreate              recreate the tox environments (default: False)\n  -x OVERRIDE, --override OVERRIDE\n                              configuration override(s), e.g., -x testenv:pypy3.ignore_errors=True (default: [])\n\nverbosity:\n  every -v increases, every -q decreases verbosity level, default WARNING, map 0=CRITICAL|1=ERROR|2=WARNING|3=INFO|4=DEBUG|5=NOTSET\n\n  -v, --verbose               increase verbosity (default: 2)\n  -q, --quiet                 decrease verbosity (default: 0)\n\nsubcommands:\n  tox command to execute (by default legacy)\n\n  {run,r,run-parallel,p,depends,de,man,list,l,devenv,d,schema,config,c,quickstart,q,exec,e,legacy,le}\n    run (r)                   run environments\n    run-parallel (p)          run environments in parallel\n    depends (de)              visualize tox environment dependencies\n    man                       Set up tox man page for current shell\n    list (l)                  list environments\n    devenv (d)                sets up a development environment at ENVDIR based on the tox configuration specified\n    schema                    Generate schema for tox configuration\n    config (c)                show tox configuration\n    quickstart (q)            Command line script to quickly create a tox config file for a Python project\n    exec (e)                  execute an arbitrary command within a tox environment\n    legacy (le)               legacy entry-point command\n\nconfig file '/root/.config/tox/config.ini' missing (change via env var TOX_USER_CONFIG_FILE)\n{\"import_origins\": {\"tox\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/wheel-installed/tox/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.9175163939999038
+      },
+      "pass": true
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints-tox.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building source distribution...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/sdist/tox-0.0.0+audit.tar.gz\n",
+        "seconds": 2.398796407999953
+      },
+      "sdist_sha256": "87b6d93479ad62e06d50cac40da8fcf9b848a3ff65fe332bd89e11fe98d72892",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints-tox.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building wheel...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/from-sdist/tox-0.0.0+audit-py3-none-any.whl\n",
+        "seconds": 2.4946484439999494
+      },
+      "artifact_sha256": "b2e60fe285825974f990fd6fed1adc9bd379b412c7dfd5b6a6a2eaa20b7d562b",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/from-sdist/tox-0.0.0+audit-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 49ms\nPrepared 1 package in 80ms\nwarning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\nInstalled 1 package in 216ms\n + tox==0.0.0+audit (from file:///workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/from-sdist/tox-0.0.0+audit-py3-none-any.whl)\n",
+        "seconds": 0.547129828999914
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/tox-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from tox.run import run\n sys.argv=['tox','--help']\n run()\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "ROOT: No loadable tox.ini or setup.cfg or pyproject.toml or tox.toml found, assuming empty tox.ini at /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/consumer/sdist\nusage: tox [-h] [--colored {yes,no}] [--stderr-color {BLACK,BLUE,CYAN,GREEN,LIGHTBLACK_EX,LIGHTBLUE_EX,LIGHTCYAN_EX,LIGHTGREEN_EX,LIGHTMAGENTA_EX,LIGHTRED_EX,LIGHTWHITE_EX,LIGHTYELLOW_EX,MAGENTA,RED,RESET,WHITE,YELLOW}] [-v | -q]\n           [--exit-and-dump-after seconds] [-c file] [--workdir dir] [--root dir] [--runner {virtualenv}] [--version] [--no-provision [REQ_JSON]] [--no-recreate-provision] [-r] [-x OVERRIDE]\n           {run,r,run-parallel,p,depends,de,man,list,l,devenv,d,schema,config,c,quickstart,q,exec,e,legacy,le} ...\n\ncreate and set up environments to run command(s) in them\n\noptions:\n  -h, --help                  show this help message and exit\n  --colored {yes,no}          should output be enriched with colors, default is yes unless TERM=dumb or NO_COLOR is defined. (default: no)\n  --stderr-color {BLACK,BLUE,CYAN,GREEN,LIGHTBLACK_EX,LIGHTBLUE_EX,LIGHTCYAN_EX,LIGHTGREEN_EX,LIGHTMAGENTA_EX,LIGHTRED_EX,LIGHTWHITE_EX,LIGHTYELLOW_EX,MAGENTA,RED,RESET,WHITE,YELLOW}\n                              color for stderr output, use RESET for terminal defaults. (default: RED)\n  --exit-and-dump-after seconds\n                              dump tox threads after n seconds and exit the app - useful to debug when tox hangs, 0 means disabled (default: 0)\n  -c file, --conf file        configuration file/folder for tox (if not specified will discover one) (default: None)\n  --workdir dir               tox working directory (if not specified will be the folder of the config file) (default: None)\n  --root dir                  project root directory (if not specified will be the folder of the config file) (default: None)\n  --runner {virtualenv}       the tox run engine to use when not explicitly stated in tox env configuration (default: virtualenv)\n  --version                   show program's and plugins version number and exit\n  --no-provision [REQ_JSON]   do not perform provision, but fail and if a path was provided write provision metadata as JSON to it (default: False)\n  --no-recreate-provision     if recreate is set do not recreate provision tox environment (default: False)\n  -r, --recreate              recreate the tox environments (default: False)\n  -x OVERRIDE, --override OVERRIDE\n                              configuration override(s), e.g., -x testenv:pypy3.ignore_errors=True (default: [])\n\nverbosity:\n  every -v increases, every -q decreases verbosity level, default WARNING, map 0=CRITICAL|1=ERROR|2=WARNING|3=INFO|4=DEBUG|5=NOTSET\n\n  -v, --verbose               increase verbosity (default: 2)\n  -q, --quiet                 decrease verbosity (default: 0)\n\nsubcommands:\n  tox command to execute (by default legacy)\n\n  {run,r,run-parallel,p,depends,de,man,list,l,devenv,d,schema,config,c,quickstart,q,exec,e,legacy,le}\n    run (r)                   run environments\n    run-parallel (p)          run environments in parallel\n    depends (de)              visualize tox environment dependencies\n    man                       Set up tox man page for current shell\n    list (l)                  list environments\n    devenv (d)                sets up a development environment at ENVDIR based on the tox configuration specified\n    schema                    Generate schema for tox configuration\n    config (c)                show tox configuration\n    quickstart (q)            Command line script to quickly create a tox config file for a Python project\n    exec (e)                  execute an arbitrary command within a tox environment\n    legacy (le)               legacy entry-point command\n\nconfig file '/root/.config/tox/config.ini' missing (change via env var TOX_USER_CONFIG_FILE)\n{\"import_origins\": {\"tox\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/online-warm-2/work/tox-sdist/1a4980f739be/reference/sdist-installed/tox/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.9061447560000033
+      },
+      "pass": true
+    }
+  ]
+}

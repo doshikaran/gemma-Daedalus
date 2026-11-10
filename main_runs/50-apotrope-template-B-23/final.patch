@@ -1,0 +1,40 @@
+diff --git a/src/apotrope/reporter.py b/src/apotrope/reporter.py
+index e6b2094..8a0e286 100644
+--- a/src/apotrope/reporter.py
++++ b/src/apotrope/reporter.py
+@@ -320,6 +320,8 @@ class Reporter:
+         from collections import defaultdict
+ 
+         letter, label = score_grade(report.score)
++        hostname = report.hostname
++        cat_scores = calculate_category_scores(report.results)
+         cat_scores = calculate_category_scores(report.results)
+ 
+         _sev_ord: dict[Severity, int] = {
+@@ -398,6 +400,8 @@ class Reporter:
+         from collections import Counter
+ 
+         letter, label = score_grade(report.score)
++        hostname = report.hostname
++        cat_scores = calculate_category_scores(report.results)
+         total = len(report.results)
+ 
+         critical_fails = sum(
+@@ -519,6 +523,8 @@ class Reporter:
+         from rich.panel import Panel
+ 
+         letter, label = score_grade(report.score)
++        hostname = report.hostname
++        cat_scores = calculate_category_scores(report.results)
+         gc  = _GRADE_COLOR.get(letter, "white")
+         bar = _score_bar(
+             report.score,
+@@ -729,6 +735,8 @@ class Reporter:
+     def _print_plain(self, report: AuditReport) -> None:
+         """Minimal plain-text output when Rich is unavailable."""
+         letter, label = score_grade(report.score)
++        hostname = report.hostname
++        cat_scores = calculate_category_scores(report.results)
+         print(
+             f"Apotrope v{__version__}  |  {report.hostname}"
+             f"  |  Score: {report.score}/100 ({letter} {label})"

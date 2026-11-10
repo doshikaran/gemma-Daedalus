@@ -1,0 +1,19 @@
+{
+  "incident": "infrastructure (host CPU contention; frozen 240 s per-request timeout)",
+  "episode": "53-pytest-html-npm-A-41",
+  "task": "pytest-html-npm",
+  "condition": "A",
+  "seed": 41,
+  "order": 53,
+  "occurred_utc": "2026-11-05T13:05Z",
+  "stage": "interact(): second model request (step 1) failed with TimeoutError after ~240 s",
+  "model_calls_completed": 1,
+  "generated_tokens": 168,
+  "interaction_wall_seconds_recorded": 262.9656628029916,
+  "error": "TimeoutError('timed out')",
+  "stop": "infrastructure_error",
+  "evidence": "native server log: decode fell from ~20 tok/s (benchmark) / ~10 tok/s (preceding requests) to ~1.3 tok/s for the failing request (686-token context, cancelled at 264 generated tokens); host 15-min load average ~15.6 shortly after versus ~2 when idle; host on AC (power_state.json). Contention source not identified (likely post-hibernation Spotlight indexing and/or browser video).",
+  "retained_at": "pilots/v1.4-infrastructure/53-pytest-html-npm-A-41 (moved unchanged; pre-move hashes restoration_1.5/episode53_before_move.sha256, 41,408 files, verified after move); plus status, controller log tail, server log tail, pmset window",
+  "disposition": "Study owner instruction 2026-11-05 ('resume') following the proposed amendment 1.5: restart from a fresh workspace with condition A, seed 41, order 53. Not counted as a main attempt. Grade not inspected or used.",
+  "recorded_utc": "2026-11-05T16:16:00.721012+00:00"
+}

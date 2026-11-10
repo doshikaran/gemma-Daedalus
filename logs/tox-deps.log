@@ -1,0 +1,18 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+Resolved 12 packages in 16.40s
+Downloading virtualenv (5.3MiB)
+ Downloaded virtualenv
+Prepared 10 packages in 262ms
+Installed 12 packages in 10ms
+ + cachetools==7.2.8
+ + colorama==0.4.6
+ + distlib==0.4.4
+ + filelock==4.2.6
+ + packaging==26.3
+ + platformdirs==4.14.2
+ + pluggy==1.7.0
+ + pyproject-api==1.12.2
+ + python-discovery==1.9.0
+ + tomli-w==1.2.0
+ + tox==4.50.1
+ + virtualenv==21.15.2

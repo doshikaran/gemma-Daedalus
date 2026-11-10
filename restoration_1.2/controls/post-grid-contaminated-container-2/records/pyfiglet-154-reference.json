@@ -1,0 +1,147 @@
+{
+  "id": "pyfiglet-154",
+  "arm": "reference",
+  "run_id": "66d4421a1ed8",
+  "source_sha": "e8601f00030ceeef363d35dd53cc95e679f16877",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/repo', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import pyfiglet\n out={name:pyfiglet.figlet_format('AB',font=name) for name in ['circle','future']}\n assert all(out.values())\n print(json.dumps({'rendered':sorted(out)}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"rendered\": [\"circle\", \"future\"]}\n{\"import_origins\": {\"pyfiglet\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/repo/pyfiglet/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.4288334230077453
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "ng 'pyfiglet/fonts/smscript.flf'\nadding 'pyfiglet/fonts/smshadow.flf'\nadding 'pyfiglet/fonts/smslant.flf'\nadding 'pyfiglet/fonts/smtengwar.flf'\nadding 'pyfiglet/fonts/soft.flf'\nadding 'pyfiglet/fonts/space_op.flf'\nadding 'pyfiglet/fonts/spc_demo.flf'\nadding 'pyfiglet/fonts/speed.flf'\nadding 'pyfiglet/fonts/spliff.flf'\nadding 'pyfiglet/fonts/stacey.flf'\nadding 'pyfiglet/fonts/stampate.flf'\nadding 'pyfiglet/fonts/stampatello.flf'\nadding 'pyfiglet/fonts/standard.flf'\nadding 'pyfiglet/fonts/star_strips.flf'\nadding 'pyfiglet/fonts/star_war.flf'\nadding 'pyfiglet/fonts/starwars.flf'\nadding 'pyfiglet/fonts/stealth_.flf'\nadding 'pyfiglet/fonts/stellar.flf'\nadding 'pyfiglet/fonts/stencil1.flf'\nadding 'pyfiglet/fonts/stencil2.flf'\nadding 'pyfiglet/fonts/stforek.flf'\nadding 'pyfiglet/fonts/stick_letters.flf'\nadding 'pyfiglet/fonts/stop.flf'\nadding 'pyfiglet/fonts/straight.flf'\nadding 'pyfiglet/fonts/street_s.flf'\nadding 'pyfiglet/fonts/stronger_than_all.flf'\nadding 'pyfiglet/fonts/sub-zero.flf'\nadding 'pyfiglet/fonts/subteran.flf'\nadding 'pyfiglet/fonts/super_te.flf'\nadding 'pyfiglet/fonts/swamp_land.flf'\nadding 'pyfiglet/fonts/swan.flf'\nadding 'pyfiglet/fonts/sweet.flf'\nadding 'pyfiglet/fonts/t__of_ap.flf'\nadding 'pyfiglet/fonts/tanja.flf'\nadding 'pyfiglet/fonts/tav1____.flf'\nadding 'pyfiglet/fonts/taxi____.flf'\nadding 'pyfiglet/fonts/tec1____.flf'\nadding 'pyfiglet/fonts/tec_7000.flf'\nadding 'pyfiglet/fonts/tecrvs__.flf'\nadding 'pyfiglet/fonts/tengwar.flf'\nadding 'pyfiglet/fonts/term.flf'\nadding 'pyfiglet/fonts/test1.flf'\nadding 'pyfiglet/fonts/the_edge.flf'\nadding 'pyfiglet/fonts/thick.flf'\nadding 'pyfiglet/fonts/thin.flf'\nadding 'pyfiglet/fonts/this.flf'\nadding 'pyfiglet/fonts/thorned.flf'\nadding 'pyfiglet/fonts/threepoint.flf'\nadding 'pyfiglet/fonts/ti_pan__.flf'\nadding 'pyfiglet/fonts/ticks.flf'\nadding 'pyfiglet/fonts/ticksslant.flf'\nadding 'pyfiglet/fonts/tiles.flf'\nadding 'pyfiglet/fonts/times.flf'\nadding 'pyfiglet/fonts/timesofl.flf'\nadding 'pyfiglet/fonts/tinker-toy.flf'\nadding 'pyfiglet/fonts/tomahawk.flf'\nadding 'pyfiglet/fonts/tombstone.flf'\nadding 'pyfiglet/fonts/top_duck.flf'\nadding 'pyfiglet/fonts/train.flf'\nadding 'pyfiglet/fonts/trashman.flf'\nadding 'pyfiglet/fonts/trek.flf'\nadding 'pyfiglet/fonts/triad_st.flf'\nadding 'pyfiglet/fonts/ts1_____.flf'\nadding 'pyfiglet/fonts/tsalagi.flf'\nadding 'pyfiglet/fonts/tsm_____.flf'\nadding 'pyfiglet/fonts/tsn_base.flf'\nadding 'pyfiglet/fonts/tty.flf'\nadding 'pyfiglet/fonts/ttyb.flf'\nadding 'pyfiglet/fonts/tubular.flf'\nadding 'pyfiglet/fonts/twin_cob.flf'\nadding 'pyfiglet/fonts/twisted.flf'\nadding 'pyfiglet/fonts/twopoint.flf'\nadding 'pyfiglet/fonts/type_set.flf'\nadding 'pyfiglet/fonts/ucf_fan_.flf'\nadding 'pyfiglet/fonts/ugalympi.flf'\nadding 'pyfiglet/fonts/unarmed_.flf'\nadding 'pyfiglet/fonts/univers.flf'\nadding 'pyfiglet/fonts/upper.flc'\nadding 'pyfiglet/fonts/usa_____.flf'\nadding 'pyfiglet/fonts/usa_pq__.flf'\nadding 'pyfiglet/fonts/usaflag.flf'\nadding 'pyfiglet/fonts/utopia.flf'\nadding 'pyfiglet/fonts/utopiab.flf'\nadding 'pyfiglet/fonts/utopiabi.flf'\nadding 'pyfiglet/fonts/utopiai.flf'\nadding 'pyfiglet/fonts/varsity.flf'\nadding 'pyfiglet/fonts/vortron_.flf'\nadding 'pyfiglet/fonts/war_of_w.flf'\nadding 'pyfiglet/fonts/wavy.flf'\nadding 'pyfiglet/fonts/weird.flf'\nadding 'pyfiglet/fonts/wet_letter.flf'\nadding 'pyfiglet/fonts/whimsy.flf'\nadding 'pyfiglet/fonts/wideterm.tlf'\nadding 'pyfiglet/fonts/wow.flf'\nadding 'pyfiglet/fonts/xbrite.flf'\nadding 'pyfiglet/fonts/xbriteb.flf'\nadding 'pyfiglet/fonts/xbritebi.flf'\nadding 'pyfiglet/fonts/xbritei.flf'\nadding 'pyfiglet/fonts/xchartr.flf'\nadding 'pyfiglet/fonts/xchartri.flf'\nadding 'pyfiglet/fonts/xcour.flf'\nadding 'pyfiglet/fonts/xcourb.flf'\nadding 'pyfiglet/fonts/xcourbi.flf'\nadding 'pyfiglet/fonts/xcouri.flf'\nadding 'pyfiglet/fonts/xhelv.flf'\nadding 'pyfiglet/fonts/xhelvb.flf'\nadding 'pyfiglet/fonts/xhelvbi.flf'\nadding 'pyfiglet/fonts/xhelvi.flf'\nadding 'pyfiglet/fonts/xsans.flf'\nadding 'pyfiglet/fonts/xsansb.flf'\nadding 'pyfiglet/fonts/xsansbi.flf'\nadding 'pyfiglet/fonts/xsansi.flf'\nadding 'pyfiglet/fonts/xsbook.flf'\nadding 'pyfiglet/fonts/xsbookb.flf'\nadding 'pyfiglet/fonts/xsbookbi.flf'\nadding 'pyfiglet/fonts/xsbooki.flf'\nadding 'pyfiglet/fonts/xtimes.flf'\nadding 'pyfiglet/fonts/xtty.flf'\nadding 'pyfiglet/fonts/xttyb.flf'\nadding 'pyfiglet/fonts/yie-ar__.flf'\nadding 'pyfiglet/fonts/yie_ar_k.flf'\nadding 'pyfiglet/fonts/z-pilot_.flf'\nadding 'pyfiglet/fonts/zig_zag_.flf'\nadding 'pyfiglet/fonts/zone7___.flf'\nadding 'pyfiglet-1.0.3.dist-info/licenses/LICENSE'\nadding 'pyfiglet-1.0.3.dist-info/METADATA'\nadding 'pyfiglet-1.0.3.dist-info/WHEEL'\nadding 'pyfiglet-1.0.3.dist-info/entry_points.txt'\nadding 'pyfiglet-1.0.3.dist-info/top_level.txt'\nadding 'pyfiglet-1.0.3.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/direct-dist/pyfiglet-1.0.3-py3-none-any.whl\n",
+        "seconds": 11.298860740003875
+      },
+      "artifact_sha256": "72ed685bc83294e8f0dfa5b30e71b35c8d74af91cd894913909ef481864af6e0",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/direct-dist/pyfiglet-1.0.3-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 109ms\nPrepared 1 package in 399ms\nInstalled 1 package in 630ms\n + pyfiglet==1.0.3 (from file:///workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/direct-dist/pyfiglet-1.0.3-py3-none-any.whl)\n",
+        "seconds": 1.565830837993417
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import pyfiglet\n out={name:pyfiglet.figlet_format('AB',font=name) for name in ['circle','future']}\n assert all(out.values())\n print(json.dumps({'rendered':sorted(out)}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"rendered\": [\"circle\", \"future\"]}\n{\"import_origins\": {\"pyfiglet\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/wheel-installed/pyfiglet/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.516339568013791
+      },
+      "pass": true
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "yfiglet/fonts\ncopying pyfiglet/fonts/tombstone.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/top_duck.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/train.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/trashman.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/trek.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/triad_st.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/ts1_____.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/tsalagi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/tsm_____.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/tsn_base.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/tty.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/ttyb.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/tubular.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/twin_cob.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/twisted.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/twopoint.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/type_set.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/ucf_fan_.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/ugalympi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/unarmed_.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/univers.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/upper.flc -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/usa_____.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/usa_pq__.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/usaflag.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/utopia.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/utopiab.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/utopiabi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/utopiai.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/varsity.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/vortron_.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/war_of_w.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/wavy.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/weird.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/wet_letter.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/whimsy.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/wideterm.tlf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/wow.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xbrite.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xbriteb.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xbritebi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xbritei.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xchartr.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xchartri.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xcour.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xcourb.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xcourbi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xcouri.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xhelv.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xhelvb.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xhelvbi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xhelvi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xsans.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xsansb.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xsansbi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xsansi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xsbook.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xsbookb.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xsbookbi.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xsbooki.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xtimes.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xtty.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/xttyb.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/yie-ar__.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/yie_ar_k.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/z-pilot_.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/zig_zag_.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet/fonts/zone7___.flf -> pyfiglet-1.0.3/pyfiglet/fonts\ncopying pyfiglet.egg-info/SOURCES.txt -> pyfiglet-1.0.3/pyfiglet.egg-info\nWriting pyfiglet-1.0.3/setup.cfg\nCreating tar archive\nremoving 'pyfiglet-1.0.3' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/sdist/pyfiglet-1.0.3.tar.gz\n",
+        "seconds": 12.751374309998937
+      },
+      "sdist_sha256": "e7836516dbaff14e95d943cd98578daa36a76765016723027d270062206772b0",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "ing 'pyfiglet/fonts/smscript.flf'\nadding 'pyfiglet/fonts/smshadow.flf'\nadding 'pyfiglet/fonts/smslant.flf'\nadding 'pyfiglet/fonts/smtengwar.flf'\nadding 'pyfiglet/fonts/soft.flf'\nadding 'pyfiglet/fonts/space_op.flf'\nadding 'pyfiglet/fonts/spc_demo.flf'\nadding 'pyfiglet/fonts/speed.flf'\nadding 'pyfiglet/fonts/spliff.flf'\nadding 'pyfiglet/fonts/stacey.flf'\nadding 'pyfiglet/fonts/stampate.flf'\nadding 'pyfiglet/fonts/stampatello.flf'\nadding 'pyfiglet/fonts/standard.flf'\nadding 'pyfiglet/fonts/star_strips.flf'\nadding 'pyfiglet/fonts/star_war.flf'\nadding 'pyfiglet/fonts/starwars.flf'\nadding 'pyfiglet/fonts/stealth_.flf'\nadding 'pyfiglet/fonts/stellar.flf'\nadding 'pyfiglet/fonts/stencil1.flf'\nadding 'pyfiglet/fonts/stencil2.flf'\nadding 'pyfiglet/fonts/stforek.flf'\nadding 'pyfiglet/fonts/stick_letters.flf'\nadding 'pyfiglet/fonts/stop.flf'\nadding 'pyfiglet/fonts/straight.flf'\nadding 'pyfiglet/fonts/street_s.flf'\nadding 'pyfiglet/fonts/stronger_than_all.flf'\nadding 'pyfiglet/fonts/sub-zero.flf'\nadding 'pyfiglet/fonts/subteran.flf'\nadding 'pyfiglet/fonts/super_te.flf'\nadding 'pyfiglet/fonts/swamp_land.flf'\nadding 'pyfiglet/fonts/swan.flf'\nadding 'pyfiglet/fonts/sweet.flf'\nadding 'pyfiglet/fonts/t__of_ap.flf'\nadding 'pyfiglet/fonts/tanja.flf'\nadding 'pyfiglet/fonts/tav1____.flf'\nadding 'pyfiglet/fonts/taxi____.flf'\nadding 'pyfiglet/fonts/tec1____.flf'\nadding 'pyfiglet/fonts/tec_7000.flf'\nadding 'pyfiglet/fonts/tecrvs__.flf'\nadding 'pyfiglet/fonts/tengwar.flf'\nadding 'pyfiglet/fonts/term.flf'\nadding 'pyfiglet/fonts/test1.flf'\nadding 'pyfiglet/fonts/the_edge.flf'\nadding 'pyfiglet/fonts/thick.flf'\nadding 'pyfiglet/fonts/thin.flf'\nadding 'pyfiglet/fonts/this.flf'\nadding 'pyfiglet/fonts/thorned.flf'\nadding 'pyfiglet/fonts/threepoint.flf'\nadding 'pyfiglet/fonts/ti_pan__.flf'\nadding 'pyfiglet/fonts/ticks.flf'\nadding 'pyfiglet/fonts/ticksslant.flf'\nadding 'pyfiglet/fonts/tiles.flf'\nadding 'pyfiglet/fonts/times.flf'\nadding 'pyfiglet/fonts/timesofl.flf'\nadding 'pyfiglet/fonts/tinker-toy.flf'\nadding 'pyfiglet/fonts/tomahawk.flf'\nadding 'pyfiglet/fonts/tombstone.flf'\nadding 'pyfiglet/fonts/top_duck.flf'\nadding 'pyfiglet/fonts/train.flf'\nadding 'pyfiglet/fonts/trashman.flf'\nadding 'pyfiglet/fonts/trek.flf'\nadding 'pyfiglet/fonts/triad_st.flf'\nadding 'pyfiglet/fonts/ts1_____.flf'\nadding 'pyfiglet/fonts/tsalagi.flf'\nadding 'pyfiglet/fonts/tsm_____.flf'\nadding 'pyfiglet/fonts/tsn_base.flf'\nadding 'pyfiglet/fonts/tty.flf'\nadding 'pyfiglet/fonts/ttyb.flf'\nadding 'pyfiglet/fonts/tubular.flf'\nadding 'pyfiglet/fonts/twin_cob.flf'\nadding 'pyfiglet/fonts/twisted.flf'\nadding 'pyfiglet/fonts/twopoint.flf'\nadding 'pyfiglet/fonts/type_set.flf'\nadding 'pyfiglet/fonts/ucf_fan_.flf'\nadding 'pyfiglet/fonts/ugalympi.flf'\nadding 'pyfiglet/fonts/unarmed_.flf'\nadding 'pyfiglet/fonts/univers.flf'\nadding 'pyfiglet/fonts/upper.flc'\nadding 'pyfiglet/fonts/usa_____.flf'\nadding 'pyfiglet/fonts/usa_pq__.flf'\nadding 'pyfiglet/fonts/usaflag.flf'\nadding 'pyfiglet/fonts/utopia.flf'\nadding 'pyfiglet/fonts/utopiab.flf'\nadding 'pyfiglet/fonts/utopiabi.flf'\nadding 'pyfiglet/fonts/utopiai.flf'\nadding 'pyfiglet/fonts/varsity.flf'\nadding 'pyfiglet/fonts/vortron_.flf'\nadding 'pyfiglet/fonts/war_of_w.flf'\nadding 'pyfiglet/fonts/wavy.flf'\nadding 'pyfiglet/fonts/weird.flf'\nadding 'pyfiglet/fonts/wet_letter.flf'\nadding 'pyfiglet/fonts/whimsy.flf'\nadding 'pyfiglet/fonts/wideterm.tlf'\nadding 'pyfiglet/fonts/wow.flf'\nadding 'pyfiglet/fonts/xbrite.flf'\nadding 'pyfiglet/fonts/xbriteb.flf'\nadding 'pyfiglet/fonts/xbritebi.flf'\nadding 'pyfiglet/fonts/xbritei.flf'\nadding 'pyfiglet/fonts/xchartr.flf'\nadding 'pyfiglet/fonts/xchartri.flf'\nadding 'pyfiglet/fonts/xcour.flf'\nadding 'pyfiglet/fonts/xcourb.flf'\nadding 'pyfiglet/fonts/xcourbi.flf'\nadding 'pyfiglet/fonts/xcouri.flf'\nadding 'pyfiglet/fonts/xhelv.flf'\nadding 'pyfiglet/fonts/xhelvb.flf'\nadding 'pyfiglet/fonts/xhelvbi.flf'\nadding 'pyfiglet/fonts/xhelvi.flf'\nadding 'pyfiglet/fonts/xsans.flf'\nadding 'pyfiglet/fonts/xsansb.flf'\nadding 'pyfiglet/fonts/xsansbi.flf'\nadding 'pyfiglet/fonts/xsansi.flf'\nadding 'pyfiglet/fonts/xsbook.flf'\nadding 'pyfiglet/fonts/xsbookb.flf'\nadding 'pyfiglet/fonts/xsbookbi.flf'\nadding 'pyfiglet/fonts/xsbooki.flf'\nadding 'pyfiglet/fonts/xtimes.flf'\nadding 'pyfiglet/fonts/xtty.flf'\nadding 'pyfiglet/fonts/xttyb.flf'\nadding 'pyfiglet/fonts/yie-ar__.flf'\nadding 'pyfiglet/fonts/yie_ar_k.flf'\nadding 'pyfiglet/fonts/z-pilot_.flf'\nadding 'pyfiglet/fonts/zig_zag_.flf'\nadding 'pyfiglet/fonts/zone7___.flf'\nadding 'pyfiglet-1.0.3.dist-info/licenses/LICENSE'\nadding 'pyfiglet-1.0.3.dist-info/METADATA'\nadding 'pyfiglet-1.0.3.dist-info/WHEEL'\nadding 'pyfiglet-1.0.3.dist-info/entry_points.txt'\nadding 'pyfiglet-1.0.3.dist-info/top_level.txt'\nadding 'pyfiglet-1.0.3.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/from-sdist/pyfiglet-1.0.3-py3-none-any.whl\n",
+        "seconds": 12.004826674005017
+      },
+      "artifact_sha256": "99de0f131bf0b974cb4515ab5e6a705e30691c7a237c3be4cd5f422ed840cb81",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/from-sdist/pyfiglet-1.0.3-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 103ms\nPrepared 1 package in 480ms\nInstalled 1 package in 510ms\n + pyfiglet==1.0.3 (from file:///workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/from-sdist/pyfiglet-1.0.3-py3-none-any.whl)\n",
+        "seconds": 1.5339180270093493
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import pyfiglet\n out={name:pyfiglet.figlet_format('AB',font=name) for name in ['circle','future']}\n assert all(out.values())\n print(json.dumps({'rendered':sorted(out)}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"rendered\": [\"circle\", \"future\"]}\n{\"import_origins\": {\"pyfiglet\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/post-grid-contaminated-container-2/work/pyfiglet-154/66d4421a1ed8/reference/sdist-installed/pyfiglet/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.4554117020161357
+      },
+      "pass": true
+    }
+  ]
+}

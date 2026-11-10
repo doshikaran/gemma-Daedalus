@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-11-06T19:12:57.337935+00:00",
+  "source_tree_sha256": "681ff7cb2ab3dae60d38b833d25e7045a3fe0d8d053875beb8a0323172a8bafe",
+  "source_archive_sha256": "bbd03e86aebe15ccceca4534b8a796096ee40d6b8ad96242743d47020f10b98f",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/59-pytest-html-npm-B-23/grading/pytest-html-npm/bcea1435286e/candidate/direct-dist/pytest_html-0.0.0+audit-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/59-pytest-html-npm-B-23/release-artifacts/9db0b1d24fc8ee3156b2b65fa241895ab043769b3fe9dc115894bf49b507e72a-pytest_html-0.0.0+audit-py3-none-any.whl",
+      "sha256": "9db0b1d24fc8ee3156b2b65fa241895ab043769b3fe9dc115894bf49b507e72a",
+      "bytes": 23639
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/59-pytest-html-npm-B-23/grading/pytest-html-npm/bcea1435286e/candidate/sdist/pytest_html-0.0.0+audit.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/59-pytest-html-npm-B-23/release-artifacts/e5e28b30c9391ab4d75f23875460cb96319a0122508524f6d3e7423e9987ff8c-pytest_html-0.0.0+audit.tar.gz",
+      "sha256": "e5e28b30c9391ab4d75f23875460cb96319a0122508524f6d3e7423e9987ff8c",
+      "bytes": 149858
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

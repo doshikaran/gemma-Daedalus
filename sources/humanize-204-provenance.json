@@ -1,0 +1,18 @@
+{
+  "id": "humanize-204",
+  "repository": "python-humanize/humanize",
+  "affected": {
+    "repository": "python-humanize/humanize",
+    "sha": "4e1c96bfb3abf0550bec12b98758bcfe2e51a79c",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/python-humanize__humanize-4e1c96bfb3abf0550bec12b98758bcfe2e51a79c",
+    "archive_sha256": "3928c61ef97ead90125c1ddb9a464015a8dd7cca2ee318351350d0446706562d",
+    "archive_bytes": 56079
+  },
+  "reference": {
+    "repository": "python-humanize/humanize",
+    "sha": "19b43d3b8d80959d75097d8e145690be811465bd",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/python-humanize__humanize-19b43d3b8d80959d75097d8e145690be811465bd",
+    "archive_sha256": "6a89097883a3cc47d272f181174021195d0c5fa31febac186892ab8d0e238c1a",
+    "archive_bytes": 56217
+  }
+}

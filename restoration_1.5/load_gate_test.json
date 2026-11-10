@@ -1,0 +1,39 @@
+{
+  "model_calls": 0,
+  "rows": [
+    {
+      "case": "quiet_fresh",
+      "ok": true,
+      "pass": true
+    },
+    {
+      "case": "busy_fresh",
+      "ok": false,
+      "pass": true
+    },
+    {
+      "case": "at_limit",
+      "ok": false,
+      "pass": true
+    },
+    {
+      "case": "quiet_stale",
+      "ok": false,
+      "pass": true
+    },
+    {
+      "case": "missing",
+      "ok": false,
+      "pass": true
+    }
+  ],
+  "live_reading": {
+    "load1": 3.08,
+    "load5": 1.99,
+    "load15": 1.83,
+    "epoch": 1793895352,
+    "utc": "2026-11-05T16:15:52Z"
+  },
+  "live_ok": true,
+  "pass": true
+}

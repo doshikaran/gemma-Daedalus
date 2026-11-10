@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-05T12:57:45.351640+00:00",
+  "source_tree_sha256": "07d5a90f7b56fadb73837c7f4adc81573b6341518970f3ce1c394ec876930311",
+  "source_archive_sha256": "b17e0dc962d9a02b7585c5db135c7975674a4b93bee0c524ff651dc98f3ee6f8",
+  "release_artifacts": [
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/direct-dist/stellium-0.21.0-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/release-artifacts/9aecf8f2c71a2c2a16fbba6145e0ae7bf3bedd61cba01015938f456510ed487b-stellium-0.21.0-py3-none-any.whl",
+      "sha256": "9aecf8f2c71a2c2a16fbba6145e0ae7bf3bedd61cba01015938f456510ed487b",
+      "bytes": 7879460
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/from-sdist/stellium-0.21.0-py3-none-any.whl",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/release-artifacts/36f0b6910906135926b43216d727a2300fe851e0eef3e9545d3ca58db41aac2b-stellium-0.21.0-py3-none-any.whl",
+      "sha256": "36f0b6910906135926b43216d727a2300fe851e0eef3e9545d3ca58db41aac2b",
+      "bytes": 7879460
+    },
+    {
+      "original": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/grading/stellium-locales/95eb7ec6d12e/candidate/sdist/stellium-0.21.0.tar.gz",
+      "retained": "/workspace/scratch/93af20bbcd93/packaging_study/main_runs/52-stellium-locales-B-19/release-artifacts/be8e1eb43f12dc76cdce099e68b1d5d48286b73342f78bc938269d7c4c43d836-stellium-0.21.0.tar.gz",
+      "sha256": "be8e1eb43f12dc76cdce099e68b1d5d48286b73342f78bc938269d7c4c43d836",
+      "bytes": 11856310
+    }
+  ],
+  "reason": "Post-grade compression of generated work directories; frozen inputs, final patch, final source, actual release artifacts and all result/trajectory records retained."
+}

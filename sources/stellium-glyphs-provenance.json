@@ -1,0 +1,18 @@
+{
+  "id": "stellium-glyphs",
+  "repository": "katelouie/stellium",
+  "affected": {
+    "repository": "katelouie/stellium",
+    "sha": "fda9d8dc35697447635f2c368d0de571d717a682",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/katelouie__stellium-fda9d8dc35697447635f2c368d0de571d717a682",
+    "archive_sha256": "e87113c4d0da3acae7809506d1de01105b334e701e9222c86a4324decacaca95",
+    "archive_bytes": 29356117
+  },
+  "reference": {
+    "repository": "katelouie/stellium",
+    "sha": "295f123e4c858ced14db9e4ae1cd1573e377b5a8",
+    "directory": "/workspace/scratch/93af20bbcd93/packaging_study/sources/katelouie__stellium-295f123e4c858ced14db9e4ae1cd1573e377b5a8",
+    "archive_sha256": "cf276de406c91da22ca26c4f77b95c5c894d0404280ca6807a364d84e3126f83",
+    "archive_bytes": 29367304
+  }
+}

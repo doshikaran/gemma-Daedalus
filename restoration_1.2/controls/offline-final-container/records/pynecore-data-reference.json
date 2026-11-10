@@ -1,0 +1,147 @@
+{
+  "id": "pynecore-data",
+  "arm": "reference",
+  "run_id": "9e17f7f86652",
+  "source_sha": "731d84b193df2a4c75e018c9f779d11eb3dd6594",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/repo/src', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import pynecore\n from pynecore.types import Series\n assert callable(Series)\n print(json.dumps({'imported':True,'series_available':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"imported\": true, \"series_available\": true}\n{\"import_origins\": {\"pynecore\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/repo/src/pynecore/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 1.2928486099999645
+      },
+      "pass": true
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "esting/broker_lab/model.py'\nadding 'pynecore/testing/broker_lab/reference.py'\nadding 'pynecore/testing/broker_lab/runner.py'\nadding 'pynecore/testing/broker_lab/scheduler.py'\nadding 'pynecore/testing/broker_lab/subprocess.py'\nadding 'pynecore/transformers/__init__.py'\nadding 'pynecore/transformers/builtin_shadow.py'\nadding 'pynecore/transformers/closure_arguments_transformer.py'\nadding 'pynecore/transformers/const_fold.py'\nadding 'pynecore/transformers/display_rewrite.py'\nadding 'pynecore/transformers/dynamic_default.py'\nadding 'pynecore/transformers/edge_rules.json'\nadding 'pynecore/transformers/float_tolerance.py'\nadding 'pynecore/transformers/function_isolation.py'\nadding 'pynecore/transformers/import_lifter.py'\nadding 'pynecore/transformers/import_normalizer.py'\nadding 'pynecore/transformers/inline_series_hoist.py'\nadding 'pynecore/transformers/input_transformer.py'\nadding 'pynecore/transformers/lib_series.py'\nadding 'pynecore/transformers/lib_types.json'\nadding 'pynecore/transformers/locations.py'\nadding 'pynecore/transformers/module_properties.json'\nadding 'pynecore/transformers/module_property.py'\nadding 'pynecore/transformers/node_ids.py'\nadding 'pynecore/transformers/persistent.py'\nadding 'pynecore/transformers/persistent_series.py'\nadding 'pynecore/transformers/pine_edge_gate.py'\nadding 'pynecore/transformers/pine_truthiness.py'\nadding 'pynecore/transformers/pine_type_artifact.py'\nadding 'pynecore/transformers/pine_type_infer.py'\nadding 'pynecore/transformers/pine_type_report.py'\nadding 'pynecore/transformers/pine_type_rules.py'\nadding 'pynecore/transformers/pine_type_table.py'\nadding 'pynecore/transformers/pine_type_transformer.py'\nadding 'pynecore/transformers/safe_convert_transformer.py'\nadding 'pynecore/transformers/safe_division_transformer.py'\nadding 'pynecore/transformers/script_requirements.py'\nadding 'pynecore/transformers/security.py'\nadding 'pynecore/transformers/security_instantiation.py'\nadding 'pynecore/transformers/series.py'\nadding 'pynecore/transformers/slot_layout.py'\nadding 'pynecore/transformers/ta_variable_hoist.py'\nadding 'pynecore/transformers/type_checking_stripper.py'\nadding 'pynecore/transformers/unused_series_detector.py'\nadding 'pynecore/types/__init__.py'\nadding 'pynecore/types/alert.py'\nadding 'pynecore/types/barmerge.py'\nadding 'pynecore/types/base.py'\nadding 'pynecore/types/box.py'\nadding 'pynecore/types/chart.py'\nadding 'pynecore/types/color.py'\nadding 'pynecore/types/currency.py'\nadding 'pynecore/types/datetime.py'\nadding 'pynecore/types/display.py'\nadding 'pynecore/types/dividends.py'\nadding 'pynecore/types/earnings.py'\nadding 'pynecore/types/extend.py'\nadding 'pynecore/types/font.py'\nadding 'pynecore/types/footprint.py'\nadding 'pynecore/types/format.py'\nadding 'pynecore/types/hline.py'\nadding 'pynecore/types/ib_persistent.py'\nadding 'pynecore/types/ib_persistent.pyi'\nadding 'pynecore/types/label.py'\nadding 'pynecore/types/line.py'\nadding 'pynecore/types/linefill.py'\nadding 'pynecore/types/location.py'\nadding 'pynecore/types/matrix.py'\nadding 'pynecore/types/na.py'\nadding 'pynecore/types/na.pyi'\nadding 'pynecore/types/ohlcv.py'\nadding 'pynecore/types/order.py'\nadding 'pynecore/types/persistent.py'\nadding 'pynecore/types/persistent.pyi'\nadding 'pynecore/types/pine_types.py'\nadding 'pynecore/types/pine_types.pyi'\nadding 'pynecore/types/pivotpointtype.py'\nadding 'pynecore/types/plot.py'\nadding 'pynecore/types/plot_meta.py'\nadding 'pynecore/types/polyline.py'\nadding 'pynecore/types/position.py'\nadding 'pynecore/types/scale.py'\nadding 'pynecore/types/script_type.py'\nadding 'pynecore/types/series.py'\nadding 'pynecore/types/series.pyi'\nadding 'pynecore/types/session.py'\nadding 'pynecore/types/shape.py'\nadding 'pynecore/types/size.py'\nadding 'pynecore/types/source.py'\nadding 'pynecore/types/splits.py'\nadding 'pynecore/types/strategy.py'\nadding 'pynecore/types/table.py'\nadding 'pynecore/types/text.py'\nadding 'pynecore/types/type_checker.py'\nadding 'pynecore/types/type_checker.pyi'\nadding 'pynecore/types/volume_row.py'\nadding 'pynecore/types/weekdays.py'\nadding 'pynecore/types/xloc.py'\nadding 'pynecore/types/yloc.py'\nadding 'pynecore/utils/__init__.py'\nadding 'pynecore/utils/file_utils.py'\nadding 'pynecore/utils/sequence_view.py'\nadding 'pynecore/utils/stdlib_checker.py'\nadding 'pynecore/utils/rich/__init__.py'\nadding 'pynecore/utils/rich/date_column.py'\nadding 'pynesys_pynecore-6.9.1.dist-info/licenses/LICENSE'\nadding 'pynesys_pynecore-6.9.1.dist-info/licenses/NOTICE'\nadding 'pynesys_pynecore-6.9.1.dist-info/METADATA'\nadding 'pynesys_pynecore-6.9.1.dist-info/WHEEL'\nadding 'pynesys_pynecore-6.9.1.dist-info/entry_points.txt'\nadding 'pynesys_pynecore-6.9.1.dist-info/top_level.txt'\nadding 'pynesys_pynecore-6.9.1.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/direct-dist/pynesys_pynecore-6.9.1-py3-none-any.whl\n",
+        "seconds": 3.0926286939999272
+      },
+      "artifact_sha256": "bf3ea65767c42f83b9940ca78cbd4084e0e138688dc4c3458c18495d4ed85a6a",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/direct-dist/pynesys_pynecore-6.9.1-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 37ms\nPrepared 1 package in 94ms\nInstalled 1 package in 165ms\n + pynesys-pynecore==6.9.1 (from file:///workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/direct-dist/pynesys_pynecore-6.9.1-py3-none-any.whl)\n",
+        "seconds": 0.45581545499999265
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import pynecore\n from pynecore.types import Series\n assert callable(Series)\n print(json.dumps({'imported':True,'series_available':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"imported\": true, \"series_available\": true}\n{\"import_origins\": {\"pynecore\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/wheel-installed/pynecore/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 1.4707114450000063
+      },
+      "pass": true
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "ynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/currency.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/datetime.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/display.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/dividends.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/earnings.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/extend.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/font.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/footprint.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/format.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/hline.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/ib_persistent.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/ib_persistent.pyi -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/label.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/line.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/linefill.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/location.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/matrix.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/na.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/na.pyi -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/ohlcv.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/order.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/persistent.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/persistent.pyi -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/pine_types.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/pine_types.pyi -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/pivotpointtype.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/plot.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/plot_meta.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/polyline.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/position.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/scale.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/script_type.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/series.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/series.pyi -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/session.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/shape.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/size.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/source.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/splits.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/strategy.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/table.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/text.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/type_checker.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/type_checker.pyi -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/volume_row.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/weekdays.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/xloc.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/types/yloc.py -> pynesys_pynecore-6.9.1/src/pynecore/types\ncopying src/pynecore/utils/__init__.py -> pynesys_pynecore-6.9.1/src/pynecore/utils\ncopying src/pynecore/utils/file_utils.py -> pynesys_pynecore-6.9.1/src/pynecore/utils\ncopying src/pynecore/utils/sequence_view.py -> pynesys_pynecore-6.9.1/src/pynecore/utils\ncopying src/pynecore/utils/stdlib_checker.py -> pynesys_pynecore-6.9.1/src/pynecore/utils\ncopying src/pynecore/utils/rich/__init__.py -> pynesys_pynecore-6.9.1/src/pynecore/utils/rich\ncopying src/pynecore/utils/rich/date_column.py -> pynesys_pynecore-6.9.1/src/pynecore/utils/rich\ncopying build/pynesys_pynecore.egg-info/SOURCES.txt -> pynesys_pynecore-6.9.1/build/pynesys_pynecore.egg-info\nWriting pynesys_pynecore-6.9.1/setup.cfg\nCreating tar archive\nremoving 'pynesys_pynecore-6.9.1' (and everything under it)\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/sdist/pynesys_pynecore-6.9.1.tar.gz\n",
+        "seconds": 2.583150551000017
+      },
+      "sdist_sha256": "5eea612ebf0b012008bc3d5d0609b81d490f3d8ea80318b07fe629b81790f559",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "testing/broker_lab/model.py'\nadding 'pynecore/testing/broker_lab/reference.py'\nadding 'pynecore/testing/broker_lab/runner.py'\nadding 'pynecore/testing/broker_lab/scheduler.py'\nadding 'pynecore/testing/broker_lab/subprocess.py'\nadding 'pynecore/transformers/__init__.py'\nadding 'pynecore/transformers/builtin_shadow.py'\nadding 'pynecore/transformers/closure_arguments_transformer.py'\nadding 'pynecore/transformers/const_fold.py'\nadding 'pynecore/transformers/display_rewrite.py'\nadding 'pynecore/transformers/dynamic_default.py'\nadding 'pynecore/transformers/edge_rules.json'\nadding 'pynecore/transformers/float_tolerance.py'\nadding 'pynecore/transformers/function_isolation.py'\nadding 'pynecore/transformers/import_lifter.py'\nadding 'pynecore/transformers/import_normalizer.py'\nadding 'pynecore/transformers/inline_series_hoist.py'\nadding 'pynecore/transformers/input_transformer.py'\nadding 'pynecore/transformers/lib_series.py'\nadding 'pynecore/transformers/lib_types.json'\nadding 'pynecore/transformers/locations.py'\nadding 'pynecore/transformers/module_properties.json'\nadding 'pynecore/transformers/module_property.py'\nadding 'pynecore/transformers/node_ids.py'\nadding 'pynecore/transformers/persistent.py'\nadding 'pynecore/transformers/persistent_series.py'\nadding 'pynecore/transformers/pine_edge_gate.py'\nadding 'pynecore/transformers/pine_truthiness.py'\nadding 'pynecore/transformers/pine_type_artifact.py'\nadding 'pynecore/transformers/pine_type_infer.py'\nadding 'pynecore/transformers/pine_type_report.py'\nadding 'pynecore/transformers/pine_type_rules.py'\nadding 'pynecore/transformers/pine_type_table.py'\nadding 'pynecore/transformers/pine_type_transformer.py'\nadding 'pynecore/transformers/safe_convert_transformer.py'\nadding 'pynecore/transformers/safe_division_transformer.py'\nadding 'pynecore/transformers/script_requirements.py'\nadding 'pynecore/transformers/security.py'\nadding 'pynecore/transformers/security_instantiation.py'\nadding 'pynecore/transformers/series.py'\nadding 'pynecore/transformers/slot_layout.py'\nadding 'pynecore/transformers/ta_variable_hoist.py'\nadding 'pynecore/transformers/type_checking_stripper.py'\nadding 'pynecore/transformers/unused_series_detector.py'\nadding 'pynecore/types/__init__.py'\nadding 'pynecore/types/alert.py'\nadding 'pynecore/types/barmerge.py'\nadding 'pynecore/types/base.py'\nadding 'pynecore/types/box.py'\nadding 'pynecore/types/chart.py'\nadding 'pynecore/types/color.py'\nadding 'pynecore/types/currency.py'\nadding 'pynecore/types/datetime.py'\nadding 'pynecore/types/display.py'\nadding 'pynecore/types/dividends.py'\nadding 'pynecore/types/earnings.py'\nadding 'pynecore/types/extend.py'\nadding 'pynecore/types/font.py'\nadding 'pynecore/types/footprint.py'\nadding 'pynecore/types/format.py'\nadding 'pynecore/types/hline.py'\nadding 'pynecore/types/ib_persistent.py'\nadding 'pynecore/types/ib_persistent.pyi'\nadding 'pynecore/types/label.py'\nadding 'pynecore/types/line.py'\nadding 'pynecore/types/linefill.py'\nadding 'pynecore/types/location.py'\nadding 'pynecore/types/matrix.py'\nadding 'pynecore/types/na.py'\nadding 'pynecore/types/na.pyi'\nadding 'pynecore/types/ohlcv.py'\nadding 'pynecore/types/order.py'\nadding 'pynecore/types/persistent.py'\nadding 'pynecore/types/persistent.pyi'\nadding 'pynecore/types/pine_types.py'\nadding 'pynecore/types/pine_types.pyi'\nadding 'pynecore/types/pivotpointtype.py'\nadding 'pynecore/types/plot.py'\nadding 'pynecore/types/plot_meta.py'\nadding 'pynecore/types/polyline.py'\nadding 'pynecore/types/position.py'\nadding 'pynecore/types/scale.py'\nadding 'pynecore/types/script_type.py'\nadding 'pynecore/types/series.py'\nadding 'pynecore/types/series.pyi'\nadding 'pynecore/types/session.py'\nadding 'pynecore/types/shape.py'\nadding 'pynecore/types/size.py'\nadding 'pynecore/types/source.py'\nadding 'pynecore/types/splits.py'\nadding 'pynecore/types/strategy.py'\nadding 'pynecore/types/table.py'\nadding 'pynecore/types/text.py'\nadding 'pynecore/types/type_checker.py'\nadding 'pynecore/types/type_checker.pyi'\nadding 'pynecore/types/volume_row.py'\nadding 'pynecore/types/weekdays.py'\nadding 'pynecore/types/xloc.py'\nadding 'pynecore/types/yloc.py'\nadding 'pynecore/utils/__init__.py'\nadding 'pynecore/utils/file_utils.py'\nadding 'pynecore/utils/sequence_view.py'\nadding 'pynecore/utils/stdlib_checker.py'\nadding 'pynecore/utils/rich/__init__.py'\nadding 'pynecore/utils/rich/date_column.py'\nadding 'pynesys_pynecore-6.9.1.dist-info/licenses/LICENSE'\nadding 'pynesys_pynecore-6.9.1.dist-info/licenses/NOTICE'\nadding 'pynesys_pynecore-6.9.1.dist-info/METADATA'\nadding 'pynesys_pynecore-6.9.1.dist-info/WHEEL'\nadding 'pynesys_pynecore-6.9.1.dist-info/entry_points.txt'\nadding 'pynesys_pynecore-6.9.1.dist-info/top_level.txt'\nadding 'pynesys_pynecore-6.9.1.dist-info/RECORD'\nremoving build/bdist.linux-x86_64/wheel\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/from-sdist/pynesys_pynecore-6.9.1-py3-none-any.whl\n",
+        "seconds": 3.200890113000014
+      },
+      "artifact_sha256": "7ecdce595195b6f06832f4942e15a5bb73e6548cab9f0bdfefa7b5f72f97679a",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/from-sdist/pynesys_pynecore-6.9.1-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 41ms\nPrepared 1 package in 96ms\nInstalled 1 package in 110ms\n + pynesys-pynecore==6.9.1 (from file:///workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/from-sdist/pynesys_pynecore-6.9.1-py3-none-any.whl)\n",
+        "seconds": 0.4327987609999582
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n import pynecore\n from pynecore.types import Series\n assert callable(Series)\n print(json.dumps({'imported':True,'series_available':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 0,
+        "stdout": "{\"imported\": true, \"series_available\": true}\n{\"import_origins\": {\"pynecore\": \"/workspace/scratch/93af20bbcd93/packaging_study/restoration_1.2/controls/offline-final-container/work/pynecore-data/9e17f7f86652/reference/sdist-installed/pynecore/__init__.py\"}}\n",
+        "stderr": "",
+        "seconds": 0.9575624640000342
+      },
+      "pass": true
+    }
+  ]
+}

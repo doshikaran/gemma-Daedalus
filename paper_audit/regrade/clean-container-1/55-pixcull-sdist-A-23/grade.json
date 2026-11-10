@@ -1,0 +1,147 @@
+{
+  "id": "pixcull-sdist",
+  "arm": "candidate",
+  "run_id": "2b2adf7d5e95",
+  "source_sha": "candidate-final-state",
+  "rows": [
+    {
+      "stage": "source",
+      "preparation": null,
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/repo')\nstage='source'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/repo', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/pixcull-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from pixcull.i18n import load_locale,t\n a=load_locale('en_US');b=load_locale('zh_CN')\n assert len(a)>10 and len(b)>10\n key=next(k for k in a if k in b and a[k]!=b[k]);assert t(key,lang='en_US')==a[key]\n print(json.dumps({'english_keys':len(a),'chinese_keys':len(b),'translation_lookup':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"pixcull\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/repo/pixcull/__init__.py\"}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/repo/pixcull/i18n.py\", line 29\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "seconds": 0.8279655909864232
+      },
+      "pass": false
+    },
+    {
+      "stage": "wheel",
+      "build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/direct-dist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building wheel...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/direct-dist/pixcull-2.43.3-py3-none-any.whl\n",
+        "seconds": 2.0849313210055698
+      },
+      "artifact_sha256": "7c1c04993fc841e726004ee724494733b0083a45cc503257f1dc471524726fc6",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/wheel-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/direct-dist/pixcull-2.43.3-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 67ms\nPrepared 1 package in 146ms\nInstalled 1 package in 142ms\n + pixcull==2.43.3 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/direct-dist/pixcull-2.43.3-py3-none-any.whl)\n",
+        "seconds": 0.6281191400194075
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/wheel-installed')\nstage='wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/wheel-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/pixcull-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from pixcull.i18n import load_locale,t\n a=load_locale('en_US');b=load_locale('zh_CN')\n assert len(a)>10 and len(b)>10\n key=next(k for k in a if k in b and a[k]!=b[k]);assert t(key,lang='en_US')==a[key]\n print(json.dumps({'english_keys':len(a),'chinese_keys':len(b),'translation_lookup':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"pixcull\": \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/wheel-installed/pixcull/__init__.py\"}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/wheel-installed/pixcull/i18n.py\", line 29\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "seconds": 0.6593492130050436
+      },
+      "pass": false
+    },
+    {
+      "stage": "sdist-wheel",
+      "sdist_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--sdist",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building source distribution...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/sdist/pixcull-2.43.3.tar.gz\n",
+        "seconds": 1.6587553110148292
+      },
+      "sdist_sha256": "bf8be1f6f41ad1fb0a595087e09478e07d559f17997129b88b3da36acb2fc5ef",
+      "wheel_build": {
+        "args": [
+          "uv",
+          "build",
+          "--python",
+          "/usr/local/bin/python3",
+          "--wheel",
+          "--out-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/from-sdist",
+          "--build-constraints",
+          "/workspace/scratch/93af20bbcd93/packaging_study/build-constraints.txt",
+          "--cache-dir",
+          "/workspace/scratch/93af20bbcd93/packaging_study/.uv-cache"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Building wheel...\nSuccessfully built /workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/from-sdist/pixcull-2.43.3-py3-none-any.whl\n",
+        "seconds": 1.5503420569875743
+      },
+      "artifact_sha256": "b70faa815b712fc485c998bfffd3daf516f88ec3cbcd05741514079aeb9c0dcf",
+      "install": {
+        "args": [
+          "uv",
+          "pip",
+          "install",
+          "--target",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/sdist-installed",
+          "--no-deps",
+          "/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/from-sdist/pixcull-2.43.3-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.14\nResolved 1 package in 67ms\nPrepared 1 package in 95ms\nInstalled 1 package in 54ms\n + pixcull==2.43.3 (from file:///workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/from-sdist/pixcull-2.43.3-py3-none-any.whl)\n",
+        "seconds": 0.46006182799465023
+      },
+      "probe": {
+        "args": [
+          "python3",
+          "-I",
+          "-c",
+          "import sys,json,pathlib\nbase=pathlib.Path('/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/sdist-installed')\nstage='sdist-wheel'\nsys.path[:0]=['/workspace/scratch/93af20bbcd93/packaging_study/paper_audit/regrade/clean-container-1/55-pixcull-sdist-A-23/grading/pixcull-sdist/2b2adf7d5e95/candidate/sdist-installed', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/pixcull-deps', '/workspace/scratch/93af20bbcd93/packaging_study/runtime/probe-deps']\ntry:\n from pixcull.i18n import load_locale,t\n a=load_locale('en_US');b=load_locale('zh_CN')\n assert len(a)>10 and len(b)>10\n key=next(k for k in a if k in b and a[k]!=b[k]);assert t(key,lang='en_US')==a[key]\n print(json.dumps({'english_keys':len(a),'chinese_keys':len(b),'translation_lookup':True}))\nfinally:\n origins={name:getattr(mod,\"__file__\",None)for name,mod in sys.modules.items()if name in [\"CocoTBFramework\",\"main\",\"apotrope\",\"pyfiglet\",\"pynecore\",\"pixcull\",\"stellium\",\"s3_security_scanner\",\"tox\"]}\n print(json.dumps({\"import_origins\":origins}))\n for name,path in origins.items():\n  if path:assert pathlib.Path(path).resolve().is_relative_to(base.resolve()),(name,path,str(base))\n"
+        ],
+        "returncode": 1,
+        "stdout": "{\"import_origins\": {\"pixcull\": null}}\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\nModuleNotFoundError: No module named 'pixcull.i18n'\n",
+        "seconds": 0.2271033859869931
+      },
+      "pass": false
+    }
+  ]
+}
